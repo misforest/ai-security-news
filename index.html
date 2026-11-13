@@ -3,13 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI 與資安新聞課程彙整</title>
+<title>智安領航站</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* 版面：頂部分頁（資訊新聞／資訊課程）→ 篩選列 → 兩欄清單（新聞：國內／國外；課程：AI／資安）。冷灰中性色＋深藍操作色，AI 紫、資安橘紅作分類標記 */
+  /* 版面：深色「駕駛艙」主視覺（品牌＋雷達＋今日儀表）→ 浮起的分頁切換 → 篩選列 → 兩欄清單。主視覺固定深色，內容區隨主題切換；訊號青色只用在主視覺 */
+  --cockpit:#08131f; --cockpit-2:#0e2135; --cockpit-line:rgba(120,190,255,.16); --cockpit-ink:#e8f1fb; --cockpit-muted:#8fa6bd; --signal:#3fd6ff;
+  --font-display:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+  --font-tech:"Chakra Petch","IBM Plex Mono",ui-monospace,monospace;
   --bg:#f3f5f8; --surface:#ffffff; --ink:#16202c; --muted:#596678; --line:#d9e0e8;
   --accent:#1f4fbf; --accent-soft:#e6edfb; --on-accent:#ffffff;
   --ai:#6b3fc9; --ai-soft:#efe9fb; --sec:#c0411a; --sec-soft:#fbebe4;
@@ -40,18 +43,51 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-header.top{padding:26px 0 10px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between}
-header.top h1{margin:0;font-size:26px;font-weight:700;letter-spacing:.02em;text-wrap:balance}
-header.top .sub{margin:4px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
-.status{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
-.status.bad{color:var(--sec)}
 
-nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-top:6px}
-nav.tabs button{font:inherit;font-size:16px;font-weight:500;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 16px 8px;cursor:pointer;min-height:44px}
-nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:700}
-nav.tabs button .n{font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-left:6px;font-weight:400}
+/* ---------- 主視覺 ---------- */
+.cockpit{position:relative;background:
+  radial-gradient(900px 420px at 85% 10%, rgba(63,214,255,.14), transparent 60%),
+  linear-gradient(180deg,var(--cockpit) 0%,var(--cockpit-2) 100%);
+  color:var(--cockpit-ink);overflow:hidden;color-scheme:dark}
+.cockpit::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--cockpit-line) 1px,transparent 1px),linear-gradient(90deg,var(--cockpit-line) 1px,transparent 1px);
+  background-size:48px 48px;mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 85%);-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.55),transparent 85%)}
+.cockpit .wrap{position:relative}
+.hero{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:28px 0 18px}
+.brand{display:flex;gap:16px;align-items:center}
+.brand svg{flex:none}
+.brand .en{font-family:var(--font-tech);font-size:12px;letter-spacing:.28em;color:var(--signal);font-weight:600}
+.brand h1{margin:2px 0 0;font-family:var(--font-display);font-weight:900;font-size:clamp(30px,4.6vw,46px);letter-spacing:.08em;line-height:1.1;text-wrap:balance}
+.tagline{margin:12px 0 0;font-size:15px;color:var(--cockpit-muted);max-width:52ch}
+.tagline b{color:var(--cockpit-ink);font-weight:500}
+#radar{width:200px;height:200px;display:block}
+.gauges{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cockpit-line);border:1px solid var(--cockpit-line);border-radius:10px;overflow:hidden;margin:4px 0 0}
+.gauge{background:rgba(8,19,31,.72);padding:12px 16px;display:flex;flex-direction:column;gap:2px}
+.gauge .k{font-size:12px;color:var(--cockpit-muted);letter-spacing:.04em}
+.gauge .v{font-family:var(--font-tech);font-size:28px;font-weight:700;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--cockpit-ink)}
+.gauge .v small{font-size:13px;font-weight:500;color:var(--cockpit-muted);margin-left:4px}
+.gauge.hot .v{color:#ff9b7a}
+.gauge.sig .v{color:var(--signal)}
+.status{font-family:var(--font-tech);font-size:12.5px;color:var(--cockpit-muted);letter-spacing:.04em;margin:12px 0 0;font-variant-numeric:tabular-nums}
+.status.bad{color:#ff9b7a}
+.status::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 3px rgba(63,214,255,.2)}
+.status.bad::before{background:#ff9b7a;box-shadow:none}
 
-.filters{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
+nav.tabs{display:inline-flex;gap:4px;padding:5px;margin:20px 0 22px;position:relative;z-index:6;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(8,19,31,.18)}
+nav.tabs button{font:inherit;font-size:15.5px;font-weight:500;background:none;border:0;border-radius:8px;color:var(--muted);padding:9px 20px;cursor:pointer;min-height:42px;transition:background .15s,color .15s}
+nav.tabs button:hover{color:var(--ink)}
+nav.tabs button[aria-selected="true"]{background:var(--cockpit);color:#fff;font-weight:700}
+nav.tabs button .n{font-family:var(--font-tech);font-size:12px;margin-left:8px;opacity:.75;font-weight:600}
+.tabpad{height:0}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  #radar{display:none}
+  .gauges{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){.filters{position:static}}
+@media (max-width:420px){nav.tabs{display:flex}nav.tabs button{flex:1;padding:9px 10px}}
+
+.filters{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:14px 0 12px}
 .frow{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end}
 .field{display:flex;flex-direction:column;gap:3px}
 .field label,.field .lbl{font-size:12px;color:var(--muted)}
@@ -68,10 +104,12 @@ input[type=search]{min-width:240px}
 main{padding:20px 0 48px;display:flex;flex-direction:column;gap:28px}
 .groups{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
 @media (max-width:860px){.groups{grid-template-columns:1fr}}
-section.group h2{margin:0 0 10px;font-size:18px;display:flex;align-items:baseline;gap:10px}
-section.group h2 .count{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);font-weight:400}
+section.group h2{margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px}
+section.group h2::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--accent);transform:rotate(45deg);align-self:center}
+section.group h2 .count{font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400}
 .list{display:flex;flex-direction:column;gap:12px}
-.item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.item{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:7px;transition:transform .15s,box-shadow .15s}
+.item:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(8,19,31,.08)}
 .item.cat-ai{border-left-color:var(--ai)}
 .item.cat-sec{border-left-color:var(--sec)}
 .srcs{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
@@ -104,25 +142,47 @@ section.actions h2{margin:0 0 8px;font-size:18px}
 .actday ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;max-width:80ch}
 .srcnote{font-size:13px;color:var(--muted);margin:0}
 [hidden]{display:none!important}
-footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
+footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 @media (max-width:480px){input[type=search]{min-width:0;width:100%}.field.grow{flex:1 1 100%}nav.tabs button{padding:10px 10px 8px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <div>
-      <h1>AI 與資安新聞課程彙整</h1>
-      <p class="sub">每天整理重要的 AI 與資安新聞，並彙整 e 等公務園+學習平臺上的 AI 與資安課程。點來源或課程名稱可開啟原始網頁。</p>
+<div class="cockpit">
+  <div class="wrap">
+    <header class="hero">
+      <div>
+        <div class="brand">
+          <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+            <circle cx="28" cy="28" r="26" fill="none" stroke="#3fd6ff" stroke-opacity=".5" stroke-width="1.5"/>
+            <circle cx="28" cy="28" r="17" fill="none" stroke="#3fd6ff" stroke-opacity=".25" stroke-width="1"/>
+            <path d="M28 6 L33 28 L28 50 L23 28 Z" fill="#3fd6ff" fill-opacity=".18" stroke="#3fd6ff" stroke-width="1.2"/>
+            <path d="M28 6 L33 28 L23 28 Z" fill="#3fd6ff"/>
+            <circle cx="28" cy="28" r="2.6" fill="#e8f1fb"/>
+          </svg>
+          <div>
+            <div class="en">AI × SECURITY NAVIGATOR</div>
+            <h1>智安領航站</h1>
+          </div>
+        </div>
+        <p class="tagline">資訊同仁的每日航圖：<b>每天 8:00</b> 更新 AI 與資安新聞，並彙整可報名的 AI、資安課程。</p>
+        <p class="status" id="status" role="status">資料載入中…</p>
+      </div>
+      <canvas id="radar" width="400" height="400" aria-label="今日新聞雷達：紫點為 AI 新聞，橘點為資安新聞" role="img"></canvas>
+    </header>
+    <div class="gauges" aria-label="今日儀表">
+      <div class="gauge"><span class="k">最新一天新聞</span><span class="v" id="g-today">—</span></div>
+      <div class="gauge hot"><span class="k">已遭利用漏洞</span><span class="v" id="g-exploit">—</span></div>
+      <div class="gauge"><span class="k">累積新聞</span><span class="v" id="g-total">—</span></div>
+      <div class="gauge sig"><span class="k">開放報名課程</span><span class="v" id="g-courses">—</span></div>
     </div>
-    <div class="status" id="status" role="status">資料載入中…</div>
-  </header>
-  <nav class="tabs" role="tablist" aria-label="內容類別">
-    <button type="button" role="tab" id="tab-news" aria-controls="view-news" aria-selected="true">資訊新聞<span class="n" id="tabn-news"></span></button>
-    <button type="button" role="tab" id="tab-courses" aria-controls="view-courses" aria-selected="false">資訊課程<span class="n" id="tabn-courses"></span></button>
-  </nav>
+    <nav class="tabs" role="tablist" aria-label="內容類別">
+      <button type="button" role="tab" id="tab-news" aria-controls="view-news" aria-selected="true">資訊新聞<span class="n" id="tabn-news"></span></button>
+      <button type="button" role="tab" id="tab-courses" aria-controls="view-courses" aria-selected="false">資訊課程<span class="n" id="tabn-courses"></span></button>
+    </nav>
+  </div>
 </div>
+<div class="tabpad"></div>
 
 <!-- ===== 資訊新聞 ===== -->
 <div id="view-news" role="tabpanel" aria-labelledby="tab-news">
@@ -205,7 +265,7 @@ footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
 </div>
 
 <div class="wrap">
-  <footer>新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
+  <footer>智安領航站・新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
 </div>
 
 <script>
@@ -402,7 +462,56 @@ footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
     if(state.status === "slow") t += "・連線中，內容可能不是最新"; else if(state.status === "cache") t += "・同步中";
     el.textContent = t;
   }
-  function render(){ renderStatus(); renderNews(); renderCourses(); }
+  /* ---------- 儀表與雷達 ---------- */
+  var blips = [];
+  function renderGauges(){
+    var L = latest(), day = state.days.filter(function(d){ return d.date === L; })[0];
+    var items = day && Array.isArray(day.items) ? day.items : [];
+    var exploited = items.filter(function(i){ return (i.flags||[]).indexOf("已遭利用") !== -1; }).length;
+    var total = state.days.reduce(function(n,d){ return n + (Array.isArray(d.items) ? d.items.length : 0); }, 0);
+    var openC = state.courses.filter(function(c){ return c && c.eligibility === "任何人"; }).length;
+    var ready = state.status !== "loading";
+    $("g-today").innerHTML = ready && L ? items.length + '<small>則・' + esc(L.slice(5).replace("-","/")) + '</small>' : "—";
+    $("g-exploit").innerHTML = ready && L ? exploited + '<small>則</small>' : "—";
+    $("g-total").innerHTML = ready ? total + '<small>則・' + state.days.length + ' 天</small>' : "—";
+    $("g-courses").innerHTML = ready ? openC + '<small>門／共 ' + state.courses.length + '</small>' : "—";
+    blips = items.map(function(it, i){
+      var h = 0, t = String(it.title||i); for(var k=0;k<t.length;k++){ h = (h*31 + t.charCodeAt(k)) >>> 0; }
+      return { a: (h % 360) * Math.PI/180, r: .25 + ((h >> 9) % 70)/100, ai: it.category === "AI", hot: (it.flags||[]).indexOf("已遭利用") !== -1 };
+    });
+    drawRadar(lastAngle);
+  }
+  var canvas = $("radar"), ctx = canvas && canvas.getContext ? canvas.getContext("2d") : null, lastAngle = -Math.PI/2;
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function drawRadar(angle){
+    if(!ctx) return;
+    var W = canvas.width, c = W/2, R = c - 8;
+    ctx.clearRect(0,0,W,W);
+    ctx.strokeStyle = "rgba(63,214,255,.28)"; ctx.lineWidth = 1.5;
+    [1,.72,.44].forEach(function(f){ ctx.beginPath(); ctx.arc(c,c,R*f,0,Math.PI*2); ctx.stroke(); });
+    ctx.beginPath(); ctx.moveTo(c-R,c); ctx.lineTo(c+R,c); ctx.moveTo(c,c-R); ctx.lineTo(c,c+R); ctx.strokeStyle="rgba(63,214,255,.14)"; ctx.stroke();
+    if(ctx.createConicGradient){
+      var g = ctx.createConicGradient(angle - Math.PI/3, c, c);
+      g.addColorStop(0,"rgba(63,214,255,0)"); g.addColorStop(1/6,"rgba(63,214,255,.32)"); g.addColorStop(1/6+0.0001,"rgba(63,214,255,0)"); g.addColorStop(1,"rgba(63,214,255,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(c,c); ctx.arc(c,c,R,0,Math.PI*2); ctx.fill();
+    }
+    ctx.beginPath(); ctx.moveTo(c,c); ctx.lineTo(c + Math.cos(angle)*R, c + Math.sin(angle)*R); ctx.strokeStyle="rgba(63,214,255,.9)"; ctx.lineWidth=2; ctx.stroke();
+    blips.forEach(function(b){
+      var x = c + Math.cos(b.a)*R*b.r, y = c + Math.sin(b.a)*R*b.r;
+      var d = ((angle - b.a) % (Math.PI*2) + Math.PI*2) % (Math.PI*2);
+      var glow = reduceMotion ? .9 : Math.max(.35, 1 - d/(Math.PI*2));
+      ctx.beginPath(); ctx.arc(x,y,b.hot?7:5.5,0,Math.PI*2);
+      ctx.fillStyle = b.ai ? "rgba(181,155,255," + glow + ")" : "rgba(255,138,92," + glow + ")"; ctx.fill();
+      if(b.hot){ ctx.beginPath(); ctx.arc(x,y,12,0,Math.PI*2); ctx.strokeStyle="rgba(255,138,92," + glow*.6 + ")"; ctx.lineWidth=1.5; ctx.stroke(); }
+    });
+    ctx.beginPath(); ctx.arc(c,c,4,0,Math.PI*2); ctx.fillStyle="#e8f1fb"; ctx.fill();
+  }
+  if(ctx && !reduceMotion){
+    var t0 = null;
+    (function loop(ts){ if(t0 === null) t0 = ts; lastAngle = -Math.PI/2 + ((ts - t0)/4200)*Math.PI*2; if(!document.hidden) drawRadar(lastAngle); requestAnimationFrame(loop); })(performance.now());
+  } else { drawRadar(lastAngle); }
+
+  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); }
 
   /* ---------- controls ---------- */
   $("newsForm").addEventListener("submit", function(e){ e.preventDefault(); });
