@@ -1,0 +1,659 @@
+{
+ "updatedAt": "2026-11-13T22:10:00+08:00",
+ "source": {
+  "name": "e等公務園+學習平臺",
+  "url": "https://elearn.hrd.gov.tw/mooc/index.php"
+ },
+ "note": "依各課程公開頁面整理（2026-11-13）。認證時數、報名資格以平臺最新公告為準。",
+ "courses": [
+  {
+   "id": "10042892",
+   "category": "AI",
+   "rank": 1,
+   "title": "AI公務與創新實務",
+   "url": "https://elearn.hrd.gov.tw/info/10042892",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 內容生成及數據分析",
+   "minutes": 214,
+   "hours": 4,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員",
+   "summary": "以案例實作操作 AI 工具，練習撰寫新聞稿、會議摘要、法案分析與計畫書，並產出簡報與圖示。",
+   "tags": [
+    "生成式AI",
+    "公務應用",
+    "實作"
+   ]
+  },
+  {
+   "id": "10042905",
+   "category": "AI",
+   "rank": 2,
+   "title": "好好用 AI：了解「AI 風險」的公務生存指南",
+   "url": "https://elearn.hrd.gov.tw/info/10042905",
+   "provider": "公務人力發展學院／台灣人工智慧學校",
+   "platformCategory": "人工智慧 > 人工智慧基礎認知",
+   "minutes": 45,
+   "hours": 1,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "說明 AI 的能力與限制，以及偏誤、隱私與誤導風險，透過公部門案例示範如何安全、負責任地使用 AI。",
+   "tags": [
+    "AI風險",
+    "負責任AI",
+    "入門"
+   ]
+  },
+  {
+   "id": "10044529",
+   "category": "AI",
+   "rank": 3,
+   "title": "AI風險與負責任使用",
+   "url": "https://elearn.hrd.gov.tw/info/10044529",
+   "provider": "國家文官學院",
+   "platformCategory": "人工智慧 > 法制倫理規範",
+   "minutes": 98,
+   "hours": 2,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "快速了解生成式 AI 與安全負責的使用方式，後半段由曾憲立副教授與朱斌妤特聘教授對談。",
+   "tags": [
+    "AI風險",
+    "法制倫理",
+    "治理"
+   ]
+  },
+  {
+   "id": "10046881",
+   "category": "AI",
+   "rank": 4,
+   "title": "高階AI工作流深度整合與專業協作",
+   "url": "https://elearn.hrd.gov.tw/info/10046881",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 生成式人工智慧",
+   "minutes": 60,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "整合多款 AI 工具：問卷設計、知識庫客服機器人、用 Claude 撰寫分析報告、Gamma 產生簡報，以及用 NotebookLM 比對多份文件。",
+   "tags": [
+    "生成式AI",
+    "AI工具",
+    "進階",
+    "NotebookLM",
+    "Claude"
+   ]
+  },
+  {
+   "id": "10042887",
+   "category": "AI",
+   "rank": 5,
+   "title": "生成式 AI 基礎入門",
+   "url": "https://elearn.hrd.gov.tw/info/10042887",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 生成式人工智慧",
+   "minutes": 35,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "介紹 AI 技術演進、LLM 與 GAN 的運作原理，比較 GPT、Gemini、Claude 等模型，並說明在公文、民意回應等公務情境的潛力與風險。",
+   "tags": [
+    "生成式AI",
+    "入門",
+    "LLM"
+   ]
+  },
+  {
+   "id": "10042886",
+   "category": "AI",
+   "rank": 6,
+   "title": "政府AI政策指引方向",
+   "url": "https://elearn.hrd.gov.tw/info/10042886",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 法制倫理規範",
+   "minutes": null,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "",
+   "summary": "由數位發展部王誠明司長主講，涵蓋政府 AI 政策五大戰略、評測機制、主權語料庫、資料雲治理與人工智慧基本法草案。",
+   "tags": [
+    "AI政策",
+    "AI基本法",
+    "數位發展部"
+   ]
+  },
+  {
+   "id": "10042838",
+   "category": "AI",
+   "rank": 7,
+   "title": "AI應用與推動策略",
+   "url": "https://elearn.hrd.gov.tw/info/10042838",
+   "provider": "公務人力發展學院／工研院文官科技素養MRT計畫",
+   "platformCategory": "人工智慧 > 人工智慧導入與技術",
+   "minutes": 39,
+   "hours": 1,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "",
+   "summary": "AI 共識營專題演講，由簡立峰博士談生成式 AI 的能與不能、台灣的優勢與挑戰，以及政府 AI 應用與推動。",
+   "tags": [
+    "AI策略",
+    "高階主管",
+    "AI共識營"
+   ]
+  },
+  {
+   "id": "10042841",
+   "category": "AI",
+   "rank": 8,
+   "title": "AI對國家競爭力的機會與挑戰-AI趨勢",
+   "url": "https://elearn.hrd.gov.tw/info/10042841",
+   "provider": "公務人力發展學院／工研院文官科技素養MRT計畫",
+   "platformCategory": "人工智慧 > 人工智慧基礎認知",
+   "minutes": 31,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "",
+   "summary": "AI 共識營專題演講，由詹文男執行長說明 AI 發展趨勢、帶來的機會與挑戰，以及各國政府的 AI 政策方向。",
+   "tags": [
+    "AI趨勢",
+    "高階主管",
+    "AI共識營"
+   ]
+  },
+  {
+   "id": "10042891",
+   "category": "AI",
+   "rank": 9,
+   "title": "AI 時代的數據思維",
+   "url": "https://elearn.hrd.gov.tw/info/10042891",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 內容生成及數據分析",
+   "minutes": 42,
+   "hours": 1,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "建立資料即資產的觀念，涵蓋資料整備與品質控管、資料分析四層級、資料治理分工，以及 AI 導入後的提示語規範與輸出審查。",
+   "tags": [
+    "資料治理",
+    "數據分析"
+   ]
+  },
+  {
+   "id": "10042882",
+   "category": "AI",
+   "rank": 10,
+   "title": "AI基礎建設與平台選型",
+   "url": "https://elearn.hrd.gov.tw/info/10042882",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 人工智慧基礎認知",
+   "minutes": null,
+   "hours": 1,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "",
+   "audience": "",
+   "summary": "說明 AI 導入成熟度、平台準備度與風險管理，以及資料湖倉架構與自建 AI 模型的基礎建設策略。",
+   "tags": [
+    "AI基礎建設",
+    "平台選型",
+    "資訊人員"
+   ]
+  },
+  {
+   "id": "10046404",
+   "category": "AI",
+   "rank": 11,
+   "title": "AI時代的資料與應用創新實踐",
+   "url": "https://elearn.hrd.gov.tw/info/10046404",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "",
+   "minutes": 39,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "介紹低程式碼／無程式碼開發、AI Agent 建構與 Cloud-Native Lakehouse 資料架構，從概念到落地的開發與資料整合實務。",
+   "tags": [
+    "低程式碼",
+    "AI Agent",
+    "資料架構",
+    "資訊人員"
+   ]
+  },
+  {
+   "id": "10042743",
+   "category": "AI",
+   "rank": 12,
+   "title": "AI概論及發展趨勢",
+   "url": "https://elearn.hrd.gov.tw/info/10042743",
+   "provider": "公務人力發展學院／工研院",
+   "platformCategory": "人工智慧 > 人工智慧基礎認知",
+   "minutes": 105,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "一般社會大眾",
+   "summary": "由成功大學吳誠文副校長深入淺出說明 AI 如何模仿人類的認知、學習與推理，以及機器學習的原理與當前挑戰。",
+   "tags": [
+    "入門",
+    "機器學習"
+   ]
+  },
+  {
+   "id": "10045983",
+   "category": "AI",
+   "rank": 13,
+   "title": "全民AI通識課",
+   "url": "https://elearn.hrd.gov.tw/info/10045983",
+   "provider": "數位發展部（與 Google 台灣、Hahow 合作）",
+   "platformCategory": "",
+   "minutes": 39,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "不需技術背景的 AI 通識：AI 是什麼、如何運作、對社會的影響，以及 AI 產品與系統評測中心的角色。",
+   "tags": [
+    "入門",
+    "通識",
+    "AI評測"
+   ]
+  },
+  {
+   "id": "10042874",
+   "category": "AI",
+   "rank": 14,
+   "title": "你不能錯過的AI工作術",
+   "url": "https://elearn.hrd.gov.tw/info/10042874",
+   "provider": "公務人力發展學院",
+   "platformCategory": "",
+   "minutes": 45,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "介紹生成式 AI 基礎與 Canva、Midjourney、D-ID、TTSmaker 等工具，應用在日常公務與行銷。",
+   "tags": [
+    "生成式AI",
+    "AI工具",
+    "行銷"
+   ]
+  },
+  {
+   "id": "10042322",
+   "category": "AI",
+   "rank": 15,
+   "title": "AI 時代的法律與風險管理-企業合法使用與資料治理實戰",
+   "url": "https://elearn.hrd.gov.tw/info/10042322",
+   "provider": "公務人力發展學院（Hahow 好學校）",
+   "platformCategory": "",
+   "minutes": null,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定身分",
+   "audience": "詳見課程頁",
+   "summary": "說明 AI 黑盒子特性帶來的法律不確定性、使用者與平台的責任歸屬，以及訓練資料、生成內容的著作權與個資法遵循。",
+   "tags": [
+    "AI法律",
+    "著作權",
+    "個資法",
+    "資料治理"
+   ]
+  },
+  {
+   "id": "10046854",
+   "category": "AI",
+   "rank": 16,
+   "title": "運用AI工具加速公文製作",
+   "url": "https://elearn.hrd.gov.tw/info/10046854",
+   "provider": "航港e學院／交通部航港局",
+   "platformCategory": "人工智慧 > 人工智慧基礎認知",
+   "minutes": 62,
+   "hours": 0,
+   "start": "2026-03-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定機關",
+   "audience": "詳見課程頁",
+   "summary": "示範運用 AI 工具加快公文製作。",
+   "tags": [
+    "公文",
+    "AI工具"
+   ]
+  },
+  {
+   "id": "10046460",
+   "category": "資安",
+   "rank": 1,
+   "title": "AI時代的資安革新",
+   "url": "https://elearn.hrd.gov.tw/info/10046460",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "人工智慧 > 法制倫理規範",
+   "minutes": 41,
+   "hours": 1,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "結合 Jamf 與 Check Point 實務，介紹零信任裝置管理、持續威脅曝險管理（CTEM）、外部攻擊面管理，以及生成式 AI 帶來的新風險。",
+   "tags": [
+    "零信任",
+    "CTEM",
+    "AI資安"
+   ]
+  },
+  {
+   "id": "10045796",
+   "category": "資安",
+   "rank": 2,
+   "title": "AI應用與資安風險(113)",
+   "url": "https://elearn.hrd.gov.tw/info/10045796",
+   "provider": "數位發展部資通安全署",
+   "platformCategory": "資通安全 > 資通安全(通識)",
+   "minutes": 120,
+   "hours": 2,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "從 AI、機器學習與生成式 AI 的基本原理出發，透過案例說明 AI 帶來的資安威脅與因應方式。",
+   "tags": [
+    "AI資安",
+    "資安通識",
+    "資安署"
+   ]
+  },
+  {
+   "id": "10046809",
+   "category": "資安",
+   "rank": 3,
+   "title": "115年資訊安全教育訓練",
+   "url": "https://elearn.hrd.gov.tw/info/10046809",
+   "provider": "臺南市政府教育局資訊中心",
+   "platformCategory": "資訊安全與管理 > 資通安全",
+   "minutes": 195,
+   "hours": 3,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "",
+   "summary": "包含 115 年資安通識（一般人員）與社交工程教育訓練，強化資安意識與社交工程辨識能力。",
+   "tags": [
+    "資安通識",
+    "社交工程",
+    "一般人員3小時"
+   ]
+  },
+  {
+   "id": "10042895",
+   "category": "資安",
+   "rank": 4,
+   "title": "從資安防禦邁向數位信任",
+   "url": "https://elearn.hrd.gov.tw/info/10042895",
+   "provider": "公務人力發展學院（114年AI政府領航人才發展計畫）",
+   "platformCategory": "",
+   "minutes": 41,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "由資安署蔡福隆署長主講，談零信任架構、AI 防禦、後量子密碼，以及第七期國家資通安全發展方案的策略。",
+   "tags": [
+    "數位信任",
+    "零信任",
+    "後量子密碼",
+    "國家資安政策"
+   ]
+  },
+  {
+   "id": "10045821",
+   "category": "資安",
+   "rank": 5,
+   "title": "資安危機與趨勢(113)",
+   "url": "https://elearn.hrd.gov.tw/info/10045821",
+   "provider": "數位發展部資通安全署",
+   "platformCategory": "",
+   "minutes": 96,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "以軟體安全為主軸，說明常見漏洞、成因與評分機制，搭配 OWASP Top 10 案例，並介紹弱點管理流程與工具。",
+   "tags": [
+    "軟體安全",
+    "OWASP",
+    "弱點管理",
+    "資訊人員"
+   ]
+  },
+  {
+   "id": "10045816",
+   "category": "資安",
+   "rank": 6,
+   "title": "SSDLC各階段資安作業(113)",
+   "url": "https://elearn.hrd.gov.tw/info/10045816",
+   "provider": "數位發展部資通安全署",
+   "platformCategory": "資通安全 > 資通安全(專業)",
+   "minutes": 202,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "介紹安全系統發展生命週期，說明如何在設計、開發、測試、部署與維運各階段加入安全需求。",
+   "tags": [
+    "SSDLC",
+    "安全開發",
+    "資安專業",
+    "資訊人員"
+   ]
+  },
+  {
+   "id": "10045805",
+   "category": "資安",
+   "rank": 7,
+   "title": "新興資安威脅與防護思維(113)",
+   "url": "https://elearn.hrd.gov.tw/info/10045805",
+   "provider": "數位發展部資通安全署",
+   "platformCategory": "",
+   "minutes": 30,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "從 AD 到 AWS、Azure 雲端服務的攻擊面擴大談起，介紹用 AI 自動分析身分攻擊面的趨勢與防護作法。",
+   "tags": [
+    "身分安全",
+    "雲端安全",
+    "AI資安"
+   ]
+  },
+  {
+   "id": "10042715",
+   "category": "資安",
+   "rank": 8,
+   "title": "數位轉型的資安治理策略",
+   "url": "https://elearn.hrd.gov.tw/info/10042715",
+   "provider": "公務人力發展學院／工研院文官科技素養MRT計畫",
+   "platformCategory": "當前政府重大政策",
+   "minutes": 63,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "",
+   "summary": "由國家資通安全研究院何全德院長主講，談數位基礎設施防護、資安治理框架、資安人才培育與 AI 的挑戰。",
+   "tags": [
+    "資安治理",
+    "數位轉型",
+    "主管"
+   ]
+  },
+  {
+   "id": "10044481",
+   "category": "資安",
+   "rank": 9,
+   "title": "資訊安全概論",
+   "url": "https://elearn.hrd.gov.tw/info/10044481",
+   "provider": "國家文官學院",
+   "platformCategory": "",
+   "minutes": 95,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "認識資安威脅趨勢與資通安全相關知能，建立工作環境的資安意識。",
+   "tags": [
+    "資安通識",
+    "入門"
+   ]
+  },
+  {
+   "id": "10044480",
+   "category": "資安",
+   "rank": 10,
+   "title": "資訊安全",
+   "url": "https://elearn.hrd.gov.tw/info/10044480",
+   "provider": "國家文官學院",
+   "platformCategory": "",
+   "minutes": 111,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "公務人員（含公職教師）、一般民眾、約聘僱人員",
+   "summary": "說明資安威脅趨勢與資通安全知能，協助確保政府資訊服務安全。",
+   "tags": [
+    "資安通識"
+   ]
+  },
+  {
+   "id": "10042634",
+   "category": "資安",
+   "rank": 11,
+   "title": "新世代企業資安防線",
+   "url": "https://elearn.hrd.gov.tw/info/10042634",
+   "provider": "公務人力發展學院／工研院文官科技素養MRT計畫",
+   "platformCategory": "",
+   "minutes": 36,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "任何人",
+   "audience": "一般社會大眾",
+   "summary": "台達電資安長分享企業資安管理三道防線：高層部署、風險評估管理與稽核確認。",
+   "tags": [
+    "資安管理",
+    "個案研習",
+    "主管"
+   ]
+  },
+  {
+   "id": "10045854",
+   "category": "資安",
+   "rank": 12,
+   "title": "校園資安作業與外部審查實務",
+   "url": "https://elearn.hrd.gov.tw/info/10045854",
+   "provider": "教育部數位學習平臺／國立政治大學",
+   "platformCategory": "資通安全 > 資通安全(專業、職能)",
+   "minutes": 180,
+   "hours": 3,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定身分",
+   "audience": "教育體系人員（需經政大活動報名系統報名）",
+   "summary": "對照資安法要求，說明 ISMS 實務運作與如何因應外部稽核審查。",
+   "tags": [
+    "ISMS",
+    "稽核",
+    "資安專業"
+   ]
+  },
+  {
+   "id": "10047224",
+   "category": "資安",
+   "rank": 13,
+   "title": "115年行政院人事行政總處資通安全教育訓練課程",
+   "url": "https://elearn.hrd.gov.tw/info/10047224",
+   "provider": "行政院人事行政總處人事資訊處",
+   "platformCategory": "資通安全 > 資通安全(通識)",
+   "minutes": 160,
+   "hours": 3,
+   "start": "2026-07-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定機關",
+   "audience": "行政院人事行政總處職員",
+   "summary": "人事總處 115 年度資安通識課程，完成後可取得資通安全 3 小時通識時數。",
+   "tags": [
+    "資安通識",
+    "一般人員3小時"
+   ]
+  },
+  {
+   "id": "10046556",
+   "category": "資安",
+   "rank": 14,
+   "title": "115年國立臺灣科技大學資通安全一般人員教育訓練",
+   "url": "https://elearn.hrd.gov.tw/info/10046556",
+   "provider": "教育部數位學習平臺／國立臺灣科技大學",
+   "platformCategory": "",
+   "minutes": 125,
+   "hours": null,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定機關",
+   "audience": "臺科大教職員工",
+   "summary": "由國家資通安全研究院講師說明資安威脅趨勢，符合一般人員資通安全教育訓練時數。",
+   "tags": [
+    "資安通識",
+    "一般人員"
+   ]
+  },
+  {
+   "id": "10046498",
+   "category": "資安",
+   "rank": 15,
+   "title": "資通安全暨個人資料保護作業",
+   "url": "https://elearn.hrd.gov.tw/info/10046498",
+   "provider": "財稅e學園／財政部高雄國稅局",
+   "platformCategory": "資訊安全與管理 > 資通安全",
+   "minutes": null,
+   "hours": 3,
+   "start": "2026-01-01",
+   "end": "2026-12-31",
+   "eligibility": "限特定機關",
+   "audience": "財政部高雄國稅局同仁",
+   "summary": "透過規定宣導、案例分享與稽核結果回饋，強化資安與個資保護意識。",
+   "tags": [
+    "資安通識",
+    "個資保護"
+   ]
+  }
+ ]
+}

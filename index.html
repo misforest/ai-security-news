@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>每日 AI 與資安新聞彙整</title>
+<title>AI 與資安新聞課程彙整</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* 版面：頂部篩選列 → 國內／國外兩欄新聞 → 機關建議行動。冷灰中性色＋深藍操作色，AI 紫、資安橘紅作分類標記 */
+  /* 版面：頂部分頁（資訊新聞／資訊課程）→ 篩選列 → 兩欄清單（新聞：國內／國外；課程：AI／資安）。冷灰中性色＋深藍操作色，AI 紫、資安橘紅作分類標記 */
   --bg:#f3f5f8; --surface:#ffffff; --ink:#16202c; --muted:#596678; --line:#d9e0e8;
-  --accent:#1f4fbf; --accent-soft:#e6edfb;
+  --accent:#1f4fbf; --accent-soft:#e6edfb; --on-accent:#ffffff;
   --ai:#6b3fc9; --ai-soft:#efe9fb; --sec:#c0411a; --sec-soft:#fbebe4;
-  --warn:#8a6100; --warn-soft:#fbf1d6;
+  --warn:#8a6100; --warn-soft:#fbf1d6; --ok:#1d7a4a; --ok-soft:#e3f4ea;
   --font-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
   --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   color-scheme:light;
@@ -21,17 +21,17 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0f141b; --surface:#171e27; --ink:#e6ebf1; --muted:#9aa7b6; --line:#2a3440;
-    --accent:#7aa2ff; --accent-soft:#1c2a45;
+    --accent:#7aa2ff; --accent-soft:#1c2a45; --on-accent:#0f141b;
     --ai:#b59bff; --ai-soft:#271f3d; --sec:#ff8a5c; --sec-soft:#3a2219;
-    --warn:#f0c35a; --warn-soft:#352b12;
+    --warn:#f0c35a; --warn-soft:#352b12; --ok:#6fd49c; --ok-soft:#163323;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0f141b; --surface:#171e27; --ink:#e6ebf1; --muted:#9aa7b6; --line:#2a3440;
-  --accent:#7aa2ff; --accent-soft:#1c2a45;
+  --accent:#7aa2ff; --accent-soft:#1c2a45; --on-accent:#0f141b;
   --ai:#b59bff; --ai-soft:#271f3d; --sec:#ff8a5c; --sec-soft:#3a2219;
-  --warn:#f0c35a; --warn-soft:#352b12;
+  --warn:#f0c35a; --warn-soft:#352b12; --ok:#6fd49c; --ok-soft:#163323;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -40,24 +40,27 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 a{color:var(--accent)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
-header.top{padding:28px 0 16px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between}
+header.top{padding:26px 0 10px;display:flex;flex-wrap:wrap;gap:8px 24px;align-items:flex-end;justify-content:space-between}
 header.top h1{margin:0;font-size:26px;font-weight:700;letter-spacing:.02em;text-wrap:balance}
-header.top .sub{margin:4px 0 0;color:var(--muted);font-size:14px}
+header.top .sub{margin:4px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
 .status{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
 .status.bad{color:var(--sec)}
+
+nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-top:6px}
+nav.tabs button{font:inherit;font-size:16px;font-weight:500;background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 16px 8px;cursor:pointer;min-height:44px}
+nav.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:700}
+nav.tabs button .n{font-family:var(--font-mono);font-size:12px;color:var(--muted);margin-left:6px;font-weight:400}
 
 .filters{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 0}
 .frow{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end}
 .field{display:flex;flex-direction:column;gap:3px}
-.field label{font-size:12px;color:var(--muted)}
-input[type=date],input[type=search]{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 9px;min-height:36px}
+.field label,.field .lbl{font-size:12px;color:var(--muted)}
+input[type=date],input[type=search],select{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 9px;min-height:36px}
 input[type=search]{min-width:240px}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--surface)}
 .seg button{font:inherit;font-size:13.5px;border:0;background:transparent;color:var(--ink);padding:6px 12px;min-height:36px;cursor:pointer}
 .seg button+button{border-left:1px solid var(--line)}
-.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
-:root[data-theme="dark"] .seg button[aria-pressed="true"]{color:#0f141b}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{color:#0f141b}}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
 .linkbtn{font:inherit;font-size:13.5px;border:0;background:none;color:var(--accent);cursor:pointer;padding:6px 4px;min-height:36px;text-decoration:underline}
 .summary{margin:10px 0 0;font-size:13.5px;color:var(--muted)}
 .summary b{color:var(--ink);font-variant-numeric:tabular-nums}
@@ -76,13 +79,18 @@ section.group h2 .count{font-family:var(--font-mono);font-size:12.5px;color:var(
 .src{font-size:12.5px;text-decoration:none;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:2px 10px;line-height:1.6;max-width:100%;overflow-wrap:anywhere}
 .src:hover{text-decoration:underline}
 .item h3{margin:0;font-size:16px;line-height:1.45;text-wrap:balance}
+.item h3 a{color:inherit;text-decoration:none}
+.item h3 a:hover{text-decoration:underline}
 .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
-.meta time{font-family:var(--font-mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.meta time,.meta .num{font-family:var(--font-mono);color:var(--muted);font-variant-numeric:tabular-nums}
 .pill{border-radius:4px;padding:0 7px;font-weight:500}
 .pill.ai{background:var(--ai-soft);color:var(--ai)}
 .pill.sec{background:var(--sec-soft);color:var(--sec)}
 .pill.flag{background:var(--warn-soft);color:var(--warn)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.plain{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
 .item p{margin:0;max-width:65ch;color:var(--ink)}
+.item .prov{font-size:12.5px;color:var(--muted)}
 mark{background:var(--warn-soft);color:inherit;border-radius:2px;padding:0 1px}
 .more{align-self:flex-start;font:inherit;font-size:14px;color:var(--accent);background:var(--surface);border:1px solid var(--accent);border-radius:6px;padding:6px 14px;cursor:pointer;min-height:36px}
 .more:hover{background:var(--accent-soft)}
@@ -94,78 +102,110 @@ section.actions h2{margin:0 0 8px;font-size:18px}
 .actday:first-of-type{border-top:0;margin-top:0;padding-top:0}
 .actday h3{margin:0 0 4px;font-family:var(--font-mono);font-size:13px;color:var(--muted);font-weight:500}
 .actday ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;max-width:80ch}
+.srcnote{font-size:13px;color:var(--muted);margin:0}
+[hidden]{display:none!important}
 footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
-@media (max-width:480px){input[type=search]{min-width:0;width:100%}.field.grow{flex:1 1 100%}}
+@media (max-width:480px){input[type=search]{min-width:0;width:100%}.field.grow{flex:1 1 100%}nav.tabs button{padding:10px 10px 8px}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>每日 AI 與資安新聞彙整</h1>
-      <p class="sub">每天整理重要的 AI 與資安新聞，分國內、國外。每則新聞先列出來源，點來源可開啟原文。</p>
+      <h1>AI 與資安新聞課程彙整</h1>
+      <p class="sub">每天整理重要的 AI 與資安新聞，並彙整 e 等公務園+學習平臺上的 AI 與資安課程。點來源或課程名稱可開啟原始網頁。</p>
     </div>
     <div class="status" id="status" role="status">資料載入中…</div>
   </header>
+  <nav class="tabs" role="tablist" aria-label="內容類別">
+    <button type="button" role="tab" id="tab-news" aria-controls="view-news" aria-selected="true">資訊新聞<span class="n" id="tabn-news"></span></button>
+    <button type="button" role="tab" id="tab-courses" aria-controls="view-courses" aria-selected="false">資訊課程<span class="n" id="tabn-courses"></span></button>
+  </nav>
 </div>
 
-<div class="filters">
+<!-- ===== 資訊新聞 ===== -->
+<div id="view-news" role="tabpanel" aria-labelledby="tab-news">
+  <div class="filters">
+    <div class="wrap">
+      <form class="frow" id="newsForm" autocomplete="off">
+        <div class="field"><label for="from">起日</label><input type="date" id="from"></div>
+        <div class="field"><label for="to">迄日</label><input type="date" id="to"></div>
+        <div class="field">
+          <span class="lbl" id="quickLbl">快速區間</span>
+          <div class="seg" role="group" aria-labelledby="quickLbl" id="quick">
+            <button type="button" data-range="latest" id="q-latest">最新一天</button>
+            <button type="button" data-range="7" id="q-7">近 7 天</button>
+            <button type="button" data-range="30" id="q-30">近 30 天</button>
+            <button type="button" data-range="all" id="q-all">全部</button>
+          </div>
+        </div>
+        <div class="field grow"><label for="q">關鍵字</label><input type="search" id="q" placeholder="例如：Outlook、零時差、台積電"></div>
+        <div class="field">
+          <span class="lbl" id="catLbl">類別</span>
+          <div class="seg" role="group" aria-labelledby="catLbl" id="cats">
+            <button type="button" data-cat="all" id="c-all">全部</button>
+            <button type="button" data-cat="AI" id="c-ai">AI</button>
+            <button type="button" data-cat="資安" id="c-sec">資安</button>
+          </div>
+        </div>
+        <button type="button" class="linkbtn" id="reset">清除篩選</button>
+      </form>
+      <p class="summary" id="summary"></p>
+    </div>
+  </div>
   <div class="wrap">
-    <form class="frow" id="filterForm" autocomplete="off">
-      <div class="field">
-        <label for="from">起日</label>
-        <input type="date" id="from">
+    <main>
+      <div class="groups">
+        <section class="group" aria-labelledby="h-dom"><h2 id="h-dom">國內 <span class="count" id="cnt-dom"></span></h2><div class="list" id="list-dom"></div></section>
+        <section class="group" aria-labelledby="h-intl"><h2 id="h-intl">國外 <span class="count" id="cnt-intl"></span></h2><div class="list" id="list-intl"></div></section>
       </div>
-      <div class="field">
-        <label for="to">迄日</label>
-        <input type="date" id="to">
-      </div>
-      <div class="field">
-        <span id="quickLbl" style="font-size:12px;color:var(--muted)">快速區間</span>
-        <div class="seg" role="group" aria-labelledby="quickLbl" id="quick">
-          <button type="button" data-range="latest" id="q-latest">最新一天</button>
-          <button type="button" data-range="7" id="q-7">近 7 天</button>
-          <button type="button" data-range="30" id="q-30">近 30 天</button>
-          <button type="button" data-range="all" id="q-all">全部</button>
+      <section class="actions" aria-labelledby="h-act"><h2 id="h-act">給機關的建議行動</h2><div id="actions"></div></section>
+    </main>
+  </div>
+</div>
+
+<!-- ===== 資訊課程 ===== -->
+<div id="view-courses" role="tabpanel" aria-labelledby="tab-courses" hidden>
+  <div class="filters">
+    <div class="wrap">
+      <form class="frow" id="courseForm" autocomplete="off">
+        <div class="field grow"><label for="cq">關鍵字</label><input type="search" id="cq" placeholder="例如：生成式、零信任、資安通識"></div>
+        <div class="field">
+          <label for="celig">報名身分</label>
+          <select id="celig">
+            <option value="all">全部</option>
+            <option value="open">任何人可報名</option>
+            <option value="restricted">限特定機關／身分</option>
+            <option value="unknown">頁面未註明</option>
+          </select>
         </div>
-      </div>
-      <div class="field grow">
-        <label for="q">關鍵字</label>
-        <input type="search" id="q" placeholder="例如：Outlook、零時差、台積電">
-      </div>
-      <div class="field">
-        <span id="catLbl" style="font-size:12px;color:var(--muted)">類別</span>
-        <div class="seg" role="group" aria-labelledby="catLbl" id="cats">
-          <button type="button" data-cat="all" id="c-all" aria-pressed="true">全部</button>
-          <button type="button" data-cat="AI" id="c-ai" aria-pressed="false">AI</button>
-          <button type="button" data-cat="資安" id="c-sec" aria-pressed="false">資安</button>
+        <div class="field">
+          <label for="csort">排序</label>
+          <select id="csort">
+            <option value="rank">推薦順序</option>
+            <option value="short">課程長度：短到長</option>
+            <option value="hours">認證時數：多到少</option>
+          </select>
         </div>
+        <button type="button" class="linkbtn" id="creset">清除篩選</button>
+      </form>
+      <p class="summary" id="csummary"></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <main>
+      <div class="groups">
+        <section class="group" aria-labelledby="h-cai"><h2 id="h-cai">AI 課程 <span class="count" id="cnt-cai"></span></h2><div class="list" id="list-cai"></div></section>
+        <section class="group" aria-labelledby="h-csec"><h2 id="h-csec">資安課程 <span class="count" id="cnt-csec"></span></h2><div class="list" id="list-csec"></div></section>
       </div>
-      <button type="button" class="linkbtn" id="reset">清除篩選</button>
-    </form>
-    <p class="summary" id="summary"></p>
+      <p class="srcnote" id="csrc"></p>
+    </main>
   </div>
 </div>
 
 <div class="wrap">
-  <main>
-    <div class="groups">
-      <section class="group" aria-labelledby="h-dom">
-        <h2 id="h-dom">國內 <span class="count" id="cnt-dom"></span></h2>
-        <div class="list" id="list-dom"></div>
-      </section>
-      <section class="group" aria-labelledby="h-intl">
-        <h2 id="h-intl">國外 <span class="count" id="cnt-intl"></span></h2>
-        <div class="list" id="list-intl"></div>
-      </section>
-    </div>
-    <section class="actions" aria-labelledby="h-act">
-      <h2 id="h-act">給機關的建議行動</h2>
-      <div id="actions"></div>
-    </section>
-  </main>
-  <footer>摘要為改寫整理，請以原文來源為準。標示「尚未證實」的數字或說法，目前還沒有一手來源確認。</footer>
+  <footer>新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
 </div>
 
 <script>
@@ -173,8 +213,10 @@ footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
   "use strict";
   var TOP_N = 5;
   var state = {
-    days: [], status: "loading", from: "", to: "", q: "", cat: "all",
-    expanded: { "國內": false, "國外": false }, rangeKey: "7", initialized: false
+    view: "news", status: "loading",
+    days: [], from: "", to: "", q: "", cat: "all", rangeKey: "7", newsInit: false,
+    expanded: {},
+    courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank"
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -184,189 +226,256 @@ footer{color:var(--muted);font-size:12.5px;padding-bottom:32px}
     });
   }
   function safeUrl(u){ return /^https?:\/\//i.test(String(u||"")) ? String(u) : ""; }
-  function hl(text){
-    var e = esc(text);
-    var q = state.q.trim();
-    if(!q) return e;
+  function hlWith(q, text){
+    var e = esc(text); q = (q||"").trim(); if(!q) return e;
     var terms = q.split(/\s+/).filter(Boolean).map(function(t){ return esc(t).replace(/[.*+?^${}()|[\]\\]/g,"\\$&"); });
     if(!terms.length) return e;
-    try { return e.replace(new RegExp("(" + terms.join("|") + ")", "gi"), "<mark>$1</mark>"); }
-    catch(_){ return e; }
+    try { return e.replace(new RegExp("(" + terms.join("|") + ")", "gi"), "<mark>$1</mark>"); } catch(_){ return e; }
   }
-  function addDays(iso, n){
-    var d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n);
-    return d.toISOString().slice(0,10);
+  function matchAll(q, hay){
+    q = (q||"").trim().toLowerCase(); if(!q) return true; hay = hay.toLowerCase();
+    return q.split(/\s+/).filter(Boolean).every(function(t){ return hay.indexOf(t) !== -1; });
   }
+  function addDays(iso, n){ var d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0,10); }
+  function moreBtn(key, total){
+    var open = !!state.expanded[key];
+    return '<button type="button" class="more" data-key="' + esc(key) + '" aria-expanded="' + open + '">' +
+      (open ? "收合，只看前 " + TOP_N + " 則" : "more：顯示全部 " + total + " 則（另 " + (total - TOP_N) + " 則）") + '</button>';
+  }
+  function resetExpand(prefix){ Object.keys(state.expanded).forEach(function(k){ if(k.indexOf(prefix) === 0) state.expanded[k] = false; }); }
+  function statusMsg(){
+    if(state.status === "loading") return "資料載入中…";
+    if(state.status === "error") return "資料讀取失敗，請稍後重新開啟此頁。";
+    if(state.status === "slow") return "資料暫時連不上，仍在重試。";
+    return "";
+  }
+
+  /* ---------- tabs ---------- */
+  function setView(v, fromHash){
+    state.view = v === "courses" ? "courses" : "news";
+    $("view-news").hidden = state.view !== "news";
+    $("view-courses").hidden = state.view !== "courses";
+    $("tab-news").setAttribute("aria-selected", state.view === "news");
+    $("tab-courses").setAttribute("aria-selected", state.view === "courses");
+    if(!fromHash){ try { history.replaceState(null, "", "#" + state.view); } catch(_){ try { location.hash = state.view; } catch(__){} } }
+  }
+  $("tab-news").addEventListener("click", function(){ setView("news"); });
+  $("tab-courses").addEventListener("click", function(){ setView("courses"); });
+  document.querySelector("nav.tabs").addEventListener("keydown", function(e){
+    if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    var next = state.view === "news" ? "courses" : "news"; setView(next); $("tab-" + next).focus();
+  });
+  window.addEventListener("hashchange", function(){ var h = (location.hash||"").slice(1); if(h === "news" || h === "courses") setView(h, true); });
+
+  /* ---------- news ---------- */
   function dates(){ return state.days.map(function(d){ return d.date; }).filter(Boolean).sort(); }
   function latest(){ var ds = dates(); return ds.length ? ds[ds.length-1] : ""; }
   function earliest(){ var ds = dates(); return ds.length ? ds[0] : ""; }
-
   function applyRange(key){
-    var L = latest();
-    state.rangeKey = key;
+    var L = latest(); state.rangeKey = key;
     if(!L){ state.from = ""; state.to = ""; }
     else if(key === "latest"){ state.from = L; state.to = L; }
     else if(key === "all"){ state.from = earliest(); state.to = L; }
     else { state.from = addDays(L, -(parseInt(key,10)-1)); state.to = L; }
-    $("from").value = state.from; $("to").value = state.to;
-    resetExpand();
+    $("from").value = state.from; $("to").value = state.to; resetExpand("news");
   }
-  function resetExpand(){ state.expanded["國內"] = false; state.expanded["國外"] = false; }
-
-  function matches(it){
-    if(state.cat !== "all" && it.category !== state.cat) return false;
-    var q = state.q.trim().toLowerCase();
-    if(!q) return true;
-    var hay = [it.title, it.summary, (it.tags||[]).join(" "), (it.flags||[]).join(" "),
-      (it.sources||[]).map(function(s){ return s && s.name; }).join(" "), it.category, it.date].join(" ").toLowerCase();
-    return q.split(/\s+/).filter(Boolean).every(function(t){ return hay.indexOf(t) !== -1; });
-  }
-  function inRange(date){
-    if(state.from && date < state.from) return false;
-    if(state.to && date > state.to) return false;
-    return true;
-  }
-  function collect(){
+  function inRange(date){ return !(state.from && date < state.from) && !(state.to && date > state.to); }
+  function collectNews(){
     var out = [];
     state.days.forEach(function(day){
       if(!day || !day.date || !inRange(day.date)) return;
       (Array.isArray(day.items) ? day.items : []).forEach(function(it){
         if(!it || typeof it !== "object") return;
-        var x = Object.assign({}, it, { date: day.date });
-        if(matches(x)) out.push(x);
+        if(state.cat !== "all" && it.category !== state.cat) return;
+        var hay = [it.title, it.summary, (it.tags||[]).join(" "), (it.flags||[]).join(" "),
+          (it.sources||[]).map(function(s){ return s && s.name; }).join(" "), it.category, day.date].join(" ");
+        if(!matchAll(state.q, hay)) return;
+        out.push(Object.assign({}, it, { date: day.date }));
       });
     });
-    out.sort(function(a,b){
-      if(a.date !== b.date) return a.date < b.date ? 1 : -1;
-      return (a.rank||99) - (b.rank||99);
-    });
+    out.sort(function(a,b){ return a.date !== b.date ? (a.date < b.date ? 1 : -1) : (a.rank||99) - (b.rank||99); });
     return out;
   }
-
-  function card(it){
+  function newsCard(it){
+    var h = function(t){ return hlWith(state.q, t); };
     var srcs = (Array.isArray(it.sources) ? it.sources : []).map(function(s){
-      var u = safeUrl(s && s.url); var n = (s && s.name) || "來源";
-      return u ? '<a class="src" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + hl(n) + ' ↗</a>'
-               : '<span class="src">' + hl(n) + '</span>';
+      var u = safeUrl(s && s.url), n = (s && s.name) || "來源";
+      return u ? '<a class="src" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + h(n) + ' ↗</a>' : '<span class="src">' + h(n) + '</span>';
     }).join("");
     var isAI = it.category === "AI";
     var flags = (Array.isArray(it.flags) ? it.flags : []).map(function(f){ return '<span class="pill flag">' + esc(f) + '</span>'; }).join("");
     return '<article class="item ' + (isAI ? "cat-ai" : "cat-sec") + '">' +
       '<div class="srcs"><span class="lbl">來源</span>' + (srcs || '<span class="lbl">（未列）</span>') + '</div>' +
-      '<h3>' + hl(it.title) + '</h3>' +
-      '<div class="meta"><time datetime="' + esc(it.date) + '">' + esc(it.date) + '</time>' +
-        '<span class="pill ' + (isAI ? "ai" : "sec") + '">' + esc(it.category || "") + '</span>' + flags + '</div>' +
-      '<p>' + hl(it.summary) + '</p>' +
-    '</article>';
+      '<h3>' + h(it.title) + '</h3>' +
+      '<div class="meta"><time datetime="' + esc(it.date) + '">' + esc(it.date) + '</time><span class="pill ' + (isAI ? "ai" : "sec") + '">' + esc(it.category||"") + '</span>' + flags + '</div>' +
+      '<p>' + h(it.summary) + '</p></article>';
   }
-
-  function renderGroup(region, items, listId, cntId){
+  function renderList(key, items, listId, cntId, cardFn, emptyText, unit){
+    $(cntId).textContent = items.length ? items.length + " " + unit : "";
     var list = $(listId);
-    $(cntId).textContent = items.length ? items.length + " 則" : "";
-    if(!items.length){
-      list.innerHTML = '<div class="empty">' + (state.days.length ? "這個區間或關鍵字沒有符合的" + region + "新聞。" : emptyMsg()) + '</div>';
-      return;
-    }
-    var open = state.expanded[region];
-    var shown = open ? items : items.slice(0, TOP_N);
-    var html = shown.map(card).join("");
-    if(items.length > TOP_N){
-      html += '<button type="button" class="more" data-region="' + esc(region) + '" aria-expanded="' + (open ? "true" : "false") + '">' +
-        (open ? "收合，只看前 " + TOP_N + " 則" : "more：顯示全部 " + items.length + " 則（另 " + (items.length - TOP_N) + " 則）") + '</button>';
-    }
-    list.innerHTML = html;
+    if(!items.length){ list.innerHTML = '<div class="empty">' + esc(statusMsg() || emptyText) + '</div>'; return; }
+    var shown = state.expanded[key] ? items : items.slice(0, TOP_N);
+    list.innerHTML = shown.map(cardFn).join("") + (items.length > TOP_N ? moreBtn(key, items.length) : "");
   }
-  function emptyMsg(){
-    if(state.status === "loading") return "資料載入中…";
-    if(state.status === "nodb") return "無法讀取新聞資料。";
-    if(state.status === "error") return "新聞資料讀取失敗，請稍後重新開啟此頁。";
-    if(state.status === "slow") return "新聞資料暫時連不上，仍在重試。";
-    return "目前還沒有新聞資料。每天執行簡報後會自動加入。";
-  }
-
-  function renderActions(){
+  function renderNews(){
+    var items = collectNews();
+    var dom = items.filter(function(i){ return i.region === "國內"; });
+    var intl = items.filter(function(i){ return i.region !== "國內"; });
+    var noData = state.days.length ? "這個區間或關鍵字沒有符合的新聞。" : "目前還沒有新聞資料。";
+    renderList("news-dom", dom, "list-dom", "cnt-dom", newsCard, noData, "則");
+    renderList("news-intl", intl, "list-intl", "cnt-intl", newsCard, noData, "則");
     var days = state.days.filter(function(d){ return d && d.date && inRange(d.date) && Array.isArray(d.actions) && d.actions.length; })
       .sort(function(a,b){ return a.date < b.date ? 1 : -1; });
-    var box = $("actions");
-    if(!days.length){ box.innerHTML = '<div class="empty">這個區間沒有建議行動。</div>'; return; }
-    box.innerHTML = days.slice(0, 3).map(function(d){
-      return '<div class="actday"><h3>' + esc(d.date) + '</h3><ol>' +
-        d.actions.map(function(a){ return '<li>' + hl(a) + '</li>'; }).join("") + '</ol></div>';
-    }).join("") + (days.length > 3 ? '<p class="summary">只顯示區間內最近 3 天；可縮小日期區間查看更早的建議。</p>' : "");
+    $("actions").innerHTML = days.length ? days.slice(0,3).map(function(d){
+      return '<div class="actday"><h3>' + esc(d.date) + '</h3><ol>' + d.actions.map(function(a){ return '<li>' + hlWith(state.q, a) + '</li>'; }).join("") + '</ol></div>';
+    }).join("") + (days.length > 3 ? '<p class="summary">只顯示區間內最近 3 天；可縮小日期區間查看更早的建議。</p>' : "")
+      : '<div class="empty">這個區間沒有建議行動。</div>';
+    var rng = state.from && state.to ? (state.from === state.to ? state.from : state.from + " ～ " + state.to) : "全部日期";
+    $("summary").innerHTML = state.days.length ? "區間 <b>" + esc(rng) + "</b>：國內 <b>" + dom.length + "</b> 則、國外 <b>" + intl.length + "</b> 則" +
+      (state.q.trim() ? "，關鍵字「" + esc(state.q.trim()) + "」" : "") + (state.cat !== "all" ? "，類別 " + esc(state.cat) : "") : "";
+    Array.prototype.forEach.call($("quick").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-range") === state.rangeKey); });
+    Array.prototype.forEach.call($("cats").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-cat") === state.cat); });
+    var total = state.days.reduce(function(n,d){ return n + (Array.isArray(d.items) ? d.items.length : 0); }, 0);
+    $("tabn-news").textContent = total ? total : "";
+  }
+
+  /* ---------- courses ---------- */
+  function eligKind(c){ return c.eligibility === "任何人" ? "open" : (c.eligibility ? "restricted" : "unknown"); }
+  function collectCourses(){
+    var out = state.courses.filter(function(c){
+      if(!c || typeof c !== "object") return false;
+      if(state.celig !== "all" && eligKind(c) !== state.celig) return false;
+      var hay = [c.title, c.summary, c.provider, c.platformCategory, c.audience, c.eligibility, (c.tags||[]).join(" ")].join(" ");
+      return matchAll(state.cq, hay);
+    });
+    out.sort(function(a,b){
+      if(state.csort === "short"){ return (a.minutes == null ? 9999 : a.minutes) - (b.minutes == null ? 9999 : b.minutes); }
+      if(state.csort === "hours"){ return (b.hours == null ? -1 : b.hours) - (a.hours == null ? -1 : a.hours); }
+      var order = {open:0, unknown:1, restricted:2}, oa = order[eligKind(a)], ob = order[eligKind(b)];
+      return oa !== ob ? oa - ob : (a.rank||99) - (b.rank||99);
+    });
+    return out;
+  }
+  function courseCard(c){
+    var h = function(t){ return hlWith(state.cq, t); };
+    var u = safeUrl(c.url);
+    var isAI = c.category === "AI";
+    var src = u ? '<a class="src" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">e等公務園+ 課程頁 ↗</a>' : '<span class="src">e等公務園+</span>';
+    var k = eligKind(c);
+    var elig = k === "open" ? '<span class="pill ok">任何人可報名</span>' : (k === "restricted" ? '<span class="pill flag">' + esc(c.eligibility) + '</span>' : '<span class="pill plain">報名身分見課程頁</span>');
+    var meta = [];
+    if(c.minutes != null) meta.push('<span class="num">' + esc(c.minutes) + ' 分鐘</span>');
+    if(c.hours != null && c.hours > 0) meta.push('<span class="pill plain">認證 ' + esc(c.hours) + ' 小時</span>');
+    if(c.start || c.end) meta.push('<span class="num">' + esc((c.start||"") + " ～ " + (c.end||"")) + '</span>');
+    var tags = (Array.isArray(c.tags) ? c.tags : []).map(function(t){ return '<span class="pill plain">' + h(t) + '</span>'; }).join("");
+    return '<article class="item ' + (isAI ? "cat-ai" : "cat-sec") + '">' +
+      '<div class="srcs"><span class="lbl">來源</span>' + src + '</div>' +
+      '<h3>' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + h(c.title) + '</a>' : h(c.title)) + '</h3>' +
+      '<div class="meta"><span class="pill ' + (isAI ? "ai" : "sec") + '">' + esc(c.category||"") + '</span>' + elig + meta.join("") + '</div>' +
+      '<p>' + h(c.summary) + '</p>' +
+      '<div class="prov">' + h(c.provider || "") + (c.platformCategory ? "・" + h(c.platformCategory) : "") + (c.audience ? "<br>對象：" + h(c.audience) : "") + '</div>' +
+      (tags ? '<div class="meta">' + tags + '</div>' : "") +
+    '</article>';
+  }
+  function renderCourses(){
+    var items = collectCourses();
+    var ai = items.filter(function(c){ return c.category === "AI"; });
+    var sec = items.filter(function(c){ return c.category !== "AI"; });
+    var noData = state.courses.length ? "沒有符合條件的課程。" : "目前還沒有課程資料。";
+    renderList("course-ai", ai, "list-cai", "cnt-cai", courseCard, noData, "門");
+    renderList("course-sec", sec, "list-csec", "cnt-csec", courseCard, noData, "門");
+    $("csummary").innerHTML = state.courses.length ? "符合條件：AI 課程 <b>" + ai.length + "</b> 門、資安課程 <b>" + sec.length + "</b> 門" +
+      (state.cq.trim() ? "，關鍵字「" + esc(state.cq.trim()) + "」" : "") : "";
+    var m = state.courseMeta || {};
+    var su = m.source && safeUrl(m.source.url);
+    $("csrc").innerHTML = state.courses.length ? "課程來源：" + (su ? '<a href="' + esc(su) + '" target="_blank" rel="noopener noreferrer">' + esc(m.source.name || "e等公務園+學習平臺") + '</a>' : "e等公務園+學習平臺") +
+      (m.updatedAt ? "，整理時間 " + esc(String(m.updatedAt).slice(0,10)) : "") + (m.note ? "。" + esc(m.note) : "") : "";
+    $("tabn-courses").textContent = state.courses.length ? state.courses.length : "";
   }
 
   function renderStatus(){
     var el = $("status"); el.classList.remove("bad");
-    var L = latest();
     if(state.status === "loading"){ el.textContent = "資料載入中…"; return; }
-    if(state.status === "nodb" || state.status === "error"){ el.textContent = "無法讀取資料"; el.classList.add("bad"); return; }
-    var t = L ? "資料更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無資料";
-    if(state.status === "slow") t += "・連線中，內容可能不是最新";
-    else if(state.status === "cache") t += "・同步中";
+    if(state.status === "error"){ el.textContent = "無法讀取資料"; el.classList.add("bad"); return; }
+    var L = latest();
+    var t = (L ? "新聞更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無新聞") + "・課程 " + state.courses.length + " 門";
+    if(state.status === "slow") t += "・連線中，內容可能不是最新"; else if(state.status === "cache") t += "・同步中";
     el.textContent = t;
   }
+  function render(){ renderStatus(); renderNews(); renderCourses(); }
 
-  function render(){
-    renderStatus();
-    var items = collect();
-    var dom = items.filter(function(i){ return i.region === "國內"; });
-    var intl = items.filter(function(i){ return i.region !== "國內"; });
-    renderGroup("國內", dom, "list-dom", "cnt-dom");
-    renderGroup("國外", intl, "list-intl", "cnt-intl");
-    renderActions();
-    var rng = state.from && state.to ? (state.from === state.to ? state.from : state.from + " ～ " + state.to) : "全部日期";
-    $("summary").innerHTML = state.days.length
-      ? "區間 <b>" + esc(rng) + "</b>：國內 <b>" + dom.length + "</b> 則、國外 <b>" + intl.length + "</b> 則" +
-        (state.q.trim() ? "，關鍵字「" + esc(state.q.trim()) + "」" : "") + (state.cat !== "all" ? "，類別 " + esc(state.cat) : "")
-      : "";
-    Array.prototype.forEach.call($("quick").querySelectorAll("button"), function(b){
-      b.setAttribute("aria-pressed", b.getAttribute("data-range") === state.rangeKey ? "true" : "false");
-    });
-    Array.prototype.forEach.call($("cats").querySelectorAll("button"), function(b){
-      b.setAttribute("aria-pressed", b.getAttribute("data-cat") === state.cat ? "true" : "false");
-    });
-  }
+  /* ---------- controls ---------- */
+  $("newsForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  $("courseForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  $("from").addEventListener("change", function(){ state.from = this.value; state.rangeKey = ""; resetExpand("news"); render(); });
+  $("to").addEventListener("change", function(){ state.to = this.value; state.rangeKey = ""; resetExpand("news"); render(); });
+  var qT = null, cqT = null;
+  $("q").addEventListener("input", function(){ var v = this.value; clearTimeout(qT); qT = setTimeout(function(){ state.q = v; resetExpand("news"); render(); }, 150); });
+  $("cq").addEventListener("input", function(){ var v = this.value; clearTimeout(cqT); cqT = setTimeout(function(){ state.cq = v; resetExpand("course"); render(); }, 150); });
+  $("quick").addEventListener("click", function(e){ var b = e.target.closest("button[data-range]"); if(!b) return; applyRange(b.getAttribute("data-range")); render(); });
+  $("cats").addEventListener("click", function(e){ var b = e.target.closest("button[data-cat]"); if(!b) return; state.cat = b.getAttribute("data-cat"); resetExpand("news"); render(); });
+  $("reset").addEventListener("click", function(){ state.q = ""; $("q").value = ""; state.cat = "all"; applyRange("7"); render(); });
+  $("celig").addEventListener("change", function(){ state.celig = this.value; resetExpand("course"); render(); });
+  $("csort").addEventListener("change", function(){ state.csort = this.value; render(); });
+  $("creset").addEventListener("click", function(){ state.cq = ""; $("cq").value = ""; state.celig = "all"; $("celig").value = "all"; state.csort = "rank"; $("csort").value = "rank"; resetExpand("course"); render(); });
+  document.addEventListener("click", function(e){ var b = e.target.closest("button.more"); if(!b) return; var k = b.getAttribute("data-key"); state.expanded[k] = !state.expanded[k]; render(); });
 
-  // controls
-  $("filterForm").addEventListener("submit", function(e){ e.preventDefault(); });
-  $("from").addEventListener("change", function(){ state.from = this.value; state.rangeKey = ""; resetExpand(); render(); });
-  $("to").addEventListener("change", function(){ state.to = this.value; state.rangeKey = ""; resetExpand(); render(); });
-  var qTimer = null;
-  $("q").addEventListener("input", function(){
-    var v = this.value; clearTimeout(qTimer);
-    qTimer = setTimeout(function(){ state.q = v; resetExpand(); render(); }, 150);
-  });
-  $("quick").addEventListener("click", function(e){
-    var b = e.target.closest("button[data-range]"); if(!b) return;
-    applyRange(b.getAttribute("data-range")); render();
-  });
-  $("cats").addEventListener("click", function(e){
-    var b = e.target.closest("button[data-cat]"); if(!b) return;
-    state.cat = b.getAttribute("data-cat"); resetExpand(); render();
-  });
-  $("reset").addEventListener("click", function(){
-    state.q = ""; $("q").value = ""; state.cat = "all"; applyRange("7"); render();
-  });
-  document.addEventListener("click", function(e){
-    var b = e.target.closest("button.more"); if(!b) return;
-    var r = b.getAttribute("data-region"); state.expanded[r] = !state.expanded[r]; render();
-  });
-
+  var initHash = (location.hash||"").slice(1);
+  setView(initHash === "courses" ? "courses" : "news", true);
   render();
 
-  // data：讀取 repo 裡的 data/news.json（由每日排程更新）
-  var timer = setTimeout(function(){ if(state.status === "loading"){ state.status = "slow"; render(); } }, 10000);
-  fetch("data/news.json?ts=" + Date.now(), { cache: "no-store" })
-    .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(function(json){
+  /* ---------- data ---------- */
+  function setDays(days){
+    state.days = (days || []).filter(function(d){ return d && typeof d.date === "string"; });
+    if(!state.newsInit && state.days.length){ state.newsInit = true; applyRange("7"); }
+  }
+  function setCourses(doc){
+    state.courses = doc && Array.isArray(doc.courses) ? doc.courses : [];
+    state.courseMeta = doc || null;
+  }
+  function loadFromFiles(){
+    var timer = setTimeout(function(){ if(state.status === "loading"){ state.status = "slow"; render(); } }, 10000);
+    var get = function(p){ return fetch(p + "?ts=" + Date.now(), { cache: "no-store" }).then(function(r){ if(!r.ok) throw new Error(p); return r.json(); }); };
+    Promise.all([
+      get("data/news.json").catch(function(){ return null; }),
+      get("data/courses.json").catch(function(){ return null; })
+    ]).then(function(res){
       clearTimeout(timer);
-      var days = Array.isArray(json) ? json : (json && Array.isArray(json.days) ? json.days : []);
-      state.days = days.filter(function(d){ return d && typeof d.date === "string"; });
-      state.status = "ok";
-      if(state.days.length){ state.initialized = true; applyRange("7"); }
-      render();
-    })
-    .catch(function(){ clearTimeout(timer); state.status = "error"; render(); });
+      if(!res[0] && !res[1]){ state.status = "error"; render(); return; }
+      var n = res[0]; setDays(Array.isArray(n) ? n : (n && n.days)); setCourses(res[1]);
+      state.status = "ok"; render();
+    });
+  }
+  async function loadFromDb(){
+    var db = null;
+    try { db = await window.claude.use("db"); } catch(_){ db = null; }
+    if(!db){ state.status = "error"; render(); return; }
+    var gotNews = false, gotCourses = false;
+    var timer = setTimeout(function(){ if(!(gotNews && gotCourses)){ state.status = "slow"; render(); } }, 10000);
+    function settle(){ if(gotNews && gotCourses){ clearTimeout(timer); if(state.status !== "error") state.status = "ok"; } }
+    try {
+      db.collection("days").orderBy("date", "desc").limit(1000).onSnapshot(function(snap){
+        setDays(snap.docs.map(function(d){ return d.data(); }));
+        if(!snap.metadata.fromCache){ gotNews = true; settle(); } else if(state.status === "loading"){ state.status = "cache"; }
+        render();
+      }, function(){ gotNews = true; clearTimeout(timer); state.status = "error"; render(); });
+      db.doc("catalog/courses").onSnapshot(function(snap){
+        setCourses(snap.exists ? snap.data() : null);
+        if(!snap.metadata.fromCache){ gotCourses = true; settle(); }
+        render();
+      }, function(){ gotCourses = true; settle(); render(); });
+    } catch(_){ clearTimeout(timer); state.status = "error"; render(); }
+  }
+  // GitHub Pages 讀 data/*.json；claude.ai 上讀網頁資料庫
+  if(/github\.io$/i.test(location.hostname)) { loadFromFiles(); }
+  else {
+    var waited = 0;
+    (function waitClaude(){
+      if(window.claude && typeof window.claude.use === "function") return loadFromDb();
+      if((waited += 200) >= 3000) return loadFromFiles();
+      setTimeout(waitClaude, 200);
+    })();
+  }
 })();
 </script>
 </body>
