@@ -334,7 +334,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   <div class="filters">
     <div class="wrap">
       <form class="frow" id="lawForm" autocomplete="off">
-        <div class="field grow"><label for="lq">關鍵字</label><input type="search" id="lq" placeholder="例如：資安長、委外、風險分類、個資"></div>
+        <div class="field grow"><label for="lq">關鍵字</label><input type="search" id="lq" placeholder="例如：特定非公務機關、稽核、醫院、交通部、風險分類"></div>
         <div class="field">
           <span class="lbl" id="lcatLbl">類別</span>
           <div class="seg" role="group" aria-labelledby="lcatLbl" id="lcats">
@@ -347,11 +347,16 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         <div class="field">
           <label for="lstatus">狀態</label>
           <select id="lstatus">
-            <option value="all">全部</option>
+            <option value="active">現行＋已公布未施行</option>
+            <option value="all">全部（含已廢止）</option>
             <option value="現行">現行</option>
             <option value="已公布未施行">已公布未施行</option>
-            <option value="草案">草案／預告中</option>
+            <option value="已廢止">已廢止</option>
           </select>
+        </div>
+        <div class="field">
+          <label for="lauth">主管機關</label>
+          <select id="lauth"><option value="all">全部機關</option></select>
         </div>
         <button type="button" class="linkbtn" id="lreset">清除篩選</button>
       </form>
@@ -362,9 +367,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     <main>
       <p class="lawlinks"><b>資料來源：全國法規資料庫</b><a href="https://law.moj.gov.tw/" target="_blank" rel="noopener noreferrer">首頁 ↗</a><a href="https://law.moj.gov.tw/Law/LawSearchAll.aspx" target="_blank" rel="noopener noreferrer">綜合查詢 ↗</a><span>每週五更新，當週發布的法規於下週五上線</span></p>
       <section class="block" aria-labelledby="h-lupd"><h2 id="h-lupd">最新法規動態 <span class="count" id="cnt-lupd"></span></h2><div id="list-lupd"></div></section>
+      <section class="block" aria-labelledby="h-lai"><h2 id="h-lai">AI 法規 <span class="count" id="cnt-lai"></span></h2><div class="list" id="list-lai"></div></section>
       <div class="groups">
-        <section class="group" aria-labelledby="h-lai"><h2 id="h-lai">AI 法規 <span class="count" id="cnt-lai"></span></h2><div class="list" id="list-lai"></div></section>
-        <section class="group" aria-labelledby="h-lsec"><h2 id="h-lsec">資安與個資法規 <span class="count" id="cnt-lsec"></span></h2><div class="list" id="list-lsec"></div></section>
+        <section class="group" aria-labelledby="h-lsec"><h2 id="h-lsec">資安法規 <span class="count" id="cnt-lsec"></span></h2><div class="list" id="list-lsec"></div></section>
+        <section class="group" aria-labelledby="h-lpd"><h2 id="h-lpd">個資保護法規 <span class="count" id="cnt-lpd"></span></h2><div class="list" id="list-lpd"></div></section>
       </div>
       <p class="srcnote" id="lsrc"></p>
     </main>
@@ -385,7 +391,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     expanded: {},
     courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank",
     videos: [], vq: "", vtype: "all", playing: {}, mode: "",
-    laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "all"
+    laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "active", lauth: "all"
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -625,8 +631,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   function catCls(c){ return c === "AI" ? "ai" : (c === "個資" ? "pd" : "sec"); }
   function lawMatch(l){
     if(state.lcat !== "all" && l.category !== state.lcat) return false;
-    if(state.lstatus !== "all" && l.status !== state.lstatus) return false;
-    return matchAll(state.lq, [l.name, l.summary, l.authority, l.type, l.status, (l.keyPoints||[]).join(" "), (l.tags||[]).join(" ")].join(" "));
+    if(state.lstatus === "active"){ if(l.status === "已廢止") return false; }
+    else if(state.lstatus !== "all" && l.status !== state.lstatus) return false;
+    if(state.lauth !== "all" && l.authority !== state.lauth) return false;
+    return matchAll(state.lq, [l.name, l.summary, l.authority, l.type, l.status, l.basis, (l.keyPoints||[]).join(" "), (l.tags||[]).join(" ")].join(" "));
   }
   function srcLinks(arr, q){
     return (Array.isArray(arr) ? arr : []).map(function(s){
@@ -637,19 +645,19 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   function lawCard(l){
     var h = function(t){ return hlWith(state.lq, t); };
     var c = catCls(l.category);
-    var st = l.status === "現行" ? '<span class="pill ok">現行</span>' : (l.status === "草案" ? '<span class="pill plain">草案／預告中</span>' : '<span class="pill flag">' + esc(l.status||"") + '</span>');
+    var st = l.status === "現行" ? '<span class="pill ok">現行</span>' : (l.status === "已廢止" ? '<span class="pill plain">已廢止</span>' : '<span class="pill flag">' + esc(l.status||"") + '</span>');
     var dates = [];
     if(l.promulgated) dates.push("公布 " + l.promulgated);
     if(l.amended) dates.push("最近修正 " + l.amended);
     if(l.effective) dates.push("施行 " + l.effective);
-    if(l.deadline) dates.push("預告截止 " + l.deadline);
+    if(l.abolished) dates.push("廢止 " + l.abolished);
     var kp = (Array.isArray(l.keyPoints) && l.keyPoints.length) ? '<ul class="kp">' + l.keyPoints.map(function(k){ return '<li>' + h(k) + '</li>'; }).join("") + '</ul>' : "";
     return '<article class="item cat-' + c + '">' +
       '<div class="srcs"><span class="lbl">來源</span>' + (srcLinks(l.sources, state.lq) || '<span class="lbl">（未列）</span>') + '</div>' +
       '<h3>' + h(l.name) + '</h3>' +
       '<div class="meta"><span class="pill ' + c + '">' + esc(l.category||"") + '</span>' + st + '<span class="pill plain">' + esc(l.type||"") + '</span>' + dates.map(function(d){ return '<span class="num">' + esc(d) + '</span>'; }).join("") + '</div>' +
       '<p>' + h(l.summary) + '</p>' + kp +
-      '<div class="prov">主管機關：' + h(l.authority||"") + '</div>' +
+      '<div class="prov">主管機關：' + h(l.authority||"") + (l.basis ? '・授權依據：' + h(l.basis) : "") + '</div>' +
     '</article>';
   }
   function updMatch(u){
@@ -668,11 +676,14 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         '<div class="srcs" style="margin-top:4px"><span class="lbl">來源</span>' + srcLinks(u.sources, state.lq) + '</div></div>';
     }).join("") + '</div>' + (ups.length > TOP_N ? moreBtn(key, ups.length) : "")
       : '<div class="empty">' + esc(statusMsg() || (state.lawUpdates.length ? "沒有符合條件的法規動態。" : "目前還沒有法規動態。")) + '</div>';
-    var laws = state.laws.filter(function(l){ return l && lawMatch(l); }).sort(function(a,b){ return (a.rank||99) - (b.rank||99); });
+    var lastD = function(l){ return String(l.amended || l.promulgated || l.abolished || ""); };
+    var laws = state.laws.filter(function(l){ return l && lawMatch(l); }).sort(function(a,b){ return ((a.rank||99) - (b.rank||99)) || (lastD(b) > lastD(a) ? 1 : (lastD(b) < lastD(a) ? -1 : 0)); });
     var noData = state.laws.length ? "沒有符合條件的法規。" : "目前還沒有法規資料。";
     renderList("law-ai", laws.filter(function(l){ return l.category === "AI"; }), "list-lai", "cnt-lai", lawCard, noData, "項");
-    renderList("law-sec", laws.filter(function(l){ return l.category !== "AI"; }), "list-lsec", "cnt-lsec", lawCard, noData, "項");
-    $("lsummary").innerHTML = state.laws.length ? "符合條件：法規 <b>" + laws.length + "</b> 項、動態 <b>" + ups.length + "</b> 則" + (state.lq.trim() ? "，關鍵字「" + esc(state.lq.trim()) + "」" : "") : "";
+    renderList("law-sec", laws.filter(function(l){ return l.category === "資安"; }), "list-lsec", "cnt-lsec", lawCard, noData, "項");
+    renderList("law-pd", laws.filter(function(l){ return l.category === "個資"; }), "list-lpd", "cnt-lpd", lawCard, noData, "項");
+    var nAb = state.laws.filter(function(l){ return l && l.status === "已廢止"; }).length;
+    $("lsummary").innerHTML = state.laws.length ? "資料庫共收錄 <b>" + state.laws.length + "</b> 項（現行 " + (state.laws.length - nAb) + "、已廢止 " + nAb + "）；符合條件：法規 <b>" + laws.length + "</b> 項、動態 <b>" + ups.length + "</b> 則" + (state.lq.trim() ? "，關鍵字「" + esc(state.lq.trim()) + "」" : "") + (state.lstatus === "active" && nAb ? "。已廢止法規請在「狀態」選「全部」或「已廢止」" : "") : "";
     var m = state.lawMeta || {};
     $("lsrc").textContent = state.laws.length ? (m.updatedAt ? "整理時間 " + String(m.updatedAt).slice(0,10) + "。" : "") + (m.note || "") : "";
     Array.prototype.forEach.call($("lcats").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-lcat") === state.lcat); });
@@ -682,6 +693,12 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     state.lawMeta = d || null;
     state.laws = d && Array.isArray(d.laws) ? d.laws : [];
     state.lawUpdates = d && Array.isArray(d.updates) ? d.updates : [];
+    var sel = $("lauth"), cur = state.lauth, seen = {};
+    state.laws.forEach(function(l){ if(l && l.authority) seen[l.authority] = (seen[l.authority]||0) + 1; });
+    var names = Object.keys(seen).sort(function(a,b){ return seen[b] - seen[a] || (a < b ? -1 : 1); });
+    sel.innerHTML = '<option value="all">全部機關</option>' + names.map(function(n){ return '<option value="' + esc(n) + '">' + esc(n) + '（' + seen[n] + '）</option>'; }).join("");
+    if(cur !== "all" && !seen[cur]) state.lauth = "all";
+    sel.value = state.lauth;
   }
 
   function renderStatus(){
@@ -764,7 +781,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("lq").addEventListener("input", function(){ var v = this.value; clearTimeout(lqT); lqT = setTimeout(function(){ state.lq = v; resetExpand("law"); render(); }, 150); });
   $("lcats").addEventListener("click", function(e){ var b = e.target.closest("button[data-lcat]"); if(!b) return; state.lcat = b.getAttribute("data-lcat"); resetExpand("law"); render(); });
   $("lstatus").addEventListener("change", function(){ state.lstatus = this.value; resetExpand("law"); render(); });
-  $("lreset").addEventListener("click", function(){ state.lq = ""; $("lq").value = ""; state.lcat = "all"; state.lstatus = "all"; $("lstatus").value = "all"; resetExpand("law"); render(); });
+  $("lauth").addEventListener("change", function(){ state.lauth = this.value; resetExpand("law"); render(); });
+  $("lreset").addEventListener("click", function(){ state.lq = ""; $("lq").value = ""; state.lcat = "all"; state.lstatus = "active"; $("lstatus").value = "active"; state.lauth = "all"; $("lauth").value = "all"; resetExpand("law"); render(); });
   var vqT = null;
   $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
   $("vtypes").addEventListener("click", function(e){ var b = e.target.closest("button[data-vtype]"); if(!b) return; state.vtype = b.getAttribute("data-vtype"); resetExpand("video"); render(); });

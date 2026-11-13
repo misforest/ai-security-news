@@ -1,28 +1,4427 @@
 {
-  "updatedAt": "2026-11-13T23:20:00+08:00",
-  "source": {"name": "全國法規資料庫", "url": "https://law.moj.gov.tw/"},
-  "note": "資料來源僅限全國法規資料庫（law.moj.gov.tw），該站每週五更新，當週發布的法規於下週五上線。重點為條文摘要，法律效力以全國法規資料庫原文為準。",
-  "laws": [
-    {"id":"H0160093","category":"AI","rank":1,"name":"人工智慧基本法","type":"法律","authority":"國家科學及技術委員會","status":"現行","promulgated":"2026-01-14","amended":"","effective":"2026-01-14","summary":"為建設智慧國家、促進以人為本的 AI 研發與產業發展而制定，全文 20 條，自公布之日起施行。","keyPoints":["第 2 條：中央主管機關為國家科學及技術委員會","第 4 條：政府推動 AI 應遵循永續發展與福祉、人類自主、隱私保護與資料治理、資安與安全、透明與可解釋、公平與不歧視、問責等原則","第 5 條：經認定為高風險應用的 AI 產品或系統，應明確標示注意事項或警語","第 6 條：行政院應成立國家人工智慧戰略特別委員會，每年至少開會一次","第 16 條：數位發展部應推動與國際介接的 AI 風險分類框架，各目的事業主管機關據以訂定管理規範","第 18 條：政府應於本法施行後二年內完成相關法規制（訂）定、修正或廢止","第 19 條：政府使用 AI 執行業務或提供服務，應進行風險評估，並訂定使用規範或內控管理機制"],"tags":["AI治理","風險分類","政府使用AI","高風險AI"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093"},{"name":"全國法規資料庫：制定公布訊息","url":"https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=196197"},{"name":"英譯版","url":"https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=H0160093"}]},
-
-    {"id":"A0030297","category":"資安","rank":1,"name":"資通安全管理法","type":"法律","authority":"數位發展部","status":"現行","promulgated":"","amended":"2025-09-24","effective":"","summary":"國家資通安全的基本法律，規範公務機關與特定非公務機關的資安責任等級、維護計畫、稽核、事件通報與罰則。最近一次修正為 2025 年 9 月 24 日。","keyPoints":["第 2 條：主管機關為數位發展部，資安業務由其指定的資安專責機關辦理","第 10 條：委外辦理資通系統建置、維運或服務，應要求受託者建立資安管理機制或通過公正第三方驗證，並簽訂書面契約","第 11 條：公務機關不得下載、安裝或使用危害國家資通安全產品；業務必要且無替代方案者，須經資安長核可並報主管機關核定，以專案方式使用","第 12 條：公務機關應置資通安全長，由機關首長指派副首長或適當人員兼任","第 17 條：公務機關應訂定資安事件通報及應變機制","第 29 條：特定非公務機關未依規定通報資安事件，處新臺幣 30 萬元以上 1,000 萬元以下罰鍰"],"tags":["資安法","資安長","委外管理","危害國家資安產品","罰則"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297"}]},
-    {"id":"A0030303","category":"資安","rank":2,"name":"資通安全管理法施行細則","type":"法規命令","authority":"數位發展部","status":"現行","promulgated":"","amended":"2026-01-05","effective":"","summary":"補充資安法的執行細節，包括資安專責機關、委外監督事項、資通安全維護計畫應包含的內容，以及事件調查報告項目。","keyPoints":["第 2 條：資安專責機關為數位發展部資通安全署","第 7 條：客製化系統開發委外，受託者應提供安全性檢測證明；屬核心資通系統或委託金額達 1,000 萬元以上者，委託機關應自行或另委第三方進行安全性檢測","第 9 條：資通安全維護計畫應包括 13 項，例如核心業務、資安長配置、資通系統盤點、風險管理、委外管理措施","第 12 條：事件調查、處理及改善報告應包括根因分析與防範再發措施"],"tags":["施行細則","資通安全維護計畫","委外","安全性檢測"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303"}]},
-    {"id":"A0030304","category":"資安","rank":3,"name":"資通安全責任等級分級辦法","type":"法規命令","authority":"數位發展部","status":"現行","promulgated":"","amended":"2026-01-07","effective":"","summary":"規定各機關資通安全責任等級（A 至 E 級）的認定基準、核定程序，以及應辦理的防護措施與資通系統防護基準。","keyPoints":["責任等級由高至低分為 A、B、C、D、E 五級，各機關應每三年提交或核定","第 4 條：業務涉及國家機密、全國性民眾服務或全國性個資檔案等，為 A 級","第 6 條：維運自行或委外設置、開發且具權限區分及管理功能之資通系統者，為 C 級","第 11 條：自行或委外開發的資通系統，應依附表九完成防護需求分級，並依附表十防護基準執行控制措施","附表修正後須新增或異動的項目，辦理期限自修正施行日起算"],"tags":["責任等級","防護基準","附表九","附表十"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304"},{"name":"全國法規資料庫：歷史法規","url":"https://law.moj.gov.tw/LawClass/LawOldVerList.aspx?pcode=A0030304"}]},
-    {"id":"A0030305","category":"資安","rank":4,"name":"資通安全事件通報應變及演練辦法","type":"法規命令","authority":"數位發展部","status":"現行","promulgated":"","amended":"2026-01-05","effective":"","summary":"規定資安事件的分級、通報時限、損害控制與復原時限、調查報告，以及機關應辦理的演練。","keyPoints":["資安事件分為四級，依核心業務、機密等級與關鍵基礎設施影響程度判定","第 6 條：公務機關知悉資安事件後，應於 1 小時內至主管機關指定平臺通報","第 8 條：第一、二級事件應於知悉後 72 小時內、重大事件應於 36 小時內完成損害控制或復原","完成損害控制或復原後，應於 1 個月內送交調查、處理及改善報告","第 10 條：每半年辦理一次社交工程演練，每年辦理一次資安事件通報及應變演練"],"tags":["事件通報","1小時通報","演練","社交工程"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305"}]},
-    {"id":"K0060168","category":"資安","rank":5,"name":"危害國家資通安全產品審查辦法","type":"法規命令","authority":"數位發展部","status":"現行","promulgated":"2025-12-19","amended":"","effective":"2025-12-01","summary":"依資安法第 11 條訂定，規定危害國家資通安全產品的提報、審查、情資分享，以及機關接收情資後應採取的措施。","keyPoints":["第 3 條：以風險為基礎，評估對國家利益、政府運作或社會安定的影響","第 4 條：提報的產品為大陸廠牌者，主管機關得逕行情資分享","第 6 條：公務機關接收情資後，應盤點資通系統與設備，有使用者應立即移除或停止使用","第 7 條：以專案方式使用者，應指定特定區域及人員使用，並定期確認有無替代方案","第 11 條：自 2025 年 12 月 1 日施行"],"tags":["危害國家資安產品","大陸廠牌","盤點"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060168"}]},
-    {"id":"A0030307","category":"資安","rank":6,"name":"資通安全情資分享辦法","type":"法規命令","authority":"數位發展部","status":"現行","promulgated":"","amended":"2026-01-05","effective":"","summary":"規定資通安全情資的範圍、分享對象、不得分享的情形，以及接收情資後的分析與安全維護義務。","keyPoints":["第 2 條：情資包括惡意偵察、安全漏洞、惡意程式、事件損害與因應措施等 7 類","第 3 條：主管機關與公務機關應互相分享情資","第 6 條：各機關應辨識情資來源的可靠性及時效性，並採取預防或應變措施","第 7 條：分析整合後發現的新型威脅情資應進行分享"],"tags":["情資分享","威脅情資"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030307"}]},
-
-    {"id":"I0050021","category":"個資","rank":7,"name":"個人資料保護法","type":"法律","authority":"個人資料保護委員會籌備處","status":"已公布未施行","promulgated":"","amended":"2025-11-11","effective":"","summary":"2025 年 11 月 11 日修正部分條文並增訂第三章之一等規定，修正條文的施行日期由行政院定之；未施行前仍適用現行條文。","keyPoints":["修正第 1-1、12、18、21、22～26、41、47～49、52、53、55 條，增訂第 1-2、20-1、21-1～21-5、51-1、53-1 條，刪除第 27 條","第 15 條：公務機關蒐集或處理個資應有特定目的，並符合執行法定職務必要範圍內等要件","第 6 條：病歷、醫療、基因、性生活、健康檢查及犯罪前科等個資，原則不得蒐集、處理或利用","第 41 條：意圖不法利益違反相關規定足生損害者，處 5 年以下有期徒刑，得併科 100 萬元以下罰金"],"tags":["個資法","修正未施行","公務機關"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=15"}]},
-    {"id":"I0050022","category":"個資","rank":8,"name":"個人資料保護法施行細則","type":"法規命令","authority":"個人資料保護委員會籌備處","status":"現行","promulgated":"","amended":"2016-03-02","effective":"","summary":"補充個資法用語與執行細節，包括委外監督、安全維護措施，以及公務機關的個資檔案安全維護規定。","keyPoints":["第 8 條：委託他人處理個資時，委託機關應監督受託者，並定期確認執行狀況","第 12 條：適當安全維護措施可包括 11 項，例如風險評估、事故通報應變、資料安全稽核、使用紀錄保存","第 22 條：個資遭侵害時，通知當事人的內容應包括被侵害事實及已採取的因應措施","第 24 條：公務機關保有個資檔案者，應訂定個資安全維護規定，並指定專人"],"tags":["個資","安全維護","委外監督"],"sources":[{"name":"全國法規資料庫：條文","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050022"}]}
-  ],
-  "updates": [
-    {"date":"2026-01-14","approx":false,"kind":"制定公布施行","category":"AI","title":"制定《人工智慧基本法》","summary":"總統令制定公布全文 20 條，並自公布之日起施行。","lawId":"H0160093","sources":[{"name":"全國法規資料庫：最新訊息","url":"https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=196197"}]},
-    {"date":"2026-01-07","approx":false,"kind":"修正","category":"資安","title":"修正「資通安全責任等級分級辦法」","summary":"配合資安法修正，修正責任等級認定與附表；附表新增或異動項目的辦理期限自修正施行日起算。","lawId":"A0030304","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304"}]},
-    {"date":"2026-01-05","approx":false,"kind":"修正","category":"資安","title":"修正「資通安全管理法施行細則」","summary":"明定資安專責機關為資通安全署，調整委外監督與維護計畫應含事項。","lawId":"A0030303","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303"}]},
-    {"date":"2026-01-05","approx":false,"kind":"修正","category":"資安","title":"修正「資通安全事件通報應變及演練辦法」","summary":"規範四級事件分級、1 小時通報、72／36 小時損害控制及演練要求。","lawId":"A0030305","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305"}]},
-    {"date":"2026-01-05","approx":false,"kind":"修正","category":"資安","title":"修正「資通安全情資分享辦法」","summary":"明定情資範圍、分享對象與新型威脅情資的分享義務。","lawId":"A0030307","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030307"}]},
-    {"date":"2025-12-19","approx":false,"kind":"發布","category":"資安","title":"發布「危害國家資通安全產品審查辦法」","summary":"依資安法第 11 條訂定，自 2025 年 12 月 1 日施行。","lawId":"K0060168","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060168"}]},
-    {"date":"2025-11-11","approx":false,"kind":"修正公布","category":"個資","title":"修正《個人資料保護法》部分條文","summary":"修正及增訂多條條文，施行日期由行政院定之。","lawId":"I0050021","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=15"}]},
-    {"date":"2025-09-24","approx":false,"kind":"修正公布","category":"資安","title":"修正《資通安全管理法》","summary":"主管機關為數位發展部，增訂危害國家資通安全產品管制、資安長、委外管理及罰則等規定。","lawId":"A0030297","sources":[{"name":"全國法規資料庫","url":"https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297"}]}
-  ]
+ "updatedAt": "2026-11-13T23:40:00+08:00",
+ "source": {
+  "name": "全國法規資料庫",
+  "url": "https://law.moj.gov.tw/"
+ },
+ "note": "收錄全國法規資料庫（law.moj.gov.tw）法規名稱含「人工智慧」「資通安全」「資通」「資安」「個人資料」「個資」的全部中央法規（含已廢止，可用狀態篩選），資料庫整編截止日 115 年 11 月 6 日。該站每週五更新，當週發布的法規於下週五上線；摘要僅供查找，法律效力以全國法規資料庫原文為準。",
+ "laws": [
+  {
+   "id": "N0090045",
+   "category": "個資",
+   "rank": 50,
+   "name": "人力仲介業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "勞動部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-09-27",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求人力仲介業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090045"
+    }
+   ]
+  },
+  {
+   "id": "N0020023",
+   "category": "個資",
+   "rank": 50,
+   "name": "人力供應業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "勞動部",
+   "status": "現行",
+   "promulgated": "2022-03-09",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求人力供應業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0020023"
+    }
+   ]
+  },
+  {
+   "id": "I0050029",
+   "category": "個資",
+   "rank": 90,
+   "name": "大眾傳播業電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "行政院新聞局",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2001-11-30",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050029"
+    }
+   ]
+  },
+  {
+   "id": "Q0010012",
+   "category": "個資",
+   "rank": 50,
+   "name": "大陸委員會指定非公務機關個人資料檔案安全維護辦法",
+   "type": "法規命令",
+   "authority": "大陸委員會",
+   "status": "現行",
+   "promulgated": "2021-12-28",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=Q0010012"
+    }
+   ]
+  },
+  {
+   "id": "D0070242",
+   "category": "個資",
+   "rank": 50,
+   "name": "工程技術顧問業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "行政院公共工程委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2024-12-25",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求工程技術顧問業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070242"
+    }
+   ]
+  },
+  {
+   "id": "D0060075",
+   "category": "個資",
+   "rank": 90,
+   "name": "不動產仲介經紀業電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-08-27",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060075"
+    }
+   ]
+  },
+  {
+   "id": "D0060119",
+   "category": "個資",
+   "rank": 90,
+   "name": "不動產經紀業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-01-25",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求不動產經紀業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060119"
+    }
+   ]
+  },
+  {
+   "id": "L0030139",
+   "category": "個資",
+   "rank": 50,
+   "name": "中藥批發零售業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-03-17",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求中藥批發零售業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030139"
+    }
+   ]
+  },
+  {
+   "id": "D0030036",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定交友服務業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2022-08-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求交友服務業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0030036"
+    }
+   ]
+  },
+  {
+   "id": "D0020085",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定合作及人民團體類非公務機關個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求合作及人民團體類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020085"
+    }
+   ]
+  },
+  {
+   "id": "D0060136",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定地政類非公務機關個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求地政類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0060136"
+    }
+   ]
+  },
+  {
+   "id": "D0020088",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定宗教團體個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求宗教團體訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020088"
+    }
+   ]
+  },
+  {
+   "id": "D0020087",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定政黨及全國性民政財團法人個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求政黨及全國性民政財團法人訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020087"
+    }
+   ]
+  },
+  {
+   "id": "D0020086",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定祭祀團體個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求祭祀團體訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020086"
+    }
+   ]
+  },
+  {
+   "id": "D0080198",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定移民業務機構個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-11-30",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求移民業務機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080198"
+    }
+   ]
+  },
+  {
+   "id": "D0070299",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定營建類非公務機關個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-30",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求營建類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0070299"
+    }
+   ]
+  },
+  {
+   "id": "D0020076",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定殯葬服務業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-11-30",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求殯葬服務業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0020076"
+    }
+   ]
+  },
+  {
+   "id": "D0080210",
+   "category": "個資",
+   "rank": 50,
+   "name": "內政部指定警政類非公務機關個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2021-11-03",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求警政類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080210"
+    }
+   ]
+  },
+  {
+   "id": "G0320033",
+   "category": "個資",
+   "rank": 50,
+   "name": "公益彩券發行機構個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-07-28",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求公益彩券發行機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0320033"
+    }
+   ]
+  },
+  {
+   "id": "L0030138",
+   "category": "個資",
+   "rank": 50,
+   "name": "化粧品批發零售業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-01-27",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求化粧品批發零售業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030138"
+    }
+   ]
+  },
+  {
+   "id": "K0090080",
+   "category": "個資",
+   "rank": 50,
+   "name": "民用航空事業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-06-01",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求民用航空事業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0090080"
+    }
+   ]
+  },
+  {
+   "id": "K0100010",
+   "category": "個資",
+   "rank": 50,
+   "name": "交通部指定氣象產業類非公務機關個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "2024-11-27",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求氣象產業類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0100010"
+    }
+   ]
+  },
+  {
+   "id": "J0150015",
+   "category": "個資",
+   "rank": 50,
+   "name": "多層次傳銷業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法作業辦法",
+   "type": "法規命令",
+   "authority": "公平交易委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-03-23",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求多層次傳銷業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0150015"
+    }
+   ]
+  },
+  {
+   "id": "J0080034",
+   "category": "個資",
+   "rank": 90,
+   "name": "百貨公司業及零售式量販業電腦處理個人資料辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-11-16",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080034"
+    }
+   ]
+  },
+  {
+   "id": "J0110089",
+   "category": "個資",
+   "rank": 50,
+   "name": "自來水事業個人資料檔案安全維護計畫標準辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-03-14",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第二項及第三項",
+   "summary": "依個人資料保護法第二十七條第二項及第三項訂定。要求自來水事業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0110089"
+    }
+   ]
+  },
+  {
+   "id": "I0050028",
+   "category": "個資",
+   "rank": 90,
+   "name": "行政院新聞局電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "行政院新聞局",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2001-11-30",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050028"
+    }
+   ]
+  },
+  {
+   "id": "O0010009",
+   "category": "個資",
+   "rank": 90,
+   "name": "行政院環境保護署電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "行政院環境保護署",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-12-17",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0010009"
+    }
+   ]
+  },
+  {
+   "id": "L0030108",
+   "category": "個資",
+   "rank": 50,
+   "name": "西藥批發零售業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-01-21",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求西藥批發零售業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030108"
+    }
+   ]
+  },
+  {
+   "id": "K0110047",
+   "category": "個資",
+   "rank": 50,
+   "name": "汽車運輸業與計程車客運服務業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-03-25",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求汽車運輸業與計程車客運服務業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110047"
+    }
+   ]
+  },
+  {
+   "id": "H0080099",
+   "category": "個資",
+   "rank": 50,
+   "name": "私立兒童課後照顧服務中心個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-01-22",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求私立兒童課後照顧服務中心訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0080099"
+    }
+   ]
+  },
+  {
+   "id": "L0070060",
+   "category": "個資",
+   "rank": 50,
+   "name": "私立長期照顧服務機構個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-06-22",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求私立長期照顧服務機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0070060"
+    }
+   ]
+  },
+  {
+   "id": "H0070072",
+   "category": "個資",
+   "rank": 50,
+   "name": "私立高級中等以下學校及幼兒園個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-12-08",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求私立高級中等以下學校及幼兒園訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0070072"
+    }
+   ]
+  },
+  {
+   "id": "H0030056",
+   "category": "個資",
+   "rank": 50,
+   "name": "私立專科以上學校及私立學術研究機構個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-12-08",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求私立專科以上學校及私立學術研究機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0030056"
+    }
+   ]
+  },
+  {
+   "id": "N0090032",
+   "category": "個資",
+   "rank": 90,
+   "name": "私立就業服務機構電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "行政院勞工委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2011-05-03",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0090032"
+    }
+   ]
+  },
+  {
+   "id": "I0050024",
+   "category": "個資",
+   "rank": 90,
+   "name": "私立學校及學術研究機構製給個人資料複製本收費標準",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2013-04-08",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050024"
+    }
+   ]
+  },
+  {
+   "id": "N0080048",
+   "category": "個資",
+   "rank": 50,
+   "name": "私立職業訓練機構個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "勞動部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-03-18",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求私立職業訓練機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=N0080048"
+    }
+   ]
+  },
+  {
+   "id": "I0050025",
+   "category": "個資",
+   "rank": 90,
+   "name": "法務部及所屬機關電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "法務部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2001-05-23",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050025"
+    }
+   ]
+  },
+  {
+   "id": "D0050215",
+   "category": "個資",
+   "rank": 50,
+   "name": "社會福利財團法人個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2024-10-04",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求社會福利財團法人訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050215"
+    }
+   ]
+  },
+  {
+   "id": "D0050210",
+   "category": "個資",
+   "rank": 50,
+   "name": "社會福利機構個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-06-09",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求社會福利機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0050210"
+    }
+   ]
+  },
+  {
+   "id": "G0380063",
+   "category": "個資",
+   "rank": 90,
+   "name": "金融業申請電腦處理個人資料登記程序許可要件及收費標準",
+   "type": "法規命令",
+   "authority": "行政院金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-10-26",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380063"
+    }
+   ]
+  },
+  {
+   "id": "G0380076",
+   "category": "個資",
+   "rank": 90,
+   "name": "金融業個人資料檔案安全維護計畫標準",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-01-13",
+   "effective": "",
+   "basis": "",
+   "summary": "要求金融業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380076"
+    }
+   ]
+  },
+  {
+   "id": "G0380077",
+   "category": "個資",
+   "rank": 90,
+   "name": "金融業接受個人資料查詢閱覽製給複製本之程序及收費標準",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2013-04-26",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380077"
+    }
+   ]
+  },
+  {
+   "id": "G0380233",
+   "category": "個資",
+   "rank": 50,
+   "name": "金融監督管理委員會指定非公務機關個人資料檔案安全維護辦法",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-12-14",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380233"
+    }
+   ]
+  },
+  {
+   "id": "L0030136",
+   "category": "個資",
+   "rank": 50,
+   "name": "非輻射電子醫療器材設備製造業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-01-20",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求非輻射電子醫療器材設備製造業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030136"
+    }
+   ]
+  },
+  {
+   "id": "D0080200",
+   "category": "個資",
+   "rank": 90,
+   "name": "保全業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-06",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求保全業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080200"
+    }
+   ]
+  },
+  {
+   "id": "G0350076",
+   "category": "個資",
+   "rank": 50,
+   "name": "保稅倉庫及物流中心個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "2022-02-08",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求保稅倉庫及物流中心訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0350076"
+    }
+   ]
+  },
+  {
+   "id": "G0390025",
+   "category": "個資",
+   "rank": 90,
+   "name": "保險業申請電腦處理個人資料登記程序及收費標準",
+   "type": "法規命令",
+   "authority": "行政院金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-11-04",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390025"
+    }
+   ]
+  },
+  {
+   "id": "G0390027",
+   "category": "個資",
+   "rank": 90,
+   "name": "保險業個人資料檔案安全維護計畫標準",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-04-10",
+   "effective": "",
+   "basis": "",
+   "summary": "要求保險業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390027"
+    }
+   ]
+  },
+  {
+   "id": "G0390026",
+   "category": "個資",
+   "rank": 90,
+   "name": "保險業接受個人資料查詢閱覽製給複製本之程序及收費標準",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-04-10",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0390026"
+    }
+   ]
+  },
+  {
+   "id": "L0040143",
+   "category": "個資",
+   "rank": 50,
+   "name": "食品業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-01-19",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求食品業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0040143"
+    }
+   ]
+  },
+  {
+   "id": "I0000114",
+   "category": "個資",
+   "rank": 10,
+   "name": "個人資料保護委員會籌備處暫行組織規程",
+   "type": "法規命令",
+   "authority": "個人資料保護委員會籌備處",
+   "status": "現行",
+   "promulgated": "2023-09-23",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "行政院為籌設個人資料保護委員會而設籌備處，規範其任務與組織。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0000114"
+    }
+   ]
+  },
+  {
+   "id": "I0000115",
+   "category": "個資",
+   "rank": 12,
+   "name": "個人資料保護委員會籌備處編制表",
+   "type": "法規命令",
+   "authority": "個人資料保護委員會籌備處",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-10-21",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "個人資料保護委員會籌備處職稱、官等職等與員額編制表。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0000115"
+    }
+   ]
+  },
+  {
+   "id": "I0010101",
+   "category": "個資",
+   "rank": 11,
+   "name": "個人資料保護委員會籌備處辦事細則",
+   "type": "法規命令",
+   "authority": "個人資料保護委員會籌備處",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-10-21",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "個人資料保護委員會籌備處內部單位分工職掌。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0010101"
+    }
+   ]
+  },
+  {
+   "id": "I0050021",
+   "category": "個資",
+   "rank": 7,
+   "name": "個人資料保護法",
+   "type": "法律",
+   "authority": "個人資料保護委員會籌備處",
+   "status": "已公布未施行",
+   "promulgated": "",
+   "amended": "2025-11-11",
+   "effective": "",
+   "summary": "2025 年 11 月 11 日修正部分條文並增訂第三章之一等規定，修正條文的施行日期由行政院定之；未施行前仍適用現行條文。",
+   "keyPoints": [
+    "修正第 1-1、12、18、21、22～26、41、47～49、52、53、55 條，增訂第 1-2、20-1、21-1～21-5、51-1、53-1 條，刪除第 27 條",
+    "第 15 條：公務機關蒐集或處理個資應有特定目的，並符合執行法定職務必要範圍內等要件",
+    "第 6 條：病歷、醫療、基因、性生活、健康檢查及犯罪前科等個資，原則不得蒐集、處理或利用",
+    "第 41 條：意圖不法利益違反相關規定足生損害者，處 5 年以下有期徒刑，得併科 100 萬元以下罰金"
+   ],
+   "tags": [
+    "個資法",
+    "修正未施行",
+    "公務機關"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=15"
+    }
+   ]
+  },
+  {
+   "id": "I0050022",
+   "category": "個資",
+   "rank": 8,
+   "name": "個人資料保護法施行細則",
+   "type": "法規命令",
+   "authority": "個人資料保護委員會籌備處",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2016-03-02",
+   "effective": "",
+   "summary": "補充個資法用語與執行細節，包括委外監督、安全維護措施，以及公務機關的個資檔案安全維護規定。",
+   "keyPoints": [
+    "第 8 條：委託他人處理個資時，委託機關應監督受託者，並定期確認執行狀況",
+    "第 12 條：適當安全維護措施可包括 11 項，例如風險評估、事故通報應變、資料安全稽核、使用紀錄保存",
+    "第 22 條：個資遭侵害時，通知當事人的內容應包括被侵害事實及已採取的因應措施",
+    "第 24 條：公務機關保有個資檔案者，應訂定個資安全維護規定，並指定專人"
+   ],
+   "tags": [
+    "個資",
+    "安全維護",
+    "委外監督"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050022"
+    }
+   ]
+  },
+  {
+   "id": "K0110038",
+   "category": "個資",
+   "rank": 90,
+   "name": "旅行業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-01",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求旅行業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110038"
+    }
+   ]
+  },
+  {
+   "id": "H0110008",
+   "category": "個資",
+   "rank": 50,
+   "name": "海外臺灣學校及大陸地區臺商學校個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-11-05",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求海外臺灣學校及大陸地區臺商學校訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0110008"
+    }
+   ]
+  },
+  {
+   "id": "G0340165",
+   "category": "個資",
+   "rank": 50,
+   "name": "記帳士與記帳及報稅代理人個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "2022-01-20",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求記帳士與記帳及報稅代理人訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0340165"
+    }
+   ]
+  },
+  {
+   "id": "K0040071",
+   "category": "個資",
+   "rank": 50,
+   "name": "停車場經營業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-12-09",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求停車場經營業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040071"
+    }
+   ]
+  },
+  {
+   "id": "C0010044",
+   "category": "個資",
+   "rank": 9,
+   "name": "國民法官個人資料保護辦法",
+   "type": "法規命令",
+   "authority": "司法院",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2023-10-23",
+   "abolished": "",
+   "effective": "",
+   "basis": "國民法官法第四十條第二項",
+   "summary": "依國民法官法第四十條第二項訂定。規範國民法官、備位國民法官及候選國民法官個人資料的蒐集、處理、利用與保密措施。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=C0010044"
+    }
+   ]
+  },
+  {
+   "id": "K0060104",
+   "category": "個資",
+   "rank": 50,
+   "name": "國家通訊傳播委員會指定非公務機關個人資料檔案安全維護辦法",
+   "type": "法規命令",
+   "authority": "國家通訊傳播委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-07-01",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060104"
+    }
+   ]
+  },
+  {
+   "id": "I0050023",
+   "category": "個資",
+   "rank": 90,
+   "name": "執行電腦處理個人資料保護事項協調連繫辦法",
+   "type": "法規命令",
+   "authority": "法務部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2012-09-28",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050023"
+    }
+   ]
+  },
+  {
+   "id": "G0430010",
+   "category": "個資",
+   "rank": 50,
+   "name": "票據交換所個人資料檔案安全維護計畫標準辦法",
+   "type": "法規命令",
+   "authority": "中央銀行",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2024-06-27",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第二項及第三項",
+   "summary": "依個人資料保護法第二十七條第二項及第三項訂定。要求票據交換所訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0430010"
+    }
+   ]
+  },
+  {
+   "id": "K0070073",
+   "category": "個資",
+   "rank": 50,
+   "name": "船舶運送業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-12-16",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求船舶運送業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0070073"
+    }
+   ]
+  },
+  {
+   "id": "G0350077",
+   "category": "個資",
+   "rank": 50,
+   "name": "報關業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "2022-03-04",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求報關業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0350077"
+    }
+   ]
+  },
+  {
+   "id": "J0160083",
+   "category": "個資",
+   "rank": 50,
+   "name": "游離輻射設備製造業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "核能安全委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2023-12-21",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求游離輻射設備製造業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0160083"
+    }
+   ]
+  },
+  {
+   "id": "H0080088",
+   "category": "個資",
+   "rank": 50,
+   "name": "短期補習班個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-01-22",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求短期補習班訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0080088"
+    }
+   ]
+  },
+  {
+   "id": "H0080072",
+   "category": "個資",
+   "rank": 90,
+   "name": "短期補習班製給個人資料複製本收費標準",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2013-03-15",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0080072"
+    }
+   ]
+  },
+  {
+   "id": "G0330036",
+   "category": "個資",
+   "rank": 50,
+   "name": "菸酒事業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-10-26",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求菸酒事業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0330036"
+    }
+   ]
+  },
+  {
+   "id": "J0070050",
+   "category": "個資",
+   "rank": 50,
+   "name": "著作權集體管理團體個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "2021-12-21",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求著作權集體管理團體訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0070050"
+    }
+   ]
+  },
+  {
+   "id": "K0050023",
+   "category": "個資",
+   "rank": 50,
+   "name": "郵政業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "2025-07-07",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求郵政業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0050023"
+    }
+   ]
+  },
+  {
+   "id": "D0080202",
+   "category": "個資",
+   "rank": 90,
+   "name": "當舖業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-06",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求當舖業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080202"
+    }
+   ]
+  },
+  {
+   "id": "M0070067",
+   "category": "個資",
+   "rank": 50,
+   "name": "農業金融業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "農業部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-04-12",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求農業金融業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0070067"
+    }
+   ]
+  },
+  {
+   "id": "M0140049",
+   "category": "個資",
+   "rank": 50,
+   "name": "農藥販賣業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "農業部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-12-02",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求農藥販賣業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0140049"
+    }
+   ]
+  },
+  {
+   "id": "H0120077",
+   "category": "個資",
+   "rank": 50,
+   "name": "運動彩券業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "運動部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2021-11-08",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求運動彩券業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0120077"
+    }
+   ]
+  },
+  {
+   "id": "K0060088",
+   "category": "個資",
+   "rank": 90,
+   "name": "電信業及傳播業受理當事人查詢或請求閱覽個人資料或製給複製本收費標準",
+   "type": "法規命令",
+   "authority": "國家通訊傳播委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-05-24",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060088"
+    }
+   ]
+  },
+  {
+   "id": "K0060042",
+   "category": "個資",
+   "rank": 90,
+   "name": "電信業及傳播業電腦處理個人資料管理辦法",
+   "type": "法規命令",
+   "authority": "國家通訊傳播委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-10-19",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060042"
+    }
+   ]
+  },
+  {
+   "id": "J0130066",
+   "category": "個資",
+   "rank": 50,
+   "name": "電業與公用天然氣事業及加油站業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2023-11-03",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求電業與公用天然氣事業及加油站業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0130066"
+    }
+   ]
+  },
+  {
+   "id": "P0040017",
+   "category": "個資",
+   "rank": 50,
+   "name": "電影事業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "文化部",
+   "status": "現行",
+   "promulgated": "2024-04-22",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求電影事業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=P0040017"
+    }
+   ]
+  },
+  {
+   "id": "J0080062",
+   "category": "個資",
+   "rank": 50,
+   "name": "零售業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2024-11-13",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求零售業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080062"
+    }
+   ]
+  },
+  {
+   "id": "E0040029",
+   "category": "個資",
+   "rank": 50,
+   "name": "僑務委員會指定特定非公務機關個人資料檔案安全維護辦法",
+   "type": "法規命令",
+   "authority": "僑務委員會",
+   "status": "現行",
+   "promulgated": "2022-03-11",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求特定非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=E0040029"
+    }
+   ]
+  },
+  {
+   "id": "D0080199",
+   "category": "個資",
+   "rank": 90,
+   "name": "槍砲彈藥刀械業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-06",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求槍砲彈藥刀械業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0080199"
+    }
+   ]
+  },
+  {
+   "id": "L0020215",
+   "category": "個資",
+   "rank": 50,
+   "name": "精神復健機構個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-06-30",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求精神復健機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020215"
+    }
+   ]
+  },
+  {
+   "id": "J0080052",
+   "category": "個資",
+   "rank": 90,
+   "name": "網際網路零售業及網際網路零售服務平台業個人資料檔案安全維護計畫及業務終止後個人資料處理作業辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2023-11-21",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求網際網路零售業及網際網路零售服務平台業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0080052"
+    }
+   ]
+  },
+  {
+   "id": "J0030130",
+   "category": "個資",
+   "rank": 50,
+   "name": "製造業及技術服務業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2023-10-30",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求製造業及技術服務業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0030130"
+    }
+   ]
+  },
+  {
+   "id": "I0050026",
+   "category": "個資",
+   "rank": 90,
+   "name": "徵信業電腦處理個人資料辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-11-16",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050026"
+    }
+   ]
+  },
+  {
+   "id": "K0010162",
+   "category": "個資",
+   "rank": 50,
+   "name": "數位經濟相關產業個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-10-12",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求數位經濟相關產業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010162"
+    }
+   ]
+  },
+  {
+   "id": "L0020218",
+   "category": "個資",
+   "rank": 50,
+   "name": "醫院個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-09-23",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求醫院訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020218"
+    }
+   ]
+  },
+  {
+   "id": "I0050027",
+   "category": "個資",
+   "rank": 50,
+   "name": "醫院電腦處理個人資料登記管理辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "1996-12-04",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "電腦處理個人資料保護法第十九條第三項等",
+   "summary": "依電腦處理個人資料保護法第十九條第三項等訂定。屬舊《電腦處理個人資料保護法》時期訂定的規定，全國法規資料庫仍列為現行，適用前請查明主管機關現行規定。",
+   "keyPoints": [],
+   "tags": [
+    "舊法"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050027"
+    }
+   ]
+  },
+  {
+   "id": "L0030137",
+   "category": "個資",
+   "rank": 50,
+   "name": "醫療器材批發零售業個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "2022-01-21",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求醫療器材批發零售業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030137"
+    }
+   ]
+  },
+  {
+   "id": "G0400040",
+   "category": "個資",
+   "rank": 90,
+   "name": "證券業暨期貨業申請電腦處理個人資料登記程序及收費標準辦法",
+   "type": "法規命令",
+   "authority": "行政院金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2010-11-03",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "舊法",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400040"
+    }
+   ]
+  },
+  {
+   "id": "G0400041",
+   "category": "個資",
+   "rank": 90,
+   "name": "證券業暨期貨業個人資料檔案安全維護計畫標準",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-02-14",
+   "effective": "",
+   "basis": "",
+   "summary": "要求證券業暨期貨業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400041"
+    }
+   ]
+  },
+  {
+   "id": "G0400035",
+   "category": "個資",
+   "rank": 90,
+   "name": "證券業暨期貨業接受個人資料查詢閱覽製給複製本之程序及收費標準辦法",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-02-14",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0400035"
+    }
+   ]
+  },
+  {
+   "id": "L0020214",
+   "category": "個資",
+   "rank": 50,
+   "name": "護理機構個人資料檔案安全維護計畫實施辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-06-13",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求護理機構訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0020214"
+    }
+   ]
+  },
+  {
+   "id": "K0110037",
+   "category": "個資",
+   "rank": 90,
+   "name": "觀光旅館業個人資料檔案安全維護計畫辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-01",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求觀光旅館業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110037"
+    }
+   ]
+  },
+  {
+   "id": "K0110034",
+   "category": "個資",
+   "rank": 90,
+   "name": "觀光旅館業接受個人資料查詢閱覽或製給複製本收費標準",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2014-02-20",
+   "effective": "",
+   "basis": "",
+   "summary": "舊《電腦處理個人資料保護法》時期或個資法修正前的配套規定，已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110034"
+    }
+   ]
+  },
+  {
+   "id": "K0110048",
+   "category": "個資",
+   "rank": 50,
+   "name": "觀光產業類非公務機關個人資料檔案安全維護管理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-11-12",
+   "abolished": "",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求觀光產業類非公務機關訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110048"
+    }
+   ]
+  },
+  {
+   "id": "K0110040",
+   "category": "個資",
+   "rank": 90,
+   "name": "觀光遊樂業個人資料檔案安全維護計畫及處理辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2022-04-01",
+   "effective": "",
+   "basis": "個人資料保護法第二十七條第三項",
+   "summary": "依個人資料保護法第二十七條第三項訂定。要求觀光遊樂業訂定個人資料檔案安全維護計畫及業務終止後個人資料處理方法，內容包括管理人員配置、風險評估、事故通報與應變、資料及設備安全管理、教育訓練與稽核紀錄等。本辦法已廢止。",
+   "keyPoints": [],
+   "tags": [
+    "安全維護計畫",
+    "事故通報",
+    "業者",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110040"
+    }
+   ]
+  },
+  {
+   "id": "Q0010011",
+   "category": "資安",
+   "rank": 50,
+   "name": "大陸委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "大陸委員會",
+   "status": "現行",
+   "promulgated": "2019-03-18",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範大陸委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及大陸委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=Q0010011"
+    }
+   ]
+  },
+  {
+   "id": "G0420009",
+   "category": "資安",
+   "rank": 50,
+   "name": "中央銀行所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "中央銀行",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-09-04",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第二十二條",
+   "summary": "依資通安全管理法第二十二條訂定。規範中央銀行所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及中央銀行辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0420009"
+    }
+   ]
+  },
+  {
+   "id": "D0010120",
+   "category": "資安",
+   "rank": 50,
+   "name": "內政部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "內政部",
+   "status": "現行",
+   "promulgated": "2019-02-12",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範內政部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及內政部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0010120"
+    }
+   ]
+  },
+  {
+   "id": "J0040062",
+   "category": "AI",
+   "rank": 3,
+   "name": "公司或有限合夥事業投資智慧機械與第五代行動通訊系統與資通安全人工智慧產品或服務及節能減碳抵減辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-11-27",
+   "abolished": "",
+   "effective": "",
+   "basis": "產業創新條例第十條之一第九項",
+   "summary": "依產業創新條例第十條之一第九項訂定。公司或有限合夥事業於 2025–2029 年投資智慧機械、5G、資通安全產品或服務、人工智慧產品或服務及節能減碳者，可申請投資抵減營利事業所得稅，本辦法定義 AI 與資安產品範圍及申請程序。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0040062"
+    }
+   ]
+  },
+  {
+   "id": "A0030308",
+   "category": "資安",
+   "rank": 10,
+   "name": "公務機關所屬人員辦理資通安全事項作業辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-13",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十八條第三項、第十九條第六項及第二十八條第二項",
+   "summary": "依資通安全管理法第十八條第三項、第十九條第六項及第二十八條第二項訂定。規範公務機關資通安全專職人員適任性查核、資安職能訓練與評量、重大事件調度支援，以及所屬人員辦理資安業務的獎懲。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030308"
+    }
+   ]
+  },
+  {
+   "id": "H0170147",
+   "category": "資安",
+   "rank": 50,
+   "name": "文化部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "文化部",
+   "status": "現行",
+   "promulgated": "2019-03-18",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範文化部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及文化部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0170147"
+    }
+   ]
+  },
+  {
+   "id": "A0030313",
+   "category": "資安",
+   "rank": 50,
+   "name": "司法院所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "司法院",
+   "status": "現行",
+   "promulgated": "2019-04-18",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範司法院所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及司法院辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030313"
+    }
+   ]
+  },
+  {
+   "id": "E0010027",
+   "category": "資安",
+   "rank": 50,
+   "name": "外交部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "外交部",
+   "status": "現行",
+   "promulgated": "2019-01-31",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範外交部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及外交部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=E0010027"
+    }
+   ]
+  },
+  {
+   "id": "K0010150",
+   "category": "資安",
+   "rank": 50,
+   "name": "交通部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "交通部",
+   "status": "現行",
+   "promulgated": "2019-02-25",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範交通部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及交通部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010150"
+    }
+   ]
+  },
+  {
+   "id": "K0060168",
+   "category": "資安",
+   "rank": 5,
+   "name": "危害國家資通安全產品審查辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2025-12-19",
+   "amended": "",
+   "effective": "2025-12-01",
+   "summary": "依資安法第 11 條訂定，規定危害國家資通安全產品的提報、審查、情資分享，以及機關接收情資後應採取的措施。",
+   "keyPoints": [
+    "第 3 條：以風險為基礎，評估對國家利益、政府運作或社會安定的影響",
+    "第 4 條：提報的產品為大陸廠牌者，主管機關得逕行情資分享",
+    "第 6 條：公務機關接收情資後，應盤點資通系統與設備，有使用者應立即移除或停止使用",
+    "第 7 條：以專案方式使用者，應指定特定區域及人員使用，並定期確認有無替代方案",
+    "第 11 條：自 2025 年 12 月 1 日施行"
+   ],
+   "tags": [
+    "危害國家資安產品",
+    "大陸廠牌",
+    "盤點"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060168"
+    }
+   ]
+  },
+  {
+   "id": "I0050031",
+   "category": "資安",
+   "rank": 50,
+   "name": "法務部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "法務部",
+   "status": "現行",
+   "promulgated": "2019-05-17",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範法務部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及法務部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0050031"
+    }
+   ]
+  },
+  {
+   "id": "G0380265",
+   "category": "資安",
+   "rank": 50,
+   "name": "金融監督管理委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "金融監督管理委員會",
+   "status": "現行",
+   "promulgated": "2019-02-27",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範金融監督管理委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及金融監督管理委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0380265"
+    }
+   ]
+  },
+  {
+   "id": "D0140021",
+   "category": "資安",
+   "rank": 50,
+   "name": "客家委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "客家委員會",
+   "status": "現行",
+   "promulgated": "2019-05-21",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範客家委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及客家委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0140021"
+    }
+   ]
+  },
+  {
+   "id": "D0130040",
+   "category": "資安",
+   "rank": 50,
+   "name": "原住民族委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "原住民族委員會",
+   "status": "現行",
+   "promulgated": "2019-03-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範原住民族委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及原住民族委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0130040"
+    }
+   ]
+  },
+  {
+   "id": "J0160085",
+   "category": "資安",
+   "rank": 50,
+   "name": "核能安全委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "核能安全委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2024-01-23",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範核能安全委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及核能安全委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0160085"
+    }
+   ]
+  },
+  {
+   "id": "G0310083",
+   "category": "資安",
+   "rank": 50,
+   "name": "財政部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "財政部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-08-27",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第二十二條",
+   "summary": "依資通安全管理法第二十二條訂定。規範財政部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及財政部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0310083"
+    }
+   ]
+  },
+  {
+   "id": "F0010073",
+   "category": "資安",
+   "rank": 50,
+   "name": "國防部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "國防部",
+   "status": "現行",
+   "promulgated": "2019-03-27",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範國防部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及國防部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=F0010073"
+    }
+   ]
+  },
+  {
+   "id": "F0150112",
+   "category": "資安",
+   "rank": 50,
+   "name": "國軍退除役官兵輔導委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "國軍退除役官兵輔導委員會",
+   "status": "現行",
+   "promulgated": "2019-06-20",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範國軍退除役官兵輔導委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及國軍退除役官兵輔導委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=F0150112"
+    }
+   ]
+  },
+  {
+   "id": "H0160073",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家科學及技術委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "國家科學及技術委員會",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2022-12-01",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範國家科學及技術委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及國家科學及技術委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160073"
+    }
+   ]
+  },
+  {
+   "id": "K0010151",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家通訊傳播委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "國家通訊傳播委員會",
+   "status": "現行",
+   "promulgated": "2019-04-01",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範國家通訊傳播委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及國家通訊傳播委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010151"
+    }
+   ]
+  },
+  {
+   "id": "A0030340",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院人員出國（境）管理辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第二十二條第二項",
+   "summary": "依國家資通安全研究院設置條例第二十二條第二項訂定。規範國家資通安全研究院之人員出國（境）管理相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030340"
+    }
+   ]
+  },
+  {
+   "id": "A0030339",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院人員安全查核辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第二十一條第二項",
+   "summary": "依國家資通安全研究院設置條例第二十一條第二項訂定。規範國家資通安全研究院之人員安全查核相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030339"
+    }
+   ]
+  },
+  {
+   "id": "A0030342",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院公有財產管理使用收益辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第二十九條第五項",
+   "summary": "依國家資通安全研究院設置條例第二十九條第五項訂定。規範國家資通安全研究院之公有財產管理使用收益相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030342"
+    }
+   ]
+  },
+  {
+   "id": "A0010123",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院設置條例",
+   "type": "法律",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2022-01-19",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "設置國家資通安全研究院（行政法人）的法律依據，規範其任務、組織、董監事、人事、財務與監督。",
+   "keyPoints": [],
+   "tags": [
+    "組織",
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0010123"
+    }
+   ]
+  },
+  {
+   "id": "A0030337",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院董事長董事與監事遴聘解聘及補聘辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第十條第二項及第十八條第五項",
+   "summary": "依國家資通安全研究院設置條例第十條第二項及第十八條第五項訂定。規範國家資通安全研究院之董事長董事與監事遴聘解聘及補聘相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030337"
+    }
+   ]
+  },
+  {
+   "id": "A0030338",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院董事監事及院長違反利益迴避處置準則",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第十五條第三項",
+   "summary": "依國家資通安全研究院設置條例第十五條第三項訂定。規範國家資通安全研究院之董事監事及院長違反利益迴避處置相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030338"
+    }
+   ]
+  },
+  {
+   "id": "A0030341",
+   "category": "資安",
+   "rank": 50,
+   "name": "國家資通安全研究院績效評鑑辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-01-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "國家資通安全研究院設置條例第二十六條第三項",
+   "summary": "依國家資通安全研究院設置條例第二十六條第三項訂定。規範國家資通安全研究院之績效評鑑相關事項。",
+   "keyPoints": [],
+   "tags": [
+    "資安院"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030341"
+    }
+   ]
+  },
+  {
+   "id": "H0160062",
+   "category": "資安",
+   "rank": 90,
+   "name": "國家資通安全科技中心公有財產管理使用收益辦法",
+   "type": "法規命令",
+   "authority": "科技部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-07-12",
+   "effective": "",
+   "basis": "",
+   "summary": "國家資通安全科技中心相關規定，已廢止（該中心業務由國家資通安全研究院承接）。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160062"
+    }
+   ]
+  },
+  {
+   "id": "H0000151",
+   "category": "資安",
+   "rank": 90,
+   "name": "國家資通安全科技中心設置條例",
+   "type": "法律",
+   "authority": "科技部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-05-25",
+   "effective": "",
+   "basis": "",
+   "summary": "國家資通安全科技中心相關規定，已廢止（該中心業務由國家資通安全研究院承接）。",
+   "keyPoints": [],
+   "tags": [
+    "組織",
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0000151"
+    }
+   ]
+  },
+  {
+   "id": "H0160061",
+   "category": "資安",
+   "rank": 90,
+   "name": "國家資通安全科技中心董事長董事與監事遴聘解聘及補聘辦法",
+   "type": "法規命令",
+   "authority": "科技部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-07-12",
+   "effective": "",
+   "basis": "",
+   "summary": "國家資通安全科技中心相關規定，已廢止（該中心業務由國家資通安全研究院承接）。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160061"
+    }
+   ]
+  },
+  {
+   "id": "H0160063",
+   "category": "資安",
+   "rank": 90,
+   "name": "國家資通安全科技中心董事監事利益迴避範圍及違反處置準則",
+   "type": "法規命令",
+   "authority": "科技部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-07-12",
+   "effective": "",
+   "basis": "",
+   "summary": "國家資通安全科技中心相關規定，已廢止（該中心業務由國家資通安全研究院承接）。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160063"
+    }
+   ]
+  },
+  {
+   "id": "H0160060",
+   "category": "資安",
+   "rank": 90,
+   "name": "國家資通安全科技中心績效評鑑辦法",
+   "type": "法規命令",
+   "authority": "科技部",
+   "status": "已廢止",
+   "promulgated": "",
+   "amended": "",
+   "abolished": "2016-07-12",
+   "effective": "",
+   "basis": "",
+   "summary": "國家資通安全科技中心相關規定，已廢止（該中心業務由國家資通安全研究院承接）。",
+   "keyPoints": [],
+   "tags": [
+    "已廢止"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160060"
+    }
+   ]
+  },
+  {
+   "id": "A0010127",
+   "category": "資安",
+   "rank": 11,
+   "name": "國家資通安全會報設置辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2026-03-02",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第五條第四項",
+   "summary": "依資通安全管理法第五條第四項訂定。規範行政院國家資通安全會報的組成、任務與議事程序，由行政院院長或副院長擔任召集人。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0010127"
+    }
+   ]
+  },
+  {
+   "id": "H0020084",
+   "category": "資安",
+   "rank": 50,
+   "name": "教育部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "教育部",
+   "status": "現行",
+   "promulgated": "2019-04-25",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範教育部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及教育部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0020084"
+    }
+   ]
+  },
+  {
+   "id": "J0010055",
+   "category": "資安",
+   "rank": 50,
+   "name": "經濟部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "經濟部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-11-06",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第二十二條",
+   "summary": "依資通安全管理法第二十二條訂定。規範經濟部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及經濟部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0010055"
+    }
+   ]
+  },
+  {
+   "id": "A0030305",
+   "category": "資安",
+   "rank": 4,
+   "name": "資通安全事件通報應變及演練辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-05",
+   "effective": "",
+   "summary": "規定資安事件的分級、通報時限、損害控制與復原時限、調查報告，以及機關應辦理的演練。",
+   "keyPoints": [
+    "資安事件分為四級，依核心業務、機密等級與關鍵基礎設施影響程度判定",
+    "第 6 條：公務機關知悉資安事件後，應於 1 小時內至主管機關指定平臺通報",
+    "第 8 條：第一、二級事件應於知悉後 72 小時內、重大事件應於 36 小時內完成損害控制或復原",
+    "完成損害控制或復原後，應於 1 個月內送交調查、處理及改善報告",
+    "第 10 條：每半年辦理一次社交工程演練，每年辦理一次資安事件通報及應變演練"
+   ],
+   "tags": [
+    "事件通報",
+    "1小時通報",
+    "演練",
+    "社交工程"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305"
+    }
+   ]
+  },
+  {
+   "id": "A0030307",
+   "category": "資安",
+   "rank": 6,
+   "name": "資通安全情資分享辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-05",
+   "effective": "",
+   "summary": "規定資通安全情資的範圍、分享對象、不得分享的情形，以及接收情資後的分析與安全維護義務。",
+   "keyPoints": [
+    "第 2 條：情資包括惡意偵察、安全漏洞、惡意程式、事件損害與因應措施等 7 類",
+    "第 3 條：主管機關與公務機關應互相分享情資",
+    "第 6 條：各機關應辨識情資來源的可靠性及時效性，並採取預防或應變措施",
+    "第 7 條：分析整合後發現的新型威脅情資應進行分享"
+   ],
+   "tags": [
+    "情資分享",
+    "威脅情資"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030307"
+    }
+   ]
+  },
+  {
+   "id": "A0030304",
+   "category": "資安",
+   "rank": 3,
+   "name": "資通安全責任等級分級辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-07",
+   "effective": "",
+   "summary": "規定各機關資通安全責任等級（A 至 E 級）的認定基準、核定程序，以及應辦理的防護措施與資通系統防護基準。",
+   "keyPoints": [
+    "責任等級由高至低分為 A、B、C、D、E 五級，各機關應每三年提交或核定",
+    "第 4 條：業務涉及國家機密、全國性民眾服務或全國性個資檔案等，為 A 級",
+    "第 6 條：維運自行或委外設置、開發且具權限區分及管理功能之資通系統者，為 C 級",
+    "第 11 條：自行或委外開發的資通系統，應依附表九完成防護需求分級，並依附表十防護基準執行控制措施",
+    "附表修正後須新增或異動的項目，辦理期限自修正施行日起算"
+   ],
+   "tags": [
+    "責任等級",
+    "防護基準",
+    "附表九",
+    "附表十"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304"
+    },
+    {
+     "name": "全國法規資料庫：歷史法規",
+     "url": "https://law.moj.gov.tw/LawClass/LawOldVerList.aspx?pcode=A0030304"
+    }
+   ]
+  },
+  {
+   "id": "A0030297",
+   "category": "資安",
+   "rank": 1,
+   "name": "資通安全管理法",
+   "type": "法律",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-09-24",
+   "effective": "",
+   "summary": "國家資通安全的基本法律，規範公務機關與特定非公務機關的資安責任等級、維護計畫、稽核、事件通報與罰則。最近一次修正為 2025 年 9 月 24 日。",
+   "keyPoints": [
+    "第 2 條：主管機關為數位發展部，資安業務由其指定的資安專責機關辦理",
+    "第 10 條：委外辦理資通系統建置、維運或服務，應要求受託者建立資安管理機制或通過公正第三方驗證，並簽訂書面契約",
+    "第 11 條：公務機關不得下載、安裝或使用危害國家資通安全產品；業務必要且無替代方案者，須經資安長核可並報主管機關核定，以專案方式使用",
+    "第 12 條：公務機關應置資通安全長，由機關首長指派副首長或適當人員兼任",
+    "第 17 條：公務機關應訂定資安事件通報及應變機制",
+    "第 29 條：特定非公務機關未依規定通報資安事件，處新臺幣 30 萬元以上 1,000 萬元以下罰鍰"
+   ],
+   "tags": [
+    "資安法",
+    "資安長",
+    "委外管理",
+    "危害國家資安產品",
+    "罰則"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297"
+    }
+   ]
+  },
+  {
+   "id": "A0030303",
+   "category": "資安",
+   "rank": 2,
+   "name": "資通安全管理法施行細則",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-05",
+   "effective": "",
+   "summary": "補充資安法的執行細節，包括資安專責機關、委外監督事項、資通安全維護計畫應包含的內容，以及事件調查報告項目。",
+   "keyPoints": [
+    "第 2 條：資安專責機關為數位發展部資通安全署",
+    "第 7 條：客製化系統開發委外，受託者應提供安全性檢測證明；屬核心資通系統或委託金額達 1,000 萬元以上者，委託機關應自行或另委第三方進行安全性檢測",
+    "第 9 條：資通安全維護計畫應包括 13 項，例如核心業務、資安長配置、資通系統盤點、風險管理、委外管理措施",
+    "第 12 條：事件調查、處理及改善報告應包括根因分析與防範再發措施"
+   ],
+   "tags": [
+    "施行細則",
+    "資通安全維護計畫",
+    "委外",
+    "安全性檢測"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303"
+    }
+   ]
+  },
+  {
+   "id": "A0030306",
+   "category": "資安",
+   "rank": 9,
+   "name": "資通安全維護計畫實施情形稽核辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2026-01-05",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第八條第四項及第十六條第三項",
+   "summary": "依資通安全管理法第八條第四項及第十六條第三項訂定。規範主管機關與上級機關稽核公務機關、特定非公務機關資通安全維護計畫實施情形的頻率、內容、方法、結果交付與改善報告。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030306"
+    }
+   ]
+  },
+  {
+   "id": "K0060166",
+   "category": "資安",
+   "rank": 12,
+   "name": "資通安全職能評量收費標準",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2025-11-06",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "規費法第十條第一項",
+   "summary": "依規費法第十條第一項訂定。訂定資通安全職能評量的收費項目與費額。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060166"
+    }
+   ]
+  },
+  {
+   "id": "M0010037",
+   "category": "資安",
+   "rank": 50,
+   "name": "農業部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "農業部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2024-01-26",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範農業部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及農業部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0010037"
+    }
+   ]
+  },
+  {
+   "id": "K0060140",
+   "category": "資安",
+   "rank": 13,
+   "name": "電信事業資通安全管理辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2020-07-09",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "電信管理法第十五條第三項",
+   "summary": "依電信管理法第十五條第三項訂定。要求公眾電信網路之電信事業訂定資通安全維護計畫、通過 CNS/ISO 27001 驗證，並規範機房實體隔離、門禁與委外維運管理。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060140"
+    }
+   ]
+  },
+  {
+   "id": "E0040028",
+   "category": "資安",
+   "rank": 50,
+   "name": "僑務委員會所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "僑務委員會",
+   "status": "現行",
+   "promulgated": "2019-02-13",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十七條第四項",
+   "summary": "依資通安全管理法第十七條第四項訂定。規範僑務委員會所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及僑務委員會辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=E0040028"
+    }
+   ]
+  },
+  {
+   "id": "K0010161",
+   "category": "資安",
+   "rank": 50,
+   "name": "數位發展部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2023-10-04",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範數位發展部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及數位發展部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010161"
+    }
+   ]
+  },
+  {
+   "id": "K0000201",
+   "category": "資安",
+   "rank": 50,
+   "name": "數位發展部資通安全署組織法",
+   "type": "法律",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2022-01-19",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "數位發展部資通安全署的組織法，規定該署掌理國家資通安全政策推動、資安防護及事件通報應變等事項。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0000201"
+    }
+   ]
+  },
+  {
+   "id": "K0010156",
+   "category": "資安",
+   "rank": 50,
+   "name": "數位發展部資通安全署處務規程",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-10-09",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "規定數位發展部資通安全署內部單位分工與處務運作。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010156"
+    }
+   ]
+  },
+  {
+   "id": "K0000204",
+   "category": "資安",
+   "rank": 50,
+   "name": "數位發展部資通安全署編制表",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-10-09",
+   "abolished": "",
+   "effective": "",
+   "basis": "",
+   "summary": "數位發展部資通安全署職稱、官等職等與員額編制表。",
+   "keyPoints": [],
+   "tags": [
+    "組織"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0000204"
+    }
+   ]
+  },
+  {
+   "id": "L0010063",
+   "category": "資安",
+   "rank": 50,
+   "name": "衛生福利部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "衛生福利部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2023-05-10",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範衛生福利部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及衛生福利部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0010063"
+    }
+   ]
+  },
+  {
+   "id": "O0010017",
+   "category": "資安",
+   "rank": 50,
+   "name": "環境部所管特定非公務機關資通安全管理作業辦法",
+   "type": "法規命令",
+   "authority": "環境部",
+   "status": "現行",
+   "promulgated": "",
+   "amended": "2025-05-15",
+   "abolished": "",
+   "effective": "",
+   "basis": "資通安全管理法第十六條第六項及第十七條第四項",
+   "summary": "依資通安全管理法第十六條第六項及第十七條第四項訂定。規範環境部所管特定非公務機關（含關鍵基礎設施提供者）提出資通安全維護計畫與實施情形的期限、方式，以及環境部辦理實地稽核、稽核小組組成與改善報告等事項。",
+   "keyPoints": [],
+   "tags": [
+    "特定非公務機關",
+    "資通安全維護計畫",
+    "稽核"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=O0010017"
+    }
+   ]
+  },
+  {
+   "id": "H0160093",
+   "category": "AI",
+   "rank": 1,
+   "name": "人工智慧基本法",
+   "type": "法律",
+   "authority": "國家科學及技術委員會",
+   "status": "現行",
+   "promulgated": "2026-01-14",
+   "amended": "",
+   "effective": "2026-01-14",
+   "summary": "為建設智慧國家、促進以人為本的 AI 研發與產業發展而制定，全文 20 條，自公布之日起施行。",
+   "keyPoints": [
+    "第 2 條：中央主管機關為國家科學及技術委員會",
+    "第 4 條：政府推動 AI 應遵循永續發展與福祉、人類自主、隱私保護與資料治理、資安與安全、透明與可解釋、公平與不歧視、問責等原則",
+    "第 5 條：經認定為高風險應用的 AI 產品或系統，應明確標示注意事項或警語",
+    "第 6 條：行政院應成立國家人工智慧戰略特別委員會，每年至少開會一次",
+    "第 16 條：數位發展部應推動與國際介接的 AI 風險分類框架，各目的事業主管機關據以訂定管理規範",
+    "第 18 條：政府應於本法施行後二年內完成相關法規制（訂）定、修正或廢止",
+    "第 19 條：政府使用 AI 執行業務或提供服務，應進行風險評估，並訂定使用規範或內控管理機制"
+   ],
+   "tags": [
+    "AI治理",
+    "風險分類",
+    "政府使用AI",
+    "高風險AI"
+   ],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=H0160093"
+    },
+    {
+     "name": "全國法規資料庫：制定公布訊息",
+     "url": "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=196197"
+    },
+    {
+     "name": "英譯版",
+     "url": "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=H0160093"
+    }
+   ]
+  },
+  {
+   "id": "A0030322",
+   "category": "AI",
+   "rank": 2,
+   "name": "國家發展委員會促進 5G 及人工智慧導入智慧城鄉物聯網創新應用補助辦法",
+   "type": "法規命令",
+   "authority": "國家發展委員會",
+   "status": "現行",
+   "promulgated": "2021-04-21",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "產業創新條例第九條第二項",
+   "summary": "依產業創新條例第九條第二項訂定。國發會以補助方式鼓勵 5G 與人工智慧結合物聯網（AIoT）的智慧城鄉示範應用，規範補助對象、範圍、比率與審查。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030322"
+    }
+   ]
+  },
+  {
+   "id": "K0060158",
+   "category": "資安",
+   "rank": 14,
+   "name": "關鍵電信基礎設施資通設備測試機構及驗證機構管理辦法",
+   "type": "法規命令",
+   "authority": "數位發展部",
+   "status": "現行",
+   "promulgated": "2021-01-29",
+   "amended": "",
+   "abolished": "",
+   "effective": "",
+   "basis": "電信管理法第八十七條第二項及第三項",
+   "summary": "依電信管理法第八十七條第二項及第三項訂定。規範關鍵電信基礎設施資通設備之測試機構與驗證機構的認可條件與管理。",
+   "keyPoints": [],
+   "tags": [],
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060158"
+    }
+   ]
+  }
+ ],
+ "updates": [
+  {
+   "date": "2026-11-06",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「經濟部所管特定非公務機關資通安全管理作業辦法」",
+   "summary": "經濟部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "J0010055",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0010055"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「個人資料保護委員會籌備處編制表」",
+   "summary": "個人資料保護委員會籌備處修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "I0000115",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0000115"
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「個人資料保護委員會籌備處辦事細則」",
+   "summary": "個人資料保護委員會籌備處修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "I0010101",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=I0010101"
+    }
+   ]
+  },
+  {
+   "date": "2026-09-04",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「中央銀行所管特定非公務機關資通安全管理作業辦法」",
+   "summary": "中央銀行修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "G0420009",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0420009"
+    }
+   ]
+  },
+  {
+   "date": "2026-08-27",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「財政部所管特定非公務機關資通安全管理作業辦法」",
+   "summary": "財政部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "G0310083",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=G0310083"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-25",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「汽車運輸業與計程車客運服務業個人資料檔案安全維護管理辦法」",
+   "summary": "交通部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0110047",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110047"
+    }
+   ]
+  },
+  {
+   "date": "2026-03-02",
+   "approx": false,
+   "kind": "發布",
+   "category": "資安",
+   "title": "發布「國家資通安全會報設置辦法」",
+   "summary": "數位發展部發布本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "A0010127",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0010127"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-14",
+   "approx": false,
+   "kind": "制定公布施行",
+   "category": "AI",
+   "title": "制定《人工智慧基本法》",
+   "summary": "總統令制定公布全文 20 條，並自公布之日起施行。",
+   "lawId": "H0160093",
+   "sources": [
+    {
+     "name": "全國法規資料庫：最新訊息",
+     "url": "https://law.moj.gov.tw/News/NewsDetail.aspx?msgid=196197"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-13",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「公務機關所屬人員辦理資通安全事項作業辦法」",
+   "summary": "數位發展部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "A0030308",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030308"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-07",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「資通安全責任等級分級辦法」",
+   "summary": "配合資安法修正，修正責任等級認定與附表；附表新增或異動項目的辦理期限自修正施行日起算。",
+   "lawId": "A0030304",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030304"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-05",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「資通安全管理法施行細則」",
+   "summary": "明定資安專責機關為資通安全署，調整委外監督與維護計畫應含事項。",
+   "lawId": "A0030303",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030303"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-05",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「資通安全事件通報應變及演練辦法」",
+   "summary": "規範四級事件分級、1 小時通報、72／36 小時損害控制及演練要求。",
+   "lawId": "A0030305",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030305"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-05",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「資通安全情資分享辦法」",
+   "summary": "明定情資範圍、分享對象與新型威脅情資的分享義務。",
+   "lawId": "A0030307",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030307"
+    }
+   ]
+  },
+  {
+   "date": "2026-01-05",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「資通安全維護計畫實施情形稽核辦法」",
+   "summary": "數位發展部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "A0030306",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030306"
+    }
+   ]
+  },
+  {
+   "date": "2025-12-19",
+   "approx": false,
+   "kind": "發布",
+   "category": "資安",
+   "title": "發布「危害國家資通安全產品審查辦法」",
+   "summary": "依資安法第 11 條訂定，自 2025 年 12 月 1 日施行。",
+   "lawId": "K0060168",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060168"
+    }
+   ]
+  },
+  {
+   "date": "2025-12-16",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「船舶運送業個人資料檔案安全維護管理辦法」",
+   "summary": "交通部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0070073",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0070073"
+    }
+   ]
+  },
+  {
+   "date": "2025-12-09",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「停車場經營業個人資料檔案安全維護管理辦法」",
+   "summary": "交通部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0040071",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0040071"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-27",
+   "approx": false,
+   "kind": "修正",
+   "category": "AI",
+   "title": "修正「公司或有限合夥事業投資智慧機械與第五代行動通訊系統與資通安全人工智慧產品或服務及節能減碳抵減辦法」",
+   "summary": "經濟部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "J0040062",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=J0040062"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-12",
+   "approx": false,
+   "kind": "修正",
+   "category": "個資",
+   "title": "修正「觀光產業類非公務機關個人資料檔案安全維護管理辦法」",
+   "summary": "交通部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0110048",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0110048"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-11",
+   "approx": false,
+   "kind": "修正公布",
+   "category": "個資",
+   "title": "修正《個人資料保護法》部分條文",
+   "summary": "修正及增訂多條條文，施行日期由行政院定之。",
+   "lawId": "I0050021",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawSingle.aspx?pcode=I0050021&flno=15"
+    }
+   ]
+  },
+  {
+   "date": "2025-11-06",
+   "approx": false,
+   "kind": "發布",
+   "category": "資安",
+   "title": "發布「資通安全職能評量收費標準」",
+   "summary": "數位發展部發布本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0060166",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0060166"
+    }
+   ]
+  },
+  {
+   "date": "2025-10-09",
+   "approx": false,
+   "kind": "修正",
+   "category": "資安",
+   "title": "修正「數位發展部資通安全署處務規程」",
+   "summary": "數位發展部修正本法規，全國法規資料庫已更新；條文以資料庫原文為準。",
+   "lawId": "K0010156",
+   "sources": [
+    {
+     "name": "全國法規資料庫：條文",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=K0010156"
+    }
+   ]
+  },
+  {
+   "date": "2025-09-24",
+   "approx": false,
+   "kind": "修正公布",
+   "category": "資安",
+   "title": "修正《資通安全管理法》",
+   "summary": "主管機關為數位發展部，增訂危害國家資通安全產品管制、資安長、委外管理及罰則等規定。",
+   "lawId": "A0030297",
+   "sources": [
+    {
+     "name": "全國法規資料庫",
+     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0030297"
+    }
+   ]
+  }
+ ]
 }
