@@ -74,7 +74,7 @@ a{color:var(--accent)}
 .status::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 3px rgba(63,214,255,.2)}
 .status.bad::before{background:#ff9b7a;box-shadow:none}
 
-nav.tabs{display:inline-flex;gap:4px;padding:5px;margin:20px 0 22px;position:relative;z-index:6;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(8,19,31,.18)}
+nav.tabs{display:inline-flex;flex-wrap:wrap;gap:4px;padding:5px;margin:20px 0 22px;position:relative;z-index:6;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:0 8px 24px rgba(8,19,31,.18)}
 nav.tabs button{font:inherit;font-size:15.5px;font-weight:500;background:none;border:0;border-radius:8px;color:var(--muted);padding:9px 20px;cursor:pointer;min-height:42px;transition:background .15s,color .15s}
 nav.tabs button:hover{color:var(--ink)}
 nav.tabs button[aria-selected="true"]{background:var(--cockpit);color:#fff;font-weight:700}
@@ -161,6 +161,21 @@ section.actions h2{margin:0 0 8px;font-size:18px}
 .vbody h3{margin:0;font-size:15.5px;line-height:1.45;text-wrap:balance}
 .vbody p{margin:0;font-size:14px;color:var(--ink)}
 .vnote{font-size:13px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:10px 12px;margin:0 0 16px}
+.timeline{display:flex;flex-direction:column;gap:0;border-left:2px solid var(--line);margin-left:6px}
+.tl{position:relative;padding:4px 0 14px 18px}
+.tl::before{content:"";position:absolute;left:-10px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.tl.cat-ai::before{border-color:var(--ai)}
+.tl.cat-sec::before{border-color:var(--sec)}
+.tl.cat-pd::before{border-color:var(--ok)}
+.tl h3{margin:2px 0 2px;font-size:15.5px;line-height:1.45}
+.tl p{margin:0;font-size:14px;max-width:70ch}
+.item.cat-pd{border-left-color:var(--ok)}
+.pill.pd{background:var(--ok-soft);color:var(--ok)}
+.kp{margin:2px 0 0;padding-left:20px;font-size:14px;display:flex;flex-direction:column;gap:2px;max-width:70ch}
+.lawlinks{font-size:13.5px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.lawlinks b{color:var(--ink)}
+section.block h2{margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px}
+section.block h2 .count{font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400}
 [hidden]{display:none!important}
 footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -200,6 +215,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
       <button type="button" role="tab" id="tab-news" aria-controls="view-news" aria-selected="true">資訊新聞<span class="n" id="tabn-news"></span></button>
       <button type="button" role="tab" id="tab-courses" aria-controls="view-courses" aria-selected="false">資訊課程<span class="n" id="tabn-courses"></span></button>
       <button type="button" role="tab" id="tab-videos" aria-controls="view-videos" aria-selected="false">最新影片<span class="n" id="tabn-videos"></span></button>
+      <button type="button" role="tab" id="tab-laws" aria-controls="view-laws" aria-selected="false">法規查詢<span class="n" id="tabn-laws"></span></button>
     </nav>
   </div>
 </div>
@@ -313,6 +329,48 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   </div>
 </div>
 
+<!-- ===== 法規查詢 ===== -->
+<div id="view-laws" role="tabpanel" aria-labelledby="tab-laws" hidden>
+  <div class="filters">
+    <div class="wrap">
+      <form class="frow" id="lawForm" autocomplete="off">
+        <div class="field grow"><label for="lq">關鍵字</label><input type="search" id="lq" placeholder="例如：資安長、委外、風險分類、個資"></div>
+        <div class="field">
+          <span class="lbl" id="lcatLbl">類別</span>
+          <div class="seg" role="group" aria-labelledby="lcatLbl" id="lcats">
+            <button type="button" data-lcat="all" id="lc-all">全部</button>
+            <button type="button" data-lcat="AI" id="lc-ai">AI</button>
+            <button type="button" data-lcat="資安" id="lc-sec">資安</button>
+            <button type="button" data-lcat="個資" id="lc-pd">個資</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="lstatus">狀態</label>
+          <select id="lstatus">
+            <option value="all">全部</option>
+            <option value="現行">現行</option>
+            <option value="已公布未施行">已公布未施行</option>
+            <option value="草案">草案／預告中</option>
+          </select>
+        </div>
+        <button type="button" class="linkbtn" id="lreset">清除篩選</button>
+      </form>
+      <p class="summary" id="lsummary"></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <main>
+      <p class="lawlinks"><b>查法規全文：</b><a href="https://law.moj.gov.tw/" target="_blank" rel="noopener noreferrer">全國法規資料庫 ↗</a><a href="https://law.moda.gov.tw/" target="_blank" rel="noopener noreferrer">數位發展部主管法規 ↗</a><a href="https://moda.gov.tw/ACS/laws/updates/" target="_blank" rel="noopener noreferrer">資安署資安法規專區 ↗</a><a href="https://join.gov.tw/policies/" target="_blank" rel="noopener noreferrer">眾開講法規預告 ↗</a></p>
+      <section class="block" aria-labelledby="h-lupd"><h2 id="h-lupd">最新法規動態 <span class="count" id="cnt-lupd"></span></h2><div id="list-lupd"></div></section>
+      <div class="groups">
+        <section class="group" aria-labelledby="h-lai"><h2 id="h-lai">AI 法規 <span class="count" id="cnt-lai"></span></h2><div class="list" id="list-lai"></div></section>
+        <section class="group" aria-labelledby="h-lsec"><h2 id="h-lsec">資安與個資法規 <span class="count" id="cnt-lsec"></span></h2><div class="list" id="list-lsec"></div></section>
+      </div>
+      <p class="srcnote" id="lsrc"></p>
+    </main>
+  </div>
+</div>
+
 <div class="wrap">
   <footer>智安領航站・新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
 </div>
@@ -326,7 +384,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     days: [], from: "", to: "", q: "", cat: "all", rangeKey: "7", newsInit: false,
     expanded: {},
     courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank",
-    videos: [], vq: "", vtype: "all", playing: {}, mode: ""
+    videos: [], vq: "", vtype: "all", playing: {}, mode: "",
+    laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "all"
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -361,7 +420,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   }
 
   /* ---------- tabs ---------- */
-  var VIEWS = ["news","courses","videos"];
+  var VIEWS = ["news","courses","videos","laws"];
   function setView(v, fromHash){
     state.view = VIEWS.indexOf(v) !== -1 ? v : "news";
     VIEWS.forEach(function(k){
@@ -562,12 +621,75 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     $("tabn-videos").textContent = state.videos.length ? state.videos.length : "";
   }
 
+  /* ---------- laws ---------- */
+  function catCls(c){ return c === "AI" ? "ai" : (c === "個資" ? "pd" : "sec"); }
+  function lawMatch(l){
+    if(state.lcat !== "all" && l.category !== state.lcat) return false;
+    if(state.lstatus !== "all" && l.status !== state.lstatus) return false;
+    return matchAll(state.lq, [l.name, l.summary, l.authority, l.type, l.status, (l.keyPoints||[]).join(" "), (l.tags||[]).join(" ")].join(" "));
+  }
+  function srcLinks(arr, q){
+    return (Array.isArray(arr) ? arr : []).map(function(s){
+      var u = safeUrl(s && s.url), n = (s && s.name) || "來源";
+      return u ? '<a class="src" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + hlWith(q, n) + ' ↗</a>' : '<span class="src">' + hlWith(q, n) + '</span>';
+    }).join("");
+  }
+  function lawCard(l){
+    var h = function(t){ return hlWith(state.lq, t); };
+    var c = catCls(l.category);
+    var st = l.status === "現行" ? '<span class="pill ok">現行</span>' : (l.status === "草案" ? '<span class="pill plain">草案／預告中</span>' : '<span class="pill flag">' + esc(l.status||"") + '</span>');
+    var dates = [];
+    if(l.promulgated) dates.push("公布 " + l.promulgated);
+    if(l.amended) dates.push("最近修正 " + l.amended);
+    if(l.effective) dates.push("施行 " + l.effective);
+    if(l.deadline) dates.push("預告截止 " + l.deadline);
+    var kp = (Array.isArray(l.keyPoints) && l.keyPoints.length) ? '<ul class="kp">' + l.keyPoints.map(function(k){ return '<li>' + h(k) + '</li>'; }).join("") + '</ul>' : "";
+    return '<article class="item cat-' + c + '">' +
+      '<div class="srcs"><span class="lbl">來源</span>' + (srcLinks(l.sources, state.lq) || '<span class="lbl">（未列）</span>') + '</div>' +
+      '<h3>' + h(l.name) + '</h3>' +
+      '<div class="meta"><span class="pill ' + c + '">' + esc(l.category||"") + '</span>' + st + '<span class="pill plain">' + esc(l.type||"") + '</span>' + dates.map(function(d){ return '<span class="num">' + esc(d) + '</span>'; }).join("") + '</div>' +
+      '<p>' + h(l.summary) + '</p>' + kp +
+      '<div class="prov">主管機關：' + h(l.authority||"") + '</div>' +
+    '</article>';
+  }
+  function updMatch(u){
+    if(state.lcat !== "all" && u.category !== state.lcat) return false;
+    return matchAll(state.lq, [u.title, u.summary, u.kind, u.category].join(" "));
+  }
+  function renderLaws(){
+    var ups = state.lawUpdates.filter(function(u){ return u && updMatch(u); }).sort(function(a,b){ return String(b.date) > String(a.date) ? 1 : (String(b.date) < String(a.date) ? -1 : 0); });
+    $("cnt-lupd").textContent = ups.length ? ups.length + " 則" : "";
+    var key = "law-upd", open = !!state.expanded[key];
+    var shown = open ? ups : ups.slice(0, TOP_N);
+    $("list-lupd").innerHTML = ups.length ? '<div class="timeline">' + shown.map(function(u){
+      var c = catCls(u.category);
+      return '<div class="tl cat-' + c + '"><div class="meta"><span class="num">' + (u.approx ? "約 " : "") + esc(u.date||"") + '</span><span class="pill ' + c + '">' + esc(u.category||"") + '</span><span class="pill plain">' + esc(u.kind||"") + '</span></div>' +
+        '<h3>' + hlWith(state.lq, u.title) + '</h3><p>' + hlWith(state.lq, u.summary) + '</p>' +
+        '<div class="srcs" style="margin-top:4px"><span class="lbl">來源</span>' + srcLinks(u.sources, state.lq) + '</div></div>';
+    }).join("") + '</div>' + (ups.length > TOP_N ? moreBtn(key, ups.length) : "")
+      : '<div class="empty">' + esc(statusMsg() || (state.lawUpdates.length ? "沒有符合條件的法規動態。" : "目前還沒有法規動態。")) + '</div>';
+    var laws = state.laws.filter(function(l){ return l && lawMatch(l); }).sort(function(a,b){ return (a.rank||99) - (b.rank||99); });
+    var noData = state.laws.length ? "沒有符合條件的法規。" : "目前還沒有法規資料。";
+    renderList("law-ai", laws.filter(function(l){ return l.category === "AI"; }), "list-lai", "cnt-lai", lawCard, noData, "項");
+    renderList("law-sec", laws.filter(function(l){ return l.category !== "AI"; }), "list-lsec", "cnt-lsec", lawCard, noData, "項");
+    $("lsummary").innerHTML = state.laws.length ? "符合條件：法規 <b>" + laws.length + "</b> 項、動態 <b>" + ups.length + "</b> 則" + (state.lq.trim() ? "，關鍵字「" + esc(state.lq.trim()) + "」" : "") : "";
+    var m = state.lawMeta || {};
+    $("lsrc").textContent = state.laws.length ? (m.updatedAt ? "整理時間 " + String(m.updatedAt).slice(0,10) + "。" : "") + (m.note || "") : "";
+    Array.prototype.forEach.call($("lcats").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-lcat") === state.lcat); });
+    $("tabn-laws").textContent = state.laws.length ? state.laws.length : "";
+  }
+  function setLaws(d){
+    state.lawMeta = d || null;
+    state.laws = d && Array.isArray(d.laws) ? d.laws : [];
+    state.lawUpdates = d && Array.isArray(d.updates) ? d.updates : [];
+  }
+
   function renderStatus(){
     var el = $("status"); el.classList.remove("bad");
     if(state.status === "loading"){ el.textContent = "資料載入中…"; return; }
     if(state.status === "error"){ el.textContent = "無法讀取資料"; el.classList.add("bad"); return; }
     var L = latest();
-    var t = (L ? "新聞更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無新聞") + "・課程 " + state.courses.length + " 門・影片 " + state.videos.length + " 部";
+    var t = (L ? "新聞更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無新聞") + "・課程 " + state.courses.length + " 門・影片 " + state.videos.length + " 部・法規 " + state.laws.length + " 項";
     if(state.status === "slow") t += "・連線中，內容可能不是最新"; else if(state.status === "cache") t += "・同步中";
     el.textContent = t;
   }
@@ -620,7 +742,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     (function loop(ts){ if(t0 === null) t0 = ts; lastAngle = -Math.PI/2 + ((ts - t0)/4200)*Math.PI*2; if(!document.hidden) drawRadar(lastAngle); requestAnimationFrame(loop); })(performance.now());
   } else { drawRadar(lastAngle); }
 
-  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); renderVideos(); }
+  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); renderVideos(); renderLaws(); }
 
   /* ---------- controls ---------- */
   $("newsForm").addEventListener("submit", function(e){ e.preventDefault(); });
@@ -637,6 +759,12 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("csort").addEventListener("change", function(){ state.csort = this.value; render(); });
   $("creset").addEventListener("click", function(){ state.cq = ""; $("cq").value = ""; state.celig = "all"; $("celig").value = "all"; state.csort = "rank"; $("csort").value = "rank"; resetExpand("course"); render(); });
   $("videoForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  $("lawForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  var lqT = null;
+  $("lq").addEventListener("input", function(){ var v = this.value; clearTimeout(lqT); lqT = setTimeout(function(){ state.lq = v; resetExpand("law"); render(); }, 150); });
+  $("lcats").addEventListener("click", function(e){ var b = e.target.closest("button[data-lcat]"); if(!b) return; state.lcat = b.getAttribute("data-lcat"); resetExpand("law"); render(); });
+  $("lstatus").addEventListener("change", function(){ state.lstatus = this.value; resetExpand("law"); render(); });
+  $("lreset").addEventListener("click", function(){ state.lq = ""; $("lq").value = ""; state.lcat = "all"; state.lstatus = "all"; $("lstatus").value = "all"; resetExpand("law"); render(); });
   var vqT = null;
   $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
   $("vtypes").addEventListener("click", function(e){ var b = e.target.closest("button[data-vtype]"); if(!b) return; state.vtype = b.getAttribute("data-vtype"); resetExpand("video"); render(); });
@@ -664,12 +792,14 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     Promise.all([
       get("data/news.json").catch(function(){ return null; }),
       get("data/courses.json").catch(function(){ return null; }),
-      get("data/videos.json").catch(function(){ return null; })
+      get("data/videos.json").catch(function(){ return null; }),
+      get("data/laws.json").catch(function(){ return null; })
     ]).then(function(res){
       clearTimeout(timer);
       if(!res[0] && !res[1]){ state.status = "error"; render(); return; }
       var n = res[0]; setDays(Array.isArray(n) ? n : (n && n.days)); setCourses(res[1]);
       state.videos = res[2] && Array.isArray(res[2].videos) ? res[2].videos : [];
+      setLaws(res[3]);
       state.status = "ok"; render();
     });
   }
@@ -687,6 +817,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         if(!snap.metadata.fromCache){ gotNews = true; settle(); } else if(state.status === "loading"){ state.status = "cache"; }
         render();
       }, function(){ gotNews = true; clearTimeout(timer); state.status = "error"; render(); });
+      db.doc("catalog/laws").onSnapshot(function(snap){
+        setLaws(snap.exists ? snap.data() : null);
+        render();
+      }, function(){ render(); });
       db.doc("catalog/videos").onSnapshot(function(snap){
         var d = snap.exists ? snap.data() : null;
         state.videos = d && Array.isArray(d.videos) ? d.videos : [];
