@@ -1,0 +1,19 @@
+{
+  "updatedAt": "2026-11-13T22:45:00+08:00",
+  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
+  "videos": [
+    {"id":"8D50gBPUPwI","type":"講座","title":"AI Agent新賽局 簡立峰：全球掀五變革","speaker":"簡立峰","channel":"經濟日報","date":"2026-10-30","approx":false,"summary":"經濟日報 2026 科技論壇專題講座，談 AI Agent 帶來的五大變革：AI 自主創新的效益與風險、師字輩職能改造、Token 經濟等。","tags":["AI Agent","趨勢","簡立峰"]},
+    {"id":"lPNPaSzjm9E","type":"講座","title":"善用 AI 成為 1% 的超級人才｜114-2 人文與科技的對話","speaker":"簡立峰","channel":"人文與科技的對話","date":"2026-11-03","approx":true,"summary":"2026/03/25 拍攝的講座，剖析 AI 對個人職場與國家社會的衝擊，以及 AI 推理能力快速進步對搜尋引擎與軟體產業的影響。","tags":["AI人才","職場","簡立峰"]},
+    {"id":"-RkmjaebJek","type":"講座","title":"AI會搶走工作嗎？AI時代的「幸」與「不幸」 ft. 簡立峰","speaker":"簡立峰","channel":"親子天下｜寧夏璐66號茶坊","date":"2026-08-01","approx":false,"summary":"與黃瑽寧、夏嘉璐對談 AI 時代的職場轉型與世代衝擊，以及社會新人可能面臨的困境與工程師寫程式方式的改變。","tags":["職場","AI人才","簡立峰"]},
+    {"id":"dhzS00lNdA4","type":"講座","title":"Sega on AI｜EP.1 台灣是 AI 霸主，還是 AI 代工廠？ft. 簡立峰博士","speaker":"簡立峰、程世嘉","channel":"Sega on AI","date":"2026-06-30","approx":false,"summary":"討論台灣在全球 AI 版圖的位置，以及哪些工作可能被 AI 取代。","tags":["台灣AI","產業","簡立峰"]},
+    {"id":"Hg29nolcmPI","type":"講座","title":"駕馭人工智慧，放大你的能力 - 電機系李宏毅教授講座","speaker":"李宏毅","channel":"北美台大校友會聯合會","date":"2026-03-29","approx":true,"summary":"北美台大校友會聯合會主辦的線上講座，由李宏毅教授談如何駕馭 AI、放大個人能力。","tags":["生成式AI","李宏毅"]},
+    {"id":"3G7Az-6w0Wg","type":"課程","title":"2026年最值得學的10門免費AI課程｜阿峰老師","speaker":"阿峰老師","channel":"阿峰老師","date":"2026-02-28","approx":true,"summary":"從零基礎到能做出 AI 工作流，評比哈佛、Google、OpenAI、微軟、Anthropic 的官方免費課程，說明各自適合的對象。","tags":["學習地圖","免費課程","入門"]},
+    {"id":"5t9_lRQ0YeQ","type":"講座","title":"【2026 AI 人才年會】簡立峰：善用 AI 打造「數位分身」，成為 1% 的超級人才","speaker":"簡立峰","channel":"2026 AI 人才年會","date":"2026-01-25","approx":false,"summary":"AI 人才年會演講，主張未來頂尖人才不只會問、會用 AI，還要能打造自己的數位分身來放大產出。","tags":["AI人才","數位分身","簡立峰"]},
+    {"id":"A3cujpIsKUc","type":"講座","title":"簡立峰：2026 AI 戰國七雄，風雲再起！合縱連橫，誰能勝出？│全新一週 EP192","speaker":"簡立峰","channel":"全新一週","date":"2025-12-15","approx":true,"summary":"分析 Gemini 3 的品質躍進、深度思考與意圖偵測能力，以及 2026 年主要 AI 公司的競爭態勢。","tags":["AI產業","Gemini","簡立峰"]},
+    {"id":"TigfpYPJk1s","type":"課程","title":"【生成式人工智慧與機器學習導論2025】第1講：一堂課搞懂生成式人工智慧的原理","speaker":"李宏毅","channel":"Hung-yi Lee","date":"2025-09-12","approx":true,"summary":"台大李宏毅 2025 秋季課程第 1 講，用文字接龍的觀念說明大型語言模型與生成式 AI 的基本原理。","tags":["生成式AI","LLM","李宏毅","系列課程"]},
+    {"id":"AVIKFXLCPY8","type":"課程","title":"【生成式AI導論 2024】第0講：課程說明","speaker":"李宏毅","channel":"Hung-yi Lee","date":"2024-02-24","approx":false,"summary":"台大李宏毅《生成式AI導論 2024》開場，說明課程目標：理解生成式 AI 背後的原理，以及何時該自己開發、何時用現成工具。","tags":["生成式AI","入門","李宏毅","系列課程"]},
+    {"id":"mNrOhk6v5GM","type":"課程","title":"歡迎來到全民 AI 通識課","speaker":"數位發展部","channel":"數位發展部（與 Google 台灣、Hahow 合作）","date":"2024-03-26","approx":true,"summary":"數位發展部的全民 AI 通識課開場，不限背景、不需程式基礎，帶大家建立 AI 基本素養。","tags":["通識","入門","數位發展部"]},
+    {"id":"JKLdpfdhRnc","type":"課程","title":"1-1. AI 是什麼？｜你的第一堂 AI 課","speaker":"數位發展部","channel":"數位發展部（與 Google 台灣、Hahow 合作）","date":"2024-03-26","approx":true,"summary":"全民 AI 通識課第 1-1 集，用簡單方式定義 AI，說明 AI 如何已影響日常生活。","tags":["通識","入門","數位發展部"]},
+    {"id":"1XGFkkkJhSw","type":"課程","title":"1-2. AI 如何運作？｜你的第一堂 AI 課","speaker":"數位發展部","channel":"數位發展部（與 Google 台灣、Hahow 合作）","date":"2024-03-26","approx":true,"summary":"全民 AI 通識課第 1-2 集，解釋預訓練、微調、對齊等關鍵概念，沒有程式基礎也能理解。","tags":["通識","入門","數位發展部"]}
+  ]
+}

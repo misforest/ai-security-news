@@ -68,6 +68,7 @@ a{color:var(--accent)}
 .gauge .v small{font-size:13px;font-weight:500;color:var(--cockpit-muted);margin-left:4px}
 .gauge.hot .v{color:#ff9b7a}
 .gauge.sig .v{color:var(--signal)}
+@media (max-width:420px){nav.tabs button{font-size:14px}}
 .status{font-family:var(--font-tech);font-size:12.5px;color:var(--cockpit-muted);letter-spacing:.04em;margin:12px 0 0;font-variant-numeric:tabular-nums}
 .status.bad{color:#ff9b7a}
 .status::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--signal);margin-right:8px;vertical-align:1px;box-shadow:0 0 0 3px rgba(63,214,255,.2)}
@@ -141,6 +142,25 @@ section.actions h2{margin:0 0 8px;font-size:18px}
 .actday h3{margin:0 0 4px;font-family:var(--font-mono);font-size:13px;color:var(--muted);font-weight:500}
 .actday ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:4px;max-width:80ch}
 .srcnote{font-size:13px;color:var(--muted);margin:0}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:980px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.vgrid{grid-template-columns:1fr}}
+.vgroup+.vgroup{margin-top:28px}
+.vcard{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+.vcard:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(8,19,31,.10)}
+.vmedia{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,var(--cockpit) 0%,var(--cockpit-2) 100%);display:flex;align-items:center;justify-content:center}
+.vmedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vmedia iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vplay{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:100%;height:100%;border:0;background:linear-gradient(180deg,transparent 55%,rgba(8,19,31,.55));cursor:pointer;padding:0}
+.vplay span{width:62px;height:44px;border-radius:12px;background:rgba(8,19,31,.82);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:background .15s,transform .15s}
+.vplay:hover span{background:#e5322d;transform:scale(1.06)}
+.vplay span::after{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.vplaceholder{position:relative;z-index:1;color:var(--cockpit-ink);font-family:var(--font-tech);font-size:13px;letter-spacing:.06em;text-align:center;padding:0 16px}
+.vplaceholder b{display:block;font-size:22px;color:var(--signal);margin-bottom:4px}
+.vbody{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.vbody h3{margin:0;font-size:15.5px;line-height:1.45;text-wrap:balance}
+.vbody p{margin:0;font-size:14px;color:var(--ink)}
+.vnote{font-size:13px;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:10px 12px;margin:0 0 16px}
 [hidden]{display:none!important}
 footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
@@ -179,6 +199,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     <nav class="tabs" role="tablist" aria-label="內容類別">
       <button type="button" role="tab" id="tab-news" aria-controls="view-news" aria-selected="true">資訊新聞<span class="n" id="tabn-news"></span></button>
       <button type="button" role="tab" id="tab-courses" aria-controls="view-courses" aria-selected="false">資訊課程<span class="n" id="tabn-courses"></span></button>
+      <button type="button" role="tab" id="tab-videos" aria-controls="view-videos" aria-selected="false">最新影片<span class="n" id="tabn-videos"></span></button>
     </nav>
   </div>
 </div>
@@ -264,6 +285,34 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   </div>
 </div>
 
+<!-- ===== 最新影片 ===== -->
+<div id="view-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
+  <div class="filters">
+    <div class="wrap">
+      <form class="frow" id="videoForm" autocomplete="off">
+        <div class="field grow"><label for="vq">關鍵字</label><input type="search" id="vq" placeholder="例如：簡立峰、李宏毅、AI Agent"></div>
+        <div class="field">
+          <span class="lbl" id="vtypeLbl">類型</span>
+          <div class="seg" role="group" aria-labelledby="vtypeLbl" id="vtypes">
+            <button type="button" data-vtype="all" id="vt-all">全部</button>
+            <button type="button" data-vtype="講座" id="vt-talk">講座</button>
+            <button type="button" data-vtype="課程" id="vt-course">課程</button>
+          </div>
+        </div>
+        <button type="button" class="linkbtn" id="vreset">清除篩選</button>
+      </form>
+      <p class="summary" id="vsummary"></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <main>
+      <p class="vnote" id="vnote" hidden></p>
+      <section class="vgroup" aria-labelledby="h-vtalk"><div class="group"><h2 id="h-vtalk" style="margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px">AI 講座 <span class="count" id="cnt-vtalk" style="font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400"></span></h2></div><div id="list-vtalk"></div></section>
+      <section class="vgroup" aria-labelledby="h-vcourse"><div class="group"><h2 id="h-vcourse" style="margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px">AI 課程 <span class="count" id="cnt-vcourse" style="font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400"></span></h2></div><div id="list-vcourse"></div></section>
+    </main>
+  </div>
+</div>
+
 <div class="wrap">
   <footer>智安領航站・新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
 </div>
@@ -276,7 +325,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     view: "news", status: "loading",
     days: [], from: "", to: "", q: "", cat: "all", rangeKey: "7", newsInit: false,
     expanded: {},
-    courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank"
+    courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank",
+    videos: [], vq: "", vtype: "all", playing: {}, mode: ""
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -311,21 +361,22 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   }
 
   /* ---------- tabs ---------- */
+  var VIEWS = ["news","courses","videos"];
   function setView(v, fromHash){
-    state.view = v === "courses" ? "courses" : "news";
-    $("view-news").hidden = state.view !== "news";
-    $("view-courses").hidden = state.view !== "courses";
-    $("tab-news").setAttribute("aria-selected", state.view === "news");
-    $("tab-courses").setAttribute("aria-selected", state.view === "courses");
+    state.view = VIEWS.indexOf(v) !== -1 ? v : "news";
+    VIEWS.forEach(function(k){
+      $("view-" + k).hidden = state.view !== k;
+      $("tab-" + k).setAttribute("aria-selected", state.view === k);
+    });
     if(!fromHash){ try { history.replaceState(null, "", "#" + state.view); } catch(_){ try { location.hash = state.view; } catch(__){} } }
   }
-  $("tab-news").addEventListener("click", function(){ setView("news"); });
-  $("tab-courses").addEventListener("click", function(){ setView("courses"); });
+  VIEWS.forEach(function(k){ $("tab-" + k).addEventListener("click", function(){ setView(k); }); });
   document.querySelector("nav.tabs").addEventListener("keydown", function(e){
     if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
-    var next = state.view === "news" ? "courses" : "news"; setView(next); $("tab-" + next).focus();
+    var i = VIEWS.indexOf(state.view) + (e.key === "ArrowRight" ? 1 : -1);
+    var next = VIEWS[(i + VIEWS.length) % VIEWS.length]; setView(next); $("tab-" + next).focus();
   });
-  window.addEventListener("hashchange", function(){ var h = (location.hash||"").slice(1); if(h === "news" || h === "courses") setView(h, true); });
+  window.addEventListener("hashchange", function(){ var h = (location.hash||"").slice(1); if(VIEWS.indexOf(h) !== -1) setView(h, true); });
 
   /* ---------- news ---------- */
   function dates(){ return state.days.map(function(d){ return d.date; }).filter(Boolean).sort(); }
@@ -453,12 +504,70 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     $("tabn-courses").textContent = state.courses.length ? state.courses.length : "";
   }
 
+  /* ---------- videos ---------- */
+  var VTOP = 6;
+  function validId(id){ return /^[A-Za-z0-9_-]{6,20}$/.test(String(id||"")); }
+  function collectVideos(){
+    return state.videos.filter(function(v){
+      if(!v || !validId(v.id)) return false;
+      if(state.vtype !== "all" && v.type !== state.vtype) return false;
+      return matchAll(state.vq, [v.title, v.speaker, v.channel, v.summary, (v.tags||[]).join(" ")].join(" "));
+    }).sort(function(a,b){ return String(b.date||"") < String(a.date||"") ? -1 : (String(b.date||"") > String(a.date||"") ? 1 : 0); });
+  }
+  function videoCard(v){
+    var h = function(t){ return hlWith(state.vq, t); };
+    var watch = "https://www.youtube.com/watch?v=" + encodeURIComponent(v.id);
+    var canEmbed = state.mode === "files";
+    var media;
+    if(canEmbed && state.playing[v.id]){
+      media = '<iframe src="https://www.youtube-nocookie.com/embed/' + encodeURIComponent(v.id) + '?autoplay=1&rel=0" title="' + esc(v.title) + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>';
+    } else if(canEmbed){
+      media = '<img src="https://i.ytimg.com/vi/' + encodeURIComponent(v.id) + '/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">' +
+        '<button type="button" class="vplay" data-play="' + esc(v.id) + '" aria-label="在本頁播放：' + esc(v.title) + '"><span></span></button>';
+    } else {
+      media = '<div class="vplaceholder"><b>▶ ' + esc(v.type || "影片") + '</b>' + esc(v.speaker || v.channel || "") + '</div>';
+    }
+    var tags = (Array.isArray(v.tags) ? v.tags : []).map(function(t){ return '<span class="pill plain">' + h(t) + '</span>'; }).join("");
+    return '<article class="vcard">' +
+      '<div class="vmedia">' + media + '</div>' +
+      '<div class="vbody">' +
+        '<div class="srcs"><span class="lbl">來源</span><a class="src" href="' + esc(watch) + '" target="_blank" rel="noopener noreferrer">YouTube・' + h(v.channel || "") + ' ↗</a></div>' +
+        '<h3>' + h(v.title) + '</h3>' +
+        '<div class="meta"><span class="pill ai">' + esc(v.type || "") + '</span><span class="num">' + (v.approx ? "約 " : "") + esc(v.date || "") + '</span>' + (v.speaker ? '<span class="prov">主講：' + h(v.speaker) + '</span>' : "") + '</div>' +
+        '<p>' + h(v.summary) + '</p>' +
+        (tags ? '<div class="meta">' + tags + '</div>' : "") +
+      '</div></article>';
+  }
+  function renderVideoGroup(key, items, listId, cntId){
+    $(cntId).textContent = items.length ? items.length + " 部" : "";
+    var list = $(listId);
+    if(!items.length){ list.innerHTML = '<div class="empty">' + esc(statusMsg() || (state.videos.length ? "沒有符合條件的影片。" : "目前還沒有影片資料。")) + '</div>'; return; }
+    var open = !!state.expanded[key];
+    var shown = open ? items : items.slice(0, VTOP);
+    list.innerHTML = '<div class="vgrid">' + shown.map(videoCard).join("") + '</div>' +
+      (items.length > VTOP ? '<div style="margin-top:12px"><button type="button" class="more" data-key="' + key + '" aria-expanded="' + open + '">' +
+        (open ? "收合，只看前 " + VTOP + " 部" : "more：顯示全部 " + items.length + " 部（另 " + (items.length - VTOP) + " 部）") + '</button></div>' : "");
+  }
+  function renderVideos(){
+    var items = collectVideos();
+    var talks = items.filter(function(v){ return v.type !== "課程"; });
+    var courses = items.filter(function(v){ return v.type === "課程"; });
+    renderVideoGroup("video-talk", talks, "list-vtalk", "cnt-vtalk");
+    renderVideoGroup("video-course", courses, "list-vcourse", "cnt-vcourse");
+    $("vsummary").innerHTML = state.videos.length ? "符合條件：講座 <b>" + talks.length + "</b> 部、課程 <b>" + courses.length + "</b> 部，依上架日期由新到舊" + (state.vq.trim() ? "，關鍵字「" + esc(state.vq.trim()) + "」" : "") : "";
+    var note = $("vnote");
+    if(state.mode === "db"){ note.hidden = false; note.innerHTML = "這個版本的網頁不允許內嵌外部影片，點「來源」會在 YouTube 開啟。要在頁面內直接播放，請使用 GitHub 版：<a href=\"https://misforest.github.io/ai-security-news/#videos\" target=\"_blank\" rel=\"noopener noreferrer\">misforest.github.io/ai-security-news</a>"; }
+    else { note.hidden = true; }
+    Array.prototype.forEach.call($("vtypes").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-vtype") === state.vtype); });
+    $("tabn-videos").textContent = state.videos.length ? state.videos.length : "";
+  }
+
   function renderStatus(){
     var el = $("status"); el.classList.remove("bad");
     if(state.status === "loading"){ el.textContent = "資料載入中…"; return; }
     if(state.status === "error"){ el.textContent = "無法讀取資料"; el.classList.add("bad"); return; }
     var L = latest();
-    var t = (L ? "新聞更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無新聞") + "・課程 " + state.courses.length + " 門";
+    var t = (L ? "新聞更新至 " + L + "・累積 " + state.days.length + " 天" : "尚無新聞") + "・課程 " + state.courses.length + " 門・影片 " + state.videos.length + " 部";
     if(state.status === "slow") t += "・連線中，內容可能不是最新"; else if(state.status === "cache") t += "・同步中";
     el.textContent = t;
   }
@@ -511,7 +620,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     (function loop(ts){ if(t0 === null) t0 = ts; lastAngle = -Math.PI/2 + ((ts - t0)/4200)*Math.PI*2; if(!document.hidden) drawRadar(lastAngle); requestAnimationFrame(loop); })(performance.now());
   } else { drawRadar(lastAngle); }
 
-  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); }
+  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); renderVideos(); }
 
   /* ---------- controls ---------- */
   $("newsForm").addEventListener("submit", function(e){ e.preventDefault(); });
@@ -527,10 +636,16 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("celig").addEventListener("change", function(){ state.celig = this.value; resetExpand("course"); render(); });
   $("csort").addEventListener("change", function(){ state.csort = this.value; render(); });
   $("creset").addEventListener("click", function(){ state.cq = ""; $("cq").value = ""; state.celig = "all"; $("celig").value = "all"; state.csort = "rank"; $("csort").value = "rank"; resetExpand("course"); render(); });
+  $("videoForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  var vqT = null;
+  $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
+  $("vtypes").addEventListener("click", function(e){ var b = e.target.closest("button[data-vtype]"); if(!b) return; state.vtype = b.getAttribute("data-vtype"); resetExpand("video"); render(); });
+  $("vreset").addEventListener("click", function(){ state.vq = ""; $("vq").value = ""; state.vtype = "all"; resetExpand("video"); render(); });
+  document.addEventListener("click", function(e){ var p = e.target.closest("button[data-play]"); if(!p) return; var id = p.getAttribute("data-play"); if(validId(id)){ state.playing[id] = true; renderVideos(); } });
   document.addEventListener("click", function(e){ var b = e.target.closest("button.more"); if(!b) return; var k = b.getAttribute("data-key"); state.expanded[k] = !state.expanded[k]; render(); });
 
   var initHash = (location.hash||"").slice(1);
-  setView(initHash === "courses" ? "courses" : "news", true);
+  setView(VIEWS.indexOf(initHash) !== -1 ? initHash : "news", true);
   render();
 
   /* ---------- data ---------- */
@@ -543,15 +658,18 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     state.courseMeta = doc || null;
   }
   function loadFromFiles(){
+    state.mode = "files";
     var timer = setTimeout(function(){ if(state.status === "loading"){ state.status = "slow"; render(); } }, 10000);
     var get = function(p){ return fetch(p + "?ts=" + Date.now(), { cache: "no-store" }).then(function(r){ if(!r.ok) throw new Error(p); return r.json(); }); };
     Promise.all([
       get("data/news.json").catch(function(){ return null; }),
-      get("data/courses.json").catch(function(){ return null; })
+      get("data/courses.json").catch(function(){ return null; }),
+      get("data/videos.json").catch(function(){ return null; })
     ]).then(function(res){
       clearTimeout(timer);
       if(!res[0] && !res[1]){ state.status = "error"; render(); return; }
       var n = res[0]; setDays(Array.isArray(n) ? n : (n && n.days)); setCourses(res[1]);
+      state.videos = res[2] && Array.isArray(res[2].videos) ? res[2].videos : [];
       state.status = "ok"; render();
     });
   }
@@ -559,6 +677,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     var db = null;
     try { db = await window.claude.use("db"); } catch(_){ db = null; }
     if(!db){ state.status = "error"; render(); return; }
+    state.mode = "db";
     var gotNews = false, gotCourses = false;
     var timer = setTimeout(function(){ if(!(gotNews && gotCourses)){ state.status = "slow"; render(); } }, 10000);
     function settle(){ if(gotNews && gotCourses){ clearTimeout(timer); if(state.status !== "error") state.status = "ok"; } }
@@ -568,6 +687,11 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         if(!snap.metadata.fromCache){ gotNews = true; settle(); } else if(state.status === "loading"){ state.status = "cache"; }
         render();
       }, function(){ gotNews = true; clearTimeout(timer); state.status = "error"; render(); });
+      db.doc("catalog/videos").onSnapshot(function(snap){
+        var d = snap.exists ? snap.data() : null;
+        state.videos = d && Array.isArray(d.videos) ? d.videos : [];
+        render();
+      }, function(){ render(); });
       db.doc("catalog/courses").onSnapshot(function(snap){
         setCourses(snap.exists ? snap.data() : null);
         if(!snap.metadata.fromCache){ gotCourses = true; settle(); }
