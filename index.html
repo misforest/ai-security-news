@@ -835,9 +835,25 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         if(!snap.metadata.fromCache){ gotNews = true; settle(); } else if(state.status === "loading"){ state.status = "cache"; }
         render();
       }, function(){ gotNews = true; clearTimeout(timer); state.status = "error"; render(); });
-      db.doc("catalog/laws").onSnapshot(function(snap){
-        setLaws(snap.exists ? snap.data() : null);
+      // 法規：頁面內附 data/laws.json 為完整底稿，資料庫 catalog/laws 只放之後新增或修正的項目，兩者合併
+      var lawFile = null, lawDb = null;
+      var mergeLaws = function(){
+        if(!lawFile && !lawDb){ return; }
+        if(!lawFile || !lawDb){ setLaws(lawFile || lawDb); render(); return; }
+        var dbNewer = String(lawDb.updatedAt || "") >= String(lawFile.updatedAt || "");
+        var byId = {}, order = [];
+        var put = function(arr, win){ (Array.isArray(arr) ? arr : []).forEach(function(l){ if(!l || !l.id) return; if(!byId[l.id]){ order.push(l.id); byId[l.id] = l; } else if(win){ byId[l.id] = l; } }); };
+        put(lawFile.laws, false); put(lawDb.laws, dbNewer);
+        var seen = {}, ups = [];
+        [].concat(lawDb.updates || [], lawFile.updates || []).forEach(function(u){ if(!u) return; var k = (u.lawId||"") + "|" + (u.date||"") + "|" + (u.title||""); if(seen[k]) return; seen[k] = 1; ups.push(u); });
+        var newer = dbNewer ? lawDb : lawFile;
+        setLaws({ updatedAt: newer.updatedAt, source: newer.source || lawFile.source, note: lawFile.note || lawDb.note, laws: order.map(function(id){ return byId[id]; }), updates: ups });
         render();
+      };
+      fetch("data/laws.json", { cache: "no-store" }).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){ lawFile = d; mergeLaws(); }).catch(function(){});
+      db.doc("catalog/laws").onSnapshot(function(snap){
+        lawDb = snap.exists ? snap.data() : null;
+        mergeLaws();
       }, function(){ render(); });
       db.doc("catalog/videos").onSnapshot(function(snap){
         var d = snap.exists ? snap.data() : null;
