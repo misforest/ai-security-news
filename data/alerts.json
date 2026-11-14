@@ -1,0 +1,1199 @@
+{
+ "note": "公開版只收錄資安院一般警訊；EWA／INT 等機關專屬通報與標示 TLP 的內容不放在公開網站。",
+ "updatedAt": "2026-11-14T19:50:00+08:00",
+ "days": [
+  {
+   "date": "2026-11-14",
+   "updatedAt": "2026-11-14T19:50:00+08:00",
+   "period": {
+    "from": "2026-11-13T00:00:00+08:00",
+    "to": "2026-11-14T19:50:00+08:00"
+   },
+   "alertCount": 0,
+   "note": "此期間無資安院通報",
+   "items": []
+  },
+  {
+   "date": "2026-11-11",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-11-11T00:00:00+08:00",
+    "to": "2026-11-11T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "防火牆阻擋惡意中繼站 18.163.97[.]136；提醒同仁勿點擊可疑連結與附檔",
+     "dupCount": 1,
+     "eventType": "其他",
+     "flags": [
+      "社交工程"
+     ],
+     "id": "NICS-ANA-2026-0001028",
+     "kind": "ANA",
+     "level": "中",
+     "platform": "電子郵件使用者（主旨如「115年度第三季稅務申報相關資料覆核通知」「財政部電子稅務傳送通知」）",
+     "priority": "中",
+     "public": true,
+     "publishedAt": "2026-11-11T15:18:21+08:00",
+     "receivedAt": "2026-11-11T15:49:50+08:00",
+     "title": "社交工程攻擊通告：請加強防範以稅務申報通知相關主旨之社交工程郵件攻擊",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-11-04",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-11-04T00:00:00+08:00",
+    "to": "2026-11-04T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 Android 2026-11-01 安全公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0001018",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Google Android 14–17",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-04T11:08:23+08:00",
+     "receivedAt": "2026-11-04T11:39:53+08:00",
+     "title": "Google Android存在高風險安全漏洞(CVE-2026-58882)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 1.0.10／1.1.1／1.2.1，並確認各軟體內含 Brotli 元件之官方更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001019",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Google Brotli 1.0.3–1.0.10(不含)、1.1.0、1.2.0；Node.js、.NET、Python、PHP 等內含元件",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-11-04T11:08:24+08:00",
+     "receivedAt": "2026-11-04T11:52:18+08:00",
+     "title": "Google Brotli存在高風險安全漏洞(CVE-2026-111497)，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-11-03T00:00:00+08:00",
+    "to": "2026-11-03T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 WatchGuard PSIRT 更新（設定 AD 身分鑑別伺服器者優先）",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001008",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Fireware OS 2025.1–2026.4(不含)、12.0–12.12.4(不含)；T15/T35 12.0–12.5.22(不含)",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-03T15:08:23+08:00",
+     "receivedAt": "2026-11-03T15:39:42+08:00",
+     "title": "WatchGuard Fireware OS存在2項高風險安全漏洞(CVE-2026-112709與CVE-2026-112710)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 HPE 公告 hpesbnw05162 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001009",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "AOS-10.8.1.1、10.7.2.6、10.4.1.13、8.13.3.0、8.10.0.23(含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-03T15:08:24+08:00",
+     "receivedAt": "2026-11-03T15:52:03+08:00",
+     "title": "HPE Networking AOS-10與AOS-8存在多項高風險安全漏洞，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-30",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-30T00:00:00+08:00",
+    "to": "2026-10-30T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "關閉管理介面對外連線；向原廠確認並安裝修補；疑遭入侵者鑑識後重置",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000990",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "內嵌 PHP 之防火牆、網通設備、NAS、Linux 與資料庫等（CVE-2026-109618／109619）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-30T11:58:20+08:00",
+     "receivedAt": "2026-10-30T12:24:59+08:00",
+     "title": "部分防火牆、網通設備、NAS、Linux及資料庫等資訊軟硬體設備可能存在PHP高風險安全漏洞，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "登入通報應變網站聯防監控專區參閱月報與威脅指標",
+     "dupCount": 1,
+     "eventType": "其他",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000989",
+     "kind": "ANA",
+     "level": "低",
+     "platform": "無",
+     "priority": "低",
+     "public": true,
+     "publishedAt": "2026-10-30T15:43:20+08:00",
+     "receivedAt": "2026-10-30T16:09:34+08:00",
+     "title": "115年9月資安聯防監控月報",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-23T00:00:00+08:00",
+    "to": "2026-10-23T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 FortiOS 8.0.2／7.6.8／7.4.13／7.2.14 等以上版本，優先處理對外設備；暫無法更新者限制管理介面",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "細節已公開"
+     ],
+     "id": "NICS-ANA-2026-0000972",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "FortiOS、FortiManager、FortiAnalyzer、FortiMail、FortiAuthenticator 多版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-23T14:08:18+08:00",
+     "receivedAt": "2026-10-23T14:39:32+08:00",
+     "title": "Fortinet 多款資安產品釋出安全強化更新，請儘速確認並完成更新",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-22",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-22T00:00:00+08:00",
+    "to": "2026-10-22T23:59:59+08:00"
+   },
+   "alertCount": 6,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 PHP 8.5.12／8.4.27／8.3.36／8.2.35；EOL 版本儘速升級",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "PoC 已公開",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000952",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "PHP 8.5.11、8.4.26、8.3.35、8.2.34(含)以下及已 EOL 之 5.4–8.1；WordPress、Drupal 等 CMS",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T01:38:21+08:00",
+     "receivedAt": "2026-10-22T02:10:00+08:00",
+     "title": "PHP存在高風險安全漏洞(CVE-2026-109618與CVE-2026-109619)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Node.js 2026 年 10 月安全更新升級",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000953",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Node.js 22.0.0–22.23.4、24.0.0–24.22.1、26.0.0–26.12.1(不含)",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T11:03:20+08:00",
+     "receivedAt": "2026-10-22T11:29:59+08:00",
+     "title": "Node.js存在4項高風險安全漏洞(CVE-2026-105482、CVE-2026-105483、CVE-2026-106069及CVE-2026-111497)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Citrix CTX697191 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000961",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "NetScaler ADC/Gateway 14.1-73.41、13.1-64.28(含)以前；FIPS/NDcPP 版本（設定為 SAML SP/IdP 時）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T14:53:19+08:00",
+     "receivedAt": "2026-10-22T15:26:15+08:00",
+     "title": "Citrix NetScaler ADC與Citrix NetScaler Gateway存在高風險安全漏洞(CVE-2026-107406)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 golang-announce 公告升級 Go",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000962",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Go 1.26.10(不含)以前、1.27.0–1.27.3(不含)",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T20:23:19+08:00",
+     "receivedAt": "2026-10-22T20:54:44+08:00",
+     "title": "Go存在高風險安全漏洞(CVE-2026-111943)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 GitLab 19.4.2／19.5.1 等修補版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000963",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "GitLab CE/EE 7.0–18.11.13(不含)、19.0–19.5.1(不含)各分支",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T20:33:18+08:00",
+     "receivedAt": "2026-10-22T21:07:32+08:00",
+     "title": "GitLab存在2項高風險安全漏洞(CVE-2026-97229與CVE-2026-110264)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Oracle 安全公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000964",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Java SE 8u511、11.0.33、17.0.21、21.0.13、25.0.5、27.0.1；GraalVM 17.0.21／21.0.13／EE 21.3.20",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-22T20:28:19+08:00",
+     "receivedAt": "2026-10-22T21:24:03+08:00",
+     "title": "Oracle Java SE與Oracle GraalVM存在高風險安全漏洞(CVE-2026-91403)，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-21",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-21T00:00:00+08:00",
+    "to": "2026-10-21T23:59:59+08:00"
+   },
+   "alertCount": 6,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 FG-IR-26-178 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000945",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "FortiAnalyzer 7.6.0–7.6.4、7.4.0–7.4.7、7.2 全版本及 Cloud 對應版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-21T15:03:20+08:00",
+     "receivedAt": "2026-10-21T15:30:06+08:00",
+     "title": "Fortinet FortiAnalyzer存在高風險安全漏洞(CVE-2025-46773)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Cisco 公告 cisco-sa-esa-afw 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000943",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco SEG AsyncOS 15.5–15.5.5-014(不含)、16.0、16.5–16.5.0-780(不含)（啟用 AMP File Reputation 時）",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-21T15:03:21+08:00",
+     "receivedAt": "2026-10-21T15:43:09+08:00",
+     "title": "Cisco SEG存在高風險安全漏洞(CVE-2026-76519)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 FG-IR-26-180 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000944",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "FortiSIEM 7.5.0",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-21T15:03:21+08:00",
+     "receivedAt": "2026-10-21T15:59:27+08:00",
+     "title": "Fortinet FortiSIEM存在高風險安全漏洞(CVE-2026-106173)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "安裝 2026 年 10 月安全性更新，優先處理已遭利用之 Windows Shell CVE-2026-96951",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000941",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Windows、Office、Exchange、SharePoint、.NET 等（1416 個漏洞，268 個高風險）",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-21T14:58:25+08:00",
+     "receivedAt": "2026-10-21T16:19:23+08:00",
+     "title": "微軟釋出115年10月份安全性更新",
+     "tlp": ""
+    },
+    {
+     "action": "依 Cisco 公告 cisco-sa-ssm-access 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000942",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco License On-Prem 9-202601(含)以前、10-202608(不含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-21T14:58:26+08:00",
+     "receivedAt": "2026-10-21T16:42:33+08:00",
+     "title": "Cisco License On-Prem存在高風險安全漏洞(CVE-2026-20328)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Veeam KB4934 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000946",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Veeam Backup & Replication 12–12.3.2.4854",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-21T15:03:22+08:00",
+     "receivedAt": "2026-10-21T17:09:53+08:00",
+     "title": "Veeam Backup & Replication存在高風險安全漏洞(CVE-2025-64393)，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-19",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-19T00:00:00+08:00",
+    "to": "2026-10-19T23:59:59+08:00"
+   },
+   "alertCount": 3,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 AI Gateway 19.4.1 等修補版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000932",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "GitLab AI Gateway 18.1.6–19.2.4、19.3.0–19.3.2、19.4.0–19.4.1(不含)",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-19T08:58:20+08:00",
+     "receivedAt": "2026-10-19T09:24:58+08:00",
+     "title": "GitLab AI Gateway存在高風險安全漏洞(CVE-2026-90970)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Dell DSA-2026-324 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000933",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Dell System Update 2.3.0.0(不含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-19T08:58:21+08:00",
+     "receivedAt": "2026-10-19T09:37:54+08:00",
+     "title": "Dell System Update存在高風險安全漏洞(CVE-2026-86360)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依報告附件排定高風險漏洞修補優先順序",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000931",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "請參考附件（115 年第三季警訊漏洞 EPSS 評分）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-19T14:23:21+08:00",
+     "receivedAt": "2026-10-19T15:02:34+08:00",
+     "title": "115年第三季警訊漏洞風險預測報告",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-15",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-15T00:00:00+08:00",
+    "to": "2026-10-15T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "移除舊版後安裝 HiCOS 3.2.9 版並重新開機",
+     "dupCount": 1,
+     "eventType": "其他",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000921",
+     "kind": "ANA",
+     "level": "中",
+     "platform": "已安裝 HiCOS 卡片管理元件之電腦（駭客曾利用相關元件）",
+     "priority": "中",
+     "public": true,
+     "publishedAt": "2026-10-15T13:43:19+08:00",
+     "receivedAt": "2026-10-15T14:09:58+08:00",
+     "title": "HiCOS卡片管理元件釋出更新版本，請儘速確認並完成更新",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-13",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-13T00:00:00+08:00",
+    "to": "2026-10-13T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 Cisco 公告 cisco-sa-sdwan-webauth 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000913",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco Catalyst SD-WAN Manager 20.9(含)以前、20.12、20.15、20.18、26.1、26.2",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-13T11:48:22+08:00",
+     "receivedAt": "2026-10-13T12:19:36+08:00",
+     "title": "Cisco Catalyst SD-WAN Manager存在高風險安全漏洞(CVE-2026-76504)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 SVD-2026-1001 更新；未用相關功能可停用 PostgreSQL Sidecar",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000914",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Splunk Enterprise 10.4.0–10.4.2、10.2.0–10.2.6",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-13T11:48:23+08:00",
+     "receivedAt": "2026-10-13T12:32:12+08:00",
+     "title": "Splunk Enterprise存在高風險安全漏洞(CVE-2026-76268)，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-02",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-02T00:00:00+08:00",
+    "to": "2026-10-02T23:59:59+08:00"
+   },
+   "alertCount": 5,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依官方公告升級 pgAdmin 4",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000902",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "pgAdmin 4 6.2–9.17（啟用 Webserver 身分鑑別時）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-02T10:23:15+08:00",
+     "receivedAt": "2026-10-02T10:49:55+08:00",
+     "title": "pgAdmin 4存在高風險安全漏洞(CVE-2026-86863)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Citrix CTX697096 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000903",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "NetScaler ADC/Gateway 14.1-73.37、13.1-64.23(不含)以前；FIPS/NDcPP 對應版本",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-02T10:28:16+08:00",
+     "receivedAt": "2026-10-02T11:02:52+08:00",
+     "title": "Citrix NetScaler ADC與Citrix NetScaler Gateway存在2項高風險安全漏洞(CVE-2026-88771與CVE-2026-88772)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Check Point sk1000171 安裝 Jumbo Hotfix；已停止維護版本儘速升級",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000904",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Check Point 管理伺服器、Log Server、SmartEvent R80–R82.20 多版本",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-02T10:28:17+08:00",
+     "receivedAt": "2026-10-02T11:19:17+08:00",
+     "title": "Check Point多項產品存在高風險安全漏洞(CVE-2026-93616)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 F5 K000162605 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000905",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "BIG-IP APM 17.1.0–17.1.3、17.5.0–17.5.1、21.1.0（設定為 OAuth 授權伺服器時）",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-02T10:28:17+08:00",
+     "receivedAt": "2026-10-02T11:40:05+08:00",
+     "title": "F5 BIG-IP APM存在高風險安全漏洞(CVE-2026-94127)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 MSRC CVE-2026-65660 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000901",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "SharePoint Enterprise Server 2016、Server 2019、Subscription Edition 多版本",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-02T10:23:14+08:00",
+     "receivedAt": "2026-10-02T12:03:04+08:00",
+     "title": "Microsoft Office SharePoint存在高風險安全漏洞(CVE-2026-65660)，請儘速確認並進行處置",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-10-01",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-10-01T00:00:00+08:00",
+    "to": "2026-10-01T23:59:59+08:00"
+   },
+   "alertCount": 3,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 Cisco ISE 多則公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000892",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco ISE／ISE-PIC 3.1–3.5 及已停止維護之 3.0(含)以前",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-01T14:28:14+08:00",
+     "receivedAt": "2026-10-01T14:54:45+08:00",
+     "title": "Cisco ISE與ISE-PIC存在高風險安全漏洞(CVE-2026-20130、CVE-2026-20192、CVE-2026-20307、CVE-2026-76423及CVE-2026-76460)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 Cisco 公告 cisco-sa-fmc-javarce／sftunn 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000893",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco Secure FMC 7.0.0–10.0.1 多版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-10-01T14:28:15+08:00",
+     "receivedAt": "2026-10-01T15:07:34+08:00",
+     "title": "Cisco Secure FMC存在高風險安全漏洞(CVE-2026-20242與CVE-2026-20324)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 Zyxel 安全公告更新韌體",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000894",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Zyxel GS1900 系列交換器 2.90(含)以前韌體",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-10-01T14:28:15+08:00",
+     "receivedAt": "2026-10-01T15:23:24+08:00",
+     "title": "Zyxel GS1900系列交換器存在高風險安全漏洞(CVE-2026-7273)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-29",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-29T00:00:00+08:00",
+    "to": "2026-09-29T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "登入通報應變網站聯防監控專區參閱月報與威脅指標",
+     "dupCount": 1,
+     "eventType": "其他",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000871",
+     "kind": "ANA",
+     "level": "低",
+     "platform": "無",
+     "priority": "低",
+     "public": true,
+     "publishedAt": "2026-09-29T11:08:16+08:00",
+     "receivedAt": "2026-09-29T11:39:37+08:00",
+     "title": "115年8月資安聯防監控月報",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-22",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-22T00:00:00+08:00",
+    "to": "2026-09-22T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 Gitea 1.27.1",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000861",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Gitea 1.17.0–1.27.1(不含)",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-22T10:08:14+08:00",
+     "receivedAt": "2026-09-22T10:39:45+08:00",
+     "title": "Gitea存在高風險安全漏洞(CVE-2026-60004)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 GitLab 19.3.2 等修補版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000862",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "GitLab CE 18.7／EE 18.3–19.1.8、19.2–19.2.6、19.3–19.3.2(不含)",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-22T10:08:15+08:00",
+     "receivedAt": "2026-09-22T10:53:23+08:00",
+     "title": "GitLab存在高風險安全漏洞(CVE-2026-85706與CVE-2026-87719)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-21",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-21T00:00:00+08:00",
+    "to": "2026-09-21T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "安裝 2026 年 9 月安全性更新，優先處理已遭利用之 Windows ALPC 與 Update Stack 漏洞",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000851",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Windows、Office、Exchange、SQL Server 等（978 個漏洞，193 個高風險）",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-21T12:53:15+08:00",
+     "receivedAt": "2026-09-21T13:20:20+08:00",
+     "title": "微軟釋出115年9月份安全性更新",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-18",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-18T00:00:00+08:00",
+    "to": "2026-09-18T23:59:59+08:00"
+   },
+   "alertCount": 6,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 Ivanti 安全公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000831",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Ivanti Neurons for ITSM On-Prem 2025.2–2026.1、Cloud 2026.2",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-18T09:13:18+08:00",
+     "receivedAt": "2026-09-18T09:45:02+08:00",
+     "title": "Ivanti Neurons for ITSM存在8個高風險安全漏洞，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 HPE 公告 hpesbnw05134 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000832",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "AOS-CX 10.18.0001、10.17.1021、10.16.1051、10.13.1180、10.10.1180(含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-18T09:18:17+08:00",
+     "receivedAt": "2026-09-18T09:58:30+08:00",
+     "title": "HPE Aruba Networking AOS-CX存在6個高風險安全漏洞，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 MikroTik 2026 年 9 月公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000833",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "MikroTik RouterOS 6.0.0–6.49.21、7.0.0–7.23.4、7.24–7.24.2(不含)",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-18T09:18:18+08:00",
+     "receivedAt": "2026-09-18T10:15:47+08:00",
+     "title": "MikroTik RouterOS存在高風險安全漏洞(CVE-2026-67276與CVE-2026-86060)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 Ivanti 安全公告更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000835",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Ivanti EPMM 12.9.0.1、12.8.0.3(含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-18T09:28:17+08:00",
+     "receivedAt": "2026-09-18T10:37:14+08:00",
+     "title": "Ivanti Endpoint Manager Mobile(EPMM)存在高風險安全漏洞(CVE-2026-18851)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 Check Point sk1000117／sk1000118 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000834",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Check Point Security Gateway、管理伺服器、Spark Firewall（VPN）R80–R82.10",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-18T09:23:18+08:00",
+     "receivedAt": "2026-09-18T10:54:57+08:00",
+     "title": "Check Point多項產品存在高風險安全漏洞(CVE-2026-85102與CVE-2026-85103)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 Cisco 公告 cisco-sa-esa-inj 等更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000841",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco SEG／SEWM 15.5(含)以前、16.0、16.5 系列",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-18T10:48:18+08:00",
+     "receivedAt": "2026-09-18T11:20:07+08:00",
+     "title": "Cisco SEG與SEWM存在高風險安全漏洞(CVE-2026-20353、CVE-2026-76440、CVE-2026-76441、CVE-2026-76443及CVE-2026-76461)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-16",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-16T00:00:00+08:00",
+    "to": "2026-09-16T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 Fireware OS 2026.2.2／12.12.2／12.5.20 以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000821",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Fireware OS 2026.2.2、12.12.2、12.5.20(不含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-16T09:58:14+08:00",
+     "receivedAt": "2026-09-16T10:24:37+08:00",
+     "title": "WatchGuard Fireware OS存在多項高風險安全漏洞(CVE-2026-13086、CVE-2026-19313、CVE-2026-19315及CVE-2026-19318)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-11",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-11T00:00:00+08:00",
+    "to": "2026-09-11T23:59:59+08:00"
+   },
+   "alertCount": 1,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "依 Cisco 公告 cisco-sa-hardening-iosxr 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000811",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Cisco IOS XR 與 IOS XR7 (LNT) 所有版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-11T14:08:14+08:00",
+     "receivedAt": "2026-09-11T14:39:38+08:00",
+     "title": "Cisco IOS XR Software存在多項高風險安全漏洞(CVE-2026-20274、CVE-2026-20275、CVE-2026-20278、CVE-2026-20279及CVE-2026-20280)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-08",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-08T00:00:00+08:00",
+    "to": "2026-09-08T23:59:59+08:00"
+   },
+   "alertCount": 2,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "更新至 MSRC CVE-2026-62911 公告之修補版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000791",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Exchange Server 2016 CU23、2019 CU14／CU15、Subscription Edition 多版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-08T12:08:13+08:00",
+     "receivedAt": "2026-09-08T12:34:57+08:00",
+     "title": "Microsoft Exchange Server存在高風險安全漏洞(CVE-2026-62911)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "依 SNWLID-2026-0015／0016 更新",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0000801",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "SonicWall NSM On-Prem 4.3.0(含)以前；SMA1000（6210、7210、8200v）12.4.3-03453、12.5.0-02835(含)以前",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-08T15:08:14+08:00",
+     "receivedAt": "2026-09-08T15:39:56+08:00",
+     "title": "SonicWall NSM On-Prem與SMA1000系列存在多項高風險安全漏洞(CVE-2026-78327、CVE-2026-83548及CVE-2026-83549)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-09-03",
+   "updatedAt": "2026-11-14T18:30:00+08:00",
+   "period": {
+    "from": "2026-09-03T00:00:00+08:00",
+    "to": "2026-09-03T23:59:59+08:00"
+   },
+   "alertCount": 6,
+   "note": "回溯建立（115年9月至11月），依收信日期彙整；已逐封讀取信件內文判定。",
+   "items": [
+    {
+     "action": "升級至 NetExtender Linux Client 10.3.6 以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000782",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "NetExtender Linux Client 10.3.5(含)以前",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-03T14:38:13+08:00",
+     "receivedAt": "2026-09-03T15:04:56+08:00",
+     "title": "SonicWall NetExtender Linux存在高風險安全漏洞(CVE-2026-66152)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 1.4.9 以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000783",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "MongoDB BI Connector ODBC Driver 1.0.0–1.4.9(不含)",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-03T14:38:14+08:00",
+     "receivedAt": "2026-09-03T15:17:23+08:00",
+     "title": "MongoDB BI Connector ODBC Driver存在高風險安全漏洞(CVE-2026-19001)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 Zimbra Collaboration 10.1.20 以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000786",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Zimbra Collaboration 10.1.20(不含)以前（安裝 zimbra-snmp 並啟用 SNMP 通知時）",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-09-03T14:43:13+08:00",
+     "receivedAt": "2026-09-03T15:33:19+08:00",
+     "title": "Zimbra Collaboration存在高風險安全漏洞(CVE-2026-73570)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "確認已更新 Patch 至 202602162(含)以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000781",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "NUMail 所有版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-03T14:38:15+08:00",
+     "receivedAt": "2026-09-03T15:53:09+08:00",
+     "title": "綠色運算NUMail存在高風險安全漏洞(CVE-2026-82082)，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 9.4.14／10.0.9／10.2.6／10.4.2 以後版本",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0000784",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Splunk Enterprise 9.4.0–9.4.13、10.0.0–10.0.8、10.2.0–10.2.5、10.4.0–10.4.1",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-03T14:38:15+08:00",
+     "receivedAt": "2026-09-03T16:16:09+08:00",
+     "title": "Splunk Enterprise存在多項高風險安全漏洞，請儘速確認並進行修補",
+     "tlp": ""
+    },
+    {
+     "action": "升級至 13.1 Patch 0（13.1.0.7233）或 13.0.2 Patch 1（13.0.2.7159）",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0000785",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Veeam ONE 13.0.2.6723(含)以前、13.1.0.7034",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-09-03T16:28:14+08:00",
+     "receivedAt": "2026-09-03T17:00:03+08:00",
+     "title": "Veeam ONE存在2項高風險安全漏洞(CVE-2026-64633與CVE-2026-65641)，請儘速確認並進行修補",
+     "tlp": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,1155 +1,1252 @@
 {
-  "updatedAt": "2026-11-14T15:55:00+08:00",
-  "days": [
+ "updatedAt": "2026-11-14T19:50:00+08:00",
+ "days": [
+  {
+   "actions": [
+    "Check Point（CISA 期限 11/16）：所有管理伺服器與閘道安裝 11 月 Jumbo Hotfix，優先處理對外開放 Mobile Access 的設備；排查 upload_progress_pwn 工作階段檔、異常 CPconfigdaemon 程序與閘道到 ESXi 的 SSH 連線。R81.10／R81 無修補，應排定升級。",
+    "有地端 N-central 的單位：立即確認 Legacy API 已停用，依 N-able 公布的入侵指標排查；有命中就視為整台遭入侵處理，不要只裝 HF2。",
+    "Apache httpd 2.4.55–2.4.70 且啟用 HTTP/2 的網站升級至 2.4.71（無法升級先關閉 HTTP/2）；PostgreSQL 升到最新小版，仍用 14 版者排定遷移；NetScaler 依 Citrix 公告升級。",
+    "Windows SignDrop 尚無修補：盤點本機管理權限、強化 EDR 對本機提權與 Defender 異常行為的監控，持續追蹤微軟公告。",
+    "在 Entra ID 以條件式存取封鎖或限縮 device code 登入；提醒同仁小心冒名電商「異常訂單」、假 LINE 客服與 Teams 會議邀請釣魚，受騙撥 165。",
+    "有使用 GitHub 的單位：檢查組織成員 MFA、近期 workflow 異動，並輪替 CI/CD 密鑰與雲端憑證；委外 AI 平台一併確認事件通報條款。",
+    "參考領務局事件與數發部五大行動：檢查線上申辦系統上傳檔（照片、掃描檔）的存放位置與存取控管，重大警訊三日內完成修補；確認資安事件 1 小時內通報、個資外洩通知當事人的流程。",
+    "依 FBI ARTEX 通報：盤點對外系統、限制管理介面來源，監控異常 LLM API 流量與 Entra 應用程式憑證新增；提醒同仁小心冒名 Zoom／Teams 的會議連結。",
+    "安裝 11 月更新後若 Word 文件無法列印，先移除文件中的零尺寸物件或改用 PDF 列印，並追蹤 WI1549472，不要移除安全性更新。",
+    "FAA 停飛事件提醒：檢視機關核心系統的軟體更新變更管理（分階段部署、可回復機制）與服務中斷的應變及對外說明流程，避免更新失誤造成全面停擺。",
+    "委外系統（線上商城、申辦平台）：確認契約已要求廠商資安事件即時通報，並檢查委外廠商可存取的個資範圍與帳號。"
+   ],
+   "date": "2026-11-14",
+   "items": [
     {
-      "date": "2026-11-14",
-      "updatedAt": "2026-11-14T15:55:00+08:00",
-      "items": [
-        {
-          "category": "AI",
-          "rank": 1,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Nvidia 官方新聞稿",
-              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
-            },
-            {
-              "name": "ABC News",
-              "url": "https://abc.net.au/news/2026-11-14/how-nvidia-scandal-could-undermine-ai-boom-verrender/107382722"
-            }
-          ],
-          "summary": "Nvidia 宣布黃仁勳辭職、財務長 Colette Kress 暫代執行長後，股價盤中一度重挫約 14%，收盤跌近 5%；自 10 月初以來市值已蒸發約三成。報導指黃仁勳預定 11 月 18 日出席美國國會聽證，說明其與涉嫌協助晶片轉運中國的人士往來，Nvidia 下週也將公布財報。北京否認相關間諜指控。",
-          "tags": [
-            "Nvidia",
-            "黃仁勳",
-            "國會聽證",
-            "AI 供應鏈"
-          ],
-          "title": "Nvidia 執行長交接後續：股價震盪，黃仁勳 11 月 18 日將赴美國國會作證"
-        },
-        {
-          "category": "AI",
-          "rank": 2,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Help Net Security",
-              "url": "https://www.helpnetsecurity.com/2026/11/13/openai-chatgpt-wallet/"
-            }
-          ],
-          "summary": "OpenAI 與 American Express、Mastercard、Visa 合作推出 ChatGPT Wallet：使用者綁卡一次，每筆交易前以生物辨識確認，由卡組織發給代理專用的代碼化卡號。目前僅限美國 18 歲以上 ChatGPT Pro 用戶；OpenAI 也坦言部分商家的防詐系統可能誤擋代理下單。",
-          "tags": [
-            "OpenAI",
-            "ChatGPT",
-            "Agentic Commerce",
-            "支付"
-          ],
-          "title": "OpenAI 推出 ChatGPT Wallet，AI 代理付款不經手真實卡號"
-        },
-        {
-          "category": "AI",
-          "flags": [
-            "第三方彙整"
-          ],
-          "rank": 3,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "DEV Community 每日彙整",
-              "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
-            },
-            {
-              "name": "Help Net Security",
-              "url": "https://www.helpnetsecurity.com/2026/11/13/google-smart-glasses-privacy-protections/"
-            }
-          ],
-          "summary": "據彙整報導，Google 11 月 12 日推出低價的 Gemini 4 Hydrogen，取代 3.8 Flash 成為預設輕量模型；同日開放與 Warby Parker、Gentle Monster 合作的 Gemini 智慧眼鏡預購，12 月 10 日在美、韓開賣，起價 395 美元。Google 也說明眼鏡對配戴者與周遭民眾的隱私保護設計。",
-          "tags": [
-            "Google",
-            "Gemini",
-            "智慧眼鏡",
-            "隱私"
-          ],
-          "title": "Google 發表 Gemini 4 Hydrogen 輕量模型並開放 Gemini 眼鏡預購"
-        },
-        {
-          "category": "AI",
-          "rank": 4,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Fireworks AI 資安公告",
-              "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
-            },
-            {
-              "name": "DEV Community 每日彙整",
-              "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
-            }
-          ],
-          "summary": "Fireworks AI 更新 10 月資安事件說明：入侵源自遭攻破的第三方雲端供應商，除帳務資訊外，部分客戶的密鑰、資料集與部分模型權重也可能外洩。報導指已有客戶開始轉移服務。",
-          "tags": [
-            "Fireworks AI",
-            "供應鏈",
-            "AI 平台",
-            "資料外洩"
-          ],
-          "title": "AI 推論平台 Fireworks AI 擴大外洩揭露，部分客戶的金鑰與資料集受影響"
-        },
-        {
-          "category": "AI",
-          "rank": 5,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Help Net Security：Daybreak",
-              "url": "https://www.helpnetsecurity.com/2026/11/13/openai-daybreak-vulnerability-remediation-red-team-defense-factory-agents/"
-            },
-            {
-              "name": "Help Net Security：自架 Managed Agents",
-              "url": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/"
-            }
-          ],
-          "summary": "OpenAI 將 Codex Security 以開源 CLI 與 TypeScript SDK 形式釋出，可掃描程式碼、驗證問題並產生修補草案；同時有報導介紹其 Daybreak 資安代理計畫。Anthropic 也推出可自架的 Claude Managed Agents（Claude 為 Anthropic 開發，此處僅轉述報導）。",
-          "tags": [
-            "OpenAI",
-            "Codex Security",
-            "AI 資安",
-            "開源"
-          ],
-          "title": "OpenAI 開源 Codex Security 弱點掃描工具，資安 AI 代理競爭升溫"
-        },
-        {
-          "category": "AI",
-          "rank": 6,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "AI News（Rio Rundown）彙整",
-              "url": "https://riorundown.substack.com/p/ai-news-nov-13-2026-leadership-transitions"
-            }
-          ],
-          "summary": "密西西比州聯邦地院法官認定四名律師提交 AI 生成的虛構引註，予以制裁，其中兩名外州律師兩年內不得在該轄區執業。再次提醒公文與法律文件使用生成式 AI 須逐一查證引用。",
-          "tags": [
-            "生成式AI",
-            "幻覺",
-            "法律",
-            "治理"
-          ],
-          "title": "美國聯邦法官以 AI 捏造判例為由，撤換案件全部四名律師"
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 7,
-          "title": "OpenAI 解散獨立機器人團隊，改由通用模型直接驅動機器人",
-          "summary": "OpenAI 向 Fortune 證實解散獨立的機器人團隊：研究人員併入首席研究長 Mark Chen 的主研究團隊，應用與硬體人員轉入 Greg Brockman 主管的 Applied 部門。報導指其通用模型已直接用於機器人任務；OpenAI 表示機器人仍是長期重點，調整是為了加快進度。",
-          "tags": [
-            "OpenAI",
-            "機器人",
-            "組織調整"
-          ],
-          "sources": [
-            {
-              "name": "Fortune",
-              "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 8,
-          "title": "報導指 Meta 聊天機器人 Muse 冒充真實女性進行露骨角色扮演",
-          "summary": "404 Media 調查、IBTimes 11 月 13 日轉述：Muse 會生成外貌近似真實人物的角色並進行露骨對話，還能依公開照片產生相似影像。Meta 表示該服務僅限 18 歲以上、不封鎖合法的成人對話；報導質疑未經當事人同意的真人仿冒缺乏防護。",
-          "tags": [
-            "Meta",
-            "聊天機器人",
-            "肖像權",
-            "AI 治理"
-          ],
-          "sources": [
-            {
-              "name": "IBTimes UK",
-              "url": "https://www.ibtimes.co.uk/meta-muse-ai-chatbot-real-women-explicit-roleplay-1832055"
-            }
-          ]
-        },
-        {
-          "category": "資安",
-          "rank": 1,
-          "region": "國內",
-          "sources": [
-            {
-              "name": "Yahoo 新聞（聯合報）",
-              "url": "https://tw.news.yahoo.com/%E9%BC%8E%E6%B3%B0%E8%B1%90%E9%A9%9A%E5%82%B3%E8%B3%87%E5%AE%89%E4%BA%8B%E4%BB%B6-%E9%A1%A7%E5%AE%A2%E5%80%8B%E8%B3%87%E6%81%90%E5%A4%96%E6%B4%A9-%E5%AE%98%E6%96%B9%E5%B7%B2%E5%A0%B1%E8%AD%A6-141305987.html"
-            }
-          ],
-          "summary": "鼎泰豐 11 月 13 日通知顧客，有人利用過往訂購資料寄送詐騙信，以異常訂單為由誘導加入假 LINE 客服；初步查核顧客姓名、電話、Email 與地址可能遭不當取得，但不含信用卡號、安全碼與密碼。公司已關閉受駭伺服器、修補漏洞並報警。",
-          "tags": [
-            "個資外洩",
-            "電商",
-            "詐騙",
-            "165"
-          ],
-          "title": "鼎泰豐購物網顧客個資疑外洩，詐騙信冒名「異常訂單」誘加假 LINE 客服"
-        },
-        {
-          "category": "資安",
-          "rank": 2,
-          "region": "國內",
-          "sources": [
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/news/180487"
-            }
-          ],
-          "summary": "電子通路商大聯大公告發生資安事件，部分員工姓名與公務電子郵件遭未經授權存取。外洩的公務信箱名單可能被用於後續針對性釣魚，往來單位宜留意冒名信件。",
-          "tags": [
-            "大聯大",
-            "重大訊息",
-            "釣魚",
-            "個資"
-          ],
-          "title": "大聯大發生資安事件，部分員工姓名與公務 Email 遭未授權存取"
-        },
-        {
-          "category": "資安",
-          "rank": 3,
-          "region": "國內",
-          "sources": [
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/news/180484"
-            }
-          ],
-          "summary": "長榮物流公告部分資訊系統遭網路攻擊，已啟動資安防禦與復原機制。連同本週台積電員工個資、鼎泰豐與大聯大事件，國內企業資安事件密集。",
-          "tags": [
-            "長榮物流",
-            "重大訊息",
-            "物流"
-          ],
-          "title": "長榮物流部分資訊系統遭攻擊，已啟動防禦與復原"
-        },
-        {
-          "region": "國內",
-          "category": "資安",
-          "rank": 4,
-          "title": "外交部領務局網站遭駭，約 10 萬份護照大頭照等資料外洩",
-          "summary": "領務局 11 月 4 日發現部分網站遭入侵，已修復並完成安全檢測後恢復上線。外洩資料包括 9 月 3 日至 11 月 2 日線上上傳的 7 萬 2,702 張護照大頭照、駐紐約辦事處 2 萬 6,072 份授權書掃描檔，以及 774 件 ABTC 申請資料。領務局表示已核發護照效力不受影響，民眾不需換發。",
-          "flags": [
-            "已證實"
-          ],
-          "tags": [
-            "外交部",
-            "領務局",
-            "個資外洩",
-            "政府機關"
-          ],
-          "sources": [
-            {
-              "name": "聯合報",
-              "url": "https://udn.com/news/story/7314/9875636"
-            }
-          ]
-        },
-        {
-          "region": "國內",
-          "category": "資安",
-          "rank": 5,
-          "title": "資安署：AI 助攻網攻，十餘家企業約 800 萬筆個資受影響；數發部公布五大行動",
-          "summary": "資安署 11 月 12 日表示，AI 協助駭客網攻已成國際趨勢，國內十餘家企業受害、約 800 萬筆個資受影響；公務機關依資通安全管理法須於 1 小時內通報。數發部 11 月 11 日公布五大行動：重大警訊三日內完成修補、個資外洩 72 小時內通報主管機關並通知當事人、查明原因，以及一個月內提出改善計畫。",
-          "tags": [
-            "數位發展部",
-            "資安署",
-            "個資外洩",
-            "通報"
-          ],
-          "sources": [
-            {
-              "name": "中央社",
-              "url": "https://www.cna.com.tw/news/aipl/202611120178.aspx"
-            },
-            {
-              "name": "資安人",
-              "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13486"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 1,
-          "title": "Check Point Gaia 零時差漏洞 CVE-2026-123039 遭利用，CISA 要求 11 月 16 日前修補",
-          "summary": "攻擊者先以 PHP2Shell（CVE-2026-109618／109619）入侵 Mobile Access 入口，再利用 Gaia OS 本機提權漏洞取得 root，植入 TSGA 後門，部分案例進一步在 VMware ESXi 主機執行資料抹除程式。CISA 已於 11 月 13 日列入 KEV。修補版本為 R82.20 Take 14、R82.10 Take 52、R82 Take 132、R81.20 Take 174；已停止支援的 R81.10、R81 沒有修補。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "Check Point",
-            "防火牆",
-            "KEV",
-            "ESXi",
-            "CVE-2026-123039"
-          ],
-          "sources": [
-            {
-              "name": "BleepingComputer",
-              "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/"
-            },
-            {
-              "name": "GBHackers",
-              "url": "https://gbhackers.com/cisa-check-point-zero-day-vulnerability/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 2,
-          "title": "FBI 警告 AI 自主滲透框架 ARTEX 遭濫用，部分入侵三小時內取得高權限",
-          "summary": "FBI 11 月 13 日發布 FLASH 通報：開源自主滲透框架 ARTEX 自 8 月起被用於偵察、利用漏洞、提權與竊資，受害者涵蓋政府、金融、醫療與電信等產業。原始碼已下架但仍有分支流傳，研究人員 11 月初發現逾 1,600 個公開曝露的控制台。FBI 建議盤點對外系統、限制管理端點，並監控異常的 LLM API 流量與 Entra 憑證新增。",
-          "tags": [
-            "FBI",
-            "AI 攻擊",
-            "ARTEX",
-            "Entra ID"
-          ],
-          "sources": [
-            {
-              "name": "GBHackers",
-              "url": "https://gbhackers.com/fbi-warns-artex-ai-framework"
-            }
-          ]
-        },
-        {
-          "category": "資安",
-          "flags": [
-            "已遭利用"
-          ],
-          "rank": 3,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "SecurityWeek",
-              "url": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/"
-            },
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html"
-            }
-          ],
-          "summary": "PoC 於 11 月 12 日公開後數小時內即出現攻擊，已知 21 台地端 N-central 主機被植入挖礦程式，其中 19 台已安裝最新 2026.4 HF2。攻擊串接 Apache Axis 漏洞 CVE-2026-90436（CVSS 9.8）與啟用 Legacy API 的 N-central 弱點；N-able 已預設停用 Legacy API 與 Intune 整合，雲端版不受影響，目前尚無對應修補。",
-          "tags": [
-            "N-able",
-            "N-central",
-            "RMM",
-            "已遭利用"
-          ],
-          "title": "N-central 新攻擊鏈「4EverAble2Shell」在已修補主機上遭利用"
-        },
-        {
-          "category": "資安",
-          "rank": 4,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html"
-            },
-            {
-              "name": "Red Hat CVE 頁面",
-              "url": "https://access.redhat.com/security/cve/CVE-2026-119618"
-            }
-          ],
-          "summary": "Apache httpd 2.4.55 至 2.4.70 的 mod_http2 存在可在未驗證下遠端執行程式碼的重大漏洞，已於 2.4.71 修補。目前未見遭利用報告，但 Apache 為機關網站常見平台，應儘速升級或暫停 HTTP/2。",
-          "tags": [
-            "Apache",
-            "HTTP/2",
-            "RCE",
-            "CVE-2026-119618"
-          ],
-          "title": "Apache HTTP Server mod_http2 重大漏洞 CVE-2026-119618，未驗證即可遠端執行程式"
-        },
-        {
-          "category": "資安",
-          "flags": [
-            "尚未修補"
-          ],
-          "rank": 5,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "SecurityWeek",
-              "url": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/"
-            },
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html"
-            }
-          ],
-          "summary": "研究人員公開 SignDrop 概念驗證，一般使用者可藉 CLFS 驅動與 Defender 簽章更新介面取得 SYSTEM 權限，宣稱影響 Windows 11 26H2 等版本。微軟尚未回應或釋出修補，目前未發現實際遭利用。",
-          "tags": [
-            "Windows",
-            "CLFS",
-            "提權",
-            "零時差"
-          ],
-          "title": "Windows CLFS 提權 PoC「SignDrop」公開，微軟尚未修補"
-        },
-        {
-          "category": "資安",
-          "rank": 6,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Help Net Security",
-              "url": "https://www.helpnetsecurity.com/2026/11/13/postgresql-security-update-november-2026/"
-            }
-          ],
-          "summary": "PostgreSQL 釋出 18.7、17.12、16.16、15.20 與 14.25，修補 52 個 CVE，其中 32 個 CVSS 8.8，涵蓋 PL/Perl、邏輯複寫、dblink 與 pg_dump 等。14.25 為 14 版最後一版，之後不再有安全更新。",
-          "tags": [
-            "PostgreSQL",
-            "資料庫",
-            "EOL"
-          ],
-          "title": "PostgreSQL 一次修補 52 個漏洞，PostgreSQL 14 停止支援"
-        },
-        {
-          "category": "資安",
-          "rank": 7,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"
-            },
-            {
-              "name": "CVE Brief 11/13",
-              "url": "https://cvebrief.com/archive/2026/11/13/"
-            }
-          ],
-          "summary": "Citrix 發布更新修補 NetScaler ADC／Gateway、NetScaler Console 與 Secure Access Client 共 12 個漏洞，多個 CVSS 9.3 以上，包括可繞過驗證與造成服務中斷的問題；目前未列為已遭利用。",
-          "tags": [
-            "Citrix",
-            "NetScaler",
-            "VPN",
-            "驗證繞過"
-          ],
-          "title": "Citrix 修補 12 個 NetScaler 與 Secure Access Client 漏洞，含驗證繞過"
-        },
-        {
-          "category": "資安",
-          "rank": 8,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html"
-            },
-            {
-              "name": "Help Net Security",
-              "url": "https://www.helpnetsecurity.com/2026/11/12/wfx-loot-github-actions-secret-stealer/"
-            }
-          ],
-          "summary": "攻擊者利用竊得的 GitHub 帳密，在至少 1,806 個儲存庫的 CI 流程植入竊取程式，收集 CI 密鑰與雲端憑證。使用 GitHub Actions 的單位應檢查近期提交與工作流程異動並輪替密鑰。",
-          "tags": [
-            "GitHub",
-            "供應鏈",
-            "CI/CD",
-            "憑證竊取"
-          ],
-          "title": "4,837 個遭劫持 GitHub 帳號在逾 1,800 個儲存庫植入 CI 密鑰竊取程式"
-        },
-        {
-          "category": "資安",
-          "rank": 9,
-          "region": "國外",
-          "sources": [
-            {
-              "name": "Help Net Security",
-              "url": "https://www.helpnetsecurity.com/2026/11/13/microsoft-teams-device-code-phishing/"
-            },
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html"
-            }
-          ],
-          "summary": "研究人員揭露攻擊者偽造 Teams 會議預約，誘使受害者在微軟登入頁輸入裝置代碼，藉此取得 Microsoft 365 權杖。另有假 Google 日曆邀請搭配即時代理竊取工作階段的活動。",
-          "tags": [
-            "Microsoft 365",
-            "Teams",
-            "釣魚",
-            "Device Code"
-          ],
-          "title": "攻擊者以 Teams 會議預約誘騙，進行裝置代碼（device code）釣魚"
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 9,
-          "title": "美國司法部查扣北韓 FaceStealer 釣魚基礎設施，凍結逾 27 億美元 Binance 被竊資產",
-          "summary": "美國司法部 11 月 12 日宣布查扣北韓駭客的 FaceStealer 雲端基礎設施。該手法先盜用 Telegram、LinkedIn、Slack 帳號，再以假 Zoom／Teams 會議頁面誘騙受害者，並偷錄網路攝影機影像用於後續冒充。FBI 將逾 60 億美元的 Binance 竊案歸咎於北韓，已凍結逾 27 億美元、法院核准扣押逾 12 億美元。",
-          "tags": [
-            "北韓",
-            "社交工程",
-            "假會議",
-            "加密貨幣"
-          ],
-          "sources": [
-            {
-              "name": "CyberScoop",
-              "url": "https://cyberscoop.com/us-seizes-north-korea-hacking-infrastructure-binance/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 10,
-          "title": "微軟證實 11 月安全性更新造成部分文件列印失敗",
-          "summary": "微軟表示，安裝 11 月更新後，內含零尺寸圖片（常見於浮水印或版面錨點）的文件可能無法列印，主要影響經 GDI 列印的 Word，Windows 10 以上與 Windows Server 2016 以上均可能受影響，事件編號 WI1549472。另有報導指 11 月更新後出現 Windows 啟用失敗問題。",
-          "flags": [
-            "非資安攻擊"
-          ],
-          "tags": [
-            "Windows",
-            "Patch Tuesday",
-            "列印",
-            "Word"
-          ],
-          "sources": [
-            {
-              "name": "BleepingComputer：列印問題",
-              "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/"
-            },
-            {
-              "name": "BleepingComputer：啟用失敗",
-              "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 11,
-          "title": "日本 10 月公開資安事件達 233 起創新高，政府推 100 億日圓緊急方案",
-          "summary": "報導彙整日本研究機構數據：10 月公開的資安事件達 233 起，約為過去單月高峰的 2.4 倍，其中 30 起各涉及百萬筆以上資料。JPCERT/CC 觀察到攻擊者用 AI 掃描已知弱點與 API；但研究人員表示尚無法確定 AI 對整體激增的貢獻。日本政府宣布 100 億日圓緊急資安方案。",
-          "tags": [
-            "日本",
-            "個資外洩",
-            "AI 攻擊",
-            "API"
-          ],
-          "sources": [
-            {
-              "name": "GBHackers",
-              "url": "https://gbhackers.com/japan-cyberattack-ai-security-vulnerabilities"
-            }
-          ]
-        }
-      ],
-      "actions": [
-        "Check Point（CISA 期限 11/16）：所有管理伺服器與閘道安裝 11 月 Jumbo Hotfix，優先處理對外開放 Mobile Access 的設備；排查 upload_progress_pwn 工作階段檔、異常 CPconfigdaemon 程序與閘道到 ESXi 的 SSH 連線。R81.10／R81 無修補，應排定升級。",
-        "有地端 N-central 的單位：立即確認 Legacy API 已停用，依 N-able 公布的入侵指標排查；有命中就視為整台遭入侵處理，不要只裝 HF2。",
-        "Apache httpd 2.4.55–2.4.70 且啟用 HTTP/2 的網站升級至 2.4.71（無法升級先關閉 HTTP/2）；PostgreSQL 升到最新小版，仍用 14 版者排定遷移；NetScaler 依 Citrix 公告升級。",
-        "Windows SignDrop 尚無修補：盤點本機管理權限、強化 EDR 對本機提權與 Defender 異常行為的監控，持續追蹤微軟公告。",
-        "在 Entra ID 以條件式存取封鎖或限縮 device code 登入；提醒同仁小心冒名電商「異常訂單」、假 LINE 客服與 Teams 會議邀請釣魚，受騙撥 165。",
-        "有使用 GitHub 的單位：檢查組織成員 MFA、近期 workflow 異動，並輪替 CI/CD 密鑰與雲端憑證；委外 AI 平台一併確認事件通報條款。",
-        "參考領務局事件與數發部五大行動：檢查線上申辦系統上傳檔（照片、掃描檔）的存放位置與存取控管，重大警訊三日內完成修補；確認資安事件 1 小時內通報、個資外洩通知當事人的流程。",
-        "依 FBI ARTEX 通報：盤點對外系統、限制管理介面來源，監控異常 LLM API 流量與 Entra 應用程式憑證新增；提醒同仁小心冒名 Zoom／Teams 的會議連結。",
-        "安裝 11 月更新後若 Word 文件無法列印，先移除文件中的零尺寸物件或改用 PDF 列印，並追蹤 WI1549472，不要移除安全性更新。"
-      ]
+     "category": "AI",
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Nvidia 官方新聞稿",
+       "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
+      },
+      {
+       "name": "ABC News",
+       "url": "https://abc.net.au/news/2026-11-14/how-nvidia-scandal-could-undermine-ai-boom-verrender/107382722"
+      }
+     ],
+     "summary": "Nvidia 宣布黃仁勳辭職、財務長 Colette Kress 暫代執行長後，股價盤中一度重挫約 14%，收盤跌近 5%；自 10 月初以來市值已蒸發約三成。報導指黃仁勳預定 11 月 18 日出席美國國會聽證，說明其與涉嫌協助晶片轉運中國的人士往來，Nvidia 下週也將公布財報。北京否認相關間諜指控。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳",
+      "國會聽證",
+      "AI 供應鏈"
+     ],
+     "title": "Nvidia 執行長交接後續：股價震盪，黃仁勳 11 月 18 日將赴美國國會作證"
     },
     {
-      "date": "2026-11-13",
-      "updatedAt": "2026-11-13T16:45:00+08:00",
-      "actions": [
-        "今天到期：若有 Ivanti Connect Secure，確認 CVE-2026-118527 已修補；有 Alpine／musl 環境的 SSH 服務，升級到 OpenSSH 10.6p2，並檢查有沒有空密碼帳號。",
-        "安裝 11 月 Office／Windows 更新，優先處理 Outlook 零時差漏洞；SQL Server 主機先在測試環境確認效能沒問題再上線。",
-        "在 M365 系統管理中心追蹤事件 EX1550543；恢復前準備替代聯絡管道，並提醒同仁小心以「信箱修復」為名的釣魚信。",
-        "更新瀏覽器到 Chrome 157、Firefox 160；有使用 N-central 或 Cisco BroadWorks 的一併修補。",
-        "參考台積電事件，盤點委外雲端服務商保存的員工與民眾個資，確認合約有通報義務與存取控管要求。"
-      ],
-      "items": [
-        {
-          "region": "國內",
-          "category": "資安",
-          "rank": 1,
-          "title": "台積電證實部分員工個資外流，源自外部雲端服務商",
-          "summary": "台積電 11 月 12 日揭露，部分現職與離職員工的個資在網路上外流，資料與一家外部雲端服務商保存的紀錄相符，目前沒有跡象顯示自家系統遭入侵。外洩範圍是員工資料，不涉及晶片生產或客戶資料。有報導稱暗網有人兜售 4.6 萬筆員工資料，此數字尚未證實。",
-          "flags": [
-            "尚未證實"
-          ],
-          "tags": [
-            "TSMC",
-            "個資外洩",
-            "供應鏈",
-            "暗網"
-          ],
-          "sources": [
-            {
-              "name": "Cybersecurity News",
-              "url": "https://cybersecuritynews.com/tsmc-data-breach/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 1,
-          "title": "Nvidia 黃仁勳辭職，財務長 Kress 暫代執行長",
-          "summary": "Nvidia 董事會宣布黃仁勳辭去總裁、執行長與董事，即刻生效，由財務長 Colette Kress 兼任臨時執行長，並開始物色正式接班人。董事會同時任命自 1993 年起擔任董事的 Harvey C. Jones 為公司首任董事長。此前董事會已在調查黃仁勳涉嫌與疑似中國間諜往來一事。",
-          "tags": [
-            "Nvidia",
-            "黃仁勳",
-            "人事",
-            "SEC 8-K"
-          ],
-          "sources": [
-            {
-              "name": "SEC 8-K 新聞稿",
-              "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
-            },
-            {
-              "name": "SEC 8-K 申報",
-              "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm"
-            },
-            {
-              "name": "24/7 Wall St.",
-              "url": "https://247wallst.com/investing/2026/11/09/does-nvidia-cfo-colette-kress-take-over-if-jensen-huang-leaves/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 2,
-          "title": "Microsoft 365 全球中斷延續到 13 日，微軟：非資安攻擊",
-          "summary": "Microsoft 365 從 11 月 12 日開始大規模中斷，影響 Exchange Online、Teams、SharePoint、Copilot 與 Defender XDR。微軟表示原因是伺服器健康檢查失敗，不是遭到入侵。部分修復後的伺服器在流量回升時又失去回應，截至 13 日仍未宣布完全恢復，事件編號 EX1550543。",
-          "flags": [
-            "服務中斷"
-          ],
-          "tags": [
-            "Microsoft 365",
-            "Outlook",
-            "Teams",
-            "Exchange"
-          ],
-          "sources": [
-            {
-              "name": "Cybersecurity News",
-              "url": "https://cybersecuritynews.com/massive-microsoft-365-outage/"
-            },
-            {
-              "name": "CNN",
-              "url": "https://edition.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk"
-            },
-            {
-              "name": "SecurityWeek",
-              "url": "https://www.securityweek.com/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 3,
-          "title": "Outlook 零時差漏洞遭利用，可竊取 Windows 驗證雜湊",
-          "summary": "微軟證實有攻擊者在利用一個 Outlook 漏洞：使用者開啟惡意檔案時，Outlook 會在沒有外部內容警告的情況下連到攻擊者控制的位置，洩漏 Windows 驗證資訊。CVSS 6.5（中度），但已確認遭實際利用，應安裝 11 月安全性更新。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "Outlook",
-            "Microsoft 365 Apps",
-            "零時差",
-            "NTLM"
-          ],
-          "sources": [
-            {
-              "name": "Cybersecurity News",
-              "url": "https://cybersecuritynews.com/outlook-0-day-vulnerability/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 4,
-          "title": "Google 全面開放 Gemini 4 Hydrogen，免費用戶也能用",
-          "summary": "Google 推出主打快速處理日常程式與 AI 代理任務的 Gemini 4 Hydrogen，定位不同於偏重深度推理的 Carbon 與 Argon。當天已在 AI Studio、Gemini API、Gemini app 與 Google 搜尋全球上線。",
-          "tags": [
-            "Google",
-            "Gemini",
-            "模型發表"
-          ],
-          "sources": [
-            {
-              "name": "AI Tech Morning Paper (note)",
-              "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 5,
-          "title": "美國四個民間團體控告五家 AI 公司，要求凍結前沿 AI 開發",
-          "summary": "原告對 Anthropic、Google、Meta、OpenAI 與 SpaceX 的 AI 部門提告，要求暫停可能協助生物武器、網路攻擊或脫離人類控制的前沿 AI 開發與提供，並引用這些公司自己發出的風險警告。（Claude 由 Anthropic 開發，此則僅轉述報導。）",
-          "tags": [
-            "訴訟",
-            "AI 安全",
-            "Anthropic",
-            "OpenAI",
-            "Google",
-            "Meta"
-          ],
-          "sources": [
-            {
-              "name": "AI Tech Morning Paper (note)",
-              "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
-            },
-            {
-              "name": "The Neuron",
-              "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 6,
-          "title": "N-able N-central 零時差漏洞遭鎖定，官方趕修",
-          "summary": "研究人員一口氣公開 30 多個 N-central 零時差漏洞後，攻擊活動隨即出現。N-able 已先修補無需驗證即可利用的漏洞，使用這套 RMM 工具的單位應盡快更新。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "N-able",
-            "N-central",
-            "RMM",
-            "零時差"
-          ],
-          "sources": [
-            {
-              "name": "SecurityWeek",
-              "url": "https://www.securityweek.com/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 7,
-          "title": "OpenAI 推出讓 AI 代理扮演攻擊者的網站資安測試產品",
-          "summary": "OpenAI 發表新產品，讓多個 AI 代理組隊模擬攻擊者，測試企業自家的網頁應用程式。",
-          "tags": [
-            "OpenAI",
-            "AI 代理",
-            "滲透測試"
-          ],
-          "sources": [
-            {
-              "name": "AI Tech Morning Paper (note)",
-              "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 8,
-          "title": "Anthropic 預計 11 月 18 日上市",
-          "summary": "據報導，Anthropic 計畫 11 月 18 日 IPO，募資可能超過 600 億美元，估值可能高於 1.4 兆美元。同日 Nvidia 也將由臨時執行長主持全員大會。（Claude 由 Anthropic 開發，此則僅轉述報導。）",
-          "tags": [
-            "Anthropic",
-            "IPO"
-          ],
-          "sources": [
-            {
-              "name": "Market News (Herve Cuviliez)",
-              "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 9,
-          "title": "Chrome 157、Firefox 160 合計修補逾 180 個漏洞",
-          "summary": "Google 在 Chrome 157 修補 83 個漏洞，Mozilla 在 Firefox 160 修補 99 個，機關端點應盡快更新瀏覽器。",
-          "tags": [
-            "Chrome",
-            "Firefox",
-            "瀏覽器"
-          ],
-          "sources": [
-            {
-              "name": "SecurityWeek",
-              "url": "https://www.securityweek.com/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 10,
-          "title": "Windows SignDrop 零時差漏洞可取得 SYSTEM 權限；11 月更新拖慢 SQL Server",
-          "summary": "有報導指出新的 Windows SignDrop 零時差漏洞可讓攻擊者提權到 SYSTEM。微軟也承認近期 Windows 更新會讓 SQL Server 效能下降，部分安全性更新有安裝問題。",
-          "tags": [
-            "Windows",
-            "SQL Server",
-            "零時差",
-            "Patch Tuesday"
-          ],
-          "sources": [
-            {
-              "name": "#Cybersecurity News Nov 12",
-              "url": "https://theparkernathan.substack.com/p/cybersecurity-news-november-12-2026"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 11,
-          "title": "CISA 將 Cisco BroadWorks 漏洞列入 KEV，並發布 6 份工控通報",
-          "summary": "CISA 把 Cisco BroadWorks 漏洞加入已遭利用漏洞清單，同時發布六份工業控制系統資安通報。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "CISA",
-            "KEV",
-            "Cisco",
-            "ICS"
-          ],
-          "sources": [
-            {
-              "name": "#Cybersecurity News Nov 12",
-              "url": "https://theparkernathan.substack.com/p/cybersecurity-news-november-12-2026"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 12,
-          "title": "憑證機構 DigiCert 內部系統遭未授權存取",
-          "summary": "DigiCert 證實一套內部業務系統遭入侵，外洩的封存客戶資料包含姓名、公司 Email、電話與地址，部分帳戶還含護照、駕照等證件。DigiCert 未說明影響人數。",
-          "tags": [
-            "DigiCert",
-            "憑證",
-            "資料外洩"
-          ],
-          "sources": [
-            {
-              "name": "BrightDefense",
-              "url": "https://www.brightdefense.com/resources/recent-data-breaches/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 13,
-          "title": "駭客用開源 AI 代理 Hermes 執行攻擊，竊取塔吉克政府文件",
-          "summary": "CloudSEK 指出，與哈薩克有關的駭客用開源 Hermes AI 代理規劃、執行並回報攻擊，因伺服器沒上鎖而曝光。現有證據無法判斷該組織是否受哈薩克政府指使。",
-          "tags": [
-            "AI 代理",
-            "APT",
-            "CloudSEK",
-            "政府"
-          ],
-          "sources": [
-            {
-              "name": "Daily AI Caffeine",
-              "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-13-nov-26"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 14,
-          "title": "市場區隔 Nvidia 治理風險與算力需求，Cerebras 上修營收",
-          "summary": "分析指出市場把 Nvidia 的治理風險和 AI 算力需求分開看待，非 Nvidia 晶片商受惠。Cerebras 把 2026 年營收預測上修到 9.4 至 9.6 億美元。",
-          "tags": [
-            "Cerebras",
-            "Nvidia",
-            "晶片"
-          ],
-          "sources": [
-            {
-              "name": "Market News (Herve Cuviliez)",
-              "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 15,
-          "title": "百度開放 ERNIE 5.5 Flash 預覽 API；字節跳動傳將推個人助理",
-          "summary": "百度開放 ERNIE 5.5 Flash 預覽版 API。另有報導稱字節跳動計畫推出類似 Meta Muse 的 AI 助理。",
-          "tags": [
-            "百度",
-            "ERNIE",
-            "字節跳動",
-            "中國模型"
-          ],
-          "sources": [
-            {
-              "name": "Daily AI Caffeine",
-              "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-13-nov-26"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 16,
-          "title": "報告稱六款中國 AI 模型帶有 Nvidia Blackwell 晶片痕跡",
-          "summary": "一份報告指稱六款中國 AI 模型留有使用 Nvidia Blackwell 晶片訓練的數值痕跡，目前尚無官方證實。",
-          "flags": [
-            "尚未證實"
-          ],
-          "tags": [
-            "中國模型",
-            "Nvidia",
-            "出口管制"
-          ],
-          "sources": [
-            {
-              "name": "The Neuron",
-              "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "AI",
-          "rank": 17,
-          "title": "Agile Robots 獲軟銀領投 5 億美元",
-          "summary": "慕尼黑機器人公司 Agile Robots 完成 5 億美元融資，由軟銀領投，估值 85 億美元，Nvidia 與日立也參與投資。",
-          "tags": [
-            "機器人",
-            "融資",
-            "軟銀"
-          ],
-          "sources": [
-            {
-              "name": "Market News (Herve Cuviliez)",
-              "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/13/openai-chatgpt-wallet/"
+      }
+     ],
+     "summary": "OpenAI 與 American Express、Mastercard、Visa 合作推出 ChatGPT Wallet：使用者綁卡一次，每筆交易前以生物辨識確認，由卡組織發給代理專用的代碼化卡號。目前僅限美國 18 歲以上 ChatGPT Pro 用戶；OpenAI 也坦言部分商家的防詐系統可能誤擋代理下單。",
+     "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "Agentic Commerce",
+      "支付"
+     ],
+     "title": "OpenAI 推出 ChatGPT Wallet，AI 代理付款不經手真實卡號"
     },
     {
-      "date": "2026-11-10",
-      "backfilled": true,
-      "items": [
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 1,
-          "title": "微軟 11 月 Patch Tuesday：1,094 個修補、一個零時差",
-          "summary": "微軟 11 月例行更新共 1,094 個修補，其中 63 個為重大等級，另有一個零時差漏洞 CVE-2026-124194。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "Microsoft",
-            "Patch Tuesday",
-            "Windows",
-            "CVE-2026-124194"
-          ],
-          "sources": [
-            {
-              "name": "Action1",
-              "url": "https://www.action1.com/patch-tuesday/patch-tuesday-november-2026/"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 2,
-          "title": "Chrome 修補 2026 年第八個已遭利用的零時差漏洞",
-          "summary": "Google 發布 Chrome 安全更新，修補今年第八個遭實際利用的零時差漏洞。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "Chrome",
-            "瀏覽器",
-            "零時差"
-          ],
-          "sources": [
-            {
-              "name": "The Hacker News",
-              "url": "https://thehackernews.com/search/label/Zero-Day?hl=ru"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "flags": [
+      "第三方彙整"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DEV Community 每日彙整",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
+      },
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/13/google-smart-glasses-privacy-protections/"
+      }
+     ],
+     "summary": "據彙整報導，Google 11 月 12 日推出低價的 Gemini 4 Hydrogen，取代 3.8 Flash 成為預設輕量模型；同日開放與 Warby Parker、Gentle Monster 合作的 Gemini 智慧眼鏡預購，12 月 10 日在美、韓開賣，起價 395 美元。Google 也說明眼鏡對配戴者與周遭民眾的隱私保護設計。",
+     "tags": [
+      "Google",
+      "Gemini",
+      "智慧眼鏡",
+      "隱私"
+     ],
+     "title": "Google 發表 Gemini 4 Hydrogen 輕量模型並開放 Gemini 眼鏡預購"
     },
     {
-      "date": "2026-11-09",
-      "backfilled": true,
-      "items": [
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 1,
-          "title": "OpenSSH SSHole 等四個已遭利用漏洞列入 CISA KEV，3 天內須修補",
-          "summary": "CISA 把 GPUStack、FreeSWITCH、OpenSSH、IBM Aspera Faspex 四個漏洞列入 KEV，要求 11 月 12 日前修補並完成鑑識初篩。OpenSSH 的 CVE-2026-123158（SSHole，CVSS 8.1）出現在使用 musl 的環境，密碼欄輸入 257–1,024 字元即可能登入未設密碼的帳號，已在 10.6p2 修補。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "OpenSSH",
-            "Alpine",
-            "musl",
-            "KEV",
-            "CVE-2026-123158",
-            "IBM Aspera"
-          ],
-          "sources": [
-            {
-              "name": "eSecurity Planet",
-              "url": "https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/"
-            },
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/news/180289"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Fireworks AI 資安公告",
+       "url": "https://fireworks.ai/security/bulletins/october-2026-security-incident-update"
+      },
+      {
+       "name": "DEV Community 每日彙整",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-13-2026-gemini-4-hydrogen-goes-default-googles-gemini-glasses-open-2a94"
+      }
+     ],
+     "summary": "Fireworks AI 更新 10 月資安事件說明：入侵源自遭攻破的第三方雲端供應商，除帳務資訊外，部分客戶的密鑰、資料集與部分模型權重也可能外洩。報導指已有客戶開始轉移服務。",
+     "tags": [
+      "Fireworks AI",
+      "供應鏈",
+      "AI 平台",
+      "資料外洩"
+     ],
+     "title": "AI 推論平台 Fireworks AI 擴大外洩揭露，部分客戶的金鑰與資料集受影響"
     },
     {
-      "date": "2026-11-06",
-      "backfilled": true,
-      "items": [
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 1,
-          "title": "SonicWall SonicOS 多項漏洞公告，MFA 繞過漏洞當日列入 KEV",
-          "summary": "SonicWall 發布 SNWLID-2026-0014，涵蓋七個 SonicOS 漏洞，CISA 當天就把其中已遭利用的漏洞列入 KEV，聯邦機關修補期限為 11 月 20 日。",
-          "flags": [
-            "已遭利用"
-          ],
-          "tags": [
-            "SonicWall",
-            "VPN",
-            "MFA",
-            "KEV"
-          ],
-          "sources": [
-            {
-              "name": "CSA Research Note",
-              "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-edge-mfa-bypass-zero-days-20261108-csa-sty/"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security：Daybreak",
+       "url": "https://www.helpnetsecurity.com/2026/11/13/openai-daybreak-vulnerability-remediation-red-team-defense-factory-agents/"
+      },
+      {
+       "name": "Help Net Security：自架 Managed Agents",
+       "url": "https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/"
+      }
+     ],
+     "summary": "OpenAI 將 Codex Security 以開源 CLI 與 TypeScript SDK 形式釋出，可掃描程式碼、驗證問題並產生修補草案；同時有報導介紹其 Daybreak 資安代理計畫。Anthropic 也推出可自架的 Claude Managed Agents（Claude 為 Anthropic 開發，此處僅轉述報導）。",
+     "tags": [
+      "OpenAI",
+      "Codex Security",
+      "AI 資安",
+      "開源"
+     ],
+     "title": "OpenAI 開源 Codex Security 弱點掃描工具，資安 AI 代理競爭升溫"
     },
     {
-      "date": "2026-11-03",
-      "backfilled": true,
-      "items": [
-        {
-          "region": "國內",
-          "category": "資安",
-          "rank": 1,
-          "title": "永豐銀行新網銀程式異常，419 名客戶出現不明轉帳",
-          "summary": "永豐銀行證實新網銀交易系統程式異常，造成部分客戶帳戶出現不明轉帳。金管會初步資訊顯示影響 419 名客戶、427 筆交易，總額超過 4,000 萬元，款項與手續費已全數返還。",
-          "tags": [
-            "永豐銀行",
-            "金融",
-            "網銀",
-            "系統異常"
-          ],
-          "sources": [
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/security/news"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 2,
-          "title": "AI 開發平台 Langflow 修補兩個 CVSS 9.8 重大漏洞",
-          "summary": "Langflow 兩個重大漏洞可讓攻擊者繞過身分驗證，或未登入就遠端執行程式碼，影響 1.0.0 至 1.12.8 版，官方已發布 1.13.0 修補（含 CVE-2026-110186）。",
-          "tags": [
-            "Langflow",
-            "AI 應用",
-            "RCE",
-            "CVE-2026-110186"
-          ],
-          "sources": [
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/security/news"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "AI News（Rio Rundown）彙整",
+       "url": "https://riorundown.substack.com/p/ai-news-nov-13-2026-leadership-transitions"
+      }
+     ],
+     "summary": "密西西比州聯邦地院法官認定四名律師提交 AI 生成的虛構引註，予以制裁，其中兩名外州律師兩年內不得在該轄區執業。再次提醒公文與法律文件使用生成式 AI 須逐一查證引用。",
+     "tags": [
+      "生成式AI",
+      "幻覺",
+      "法律",
+      "治理"
+     ],
+     "title": "美國聯邦法官以 AI 捏造判例為由，撤換案件全部四名律師"
     },
     {
-      "date": "2026-10-30",
-      "backfilled": true,
-      "items": [
-        {
-          "region": "國內",
-          "category": "資安",
-          "rank": 1,
-          "title": "91APP 遭駭，最多波及 1,329 個品牌、約 480 萬名消費者",
-          "summary": "電商雲端服務商 91APP 公布調查結果，影響範圍最大可能涵蓋 1,329 個品牌、479 萬餘名消費者，涉及 2025/4/4 至 2026/10/14 的線上訂單。臺灣無印良品表示約 18 萬人受影響，外洩欄位包含姓名、電話、地址與 Email。",
-          "tags": [
-            "91APP",
-            "無印良品",
-            "個資外洩",
-            "供應鏈",
-            "電商"
-          ],
-          "sources": [
-            {
-              "name": "風傳媒",
-              "url": "https://www.storm.mg/keyword/資安事件"
-            },
-            {
-              "name": "iThome",
-              "url": "https://www.ithome.com.tw/news/180291"
-            }
-          ]
-        },
-        {
-          "region": "國外",
-          "category": "資安",
-          "rank": 2,
-          "title": "幣安遭駭估損約 63 億美元，疑為北韓駭客",
-          "summary": "幣安暫停存提服務，估計涉及資產約 63 億美元，已與區塊鏈夥伴凍結約 30 億美元。初步調查指向一名 DevOps 工程師的筆電遭入侵；TRM Labs 認為可能與北韓駭客有關。",
-          "tags": [
-            "幣安",
-            "加密貨幣",
-            "北韓",
-            "端點入侵"
-          ],
-          "sources": [
-            {
-              "name": "風傳媒",
-              "url": "https://www.storm.mg/keyword/資安事件"
-            }
-          ]
-        }
-      ]
+     "category": "AI",
+     "rank": 7,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Fortune",
+       "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/"
+      }
+     ],
+     "summary": "OpenAI 向 Fortune 證實解散獨立的機器人團隊：研究人員併入首席研究長 Mark Chen 的主研究團隊，應用與硬體人員轉入 Greg Brockman 主管的 Applied 部門。報導指其通用模型已直接用於機器人任務；OpenAI 表示機器人仍是長期重點，調整是為了加快進度。",
+     "tags": [
+      "OpenAI",
+      "機器人",
+      "組織調整"
+     ],
+     "title": "OpenAI 解散獨立機器人團隊，改由通用模型直接驅動機器人"
+    },
+    {
+     "category": "AI",
+     "rank": 8,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "IBTimes UK",
+       "url": "https://www.ibtimes.co.uk/meta-muse-ai-chatbot-real-women-explicit-roleplay-1832055"
+      }
+     ],
+     "summary": "404 Media 調查、IBTimes 11 月 13 日轉述：Muse 會生成外貌近似真實人物的角色並進行露骨對話，還能依公開照片產生相似影像。Meta 表示該服務僅限 18 歲以上、不封鎖合法的成人對話；報導質疑未經當事人同意的真人仿冒缺乏防護。",
+     "tags": [
+      "Meta",
+      "聊天機器人",
+      "肖像權",
+      "AI 治理"
+     ],
+     "title": "報導指 Meta 聊天機器人 Muse 冒充真實女性進行露骨角色扮演"
+    },
+    {
+     "category": "資安",
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "Yahoo 新聞（聯合報）",
+       "url": "https://tw.news.yahoo.com/%E9%BC%8E%E6%B3%B0%E8%B1%90%E9%A9%9A%E5%82%B3%E8%B3%87%E5%AE%89%E4%BA%8B%E4%BB%B6-%E9%A1%A7%E5%AE%A2%E5%80%8B%E8%B3%87%E6%81%90%E5%A4%96%E6%B4%A9-%E5%AE%98%E6%96%B9%E5%B7%B2%E5%A0%B1%E8%AD%A6-141305987.html"
+      }
+     ],
+     "summary": "鼎泰豐 11 月 13 日通知顧客，有人利用過往訂購資料寄送詐騙信，以異常訂單為由誘導加入假 LINE 客服；初步查核顧客姓名、電話、Email 與地址可能遭不當取得，但不含信用卡號、安全碼與密碼。公司已關閉受駭伺服器、修補漏洞並報警。",
+     "tags": [
+      "個資外洩",
+      "電商",
+      "詐騙",
+      "165"
+     ],
+     "title": "鼎泰豐購物網顧客個資疑外洩，詐騙信冒名「異常訂單」誘加假 LINE 客服"
+    },
+    {
+     "category": "資安",
+     "rank": 2,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180487"
+      }
+     ],
+     "summary": "電子通路商大聯大公告發生資安事件，部分員工姓名與公務電子郵件遭未經授權存取。外洩的公務信箱名單可能被用於後續針對性釣魚，往來單位宜留意冒名信件。",
+     "tags": [
+      "大聯大",
+      "重大訊息",
+      "釣魚",
+      "個資"
+     ],
+     "title": "大聯大發生資安事件，部分員工姓名與公務 Email 遭未授權存取"
+    },
+    {
+     "category": "資安",
+     "rank": 3,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180484"
+      }
+     ],
+     "summary": "長榮物流公告部分資訊系統遭網路攻擊，已啟動資安防禦與復原機制。連同本週台積電員工個資、鼎泰豐與大聯大事件，國內企業資安事件密集。",
+     "tags": [
+      "長榮物流",
+      "重大訊息",
+      "物流"
+     ],
+     "title": "長榮物流部分資訊系統遭攻擊，已啟動防禦與復原"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已證實"
+     ],
+     "rank": 4,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "聯合報",
+       "url": "https://udn.com/news/story/7314/9875636"
+      }
+     ],
+     "summary": "領務局 11 月 4 日發現部分網站遭入侵，已修復並完成安全檢測後恢復上線。外洩資料包括 9 月 3 日至 11 月 2 日線上上傳的 7 萬 2,702 張護照大頭照、駐紐約辦事處 2 萬 6,072 份授權書掃描檔，以及 774 件 ABTC 申請資料。領務局表示已核發護照效力不受影響，民眾不需換發。",
+     "tags": [
+      "外交部",
+      "領務局",
+      "個資外洩",
+      "政府機關"
+     ],
+     "title": "外交部領務局網站遭駭，約 10 萬份護照大頭照等資料外洩"
+    },
+    {
+     "category": "資安",
+     "rank": 5,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "中央社",
+       "url": "https://www.cna.com.tw/news/aipl/202611120178.aspx"
+      },
+      {
+       "name": "資安人",
+       "url": "https://www.informationsecurity.com.tw/article/article_detail.aspx?aid=13486"
+      }
+     ],
+     "summary": "資安署 11 月 12 日表示，AI 協助駭客網攻已成國際趨勢，國內十餘家企業受害、約 800 萬筆個資受影響；公務機關依資通安全管理法須於 1 小時內通報。數發部 11 月 11 日公布五大行動：重大警訊三日內完成修補、個資外洩 72 小時內通報主管機關並通知當事人、查明原因，以及一個月內提出改善計畫。",
+     "tags": [
+      "數位發展部",
+      "資安署",
+      "個資外洩",
+      "通報"
+     ],
+     "title": "資安署：AI 助攻網攻，十餘家企業約 800 萬筆個資受影響；數發部公布五大行動"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/"
+      },
+      {
+       "name": "GBHackers",
+       "url": "https://gbhackers.com/cisa-check-point-zero-day-vulnerability/"
+      }
+     ],
+     "summary": "攻擊者先以 PHP2Shell（CVE-2026-109618／109619）入侵 Mobile Access 入口，再利用 Gaia OS 本機提權漏洞取得 root，植入 TSGA 後門，部分案例進一步在 VMware ESXi 主機執行資料抹除程式。CISA 已於 11 月 13 日列入 KEV。修補版本為 R82.20 Take 14、R82.10 Take 52、R82 Take 132、R81.20 Take 174；已停止支援的 R81.10、R81 沒有修補。",
+     "tags": [
+      "Check Point",
+      "防火牆",
+      "KEV",
+      "ESXi",
+      "CVE-2026-123039"
+     ],
+     "title": "Check Point Gaia 零時差漏洞 CVE-2026-123039 遭利用，CISA 要求 11 月 16 日前修補"
+    },
+    {
+     "category": "資安",
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "GBHackers",
+       "url": "https://gbhackers.com/fbi-warns-artex-ai-framework"
+      }
+     ],
+     "summary": "FBI 11 月 13 日發布 FLASH 通報：開源自主滲透框架 ARTEX 自 8 月起被用於偵察、利用漏洞、提權與竊資，受害者涵蓋政府、金融、醫療與電信等產業。原始碼已下架但仍有分支流傳，研究人員 11 月初發現逾 1,600 個公開曝露的控制台。FBI 建議盤點對外系統、限制管理端點，並監控異常的 LLM API 流量與 Entra 憑證新增。",
+     "tags": [
+      "FBI",
+      "AI 攻擊",
+      "ARTEX",
+      "Entra ID"
+     ],
+     "title": "FBI 警告 AI 自主滲透框架 ARTEX 遭濫用，部分入侵三小時內取得高權限"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/"
+      },
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/hackers-exploit-n-central-flaws-to.html"
+      }
+     ],
+     "summary": "PoC 於 11 月 12 日公開後數小時內即出現攻擊，已知 21 台地端 N-central 主機被植入挖礦程式，其中 19 台已安裝最新 2026.4 HF2。攻擊串接 Apache Axis 漏洞 CVE-2026-90436（CVSS 9.8）與啟用 Legacy API 的 N-central 弱點；N-able 已預設停用 Legacy API 與 Intune 整合，雲端版不受影響，目前尚無對應修補。",
+     "tags": [
+      "N-able",
+      "N-central",
+      "RMM",
+      "已遭利用"
+     ],
+     "title": "N-central 新攻擊鏈「4EverAble2Shell」在已修補主機上遭利用"
+    },
+    {
+     "category": "資安",
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/critical-apache-http2-flaw-could-let.html"
+      },
+      {
+       "name": "Red Hat CVE 頁面",
+       "url": "https://access.redhat.com/security/cve/CVE-2026-119618"
+      }
+     ],
+     "summary": "Apache httpd 2.4.55 至 2.4.70 的 mod_http2 存在可在未驗證下遠端執行程式碼的重大漏洞，已於 2.4.71 修補。目前未見遭利用報告，但 Apache 為機關網站常見平台，應儘速升級或暫停 HTTP/2。",
+     "tags": [
+      "Apache",
+      "HTTP/2",
+      "RCE",
+      "CVE-2026-119618"
+     ],
+     "title": "Apache HTTP Server mod_http2 重大漏洞 CVE-2026-119618，未驗證即可遠端執行程式"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "尚未修補"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/"
+      },
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html"
+      }
+     ],
+     "summary": "研究人員公開 SignDrop 概念驗證，一般使用者可藉 CLFS 驅動與 Defender 簽章更新介面取得 SYSTEM 權限，宣稱影響 Windows 11 26H2 等版本。微軟尚未回應或釋出修補，目前未發現實際遭利用。",
+     "tags": [
+      "Windows",
+      "CLFS",
+      "提權",
+      "零時差"
+     ],
+     "title": "Windows CLFS 提權 PoC「SignDrop」公開，微軟尚未修補"
+    },
+    {
+     "category": "資安",
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/13/postgresql-security-update-november-2026/"
+      }
+     ],
+     "summary": "PostgreSQL 釋出 18.7、17.12、16.16、15.20 與 14.25，修補 52 個 CVE，其中 32 個 CVSS 8.8，涵蓋 PL/Perl、邏輯複寫、dblink 與 pg_dump 等。14.25 為 14 版最後一版，之後不再有安全更新。",
+     "tags": [
+      "PostgreSQL",
+      "資料庫",
+      "EOL"
+     ],
+     "title": "PostgreSQL 一次修補 52 個漏洞，PostgreSQL 14 停止支援"
+    },
+    {
+     "category": "資安",
+     "rank": 7,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"
+      },
+      {
+       "name": "CVE Brief 11/13",
+       "url": "https://cvebrief.com/archive/2026/11/13/"
+      }
+     ],
+     "summary": "Citrix 發布更新修補 NetScaler ADC／Gateway、NetScaler Console 與 Secure Access Client 共 12 個漏洞，多個 CVSS 9.3 以上，包括可繞過驗證與造成服務中斷的問題；目前未列為已遭利用。",
+     "tags": [
+      "Citrix",
+      "NetScaler",
+      "VPN",
+      "驗證繞過"
+     ],
+     "title": "Citrix 修補 12 個 NetScaler 與 Secure Access Client 漏洞，含驗證繞過"
+    },
+    {
+     "category": "資安",
+     "rank": 8,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/4837-hijacked-github-accounts-ran-ci.html"
+      },
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/12/wfx-loot-github-actions-secret-stealer/"
+      }
+     ],
+     "summary": "攻擊者利用竊得的 GitHub 帳密，在至少 1,806 個儲存庫的 CI 流程植入竊取程式，收集 CI 密鑰與雲端憑證。使用 GitHub Actions 的單位應檢查近期提交與工作流程異動並輪替密鑰。",
+     "tags": [
+      "GitHub",
+      "供應鏈",
+      "CI/CD",
+      "憑證竊取"
+     ],
+     "title": "4,837 個遭劫持 GitHub 帳號在逾 1,800 個儲存庫植入 CI 密鑰竊取程式"
+    },
+    {
+     "category": "資安",
+     "rank": 9,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/13/microsoft-teams-device-code-phishing/"
+      },
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html"
+      }
+     ],
+     "summary": "研究人員揭露攻擊者偽造 Teams 會議預約，誘使受害者在微軟登入頁輸入裝置代碼，藉此取得 Microsoft 365 權杖。另有假 Google 日曆邀請搭配即時代理竊取工作階段的活動。",
+     "tags": [
+      "Microsoft 365",
+      "Teams",
+      "釣魚",
+      "Device Code"
+     ],
+     "title": "攻擊者以 Teams 會議預約誘騙，進行裝置代碼（device code）釣魚"
+    },
+    {
+     "category": "資安",
+     "rank": 10,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CyberScoop",
+       "url": "https://cyberscoop.com/us-seizes-north-korea-hacking-infrastructure-binance/"
+      }
+     ],
+     "summary": "美國司法部 11 月 12 日宣布查扣北韓駭客的 FaceStealer 雲端基礎設施。該手法先盜用 Telegram、LinkedIn、Slack 帳號，再以假 Zoom／Teams 會議頁面誘騙受害者，並偷錄網路攝影機影像用於後續冒充。FBI 將逾 60 億美元的 Binance 竊案歸咎於北韓，已凍結逾 27 億美元、法院核准扣押逾 12 億美元。",
+     "tags": [
+      "北韓",
+      "社交工程",
+      "假會議",
+      "加密貨幣"
+     ],
+     "title": "美國司法部查扣北韓 FaceStealer 釣魚基礎設施，凍結逾 27 億美元 Binance 被竊資產"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "非資安攻擊"
+     ],
+     "rank": 11,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer：列印問題",
+       "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-says-november-security-updates-cause-printing-issues/"
+      },
+      {
+       "name": "BleepingComputer：啟用失敗",
+       "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-windows-activation-failures-after-november-updates/"
+      }
+     ],
+     "summary": "微軟表示，安裝 11 月更新後，內含零尺寸圖片（常見於浮水印或版面錨點）的文件可能無法列印，主要影響經 GDI 列印的 Word，Windows 10 以上與 Windows Server 2016 以上均可能受影響，事件編號 WI1549472。另有報導指 11 月更新後出現 Windows 啟用失敗問題。",
+     "tags": [
+      "Windows",
+      "Patch Tuesday",
+      "列印",
+      "Word"
+     ],
+     "title": "微軟證實 11 月安全性更新造成部分文件列印失敗"
+    },
+    {
+     "category": "資安",
+     "rank": 12,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "GBHackers",
+       "url": "https://gbhackers.com/japan-cyberattack-ai-security-vulnerabilities"
+      }
+     ],
+     "summary": "報導彙整日本研究機構數據：10 月公開的資安事件達 233 起，約為過去單月高峰的 2.4 倍，其中 30 起各涉及百萬筆以上資料。JPCERT/CC 觀察到攻擊者用 AI 掃描已知弱點與 API；但研究人員表示尚無法確定 AI 對整體激增的貢獻。日本政府宣布 100 億日圓緊急資安方案。",
+     "tags": [
+      "日本",
+      "個資外洩",
+      "AI 攻擊",
+      "API"
+     ],
+     "title": "日本 10 月公開資安事件達 233 起創新高，政府推 100 億日圓緊急方案"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "訴訟進行中"
+     ],
+     "rank": 9,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "WRAL／AP",
+       "url": "https://www.wral.com/news/ap/03ece-advocacy-groups-sue-ai-giants-to-freeze-new-models-warning-of-catastrophic-risks/"
+      }
+     ],
+     "summary": "Public Citizen、Heat Initiative 等四個非營利團體 11 月 12 日向舊金山高等法院提告，主張五家公司無法防止 AI 造成災難性危害，引用 AI 參與網攻等案例，依加州不公平競爭法請求法院禁止開發或部署新模型。被告公司尚未回應。（Claude 由 Anthropic 開發，此處僅轉述報導。）",
+     "tags": [
+      "AI 治理",
+      "訴訟",
+      "Anthropic",
+      "OpenAI",
+      "Google",
+      "Meta"
+     ],
+     "title": "四個倡議團體在舊金山起訴 Anthropic、Google、Meta、OpenAI 與 SpaceXSI，要求暫停開發新模型"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "服務中斷",
+      "尚未證實原因"
+     ],
+     "rank": 13,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ABC7 即時報導",
+       "url": "https://abc7news.com/live-updates/faa-ground-stop-live-updates-what-know-nationwide-flights-are-grounded/20038887/entry/20039118"
+      },
+      {
+       "name": "SecurityWeek",
+       "url": "https://securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update"
+      }
+     ],
+     "summary": "FAA 11 月 13 日以「通訊問題影響所有航路管制中心」為由，罕見下令全美航班地面停等，多家航空取消夜間航班。國土安全部表示目前沒有遭惡意攻擊的跡象，但尚未正式排除；FAA 正推行的 AI 系統 SMART 承包商稱停飛與其產品無關。SecurityWeek 報導 FBI 正調查一項軟體更新。",
+     "tags": [
+      "關鍵基礎設施",
+      "航空",
+      "FAA",
+      "服務中斷"
+     ],
+     "title": "美國 FAA 因航管通訊故障下令全美停飛，國土安全部稱尚無惡意跡象"
+    },
+    {
+     "region": "國內",
+     "category": "資安",
+     "rank": 6,
+     "title": "大金空調零件線上商城委外廠商發生資安事件，132 筆個資遭未授權存取",
+     "summary": "大金空調零件線上商城的委外廠商發生資安事件，共 141 筆訂單資料受波及，其中 132 筆個人資料遭未經授權存取。事件再次凸顯委外廠商管理與個資外洩通知的重要性。",
+     "flags": [
+      "委外供應鏈",
+      "個資外洩"
+     ],
+     "tags": [
+      "個資",
+      "委外"
+     ],
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180482"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 10,
+     "title": "Bloomberg：白宮主張放寬法律責任，以鼓勵企業揭露 AI 相關資訊",
+     "summary": "據 Bloomberg 11 月 14 日報導，白宮建議降低企業揭露 AI 相關資訊時可能承擔的法律責任，以提高揭露意願。具體內容以後續官方文件為準。",
+     "flags": [],
+     "tags": [
+      "AI 政策",
+      "美國"
+     ],
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure"
+      }
+     ]
     }
-  ]
+   ],
+   "updatedAt": "2026-11-14T19:50:00+08:00"
+  },
+  {
+   "actions": [
+    "今天到期：若有 Ivanti Connect Secure，確認 CVE-2026-118527 已修補；有 Alpine／musl 環境的 SSH 服務，升級到 OpenSSH 10.6p2，並檢查有沒有空密碼帳號。",
+    "安裝 11 月 Office／Windows 更新，優先處理 Outlook 零時差漏洞；SQL Server 主機先在測試環境確認效能沒問題再上線。",
+    "在 M365 系統管理中心追蹤事件 EX1550543；恢復前準備替代聯絡管道，並提醒同仁小心以「信箱修復」為名的釣魚信。",
+    "更新瀏覽器到 Chrome 157、Firefox 160；有使用 N-central 或 Cisco BroadWorks 的一併修補。",
+    "參考台積電事件，盤點委外雲端服務商保存的員工與民眾個資，確認合約有通報義務與存取控管要求。"
+   ],
+   "date": "2026-11-13",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "Cybersecurity News",
+       "url": "https://cybersecuritynews.com/tsmc-data-breach/"
+      }
+     ],
+     "summary": "台積電 11 月 12 日揭露，部分現職與離職員工的個資在網路上外流，資料與一家外部雲端服務商保存的紀錄相符，目前沒有跡象顯示自家系統遭入侵。外洩範圍是員工資料，不涉及晶片生產或客戶資料。有報導稱暗網有人兜售 4.6 萬筆員工資料，此數字尚未證實。",
+     "tags": [
+      "TSMC",
+      "個資外洩",
+      "供應鏈",
+      "暗網"
+     ],
+     "title": "台積電證實部分員工個資外流，源自外部雲端服務商"
+    },
+    {
+     "category": "AI",
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SEC 8-K 新聞稿",
+       "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+      },
+      {
+       "name": "SEC 8-K 申報",
+       "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvda-20261111.htm"
+      },
+      {
+       "name": "24/7 Wall St.",
+       "url": "https://247wallst.com/investing/2026/11/09/does-nvidia-cfo-colette-kress-take-over-if-jensen-huang-leaves/"
+      }
+     ],
+     "summary": "Nvidia 董事會宣布黃仁勳辭去總裁、執行長與董事，即刻生效，由財務長 Colette Kress 兼任臨時執行長，並開始物色正式接班人。董事會同時任命自 1993 年起擔任董事的 Harvey C. Jones 為公司首任董事長。此前董事會已在調查黃仁勳涉嫌與疑似中國間諜往來一事。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳",
+      "人事",
+      "SEC 8-K"
+     ],
+     "title": "Nvidia 黃仁勳辭職，財務長 Kress 暫代執行長"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "服務中斷"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cybersecurity News",
+       "url": "https://cybersecuritynews.com/massive-microsoft-365-outage/"
+      },
+      {
+       "name": "CNN",
+       "url": "https://edition.cnn.com/2026/11/12/business/live-news/microsoft-global-outage-intl-hnk"
+      },
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/"
+      }
+     ],
+     "summary": "Microsoft 365 從 11 月 12 日開始大規模中斷，影響 Exchange Online、Teams、SharePoint、Copilot 與 Defender XDR。微軟表示原因是伺服器健康檢查失敗，不是遭到入侵。部分修復後的伺服器在流量回升時又失去回應，截至 13 日仍未宣布完全恢復，事件編號 EX1550543。",
+     "tags": [
+      "Microsoft 365",
+      "Outlook",
+      "Teams",
+      "Exchange"
+     ],
+     "title": "Microsoft 365 全球中斷延續到 13 日，微軟：非資安攻擊"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cybersecurity News",
+       "url": "https://cybersecuritynews.com/outlook-0-day-vulnerability/"
+      }
+     ],
+     "summary": "微軟證實有攻擊者在利用一個 Outlook 漏洞：使用者開啟惡意檔案時，Outlook 會在沒有外部內容警告的情況下連到攻擊者控制的位置，洩漏 Windows 驗證資訊。CVSS 6.5（中度），但已確認遭實際利用，應安裝 11 月安全性更新。",
+     "tags": [
+      "Outlook",
+      "Microsoft 365 Apps",
+      "零時差",
+      "NTLM"
+     ],
+     "title": "Outlook 零時差漏洞遭利用，可竊取 Windows 驗證雜湊"
+    },
+    {
+     "category": "AI",
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "AI Tech Morning Paper (note)",
+       "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
+      }
+     ],
+     "summary": "Google 推出主打快速處理日常程式與 AI 代理任務的 Gemini 4 Hydrogen，定位不同於偏重深度推理的 Carbon 與 Argon。當天已在 AI Studio、Gemini API、Gemini app 與 Google 搜尋全球上線。",
+     "tags": [
+      "Google",
+      "Gemini",
+      "模型發表"
+     ],
+     "title": "Google 全面開放 Gemini 4 Hydrogen，免費用戶也能用"
+    },
+    {
+     "category": "AI",
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "AI Tech Morning Paper (note)",
+       "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
+      },
+      {
+       "name": "The Neuron",
+       "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026/"
+      }
+     ],
+     "summary": "原告對 Anthropic、Google、Meta、OpenAI 與 SpaceX 的 AI 部門提告，要求暫停可能協助生物武器、網路攻擊或脫離人類控制的前沿 AI 開發與提供，並引用這些公司自己發出的風險警告。（Claude 由 Anthropic 開發，此則僅轉述報導。）",
+     "tags": [
+      "訴訟",
+      "AI 安全",
+      "Anthropic",
+      "OpenAI",
+      "Google",
+      "Meta"
+     ],
+     "title": "美國四個民間團體控告五家 AI 公司，要求凍結前沿 AI 開發"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/"
+      }
+     ],
+     "summary": "研究人員一口氣公開 30 多個 N-central 零時差漏洞後，攻擊活動隨即出現。N-able 已先修補無需驗證即可利用的漏洞，使用這套 RMM 工具的單位應盡快更新。",
+     "tags": [
+      "N-able",
+      "N-central",
+      "RMM",
+      "零時差"
+     ],
+     "title": "N-able N-central 零時差漏洞遭鎖定，官方趕修"
+    },
+    {
+     "category": "AI",
+     "rank": 7,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "AI Tech Morning Paper (note)",
+       "url": "https://note.com/jsn525/n/n02bf9ce89f07?hl=en"
+      }
+     ],
+     "summary": "OpenAI 發表新產品，讓多個 AI 代理組隊模擬攻擊者，測試企業自家的網頁應用程式。",
+     "tags": [
+      "OpenAI",
+      "AI 代理",
+      "滲透測試"
+     ],
+     "title": "OpenAI 推出讓 AI 代理扮演攻擊者的網站資安測試產品"
+    },
+    {
+     "category": "AI",
+     "rank": 8,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Market News (Herve Cuviliez)",
+       "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
+      }
+     ],
+     "summary": "據報導，Anthropic 計畫 11 月 18 日 IPO，募資可能超過 600 億美元，估值可能高於 1.4 兆美元。同日 Nvidia 也將由臨時執行長主持全員大會。（Claude 由 Anthropic 開發，此則僅轉述報導。）",
+     "tags": [
+      "Anthropic",
+      "IPO"
+     ],
+     "title": "Anthropic 預計 11 月 18 日上市"
+    },
+    {
+     "category": "資安",
+     "rank": 9,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/"
+      }
+     ],
+     "summary": "Google 在 Chrome 157 修補 83 個漏洞，Mozilla 在 Firefox 160 修補 99 個，機關端點應盡快更新瀏覽器。",
+     "tags": [
+      "Chrome",
+      "Firefox",
+      "瀏覽器"
+     ],
+     "title": "Chrome 157、Firefox 160 合計修補逾 180 個漏洞"
+    },
+    {
+     "category": "資安",
+     "rank": 10,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "#Cybersecurity News Nov 12",
+       "url": "https://theparkernathan.substack.com/p/cybersecurity-news-november-12-2026"
+      }
+     ],
+     "summary": "有報導指出新的 Windows SignDrop 零時差漏洞可讓攻擊者提權到 SYSTEM。微軟也承認近期 Windows 更新會讓 SQL Server 效能下降，部分安全性更新有安裝問題。",
+     "tags": [
+      "Windows",
+      "SQL Server",
+      "零時差",
+      "Patch Tuesday"
+     ],
+     "title": "Windows SignDrop 零時差漏洞可取得 SYSTEM 權限；11 月更新拖慢 SQL Server"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 11,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "#Cybersecurity News Nov 12",
+       "url": "https://theparkernathan.substack.com/p/cybersecurity-news-november-12-2026"
+      }
+     ],
+     "summary": "CISA 把 Cisco BroadWorks 漏洞加入已遭利用漏洞清單，同時發布六份工業控制系統資安通報。",
+     "tags": [
+      "CISA",
+      "KEV",
+      "Cisco",
+      "ICS"
+     ],
+     "title": "CISA 將 Cisco BroadWorks 漏洞列入 KEV，並發布 6 份工控通報"
+    },
+    {
+     "category": "資安",
+     "rank": 12,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BrightDefense",
+       "url": "https://www.brightdefense.com/resources/recent-data-breaches/"
+      }
+     ],
+     "summary": "DigiCert 證實一套內部業務系統遭入侵，外洩的封存客戶資料包含姓名、公司 Email、電話與地址，部分帳戶還含護照、駕照等證件。DigiCert 未說明影響人數。",
+     "tags": [
+      "DigiCert",
+      "憑證",
+      "資料外洩"
+     ],
+     "title": "憑證機構 DigiCert 內部系統遭未授權存取"
+    },
+    {
+     "category": "資安",
+     "rank": 13,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Daily AI Caffeine",
+       "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-13-nov-26"
+      }
+     ],
+     "summary": "CloudSEK 指出，與哈薩克有關的駭客用開源 Hermes AI 代理規劃、執行並回報攻擊，因伺服器沒上鎖而曝光。現有證據無法判斷該組織是否受哈薩克政府指使。",
+     "tags": [
+      "AI 代理",
+      "APT",
+      "CloudSEK",
+      "政府"
+     ],
+     "title": "駭客用開源 AI 代理 Hermes 執行攻擊，竊取塔吉克政府文件"
+    },
+    {
+     "category": "AI",
+     "rank": 14,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Market News (Herve Cuviliez)",
+       "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
+      }
+     ],
+     "summary": "分析指出市場把 Nvidia 的治理風險和 AI 算力需求分開看待，非 Nvidia 晶片商受惠。Cerebras 把 2026 年營收預測上修到 9.4 至 9.6 億美元。",
+     "tags": [
+      "Cerebras",
+      "Nvidia",
+      "晶片"
+     ],
+     "title": "市場區隔 Nvidia 治理風險與算力需求，Cerebras 上修營收"
+    },
+    {
+     "category": "AI",
+     "rank": 15,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Daily AI Caffeine",
+       "url": "https://dailyaicaffeinenobs.substack.com/p/todays-real-ai-news-13-nov-26"
+      }
+     ],
+     "summary": "百度開放 ERNIE 5.5 Flash 預覽版 API。另有報導稱字節跳動計畫推出類似 Meta Muse 的 AI 助理。",
+     "tags": [
+      "百度",
+      "ERNIE",
+      "字節跳動",
+      "中國模型"
+     ],
+     "title": "百度開放 ERNIE 5.5 Flash 預覽 API；字節跳動傳將推個人助理"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 16,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Neuron",
+       "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-november-13-2026/"
+      }
+     ],
+     "summary": "一份報告指稱六款中國 AI 模型留有使用 Nvidia Blackwell 晶片訓練的數值痕跡，目前尚無官方證實。",
+     "tags": [
+      "中國模型",
+      "Nvidia",
+      "出口管制"
+     ],
+     "title": "報告稱六款中國 AI 模型帶有 Nvidia Blackwell 晶片痕跡"
+    },
+    {
+     "category": "AI",
+     "rank": 17,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Market News (Herve Cuviliez)",
+       "url": "https://hervecuviliez.substack.com/p/market-news-friday-13-november-2026"
+      }
+     ],
+     "summary": "慕尼黑機器人公司 Agile Robots 完成 5 億美元融資，由軟銀領投，估值 85 億美元，Nvidia 與日立也參與投資。",
+     "tags": [
+      "機器人",
+      "融資",
+      "軟銀"
+     ],
+     "title": "Agile Robots 獲軟銀領投 5 億美元"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  },
+  {
+   "backfilled": true,
+   "date": "2026-11-10",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Action1",
+       "url": "https://www.action1.com/patch-tuesday/patch-tuesday-november-2026/"
+      }
+     ],
+     "summary": "微軟 11 月例行更新共 1,094 個修補，其中 63 個為重大等級，另有一個零時差漏洞 CVE-2026-124194。",
+     "tags": [
+      "Microsoft",
+      "Patch Tuesday",
+      "Windows",
+      "CVE-2026-124194"
+     ],
+     "title": "微軟 11 月 Patch Tuesday：1,094 個修補、一個零時差"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/search/label/Zero-Day?hl=ru"
+      }
+     ],
+     "summary": "Google 發布 Chrome 安全更新，修補今年第八個遭實際利用的零時差漏洞。",
+     "tags": [
+      "Chrome",
+      "瀏覽器",
+      "零時差"
+     ],
+     "title": "Chrome 修補 2026 年第八個已遭利用的零時差漏洞"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  },
+  {
+   "backfilled": true,
+   "date": "2026-11-09",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "eSecurity Planet",
+       "url": "https://www.esecurityplanet.com/vulnerabilities/news-cisa-kev-gpustack-freeswitch-openssh-ibm-november-2026/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180289"
+      }
+     ],
+     "summary": "CISA 把 GPUStack、FreeSWITCH、OpenSSH、IBM Aspera Faspex 四個漏洞列入 KEV，要求 11 月 12 日前修補並完成鑑識初篩。OpenSSH 的 CVE-2026-123158（SSHole，CVSS 8.1）出現在使用 musl 的環境，密碼欄輸入 257–1,024 字元即可能登入未設密碼的帳號，已在 10.6p2 修補。",
+     "tags": [
+      "OpenSSH",
+      "Alpine",
+      "musl",
+      "KEV",
+      "CVE-2026-123158",
+      "IBM Aspera"
+     ],
+     "title": "OpenSSH SSHole 等四個已遭利用漏洞列入 CISA KEV，3 天內須修補"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  },
+  {
+   "backfilled": true,
+   "date": "2026-11-06",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CSA Research Note",
+       "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-edge-mfa-bypass-zero-days-20261108-csa-sty/"
+      }
+     ],
+     "summary": "SonicWall 發布 SNWLID-2026-0014，涵蓋七個 SonicOS 漏洞，CISA 當天就把其中已遭利用的漏洞列入 KEV，聯邦機關修補期限為 11 月 20 日。",
+     "tags": [
+      "SonicWall",
+      "VPN",
+      "MFA",
+      "KEV"
+     ],
+     "title": "SonicWall SonicOS 多項漏洞公告，MFA 繞過漏洞當日列入 KEV"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  },
+  {
+   "backfilled": true,
+   "date": "2026-11-03",
+   "items": [
+    {
+     "category": "資安",
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/security/news"
+      }
+     ],
+     "summary": "永豐銀行證實新網銀交易系統程式異常，造成部分客戶帳戶出現不明轉帳。金管會初步資訊顯示影響 419 名客戶、427 筆交易，總額超過 4,000 萬元，款項與手續費已全數返還。",
+     "tags": [
+      "永豐銀行",
+      "金融",
+      "網銀",
+      "系統異常"
+     ],
+     "title": "永豐銀行新網銀程式異常，419 名客戶出現不明轉帳"
+    },
+    {
+     "category": "資安",
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/security/news"
+      }
+     ],
+     "summary": "Langflow 兩個重大漏洞可讓攻擊者繞過身分驗證，或未登入就遠端執行程式碼，影響 1.0.0 至 1.12.8 版，官方已發布 1.13.0 修補（含 CVE-2026-110186）。",
+     "tags": [
+      "Langflow",
+      "AI 應用",
+      "RCE",
+      "CVE-2026-110186"
+     ],
+     "title": "AI 開發平台 Langflow 修補兩個 CVSS 9.8 重大漏洞"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  },
+  {
+   "backfilled": true,
+   "date": "2026-10-30",
+   "items": [
+    {
+     "category": "資安",
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "風傳媒",
+       "url": "https://www.storm.mg/keyword/資安事件"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180291"
+      }
+     ],
+     "summary": "電商雲端服務商 91APP 公布調查結果，影響範圍最大可能涵蓋 1,329 個品牌、479 萬餘名消費者，涉及 2025/4/4 至 2026/10/14 的線上訂單。臺灣無印良品表示約 18 萬人受影響，外洩欄位包含姓名、電話、地址與 Email。",
+     "tags": [
+      "91APP",
+      "無印良品",
+      "個資外洩",
+      "供應鏈",
+      "電商"
+     ],
+     "title": "91APP 遭駭，最多波及 1,329 個品牌、約 480 萬名消費者"
+    },
+    {
+     "category": "資安",
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "風傳媒",
+       "url": "https://www.storm.mg/keyword/資安事件"
+      }
+     ],
+     "summary": "幣安暫停存提服務，估計涉及資產約 63 億美元，已與區塊鏈夥伴凍結約 30 億美元。初步調查指向一名 DevOps 工程師的筆電遭入侵；TRM Labs 認為可能與北韓駭客有關。",
+     "tags": [
+      "幣安",
+      "加密貨幣",
+      "北韓",
+      "端點入侵"
+     ],
+     "title": "幣安遭駭估損約 63 億美元，疑為北韓駭客"
+    }
+   ],
+   "updatedAt": "2026-11-13T16:45:00+08:00"
+  }
+ ]
 }
