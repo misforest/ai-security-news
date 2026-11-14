@@ -61,7 +61,7 @@ a{color:var(--accent)}
 .tagline{margin:12px 0 0;font-size:15px;color:var(--cockpit-muted);max-width:52ch}
 .tagline b{color:var(--cockpit-ink);font-weight:500}
 #radar{width:200px;height:200px;display:block}
-.gauges{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--cockpit-line);border:1px solid var(--cockpit-line);border-radius:10px;overflow:hidden;margin:4px 0 0}
+.gauges{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--cockpit-line);border:1px solid var(--cockpit-line);border-radius:10px;overflow:hidden;margin:4px 0 0}
 .gauge{background:rgba(8,19,31,.72);padding:12px 16px;display:flex;flex-direction:column;gap:2px}
 .gauge .k{font-size:12px;color:var(--cockpit-muted);letter-spacing:.04em}
 .gauge .v{font-family:var(--font-tech);font-size:28px;font-weight:700;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--cockpit-ink)}
@@ -84,6 +84,7 @@ nav.tabs button .n{font-family:var(--font-tech);font-size:12px;margin-left:8px;o
   .hero{grid-template-columns:1fr}
   #radar{display:none}
   .gauges{grid-template-columns:repeat(2,1fr)}
+  .gauge:last-child{grid-column:span 2}
 }
 @media (max-width:640px){.filters{position:static}}
 @media (max-width:420px){nav.tabs{display:flex}nav.tabs button{flex:1;padding:9px 10px}}
@@ -216,9 +217,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     </header>
     <div class="gauges" aria-label="今日儀表">
       <div class="gauge"><span class="k">最新一天新聞</span><span class="v" id="g-today">—</span></div>
-      <div class="gauge hot"><span class="k">已遭利用漏洞</span><span class="v" id="g-exploit">—</span></div>
       <div class="gauge"><span class="k">累積新聞</span><span class="v" id="g-total">—</span></div>
       <div class="gauge sig"><span class="k">開放報名課程</span><span class="v" id="g-courses">—</span></div>
+      <div class="gauge"><span class="k">最新影片</span><span class="v" id="g-videos">—</span></div>
+      <div class="gauge" id="g-alerts-box"><span class="k">資安通報</span><span class="v" id="g-alerts">—</span></div>
     </div>
     <div class="urgent" id="urgent" role="alert" hidden></div>
     <nav class="tabs" role="tablist" aria-label="內容類別">
@@ -776,6 +778,11 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     });
     return out.sort(function(a,b){ return (PRI[a.priority]==null?9:PRI[a.priority]) - (PRI[b.priority]==null?9:PRI[b.priority]) || (String(b.receivedAt) > String(a.receivedAt) ? 1 : -1); });
   }
+  function alertTotal(){
+    var seen = {}, n = 0;
+    state.alertDays.forEach(function(d){ (d && Array.isArray(d.items) ? d.items : []).forEach(function(a){ if(a && a.id && !seen[a.id]){ seen[a.id] = 1; n++; } }); });
+    return n;
+  }
   function fmtTime(t){ t = String(t||""); return t ? t.slice(5,16).replace("T"," ").replace("-","/") : ""; }
   function alertCard(a){
     var h = function(t){ return hlWith(state.aq, t); };
@@ -808,7 +815,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     Array.prototype.forEach.call($("apris").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-apri") === state.apri); });
     var latestDay = state.alertDays.slice().sort(function(a,b){ return a.date < b.date ? 1 : -1; })[0];
     var li = latestDay && Array.isArray(latestDay.items) ? latestDay.items : [];
-    $("tabn-alerts").textContent = li.length ? li.length : "";
+    $("tabn-alerts").textContent = state.status !== "loading" ? alertTotal() : "";
     var urg = li.filter(function(a){ return a && a.priority === "緊急"; });
     var box = $("urgent");
     if(urg.length){
@@ -831,14 +838,20 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   function renderGauges(){
     var L = latest(), day = state.days.filter(function(d){ return d.date === L; })[0];
     var items = day && Array.isArray(day.items) ? day.items : [];
-    var exploited = items.filter(function(i){ return (i.flags||[]).indexOf("已遭利用") !== -1; }).length;
     var total = state.days.reduce(function(n,d){ return n + (Array.isArray(d.items) ? d.items.length : 0); }, 0);
     var openC = state.courses.filter(function(c){ return c && c.eligibility === "任何人"; }).length;
     var ready = state.status !== "loading";
     $("g-today").innerHTML = ready && L ? items.length + '<small>則・' + esc(L.slice(5).replace("-","/")) + '</small>' : "—";
-    $("g-exploit").innerHTML = ready && L ? exploited + '<small>則</small>' : "—";
     $("g-total").innerHTML = ready ? total + '<small>則・' + state.days.length + ' 天</small>' : "—";
     $("g-courses").innerHTML = ready ? openC + '<small>門／共 ' + state.courses.length + '</small>' : "—";
+    var vd = state.videos.map(function(v){ return v && v.date ? String(v.date) : ""; }).filter(Boolean).sort();
+    var vL = vd.length ? vd[vd.length-1] : "";
+    $("g-videos").innerHTML = ready ? state.videos.length + '<small>部' + (vL ? '・最新 ' + esc(vL.slice(5).replace("-","/")) : "") + '</small>' : "—";
+    var ad = state.alertDays.filter(function(d){ return d && d.date; }).sort(function(a,b){ return a.date < b.date ? 1 : -1; })[0];
+    var aLi = ad && Array.isArray(ad.items) ? ad.items : [];
+    var aUrg = aLi.filter(function(a){ return a && a.priority === "緊急"; }).length;
+    $("g-alerts").innerHTML = ready ? alertTotal() + '<small>則' + (ad ? '・' + esc(ad.date.slice(5).replace("-","/")) + ' 新增 ' + aLi.length : "") + '</small>' : "—";
+    $("g-alerts-box").classList.toggle("hot", aUrg > 0);
     blips = items.map(function(it, i){
       var h = 0, t = String(it.title||i); for(var k=0;k<t.length;k++){ h = (h*31 + t.charCodeAt(k)) >>> 0; }
       return { a: (h % 360) * Math.PI/180, r: .25 + ((h >> 9) % 70)/100, ai: it.category === "AI", hot: (it.flags||[]).indexOf("已遭利用") !== -1 };
