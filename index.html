@@ -780,6 +780,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   var SRC_NAME = {"資安院":"資安院","SOC":"SOC","ACSI":"安碁訊息"};
   var TIER = {"緊急":"立即處理","高":"本週內確認","中":"例行追蹤","低":"例行追蹤"};
   function srcOf(a){ return a && SRC_NAME[a.source] ? a.source : "資安院"; }
+  function mailUrl(u){ return /^https:\/\/outlook\.(office365|office)\.com\//i.test(String(u||"")) ? String(u) : ""; }
   function collectAlerts(){
     var seen = {}, out = [];
     alertDaysInRange().forEach(function(d){
@@ -811,6 +812,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
       '<h3>' + h(a.title) + '</h3>' +
       '<div class="meta"><span class="num">收信 ' + esc(fmtTime(a.receivedAt)) + '</span>' + (a.eventType ? '<span class="pill plain">' + h(a.eventType) + '</span>' : "") + (a.nicsType ? '<span class="pill plain">' + h(a.nicsType) + '</span>' : "") + lvl + (a.dupCount > 1 ? '<span class="num">重複 ' + esc(a.dupCount) + ' 封</span>' : "") + '</div>' +
       f("影響平台", a.platform) + f("建議措施", a.action) + f("判斷依據", a.basis) +
+      (mailUrl(a.mailLink) ? '<div class="srcs"><span class="lbl">來源信件</span><a class="src" href="' + esc(mailUrl(a.mailLink)) + '" target="_blank" rel="noopener noreferrer">在 Outlook 開啟原始信件 ↗</a></div>' : "") +
     '</article>';
   }
   function renderAlerts(){
@@ -853,7 +855,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     if(urg.length){
       var cnt = {}; urg.forEach(function(a){ var s = SRC_NAME[srcOf(a)]; cnt[s] = (cnt[s]||0) + 1; });
       box.hidden = false;
-      box.innerHTML = '<b class="h">⚠ 緊急：' + esc(since) + ' 起有 ' + urg.length + ' 則須立即處理的通報（' + esc(Object.keys(cnt).map(function(k){ return k + " " + cnt[k]; }).join("、")) + '）</b><ul>' + urg.slice(0, 8).map(function(a){ return '<li>[' + esc(SRC_NAME[srcOf(a)]) + '] ' + esc(a.id) + '：' + esc(a.title) + '</li>'; }).join("") + (urg.length > 8 ? '<li>另 ' + (urg.length - 8) + ' 則…</li>' : "") + '</ul><a href="#alerts">前往資安通報 →</a>';
+      box.innerHTML = '<b class="h">⚠ 緊急：' + esc(since) + ' 起有 ' + urg.length + ' 則須立即處理的通報（' + esc(Object.keys(cnt).map(function(k){ return k + " " + cnt[k]; }).join("、")) + '）</b><ul>' + urg.slice(0, 8).map(function(a){ var mu = mailUrl(a.mailLink); return '<li>[' + esc(SRC_NAME[srcOf(a)]) + '] ' + esc(a.id) + '：' + (mu ? '<a href="' + esc(mu) + '" target="_blank" rel="noopener noreferrer">' + esc(a.title) + ' ↗</a>' : esc(a.title)) + '</li>'; }).join("") + (urg.length > 8 ? '<li>另 ' + (urg.length - 8) + ' 則…</li>' : "") + '</ul><a href="#alerts">前往資安通報 →</a>';
     } else { box.hidden = true; box.innerHTML = ""; }
   }
 
