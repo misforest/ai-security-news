@@ -1,6 +1,259 @@
 {
- "updatedAt": "2026-11-14T19:50:00+08:00",
+ "updatedAt": "2026-11-15T08:15:00+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點機關或委外廠商是否使用 Fireworks AI 等外部 AI 推論平台，輪替曾提供的 API 金鑰並確認交付資料範圍。",
+    "提醒同仁：Microsoft 365 中斷後出現假冒「信箱復原」釣魚，帳密只在官方入口輸入，並檢查異常登入紀錄。",
+    "確認 SQL Server 等資料庫未直接對網際網路開放，停用 sa 等預設帳號並強制複雜密碼。",
+    "有使用 UnrealIRCd 者依 CISA KEV 盡速更新；持續追蹤前一日 Check Point Gaia 漏洞（CISA 期限 11 月 16 日）修補進度。",
+    "將常用 AI 服務官方網址設為書籤或白名單，並對 GPU／AI 運算主機加強異常負載監控。"
+   ],
+   "date": "2026-11-15",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [
+      "併購"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CSO Online",
+       "url": "https://www.csoonline.com/article/4244500/crowdstrike-to-acquire-fiddler-dreadnode-to-extend-ai-security-across-agent-lifecycle.html"
+      },
+      {
+       "name": "BankInfoSecurity",
+       "url": "https://www.bankinfosecurity.com/crowdstrike-to-buy-ai-security-startups-for-495m-a-33285"
+      },
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/crowdstrike-fiddler-dreadnode-acquisitions-ai-kill-switch"
+      }
+     ],
+     "summary": "CrowdStrike 宣布收購 AI 可觀測性公司 Fiddler AI 與 AI 紅隊公司 Dreadnode，總額約 4.95 億美元，目標涵蓋 AI 代理從開發、測試到執行的整個生命週期；同時推出可中止失控 AI 代理的 Kill Switch 功能。資安大廠持續加碼 AI 代理治理，機關導入 AI 代理時可留意這類監控與中止機制。",
+     "tags": [
+      "AI 代理",
+      "AI 資安",
+      "CrowdStrike"
+     ],
+     "title": "CrowdStrike 以約 4.95 億美元收購 Fiddler AI 與 Dreadnode，並推出 AI 代理「緊急停止」功能"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Unite.AI",
+       "url": "https://www.unite.ai/langchain-secures-300m-series-c-at-3b-valuation-for-agent-governance"
+      }
+     ],
+     "summary": "AI 代理開發框架 LangChain 完成由 CapitalG 領投的 3 億美元 C 輪募資，估值較前一輪的 12.5 億美元大幅提高。資金將投入代理治理與監控平台 LangSmith，顯示企業對 AI 代理可控性的需求快速成長。",
+     "tags": [
+      "AI 代理",
+      "募資",
+      "LangChain"
+     ],
+     "title": "LangChain 完成 3 億美元 C 輪募資，估值 30 億美元，主打 AI 代理治理"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Databricks 官方部落格",
+       "url": "https://www.databricks.com/blog/openai-and-databricks-enterprise-ai-your-governed-data"
+      }
+     ],
+     "summary": "Databricks 宣布與 OpenAI 合作，企業可在 Databricks 平台上以既有的資料治理與權限設定，直接使用 GPT 與 Codex 等模型。重點在於資料不必搬出受控環境，有助於兼顧 AI 應用與資料保護。",
+     "tags": [
+      "OpenAI",
+      "Databricks",
+      "資料治理"
+     ],
+     "title": "OpenAI 與 Databricks 合作，企業可在受控資料上直接使用 OpenAI 模型"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "MLQ.ai",
+       "url": "https://mlq.ai/news/cloudflare-open-sources-kitesurf-its-workers-based-browser-engine-for-ai-agents"
+      }
+     ],
+     "summary": "Cloudflare 以 Apache 2.0 授權開源 Kitesurf，這是一套在 Workers 上執行、無狀態的瀏覽器引擎，供 AI 代理瀏覽與操作網頁。Cloudflare 另指出，自 10 月以來 AI 自動化滲透測試工具的流量大幅增加。",
+     "tags": [
+      "AI 代理",
+      "開源",
+      "Cloudflare"
+     ],
+     "title": "Cloudflare 開源 AI 代理用瀏覽器引擎 Kitesurf"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Hugging Face 部落格",
+       "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+      }
+     ],
+     "summary": "開源本地端大型語言模型推論框架 llama.cpp 發布 v1.0.0，宣告 API 與 ABI 進入穩定階段，之後主版本號變動才代表不相容變更。對於在機關內部離線部署開源模型的單位，版本管理與升級規劃會更明確。",
+     "tags": [
+      "開源模型",
+      "本地部署",
+      "llama.cpp"
+     ],
+     "title": "本地端推論框架 llama.cpp 推出 1.0 版，承諾 API／ABI 穩定"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "供應鏈"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News（Uber）",
+       "url": "https://cybersecuritynews.com/uber-confirms-data-breach/"
+      },
+      {
+       "name": "Cyber Security News（Cursor）",
+       "url": "https://cybersecuritynews.com/cursor-data-breach/"
+      },
+      {
+       "name": "BleepingComputer",
+       "url": "https://bleepingcomputer.com/news/security/fireworks-ai-discloses-new-breach-after-cloud-provider-hack"
+      }
+     ],
+     "summary": "Uber 證實駭客透過 AI 推論平台 Fireworks AI 存放的紀錄，取得數千名美國司機的個人資料；AI 程式開發工具 Cursor 也表示其 10 月的資安事件源自 Fireworks AI 外洩的存取金鑰，攻擊者藉此竊取歷史程式碼資料。此事凸顯 AI 供應鏈第三方風險，使用外部 AI 平台時要盤點交付的資料與金鑰。",
+     "tags": [
+      "資料外洩",
+      "AI 供應鏈",
+      "Fireworks AI",
+      "Uber",
+      "Cursor"
+     ],
+     "title": "Fireworks AI 外洩持續擴大：Uber 證實美國司機資料外流，Cursor 也追查到同一來源"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "社交工程"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/active-password-stealing-attack-microsoft-365/"
+      }
+     ],
+     "summary": "微軟指出有釣魚活動以 11 月 12 日起的 Microsoft 365 服務中斷為誘餌，引導使用者開啟假冒的信箱復原頁面輸入帳密。機關使用者近期若收到「信件復原」「帳號驗證」類通知，應一律經官方入口確認。",
+     "tags": [
+      "釣魚",
+      "Microsoft 365"
+     ],
+     "title": "微軟警告：駭客利用 Microsoft 365 大當機進行密碼竊取釣魚"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CISA",
+       "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      },
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html"
+      }
+     ],
+     "summary": "CISA 於 11 月 13 日將 UnrealIRCd 的分隔字元處理不當漏洞 CVE-2026-114713 列入已知遭利用漏洞（KEV）清單，同批還有 Check Point 漏洞。有使用 IRC 伺服器的單位應盡快更新並檢查是否有異常連線。",
+     "tags": [
+      "CISA KEV",
+      "UnrealIRCd",
+      "CVE-2026-114713"
+     ],
+     "title": "CISA 將 UnrealIRCd 漏洞 CVE-2026-114713 列入 KEV，已遭實際利用"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/break-into-microsoft-sql-servers/"
+      }
+     ],
+     "summary": "研究人員發現一波攻擊活動，針對網際網路上可直接連線的 Microsoft SQL Server，以超過 2,700 組密碼字典嘗試登入，成功後植入遠端存取惡意程式。此類攻擊不需漏洞，關鍵在於不要讓資料庫直接對外並停用弱密碼帳號。",
+     "tags": [
+      "SQL Server",
+      "暴力破解",
+      "RAT"
+     ],
+     "title": "攻擊者以 2,700 組常見密碼暴力破解對外開放的 SQL Server，植入遠端存取木馬"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "社交工程"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/new-typoprompting-attacks/"
+      }
+     ],
+     "summary": "研究人員揭露攻擊者註冊與熱門 AI 服務相似的網域，使用者輸入錯字時會被導向假網站並下載惡意程式。機關可將常用 AI 服務官方網址加入書籤或白名單，並封鎖相似網域。",
+     "tags": [
+      "域名仿冒",
+      "AI 工具",
+      "惡意程式"
+     ],
+     "title": "「TypoPrompting」攻擊：打錯 AI 工具網址就被導向惡意程式"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/hackers-use-sansar-linux-malware/"
+      }
+     ],
+     "summary": "一套名為 SANSAR 的 Linux 惡意工具會竄改 GPU 監控數據，讓管理者看到 GPU 閒置，藉此掩護在 GPU 伺服器上的加密貨幣挖礦。建置 AI 運算主機的單位應以多種方式（功耗、溫度、程序清單）交叉監控。",
+     "tags": [
+      "Linux",
+      "挖礦",
+      "GPU 伺服器"
+     ],
+     "title": "SANSAR Linux 惡意程式偽造 GPU 使用率為 0%，暗中挖礦"
+    }
+   ],
+   "updatedAt": "2026-11-15T08:15:00+08:00"
+  },
   {
    "actions": [
     "Check Point（CISA 期限 11/16）：所有管理伺服器與閘道安裝 11 月 Jumbo Hotfix，優先處理對外開放 Mobile Access 的設備；排查 upload_progress_pwn 工作階段檔、異常 CPconfigdaemon 程序與閘道到 ESXi 的 SSH 連線。R81.10／R81 無修補，應排定升級。",
@@ -612,43 +865,43 @@
      "title": "美國 FAA 因航管通訊故障下令全美停飛，國土安全部稱尚無惡意跡象"
     },
     {
-     "region": "國內",
      "category": "資安",
-     "rank": 6,
-     "title": "大金空調零件線上商城委外廠商發生資安事件，132 筆個資遭未授權存取",
-     "summary": "大金空調零件線上商城的委外廠商發生資安事件，共 141 筆訂單資料受波及，其中 132 筆個人資料遭未經授權存取。事件再次凸顯委外廠商管理與個資外洩通知的重要性。",
      "flags": [
       "委外供應鏈",
       "個資外洩"
      ],
-     "tags": [
-      "個資",
-      "委外"
-     ],
+     "rank": 6,
+     "region": "國內",
      "sources": [
       {
        "name": "iThome",
        "url": "https://www.ithome.com.tw/news/180482"
       }
-     ]
+     ],
+     "summary": "大金空調零件線上商城的委外廠商發生資安事件，共 141 筆訂單資料受波及，其中 132 筆個人資料遭未經授權存取。事件再次凸顯委外廠商管理與個資外洩通知的重要性。",
+     "tags": [
+      "個資",
+      "委外"
+     ],
+     "title": "大金空調零件線上商城委外廠商發生資安事件，132 筆個資遭未授權存取"
     },
     {
-     "region": "國外",
      "category": "AI",
-     "rank": 10,
-     "title": "Bloomberg：白宮主張放寬法律責任，以鼓勵企業揭露 AI 相關資訊",
-     "summary": "據 Bloomberg 11 月 14 日報導，白宮建議降低企業揭露 AI 相關資訊時可能承擔的法律責任，以提高揭露意願。具體內容以後續官方文件為準。",
      "flags": [],
-     "tags": [
-      "AI 政策",
-      "美國"
-     ],
+     "rank": 10,
+     "region": "國外",
      "sources": [
       {
        "name": "Bloomberg",
        "url": "https://bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure"
       }
-     ]
+     ],
+     "summary": "據 Bloomberg 11 月 14 日報導，白宮建議降低企業揭露 AI 相關資訊時可能承擔的法律責任，以提高揭露意願。具體內容以後續官方文件為準。",
+     "tags": [
+      "AI 政策",
+      "美國"
+     ],
+     "title": "Bloomberg：白宮主張放寬法律責任，以鼓勵企業揭露 AI 相關資訊"
     }
    ],
    "updatedAt": "2026-11-14T19:50:00+08:00"
