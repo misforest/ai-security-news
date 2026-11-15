@@ -210,7 +210,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
             <h1>智安領航站</h1>
           </div>
         </div>
-        <p class="tagline">資訊同仁的每日航圖：<b>每天 8:00</b> 更新 AI 與資安新聞、資安院通報，並彙整可報名的 AI、資安課程。</p>
+        <p class="tagline">資訊同仁的每日航圖：<b>每天 8:00</b> 更新 AI 與資安新聞、資安院與 SOC 通報，並彙整可報名的 AI、資安課程。</p>
         <p class="status" id="status" role="status">資料載入中…</p>
       </div>
       <canvas id="radar" width="400" height="400" aria-label="今日新聞雷達：紫點為 AI 新聞，橘點為資安新聞" role="img"></canvas>
@@ -395,7 +395,16 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   <div class="filters">
     <div class="wrap">
       <form class="frow" id="alertForm" autocomplete="off">
-        <div class="field grow"><label for="aq">關鍵字</label><input type="search" id="aq" placeholder="例如：Fortinet、社交工程、CVE、EWA"></div>
+        <div class="field grow"><label for="aq">關鍵字</label><input type="search" id="aq" placeholder="例如：Fortinet、SQL Injection、登入失敗、EWA"></div>
+        <div class="field">
+          <span class="lbl" id="asrcLbl">通報來源</span>
+          <div class="seg" role="group" aria-labelledby="asrcLbl" id="asrcs">
+            <button type="button" data-asrc="all">全部</button>
+            <button type="button" data-asrc="資安院">資安院</button>
+            <button type="button" data-asrc="SOC">SOC</button>
+            <button type="button" data-asrc="ACSI">安碁漏洞訊息</button>
+          </div>
+        </div>
         <div class="field">
           <span class="lbl" id="apriLbl">重要性</span>
           <div class="seg" role="group" aria-labelledby="apriLbl" id="apris">
@@ -408,10 +417,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         <div class="field">
           <label for="arange">期間</label>
           <select id="arange">
-            <option value="all">全部（115年9月起）</option>
-            <option value="latest">最新一次彙整</option>
             <option value="7">近 7 天</option>
+            <option value="latest">最新一次彙整</option>
             <option value="30">近 30 天</option>
+            <option value="all">全部（115年9月起）</option>
           </select>
         </div>
         <button type="button" class="linkbtn" id="areset">清除篩選</button>
@@ -421,11 +430,12 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   </div>
   <div class="wrap">
     <main>
-      <p class="lawlinks"><b>資料來源：國家資通安全研究院寄送之通報信件</b><a href="https://www.ncert.nat.gov.tw" target="_blank" rel="noopener noreferrer">通報應變網站 ↗</a><span>每天 8:00 彙整前一天 00:00 起的通報；EWA／INT 為機關專屬通報，列為緊急、請優先處理</span></p>
-      <section class="block" aria-labelledby="h-acrit"><h2 id="h-acrit">緊急處理 <span class="count" id="cnt-acrit"></span></h2><div class="list" id="list-acrit"></div></section>
+      <p class="lawlinks"><b>資料來源：資安院、安碁 SOC 與安碁訊息通知的 Outlook 信件</b><a href="https://www.ncert.nat.gov.tw" target="_blank" rel="noopener noreferrer">通報應變網站 ↗</a><span>每天 8:00 彙整前一天 00:00 起的信件。重要性：緊急＝立即處理、高＝本週內確認、中／低＝例行追蹤</span></p>
+      <section class="block" aria-labelledby="h-acrit"><h2 id="h-acrit">緊急：立即處理（全部來源） <span class="count" id="cnt-acrit"></span></h2><div class="list" id="list-acrit"></div></section>
+      <section class="block" aria-labelledby="h-anics"><h2 id="h-anics">資安院通報 <span class="count" id="cnt-anics"></span></h2><div class="list" id="list-anics"></div></section>
       <div class="groups">
-        <section class="group" aria-labelledby="h-ahigh"><h2 id="h-ahigh">影響等級：高 <span class="count" id="cnt-ahigh"></span></h2><div class="list" id="list-ahigh"></div></section>
-        <section class="group" aria-labelledby="h-aother"><h2 id="h-aother">其他（中／低） <span class="count" id="cnt-aother"></span></h2><div class="list" id="list-aother"></div></section>
+        <section class="group" aria-labelledby="h-asoc"><h2 id="h-asoc">SOC 通報（安碁 SOC） <span class="count" id="cnt-asoc"></span></h2><div class="list" id="list-asoc"></div></section>
+        <section class="group" aria-labelledby="h-aacsi"><h2 id="h-aacsi">安碁漏洞訊息通知 <span class="count" id="cnt-aacsi"></span></h2><div class="list" id="list-aacsi"></div></section>
       </div>
       <p class="srcnote" id="asrc"></p>
     </main>
@@ -447,7 +457,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank",
     videos: [], vq: "", vtype: "all", playing: {}, mode: "",
     laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "active", lauth: "all",
-    alertDays: [], aq: "", apri: "all", arange: "all"
+    alertDays: [], aq: "", apri: "all", arange: "7", asrc: "all"
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -767,12 +777,16 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     var from = addDays(ds[0].date, -(parseInt(state.arange,10)-1));
     return ds.filter(function(d){ return d.date >= from; });
   }
+  var SRC_NAME = {"資安院":"資安院","SOC":"SOC","ACSI":"安碁訊息"};
+  var TIER = {"緊急":"立即處理","高":"本週內確認","中":"例行追蹤","低":"例行追蹤"};
+  function srcOf(a){ return a && SRC_NAME[a.source] ? a.source : "資安院"; }
   function collectAlerts(){
     var seen = {}, out = [];
     alertDaysInRange().forEach(function(d){
       (Array.isArray(d.items) ? d.items : []).forEach(function(a){
         if(!a || !a.id || seen[a.id]) return; seen[a.id] = 1;
-        if(!matchAll(state.aq, [a.id, a.kind, a.title, a.eventType, a.level, a.platform, a.action, a.tlp, (a.flags||[]).join(" ")].join(" "))) return;
+        if(state.asrc !== "all" && srcOf(a) !== state.asrc) return;
+        if(!matchAll(state.aq, [a.id, a.kind, SRC_NAME[srcOf(a)], a.title, a.eventType, a.nicsType, a.level, a.platform, a.action, a.tlp, (a.flags||[]).join(" ")].join(" "))) return;
         out.push(a);
       });
     });
@@ -786,41 +800,60 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   function fmtTime(t){ t = String(t||""); return t ? t.slice(5,16).replace("T"," ").replace("-","/") : ""; }
   function alertCard(a){
     var h = function(t){ return hlWith(state.aq, t); };
-    var crit = a.priority === "緊急";
-    var pri = '<span class="pill ' + (crit ? "crit" : (a.priority === "高" ? "sec" : "plain")) + '">' + esc(a.priority||"") + '</span>';
+    var crit = a.priority === "緊急", src = srcOf(a);
+    var pri = '<span class="pill ' + (crit ? "crit" : (a.priority === "高" ? "sec" : "plain")) + '">' + esc(a.priority||"") + (TIER[a.priority] ? "・" + TIER[a.priority] : "") + '</span>';
     var flags = (Array.isArray(a.flags) ? a.flags : []).map(function(f){ return '<span class="pill flag">' + h(f) + '</span>'; }).join("");
     var tlp = a.tlp ? '<span class="pill flag">' + esc(a.tlp) + '・限內部分享</span>' : "";
     var f = function(k, v){ return v ? '<p class="afield"><b>' + k + '</b>' + h(v) + '</p>' : ""; };
+    var lvl = src === "ACSI" ? "" : '<span class="pill plain">' + (src === "SOC" ? "風險等級 " : "影響等級 ") + esc(a.level || "無此欄位") + '</span>';
     return '<article class="item ' + (crit ? "pri-crit" : (a.priority === "高" ? "pri-high" : "")) + '">' +
-      '<div class="meta"><span class="num">' + esc(a.id) + '</span>' + (a.kind ? '<span class="pill plain">' + esc(a.kind) + '</span>' : "") + pri + tlp + flags + '</div>' +
+      '<div class="meta"><span class="pill ' + (src === "資安院" ? "ai" : (src === "SOC" ? "sec" : "pd")) + '">' + esc(SRC_NAME[src]) + '</span><span class="num">' + esc(a.id) + '</span>' + (a.kind && src === "資安院" ? '<span class="pill plain">' + esc(a.kind) + '</span>' : "") + pri + tlp + flags + '</div>' +
       '<h3>' + h(a.title) + '</h3>' +
-      '<div class="meta"><span class="num">收信 ' + esc(fmtTime(a.receivedAt)) + '</span>' + (a.eventType ? '<span class="pill plain">' + esc(a.eventType) + '</span>' : "") + '<span class="pill plain">影響等級 ' + esc(a.level || "無此欄位") + '</span>' + (a.dupCount > 1 ? '<span class="num">重複 ' + esc(a.dupCount) + ' 封</span>' : "") + '</div>' +
-      f("影響平台", a.platform) + f("建議措施", a.action) +
+      '<div class="meta"><span class="num">收信 ' + esc(fmtTime(a.receivedAt)) + '</span>' + (a.eventType ? '<span class="pill plain">' + h(a.eventType) + '</span>' : "") + (a.nicsType ? '<span class="pill plain">' + h(a.nicsType) + '</span>' : "") + lvl + (a.dupCount > 1 ? '<span class="num">重複 ' + esc(a.dupCount) + ' 封</span>' : "") + '</div>' +
+      f("影響平台", a.platform) + f("建議措施", a.action) + f("判斷依據", a.basis) +
     '</article>';
   }
   function renderAlerts(){
     var all = collectAlerts();
-    var byPri = function(p){ return all.filter(function(a){ return p === "中低" ? (a.priority === "中" || a.priority === "低" || !a.priority) : a.priority === p; }); };
-    var show = function(p){ return state.apri === "all" || state.apri === p; };
-    var crit = show("緊急") ? byPri("緊急") : [], high = show("高") ? byPri("高") : [], other = show("中低") ? byPri("中低") : [];
+    var isLow = function(a){ return a.priority === "中" || a.priority === "低" || !a.priority; };
+    var priOk = function(a){ return state.apri === "all" || (state.apri === "中低" ? isLow(a) : a.priority === state.apri); };
+    var byPri = function(p){ return all.filter(function(a){ return p === "中低" ? isLow(a) : a.priority === p; }); };
+    var shown = all.filter(priOk);
     var noData = state.alertDays.length ? "這個期間沒有符合條件的通報。" : "目前還沒有通報資料。";
-    renderList("alert-crit", crit, "list-acrit", "cnt-acrit", alertCard, state.alertDays.length && !state.aq.trim() ? "沒有需要緊急處理的通報。" : noData, "則");
-    renderList("alert-high", high, "list-ahigh", "cnt-ahigh", alertCard, noData, "則");
-    renderList("alert-other", other, "list-aother", "cnt-aother", alertCard, noData, "則");
+    var publicOnly = state.mode === "files";
+    var crit = (state.apri === "all" || state.apri === "緊急") ? byPri("緊急") : [];
+    renderList("alert-crit", crit, "list-acrit", "cnt-acrit", alertCard, state.alertDays.length && !state.aq.trim() ? "這個期間沒有需要立即處理的通報。" : noData, "則");
+    var groups = [["資安院","alert-nics","list-anics","cnt-anics","h-anics"],["SOC","alert-soc","list-asoc","cnt-asoc","h-asoc"],["ACSI","alert-acsi","list-aacsi","cnt-aacsi","h-aacsi"]];
+    var tally = {};
+    groups.forEach(function(g){
+      var items = shown.filter(function(a){ return srcOf(a) === g[0]; });
+      var sec = $(g[4]).parentNode;
+      sec.hidden = state.asrc !== "all" && state.asrc !== g[0];
+      var t = { "緊急":0, "高":0, "中低":0 };
+      items.forEach(function(a){ t[isLow(a) ? "中低" : a.priority]++; });
+      tally[g[0]] = items.length;
+      var empty = (publicOnly && g[0] !== "資安院") ? "公開版不收錄 SOC 與安碁訊息（含本署內部資訊），請至 claude.ai 版查看。" : noData;
+      renderList(g[1], items, g[2], g[3], alertCard, empty, "則");
+      if(items.length) $(g[3]).textContent = items.length + " 則・緊急 " + t["緊急"] + "・高 " + t["高"] + "・中低 " + t["中低"];
+    });
     var ds = alertDaysInRange(), d0 = ds[0];
     var per = d0 && d0.period ? fmtTime(d0.period.from) + " ～ " + fmtTime(d0.period.to) : "";
-    $("asummary").innerHTML = state.alertDays.length ? (state.arange === "latest" && d0 ? "最新彙整 <b>" + esc(d0.date) + "</b>（期間 " + esc(per) + "，信件 " + esc(d0.mailCount||0) + " 封）：" : "") +
-      "緊急 <b>" + byPri("緊急").length + "</b>、高 <b>" + byPri("高").length + "</b>、中／低 <b>" + byPri("中低").length + "</b> 則" + (state.aq.trim() ? "，關鍵字「" + esc(state.aq.trim()) + "」" : "") : "";
+    $("asummary").innerHTML = state.alertDays.length ? (state.arange === "latest" && d0 ? "最新彙整 <b>" + esc(d0.date) + "</b>" + (per ? "（期間 " + esc(per) + "）" : "") + "：" : "") +
+      "緊急 <b>" + byPri("緊急").length + "</b>、高 <b>" + byPri("高").length + "</b>、中／低 <b>" + byPri("中低").length + "</b> 則（資安院 " + tally["資安院"] + "、SOC " + tally["SOC"] + "、安碁訊息 " + tally["ACSI"] + "）" + (state.aq.trim() ? "，關鍵字「" + esc(state.aq.trim()) + "」" : "") : "";
     $("asrc").textContent = d0 && d0.note ? d0.note : "";
     Array.prototype.forEach.call($("apris").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-apri") === state.apri); });
-    var latestDay = state.alertDays.slice().sort(function(a,b){ return a.date < b.date ? 1 : -1; })[0];
-    var li = latestDay && Array.isArray(latestDay.items) ? latestDay.items : [];
+    Array.prototype.forEach.call($("asrcs").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-asrc") === state.asrc); });
     $("tabn-alerts").textContent = state.status !== "loading" ? alertTotal() : "";
-    var urg = li.filter(function(a){ return a && a.priority === "緊急"; });
+    // 提醒：最近兩天（前一天＋當天）收到、需立即處理的通報，所有來源
+    var sorted = state.alertDays.filter(function(d){ return d && d.date; }).sort(function(a,b){ return a.date < b.date ? 1 : -1; });
+    var latestDate = sorted[0] && sorted[0].date, since = latestDate ? addDays(latestDate, -1) : "";
+    var urg = [], useen = {};
+    sorted.filter(function(d){ return d.date >= since; }).forEach(function(d){ (Array.isArray(d.items) ? d.items : []).forEach(function(a){ if(a && a.id && !useen[a.id] && a.priority === "緊急"){ useen[a.id] = 1; urg.push(a); } }); });
     var box = $("urgent");
     if(urg.length){
+      var cnt = {}; urg.forEach(function(a){ var s = SRC_NAME[srcOf(a)]; cnt[s] = (cnt[s]||0) + 1; });
       box.hidden = false;
-      box.innerHTML = '<b class="h">⚠ 緊急：' + esc(latestDay.date) + ' 有 ' + urg.length + ' 則須優先處理的資安院通報</b><ul>' + urg.map(function(a){ return '<li>' + esc(a.id) + '：' + esc(a.title) + '</li>'; }).join("") + '</ul><a href="#alerts">前往資安通報 →</a>';
+      box.innerHTML = '<b class="h">⚠ 緊急：' + esc(since) + ' 起有 ' + urg.length + ' 則須立即處理的通報（' + esc(Object.keys(cnt).map(function(k){ return k + " " + cnt[k]; }).join("、")) + '）</b><ul>' + urg.slice(0, 8).map(function(a){ return '<li>[' + esc(SRC_NAME[srcOf(a)]) + '] ' + esc(a.id) + '：' + esc(a.title) + '</li>'; }).join("") + (urg.length > 8 ? '<li>另 ' + (urg.length - 8) + ' 則…</li>' : "") + '</ul><a href="#alerts">前往資安通報 →</a>';
     } else { box.hidden = true; box.innerHTML = ""; }
   }
 
@@ -917,7 +950,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("aq").addEventListener("input", function(){ var v = this.value; clearTimeout(aqT); aqT = setTimeout(function(){ state.aq = v; resetExpand("alert"); render(); }, 150); });
   $("apris").addEventListener("click", function(e){ var b = e.target.closest("button[data-apri]"); if(!b) return; state.apri = b.getAttribute("data-apri"); resetExpand("alert"); render(); });
   $("arange").addEventListener("change", function(){ state.arange = this.value; resetExpand("alert"); render(); });
-  $("areset").addEventListener("click", function(){ state.aq = ""; $("aq").value = ""; state.apri = "all"; state.arange = "all"; $("arange").value = "all"; resetExpand("alert"); render(); });
+  $("asrcs").addEventListener("click", function(e){ var b = e.target.closest("button[data-asrc]"); if(!b) return; state.asrc = b.getAttribute("data-asrc"); resetExpand("alert"); render(); });
+  $("areset").addEventListener("click", function(){ state.aq = ""; $("aq").value = ""; state.apri = "all"; state.asrc = "all"; state.arange = "7"; $("arange").value = "7"; resetExpand("alert"); render(); });
   $("urgent").addEventListener("click", function(e){ if(e.target.closest("a[href='#alerts']")){ e.preventDefault(); setView("alerts"); } });
   var vqT = null;
   $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
