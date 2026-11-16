@@ -270,6 +270,14 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         <section class="group" aria-labelledby="h-dom"><h2 id="h-dom">國內 <span class="count" id="cnt-dom"></span></h2><div class="list" id="list-dom"></div></section>
         <section class="group" aria-labelledby="h-intl"><h2 id="h-intl">國外 <span class="count" id="cnt-intl"></span></h2><div class="list" id="list-intl"></div></section>
       </div>
+      <section class="block" aria-labelledby="h-ith">
+        <h2 id="h-ith">iThome 專區 <span class="count" id="cnt-ith"></span></h2>
+        <p class="lawlinks" style="margin:0 0 14px"><b>來源：iThome 資安與 AI 文章</b><a href="https://www.ithome.com.tw/security" target="_blank" rel="noopener noreferrer">iThome 資安 ↗</a><a href="https://www.ithome.com.tw/ai" target="_blank" rel="noopener noreferrer">iThome AI ↗</a><span>每天 8:00 整理，摘要為改寫，請點標題閱讀原文；標「約」的日期為推估</span></p>
+        <div class="groups">
+          <section class="group" aria-labelledby="h-ithsec"><h2 id="h-ithsec">資安文章 <span class="count" id="cnt-ithsec"></span></h2><div class="list" id="list-ithsec"></div></section>
+          <section class="group" aria-labelledby="h-ithai"><h2 id="h-ithai">AI 文章 <span class="count" id="cnt-ithai"></span></h2><div class="list" id="list-ithai"></div></section>
+        </div>
+      </section>
       <section class="actions" aria-labelledby="h-act"><h2 id="h-act">給機關的建議行動</h2><div id="actions"></div></section>
     </main>
   </div>
@@ -554,6 +562,33 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
       '<div class="meta"><time datetime="' + esc(it.date) + '">' + esc(it.date) + '</time><span class="pill ' + (isAI ? "ai" : "sec") + '">' + esc(it.category||"") + '</span>' + flags + '</div>' +
       '<p>' + h(it.summary) + '</p></article>';
   }
+  function collectIthome(){
+    var seen = {}, out = [];
+    state.days.forEach(function(day){
+      if(!day || !day.date || !inRange(day.date)) return;
+      (Array.isArray(day.ithome) ? day.ithome : []).forEach(function(it){
+        if(!it || typeof it !== "object") return;
+        var key = it.url || it.title; if(!key || seen[key]) return;
+        if(state.cat !== "all" && it.category !== state.cat) return;
+        if(!matchAll(state.q, [it.title, it.summary, (it.tags||[]).join(" "), it.category, "iThome"].join(" "))) return;
+        seen[key] = 1; out.push(Object.assign({ collected: day.date }, it));
+      });
+    });
+    out.sort(function(a,b){ var da = String(a.date || a.collected), db = String(b.date || b.collected); return da !== db ? (da < db ? 1 : -1) : (a.rank||99) - (b.rank||99); });
+    return out;
+  }
+  function ithomeCard(it){
+    var h = function(t){ return hlWith(state.q, t); };
+    var u = safeUrl(it.url), isAI = it.category === "AI";
+    var d = it.date || it.collected || "";
+    var tags = (Array.isArray(it.tags) ? it.tags : []).map(function(t){ return '<span class="pill plain">' + h(t) + '</span>'; }).join("");
+    var flags = (Array.isArray(it.flags) ? it.flags : []).map(function(f){ return '<span class="pill flag">' + esc(f) + '</span>'; }).join("");
+    return '<article class="item ' + (isAI ? "cat-ai" : "cat-sec") + '">' +
+      '<div class="srcs"><span class="lbl">來源</span>' + (u ? '<a class="src" href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">iThome ↗</a>' : '<span class="src">iThome</span>') + '</div>' +
+      '<h3>' + (u ? '<a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + h(it.title) + '</a>' : h(it.title)) + '</h3>' +
+      '<div class="meta"><time datetime="' + esc(d) + '">' + (it.approx ? "約 " : "") + esc(d) + '</time><span class="pill ' + (isAI ? "ai" : "sec") + '">' + esc(it.category||"") + '</span>' + flags + tags + '</div>' +
+      (it.summary ? '<p>' + h(it.summary) + '</p>' : "") + '</article>';
+  }
   function renderList(key, items, listId, cntId, cardFn, emptyText, unit){
     $(cntId).textContent = items.length ? items.length + " " + unit : "";
     var list = $(listId);
@@ -568,6 +603,12 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     var noData = state.days.length ? "這個區間或關鍵字沒有符合的新聞。" : "目前還沒有新聞資料。";
     renderList("news-dom", dom, "list-dom", "cnt-dom", newsCard, noData, "則");
     renderList("news-intl", intl, "list-intl", "cnt-intl", newsCard, noData, "則");
+    var ith = collectIthome();
+    var ithSec = ith.filter(function(i){ return i.category !== "AI"; }), ithAI = ith.filter(function(i){ return i.category === "AI"; });
+    var ithNo = state.days.some(function(d){ return Array.isArray(d.ithome) && d.ithome.length; }) ? "這個區間或關鍵字沒有符合的 iThome 文章。" : "iThome 專區從 2026-11-16 起每天更新。";
+    renderList("news-ithsec", ithSec, "list-ithsec", "cnt-ithsec", ithomeCard, ithNo, "篇");
+    renderList("news-ithai", ithAI, "list-ithai", "cnt-ithai", ithomeCard, ithNo, "篇");
+    $("cnt-ith").textContent = ith.length ? ith.length + " 篇" : "";
     var days = state.days.filter(function(d){ return d && d.date && inRange(d.date) && Array.isArray(d.actions) && d.actions.length; })
       .sort(function(a,b){ return a.date < b.date ? 1 : -1; });
     $("actions").innerHTML = days.length ? days.slice(0,3).map(function(d){
@@ -1061,3 +1102,4 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
 </script>
 </body>
 </html>
+
