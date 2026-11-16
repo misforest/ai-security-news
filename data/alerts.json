@@ -1,17 +1,55 @@
 {
  "note": "公開版只收錄資安院一般警訊；EWA／INT 等機關專屬通報、標示 TLP 的內容，以及 SOC 與安碁通報不放在公開網站。",
- "updatedAt": "2026-11-16T13:48:47+08:00",
+ "updatedAt": "2026-11-16T14:25:47+08:00",
  "days": [
   {
    "date": "2026-11-16",
-   "updatedAt": "2026-11-16T13:04:20+08:00",
+   "updatedAt": "2026-11-16T14:25:08+08:00",
    "period": {
     "from": "2026-11-13T00:00:00+08:00",
-    "to": "2026-11-16T13:04:20+08:00"
+    "to": "2026-11-16T14:25:08+08:00"
    },
-   "alertCount": 5,
-   "note": "資安院 5 則（Oracle PHP 漏洞已遭利用；Apache HTTP/2、Linux Kernel、Linux APT、Veeam Management Pack 高風險漏洞）",
+   "alertCount": 7,
+   "note": "資安院 7 則（Oracle PHP、微軟 11 月更新含 Outlook 漏洞已遭利用；Apache HTTP/2、Linux Kernel、Linux APT、Veeam、Zyxel GS1900 高風險漏洞）",
    "items": [
+    {
+     "action": "依 Zyxel 安全公告更新韌體；曝露於公眾網路者 14 天內處置，並限制管理介面僅內部存取",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001043",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Zyxel GS1900-8/8HP/10HP/16/24/24E/24EP/24HPv2/48/48HPv2 韌體 2.90 C0(含)以前版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-16T11:28:23+08:00",
+     "receivedAt": "2026-11-16T13:44:41+08:00",
+     "source": "資安院",
+     "title": "Zyxel GS1900系列交換器存在高風險安全漏洞(CVE-2026-107441)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "儘速安裝 11 月份安全性更新；Outlook CVE-2026-124194 已遭利用（NTLMv2 雜湊外洩），14 天內完成修補",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "已遭利用"
+     ],
+     "id": "NICS-ANA-2026-0001044",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Windows、Office（Outlook/Word/Excel/SharePoint）、Exchange Server、SQL Server、AD DS、DNS、RDP 等；共 1095 個漏洞，269 個高風險",
+     "priority": "緊急",
+     "public": true,
+     "publishedAt": "2026-11-16T11:28:23+08:00",
+     "receivedAt": "2026-11-16T13:12:57+08:00",
+     "source": "資安院",
+     "title": "微軟釋出115年11月份安全性更新",
+     "tlp": ""
+    },
     {
      "action": "依 Debian／Ubuntu 安全公告更新 APT；曝露於公眾網路者 14 天內處置，未曝露者於下次系統更新時處置",
      "dupCount": 1,
