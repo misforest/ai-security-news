@@ -1,6 +1,228 @@
 {
- "updatedAt": "2026-11-15T08:15:00+08:00",
+ "updatedAt": "2026-11-16T08:12:00+08:00",
  "days": [
+  {
+   "actions": [
+    "Check Point Gaia 漏洞 CVE-2026-123039（CISA 期限今天 11/16）：依安碁 F0202_2902 通知確認版本並完成修補，檢查閘道是否有異常帳號或後門跡象，並確認 VMware ESXi 有離線備份。",
+    "全署 Chrome 更新至 157.0.8103.50 以上並重啟；Office／Outlook 套用 11 月安全更新（CVE-2026-124194，期限 11/24）。",
+    "如有使用 Barracuda 郵件閘道或委外廠商使用，立即確認已更新至 9.4.0.030 以上並檢查設定是否遭還原。",
+    "SOC 本期多為帳號登入失敗與帳號加入安全性群組通報，請確認權限異動都有申請紀錄，並追蹤 11/14 WAF 未阻擋可疑連線事件處理結果。",
+    "公文、簽呈與法律文件若使用生成式 AI，引用的法條與判例一律人工查核原始出處。"
+   ],
+   "date": "2026-11-16",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [
+      "媒體報導"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-15/bessent-says-nvidia-needs-dramatic-shakeup-after-huang-ouster"
+      },
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html"
+      }
+     ],
+     "summary": "Bloomberg 報導，美國財政部長貝森特公開表示 Nvidia 應從外部延攬新執行長，而非由暫代的財務長 Kress 接任，並要求董事會與外部律師在 10 天內回答經新加坡空殼公司銷往中國的相關問題。另有持股投資人致函董事會，希望保留黃仁勳回任的選項。以上為媒體報導，Nvidia 尚未正式回應。",
+     "tags": [
+      "Nvidia",
+      "公司治理",
+      "出口管制"
+     ],
+     "title": "Nvidia 執行長風波延燒：美財長貝森特公開要求找外部人選，並限董事會 10 天內答覆"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "媒體報導"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-15/nvidia-sought-taipei-s-help-over-employee-s-chip-smuggling-case"
+      }
+     ],
+     "summary": "Bloomberg 報導，一名張姓 Nvidia 主管 8 月因涉嫌將 74 台含 B300 的伺服器轉運中國遭起訴，Nvidia 代表曾就此案聯繫台灣政界人士，也曾徵詢台積電意見，但台積電拒絕介入。此為媒體報導，相關單位說法以官方為準。",
+     "tags": [
+      "Nvidia",
+      "台積電",
+      "晶片走私",
+      "出口管制"
+     ],
+     "title": "Bloomberg：Nvidia 曾為員工涉晶片走私案聯繫台灣官員，台積電婉拒介入"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "媒體報導"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Financial Times",
+       "url": "https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22"
+      },
+      {
+       "name": "ITIF：Pax Silica 時間軸",
+       "url": "https://itif.org/publications/2026/11/03/pax-silica-timeline/"
+      }
+     ],
+     "summary": "據金融時報報導，美國與印度、英國、南韓、阿聯、德國、瑞典、荷蘭及歐盟執委會於 11 月 15 日簽署宣言，共同建立 AI 技術與供應鏈風險登錄，屬美方推動的 Pax Silica 系列合作；簽署時間點在川習 APEC 會面前。",
+     "tags": [
+      "AI 供應鏈",
+      "國際合作",
+      "Pax Silica"
+     ],
+     "title": "美國與印度、英國、韓國等簽署 AI 供應鏈宣言，建立易受中國干預的技術登錄機制"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "產品發表"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Google Research",
+       "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/"
+      }
+     ],
+     "summary": "Google Research 發表 Antigravity 的 /teamwork 功能，可協調多個專長子代理分工處理開放研究問題，並開放外部研究人員試用；官方展示的數學形式化成果屬公司自述。",
+     "tags": [
+      "Google",
+      "AI 代理",
+      "研究工具"
+     ],
+     "title": "Google 在 Antigravity 推出多代理協作功能 /teamwork，開放研究人員使用"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "法規草案"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Rio Rundown（彙整 Tom's Hardware）",
+       "url": "https://riorundown.substack.com/p/ai-news-nov-15-2026-ai-infrastructure"
+      }
+     ],
+     "summary": "馬來西亞提出草案，要求資料中心業者申報 AI 加速器進口與耗電量、全生命週期追蹤設施，並須為保留電力付費；被視為回應美方對東南亞轉運先進晶片的疑慮。",
+     "tags": [
+      "馬來西亞",
+      "AI 晶片",
+      "出口管制"
+     ],
+     "title": "馬來西亞擬立法防堵 AI 晶片走私，資料中心須申報加速器進口與用電"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Rio Rundown",
+       "url": "https://riorundown.substack.com/p/ai-news-nov-15-2026-ai-infrastructure"
+      }
+     ],
+     "summary": "美國律所 Sullivan & Cromwell 承認在曼哈頓破產案書狀中引用不存在的判例；追蹤資料庫顯示全球 AI 幻覺引用案例已逾 2,280 件，提醒公文與法律文件使用 AI 須人工查核出處。",
+     "tags": [
+      "生成式 AI",
+      "幻覺",
+      "法律"
+     ],
+     "title": "知名律所 Sullivan & Cromwell 承認破產案書狀含 AI 捏造判例"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "CISA KEV"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Check Point Research",
+       "url": "https://research.checkpoint.com/2026/php2shell-exploitation-on-check-point-gateway/"
+      },
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/check-point-gateways-hacked-via-php2shell-to-deploy-vmware-esxi-wiper/"
+      }
+     ],
+     "summary": "Check Point Research 揭露攻擊者利用 PHP2Shell 搭配 Gaia 漏洞 CVE-2026-123039 入侵 Check Point 閘道，植入 TSGA 後門後橫向移動，對 VMware ESXi 主機執行清除程式。CVE-2026-123039 已列入 CISA KEV，聯邦機關修補期限為 11 月 16 日。",
+     "tags": [
+      "Check Point",
+      "PHP2Shell",
+      "CVE-2026-123039",
+      "VMware ESXi",
+      "Wiper"
+     ],
+     "title": "Check Point 閘道遭 PHP2Shell 攻擊，植入 TSGA 後門並清除 VMware ESXi 檔案"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "零時差",
+      "CISA KEV"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityOnline",
+       "url": "https://securityonline.info/cisa-kev-six-vulnerabilities-november-2026/"
+      }
+     ],
+     "summary": "Google Chrome XML 元件的 use-after-free 漏洞 CVE-2026-125350（高風險）已有在野利用，11 月 10 日列入 CISA KEV；請更新至 157.0.8103.50 以上並重新啟動瀏覽器。同批列入的 Outlook NTLM 雜湊外洩漏洞 CVE-2026-124194 期限同為 11 月 24 日。",
+     "tags": [
+      "Chrome",
+      "CVE-2026-125350",
+      "Outlook",
+      "CVE-2026-124194"
+     ],
+     "title": "Chrome 零時差漏洞 CVE-2026-125350 已遭利用，CISA 要求 11 月 24 日前修補"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "PoC 已公開",
+      "CISA KEV"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityOnline",
+       "url": "https://securityonline.info/cisa-kev-six-vulnerabilities-november-2026/"
+      }
+     ],
+     "summary": "Barracuda Email Security Gateway 驗證繞過漏洞 CVE-2026-116606（CVSS 9.3）與時區欄位命令注入漏洞 CVE-2026-111560 遭串連利用，已有少數組織受害；前者已在 9.4.0.030 修補，且已有公開 PoC。兩漏洞 11 月 10 日列入 CISA KEV，期限 11 月 13 日已過。",
+     "tags": [
+      "Barracuda",
+      "CVE-2026-116606",
+      "CVE-2026-111560",
+      "郵件閘道"
+     ],
+     "title": "Barracuda 郵件安全閘道兩漏洞遭串連利用，可免驗證取得 root 權限"
+    }
+   ],
+   "updatedAt": "2026-11-16T08:12:00+08:00"
+  },
   {
    "actions": [
     "盤點機關或委外廠商是否使用 Fireworks AI 等外部 AI 推論平台，輪替曾提供的 API 金鑰並確認交付資料範圍。",
