@@ -1,55 +1,112 @@
 {
  "note": "公開版只收錄資安院一般警訊；EWA／INT 等機關專屬通報、標示 TLP 的內容，以及 SOC 與安碁通報不放在公開網站。",
- "updatedAt": "2026-11-16T12:05:00+08:00",
+ "updatedAt": "2026-11-16T13:48:47+08:00",
  "days": [
   {
    "date": "2026-11-16",
-   "updatedAt": "2026-11-16T12:05:00+08:00",
+   "updatedAt": "2026-11-16T13:04:20+08:00",
    "period": {
     "from": "2026-11-13T00:00:00+08:00",
-    "to": "2026-11-16T12:05:00+08:00"
+    "to": "2026-11-16T13:04:20+08:00"
    },
-   "alertCount": 2,
-   "note": "資安院 2 則（Oracle PHP 漏洞已遭利用、Apache HTTP/2 RCE）",
+   "alertCount": 5,
+   "note": "資安院 5 則（Oracle PHP 漏洞已遭利用；Apache HTTP/2、Linux Kernel、Linux APT、Veeam Management Pack 高風險漏洞）",
    "items": [
     {
-     "id": "NICS-ANA-2026-0001039",
-     "source": "資安院",
-     "kind": "ANA",
-     "receivedAt": "2026-11-16T11:47:48+08:00",
-     "publishedAt": "2026-11-16T11:13:22+08:00",
+     "action": "依 Debian／Ubuntu 安全公告更新 APT；曝露於公眾網路者 14 天內處置，未曝露者於下次系統更新時處置",
+     "dupCount": 1,
      "eventType": "漏洞預警",
-     "title": "Oracle多項產品存在2項高風險安全漏洞(CVE-2026-109618與CVE-2026-109619)，請儘速確認並進行處置",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001042",
+     "kind": "ANA",
      "level": "高",
-     "platform": "Oracle Communications 多項產品、Oracle Secure Backup 19.1、Oracle Solaris 11（內含 PHP 元件）",
+     "platform": "Debian 12/13、Ubuntu 14.04–26.10 等使用 APT 之 Linux 發行版（未更新至官方修補版本者）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-16T11:28:22+08:00",
+     "receivedAt": "2026-11-16T12:46:02+08:00",
+     "source": "資安院",
+     "title": "Linux APT套件管理工具存在高風險安全漏洞(CVE-2026-109518)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "更新核心至官方修補版本並盤點內建 Linux 之設備；曝露於公眾網路者 3 天內、未曝露者 60 天內完成處置",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001041",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Linux Kernel 4.4、5.10–7.2 各分支修補版以前版本，及以其為底層之發行版與設備（Check Point、F5、Sophos 等）",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-16T11:18:23+08:00",
+     "receivedAt": "2026-11-16T12:23:11+08:00",
+     "source": "資安院",
+     "title": "Linux Kernel存在高風險安全漏洞(CVE-2026-98432)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 Veeam KB4961 更新；CVE-2023-22793 曝露於公眾網路者 3 天內、未曝露者 60 天內完成處置",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "id": "NICS-ANA-2026-0001040",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Veeam Management Pack for Microsoft System Center 9.1(含)以前之 9.x 版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-16T11:18:22+08:00",
+     "receivedAt": "2026-11-16T12:03:32+08:00",
+     "source": "資安院",
+     "title": "Veeam Management Pack for Microsoft System Center存在3項高風險安全漏洞(CVE-2023-22793、CVE-2026-107238及CVE-2026-107239)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
      "action": "依 Oracle 安全警示更新；曝露於公眾網路者 3 天內、未曝露者 14 天內完成處置",
-     "tlp": "",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
      "flags": [
       "已遭利用",
       "免認證 RCE"
      ],
+     "id": "NICS-ANA-2026-0001039",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Oracle Communications 多項產品、Oracle Secure Backup 19.1、Oracle Solaris 11（內含 PHP 元件）",
      "priority": "緊急",
-     "dupCount": 1,
-     "public": true
+     "public": true,
+     "publishedAt": "2026-11-16T11:13:22+08:00",
+     "receivedAt": "2026-11-16T11:47:48+08:00",
+     "source": "資安院",
+     "title": "Oracle多項產品存在2項高風險安全漏洞(CVE-2026-109618與CVE-2026-109619)，請儘速確認並進行處置",
+     "tlp": ""
     },
     {
-     "id": "NICS-ANA-2026-0001038",
-     "source": "資安院",
-     "kind": "ANA",
-     "receivedAt": "2026-11-16T11:35:01+08:00",
-     "publishedAt": "2026-11-16T11:08:22+08:00",
-     "eventType": "漏洞預警",
-     "title": "Apache HTTP Server存在高風險安全漏洞(CVE-2026-119618)，請儘速確認並進行處置",
-     "level": "高",
-     "platform": "Apache HTTP Server 2.4.55–2.4.70（啟用 mod_http2）、獨立 mod_h2 2.0.8–2.0.42",
      "action": "更新至官方修補版本；曝露於公眾網路者 3 天內、未曝露者 60 天內完成處置，暫時可停用 HTTP/2",
-     "tlp": "",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
      "flags": [
       "免認證 RCE"
      ],
+     "id": "NICS-ANA-2026-0001038",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "Apache HTTP Server 2.4.55–2.4.70（啟用 mod_http2）、獨立 mod_h2 2.0.8–2.0.42",
      "priority": "高",
-     "dupCount": 1,
-     "public": true
+     "public": true,
+     "publishedAt": "2026-11-16T11:08:22+08:00",
+     "receivedAt": "2026-11-16T11:35:01+08:00",
+     "source": "資安院",
+     "title": "Apache HTTP Server存在高風險安全漏洞(CVE-2026-119618)，請儘速確認並進行處置",
+     "tlp": ""
     }
    ]
   },
