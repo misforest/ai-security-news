@@ -1,21 +1,21 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-16T12:19:00+08:00",
+ "updatedAt": "2026-11-16T19:40:00+08:00",
  "videos": [
   {
-   "id": "v0Utww2mros",
-   "type": "講座",
-   "title": "老闆不能只動嘴！簡立峰談企業AI落地與Agent革命《AI未來已來》",
-   "speaker": "簡立峰",
+   "approx": true,
    "channel": "天下文化",
    "date": "2026-11-16",
-   "approx": true,
+   "id": "v0Utww2mros",
+   "speaker": "簡立峰",
    "summary": "天下文化《AI未來已來》系列影片，簡立峰談企業導入 AI 不能只靠主管喊口號，以及 AI Agent 帶來的組織與工作變革。",
    "tags": [
     "AI Agent",
     "企業導入",
     "簡立峰"
-   ]
+   ],
+   "title": "老闆不能只動嘴！簡立峰談企業AI落地與Agent革命《AI未來已來》",
+   "type": "講座"
   },
   {
    "approx": true,
@@ -75,6 +75,22 @@
     "企業導入"
    ],
    "title": "從 AI 代理邁向 AI 治理｜TO Talk EP178",
+   "type": "講座"
+  },
+  {
+   "approx": true,
+   "channel": "天下文化",
+   "date": "2026-09-15",
+   "id": "1xsDhApBGbw",
+   "speaker": "李開復、簡立峰",
+   "summary": "天下文化《AI未來已來》新書系列對談，李開復與簡立峰討論企業面對 AI 浪潮應如何規劃布局、避免導入踩雷。",
+   "tags": [
+    "企業導入",
+    "AI 策略",
+    "李開復",
+    "簡立峰"
+   ],
+   "title": "【大師對談】李開復x簡立峰：面對AI浪潮，企業該如何佈局才不踩雷？《AI未來已來》",
    "type": "講座"
   },
   {

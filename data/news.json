@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T12:45:00+08:00",
+ "updatedAt": "2026-11-16T19:40:00+08:00",
  "days": [
   {
    "actions": [
@@ -8,7 +8,10 @@
     "全署 Chrome 更新至 157.0.8103.50 以上並重啟；Office／Outlook 套用 11 月安全更新（CVE-2026-124194，期限 11/24）。",
     "如有使用 Barracuda 郵件閘道或委外廠商使用，立即確認已更新至 9.4.0.030 以上並檢查設定是否遭還原。",
     "SOC 本期多為帳號登入失敗與帳號加入安全性群組通報，請確認權限異動都有申請紀錄，並追蹤 11/14 WAF 未阻擋可疑連線事件處理結果。",
-    "公文、簽呈與法律文件若使用生成式 AI，引用的法條與判例一律人工查核原始出處。"
+    "公文、簽呈與法律文件若使用生成式 AI，引用的法條與判例一律人工查核原始出處。",
+    "Linux 伺服器排程更新核心以修補 NoisyTCP（CVE-2026-99288）與資安院通報的 Linux Kernel、APT 漏洞，對外服務主機優先。",
+    "Microsoft 365 中斷屬服務異常非攻擊：追蹤微軟 11/20 完整事件報告，並檢視 Exchange Online 中斷時的備援通訊與公告流程。",
+    "留意以資安院或通報應變名義寄出的可疑信件與附件（UNC6783 宣稱竊得資安院資料），提醒同仁先確認寄件來源再開啟。"
    ],
    "date": "2026-11-16",
    "items": [
@@ -222,20 +225,13 @@
      "title": "Barracuda 郵件安全閘道兩漏洞遭串連利用，可免驗證取得 root 權限"
     },
     {
-     "region": "國內",
      "category": "資安",
-     "rank": 1,
-     "title": "資安院警訊：Oracle 多項產品受 PHP 漏洞影響且已遭利用，公眾網路系統須 3 天內處置",
-     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001039，Oracle 通訊產品、Secure Backup 與 Solaris 11 內含的 PHP 元件受 CVE-2026-109618／109619 影響，未經驗證即可遠端執行程式碼，且已遭駭客利用。曝露於公眾網路者處置期限 3 天。",
      "flags": [
       "已遭利用",
       "免認證 RCE"
      ],
-     "tags": [
-      "Oracle",
-      "PHP",
-      "資安院"
-     ],
+     "rank": 1,
+     "region": "國內",
      "sources": [
       {
        "name": "國家資通安全研究院 漏洞警訊",
@@ -245,22 +241,22 @@
        "name": "Oracle Security Alert",
        "url": "https://www.oracle.com/security-alerts/alert-cve-2026-109618.html"
       }
-     ]
+     ],
+     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001039，Oracle 通訊產品、Secure Backup 與 Solaris 11 內含的 PHP 元件受 CVE-2026-109618／109619 影響，未經驗證即可遠端執行程式碼，且已遭駭客利用。曝露於公眾網路者處置期限 3 天。",
+     "tags": [
+      "Oracle",
+      "PHP",
+      "資安院"
+     ],
+     "title": "資安院警訊：Oracle 多項產品受 PHP 漏洞影響且已遭利用，公眾網路系統須 3 天內處置"
     },
     {
-     "region": "國內",
      "category": "資安",
-     "rank": 2,
-     "title": "資安院警訊：Apache HTTP Server mod_http2 競爭條件漏洞可免驗證 RCE",
-     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001038，Apache HTTP Server 2.4.55–2.4.70 啟用 HTTP/2 時存在 CVE-2026-119618，可被自動化利用並完全控制主機；官方已釋出修補，曝露於公眾網路者須 3 天內處置。",
      "flags": [
       "免認證 RCE"
      ],
-     "tags": [
-      "Apache",
-      "HTTP/2",
-      "資安院"
-     ],
+     "rank": 2,
+     "region": "國內",
      "sources": [
       {
        "name": "Apache httpd 安全公告",
@@ -270,168 +266,364 @@
        "name": "SecurityOnline",
        "url": "https://securityonline.info/apache-http-server-cve-2026-119618-rce-fixed/"
       }
-     ]
-    }
-   ],
-   "updatedAt": "2026-11-16T12:05:00+08:00",
-   "ithome": [
+     ],
+     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001038，Apache HTTP Server 2.4.55–2.4.70 啟用 HTTP/2 時存在 CVE-2026-119618，可被自動化利用並完全控制主機；官方已釋出修補，曝露於公眾網路者須 3 天內處置。",
+     "tags": [
+      "Apache",
+      "HTTP/2",
+      "資安院"
+     ],
+     "title": "資安院警訊：Apache HTTP Server mod_http2 競爭條件漏洞可免驗證 RCE"
+    },
     {
      "category": "資安",
-     "rank": 1,
-     "title": "微軟Microsoft 365全球當機逾30小時，禍因網路升級瑕疵",
-     "url": "https://www.ithome.com.tw/news/180511",
-     "date": "2026-11-14",
+     "flags": [
+      "服務中斷"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/microsoft-outage-incident-report/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180511"
+      }
+     ],
+     "summary": "微軟 11/15 初步事件報告指出，11/12–13 長達約 24 小時的 Microsoft 365 中斷（Exchange Online 受影響最大）源自 M365 網路閘道伺服器上內部 Windows 程序的鎖定競爭缺陷，自動容錯移轉反而讓故障擴散到多個區域。微軟表示一般 Windows 部署不受此缺陷影響，完整修復說明預計 11/20 公布。此事件屬服務中斷，非資安攻擊。",
+     "tags": [
+      "Microsoft 365",
+      "Exchange Online",
+      "服務中斷"
+     ],
+     "title": "微軟公布 Microsoft 365 全球中斷初步報告：網路閘道伺服器內部 Windows 程序潛在缺陷"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "PoC 已公開"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/noisytcp-linux-kernel-vulnerability"
+      },
+      {
+       "name": "NoisyTCP 研究說明（GitHub）",
+       "url": "https://github.com/V4bel/NoisyTCP"
+      }
+     ],
+     "summary": "研究人員揭露 Linux 核心 TCP 程式碼的競爭條件漏洞，遠端攻擊者不需驗證即可讓有對外監聽連線埠的伺服器當機，屬阻斷服務而非遠端執行程式碼。漏洞自 2015 年引入、已於 11 月初修正，目前未有遭實際利用的報告；修補前的暫時措施包含調整 SYN cookies 或網卡接收佇列設定。",
+     "tags": [
+      "Linux",
+      "CVE-2026-99288",
+      "DoS"
+     ],
+     "title": "Linux 核心 TCP 潛藏 11 年漏洞 NoisyTCP（CVE-2026-99288），可遠端免驗證讓伺服器當機"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Cyber Security News",
+       "url": "https://cybersecuritynews.com/233-cyber-incidents"
+      },
+      {
+       "name": "Socket",
+       "url": "https://socket.dev/blog/japan-cyberattack-surge"
+      }
+     ],
+     "summary": "依趨勢科技資料，日本 10 月公開揭露的資安事件達 233 件，約為過去單月紀錄的 2.4 倍；研究機構估計約 1.85 億筆個資已外洩或可能外洩（尚未證實），其中郵件發送業者 Arara 證實約 8,130 萬筆電子郵件地址遭竊。日本政府已於 11/6 宣布 100 億日圓緊急資安方案。",
+     "tags": [
+      "日本",
+      "個資外洩",
+      "供應鏈"
+     ],
+     "title": "日本 10 月公開資安事件達 233 件創新高，估計逾 1.8 億筆個資恐受影響"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "社交工程"
+     ],
+     "rank": 3,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180499"
+      }
+     ],
+     "summary": "iThome 報導駭客集團 UNC6783 宣稱入侵國家資通安全研究院並竊得 102 GB 資料；資安院表示相關事件已於去年 7 月完成資安通報。駭客聲稱的資料量尚未證實，機關可留意後續是否有以資安院名義發出的社交工程信件。",
+     "tags": [
+      "資安院",
+      "UNC6783",
+      "資料外洩"
+     ],
+     "title": "駭客集團 UNC6783 聲稱入侵資安院竊得 102 GB 資料，資安院回應去年 7 月已通報"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180510"
+      }
+     ],
+     "summary": "iThome 報導，Nvidia 執行長異動風波持續，已有超過 18% 員工連署要求黃仁勳回鍋，與美國財長要求外部人選的立場形成拉鋸。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳",
+      "公司治理"
+     ],
+     "title": "超過 18% Nvidia 員工連署要求黃仁勳回任"
+    }
+   ],
+   "ithome": [
+    {
      "approx": true,
+     "category": "資安",
+     "date": "2026-11-14",
+     "flags": [],
+     "rank": 1,
      "summary": "iThome 報導微軟 Microsoft 365 全球服務中斷超過 30 小時，原因是網路升級作業的瑕疵。",
      "tags": [
       "Microsoft 365",
       "服務中斷"
      ],
-     "flags": []
+     "title": "微軟Microsoft 365全球當機逾30小時，禍因網路升級瑕疵",
+     "url": "https://www.ithome.com.tw/news/180511"
     },
     {
-     "category": "資安",
-     "rank": 2,
-     "title": "Apache修補網頁伺服器HTTP/2模組的重大漏洞，64%雲端環境恐曝險",
-     "url": "https://www.ithome.com.tw/news/180490",
-     "date": "2026-11-13",
      "approx": true,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 2,
      "summary": "Apache 修補網頁伺服器 HTTP/2 模組的重大漏洞，報導指出約 64% 雲端環境可能受影響。",
      "tags": [
       "Apache",
       "HTTP/2"
      ],
-     "flags": []
+     "title": "Apache修補網頁伺服器HTTP/2模組的重大漏洞，64%雲端環境恐曝險",
+     "url": "https://www.ithome.com.tw/news/180490"
     },
     {
-     "category": "資安",
-     "rank": 3,
-     "title": "【資安日報】11月13日，Apache修補網頁伺服器HTTP/2重大漏洞",
-     "url": "https://www.ithome.com.tw/news/180494",
-     "date": "2026-11-13",
      "approx": false,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 3,
      "summary": "11 月 13 日資安日報，頭條為 Apache HTTP/2 重大漏洞修補。",
      "tags": [
       "資安日報"
      ],
-     "flags": []
+     "title": "【資安日報】11月13日，Apache修補網頁伺服器HTTP/2重大漏洞",
+     "url": "https://www.ithome.com.tw/news/180494"
     },
     {
-     "category": "資安",
-     "rank": 4,
-     "title": "大聯大發生資安事件，部分員工姓名與公務電子郵件遭未經授權存取",
-     "url": "https://www.ithome.com.tw/news/180487",
-     "date": "2026-11-13",
      "approx": true,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 4,
      "summary": "大聯大發生資安事件，部分員工姓名與公務電子郵件遭未經授權存取。",
      "tags": [
       "資安事件",
       "個資"
      ],
-     "flags": []
+     "title": "大聯大發生資安事件，部分員工姓名與公務電子郵件遭未經授權存取",
+     "url": "https://www.ithome.com.tw/news/180487"
     },
     {
-     "category": "資安",
-     "rank": 5,
-     "title": "大金空調零件線上商城委外廠商發生資安事件，141筆訂單資料受波及、132筆個資遭未授權存取",
-     "url": "https://www.ithome.com.tw/news/180482",
-     "date": "2026-11-13",
      "approx": true,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 5,
      "summary": "大金空調零件線上商城的委外廠商發生資安事件，141 筆訂單與 132 筆個資受影響。",
      "tags": [
       "供應鏈",
       "個資"
      ],
-     "flags": []
+     "title": "大金空調零件線上商城委外廠商發生資安事件，141筆訂單資料受波及、132筆個資遭未授權存取",
+     "url": "https://www.ithome.com.tw/news/180482"
     },
     {
-     "category": "資安",
-     "rank": 6,
-     "title": "微軟警告Outlook零時差漏洞已遭到利用",
-     "url": "https://www.ithome.com.tw/news/180405",
-     "date": "2026-11-11",
      "approx": true,
+     "category": "資安",
+     "date": "2026-11-11",
+     "flags": [
+      "已遭利用",
+      "零時差"
+     ],
+     "rank": 6,
      "summary": "微軟警告 Outlook 零時差漏洞已遭攻擊者利用。",
      "tags": [
       "Outlook",
       "零時差"
      ],
-     "flags": [
-      "已遭利用",
-      "零時差"
-     ]
+     "title": "微軟警告Outlook零時差漏洞已遭到利用",
+     "url": "https://www.ithome.com.tw/news/180405"
     },
     {
-     "category": "AI",
-     "rank": 1,
-     "title": "Google公布Gemini 4 Hydrogen，比前代快2.5倍",
-     "url": "https://www.ithome.com.tw/news/180516",
-     "date": "2026-11-16",
      "approx": true,
+     "category": "AI",
+     "date": "2026-11-16",
+     "flags": [],
+     "rank": 1,
      "summary": "Google 公布 Gemini 4 Hydrogen 模型，宣稱速度比前代快 2.5 倍。",
      "tags": [
       "Google",
       "Gemini"
      ],
-     "flags": []
+     "title": "Google公布Gemini 4 Hydrogen，比前代快2.5倍",
+     "url": "https://www.ithome.com.tw/news/180516"
     },
     {
-     "category": "AI",
-     "rank": 2,
-     "title": "Google發布生成式介面協定A2UI 1.0，代理可跨平臺產生互動介面",
-     "url": "https://www.ithome.com.tw/news/180453",
-     "date": "2026-11-12",
      "approx": true,
+     "category": "AI",
+     "date": "2026-11-12",
+     "flags": [],
+     "rank": 2,
      "summary": "Google 發布生成式介面協定 A2UI 1.0，讓 AI 代理可跨平臺產生互動介面。",
      "tags": [
       "AI Agent",
       "Google"
      ],
-     "flags": []
+     "title": "Google發布生成式介面協定A2UI 1.0，代理可跨平臺產生互動介面",
+     "url": "https://www.ithome.com.tw/news/180453"
     },
     {
-     "category": "AI",
-     "rank": 3,
-     "title": "Google Gemini 4 Carbon全面上線，以較低價對打Anthropic Fable/Mythos 5.2",
-     "url": "https://www.ithome.com.tw/news/180428",
-     "date": "2026-11-12",
      "approx": true,
+     "category": "AI",
+     "date": "2026-11-12",
+     "flags": [],
+     "rank": 3,
      "summary": "Google Gemini 4 Carbon 全面上線，以較低價格與 Anthropic 新模型競爭。",
      "tags": [
       "Google",
       "Gemini"
      ],
-     "flags": []
+     "title": "Google Gemini 4 Carbon全面上線，以較低價對打Anthropic Fable/Mythos 5.2",
+     "url": "https://www.ithome.com.tw/news/180428"
     },
     {
-     "category": "AI",
-     "rank": 4,
-     "title": "Anthropic公布Claude Fable、Mythos 5.2，輸出速度最高提升30%、價格降20%",
-     "url": "https://www.ithome.com.tw/news/180406",
-     "date": "2026-11-11",
      "approx": true,
+     "category": "AI",
+     "date": "2026-11-11",
+     "flags": [],
+     "rank": 4,
      "summary": "Anthropic 公布新一代 Claude 模型，輸出速度最高提升 30%、價格調降 20%。",
      "tags": [
       "Anthropic",
       "Claude"
      ],
-     "flags": []
+     "title": "Anthropic公布Claude Fable、Mythos 5.2，輸出速度最高提升30%、價格降20%",
+     "url": "https://www.ithome.com.tw/news/180406"
     },
     {
-     "category": "AI",
-     "rank": 5,
-     "title": "Google預測2027年資安趨勢，AI代理將深入SOC與企業防禦",
-     "url": "https://www.ithome.com.tw/news/180372",
-     "date": "2026-11-10",
      "approx": true,
+     "category": "AI",
+     "date": "2026-11-10",
+     "flags": [],
+     "rank": 5,
      "summary": "Google 發布 2027 年資安趨勢預測，認為 AI 代理將深入 SOC 與企業防禦。",
      "tags": [
       "AI Agent",
       "SOC"
      ],
-     "flags": []
+     "title": "Google預測2027年資安趨勢，AI代理將深入SOC與企業防禦",
+     "url": "https://www.ithome.com.tw/news/180372"
+    },
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-16",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 7,
+     "summary": "iThome 11/16 資安日報，頭條為 Check Point 閘道遭 PHP2Shell 漏洞攻擊並植入後門，駭客再透過虛擬化平臺破壞資料。",
+     "tags": [
+      "資安日報",
+      "Check Point",
+      "PHP2Shell"
+     ],
+     "title": "【資安日報】11月16日，Check Point閘道設備遭PHP2Shell漏洞攻擊，駭客植入後門並透過虛擬化平臺進行資料破壞",
+     "url": "https://www.ithome.com.tw/news/180534"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 8,
+     "summary": "駭客集團 UNC6783 宣稱從資安院竊得 102 GB 資料，資安院回應該事件已於去年 7 月通報。",
+     "tags": [
+      "資安院",
+      "UNC6783",
+      "公部門"
+     ],
+     "title": "駭客集團UNC6783聲稱入侵資安院竊得102 GB資料，資安院：去年7月已進行資安通報",
+     "url": "https://www.ithome.com.tw/news/180499"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-13",
+     "flags": [],
+     "rank": 9,
+     "summary": "攻擊者濫用超過 4,800 個遭入侵的 GitHub 帳號，鎖定約 6 萬個程式碼儲存庫竊取雲端憑證。",
+     "tags": [
+      "GitHub",
+      "供應鏈",
+      "雲端憑證"
+     ],
+     "title": "駭客利用逾4,800個遭入侵GitHub帳號，鎖定6萬個儲存庫竊取雲端憑證",
+     "url": "https://www.ithome.com.tw/news/180498"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-14",
+     "flags": [],
+     "rank": 10,
+     "summary": "iThome 整理 11/9–11/13 資安動態：Cyberbiz 電商平臺事件擴大，多家上市櫃公司接連發布資安公告，事件應變人力恐不足。",
+     "tags": [
+      "資安週報",
+      "Cyberbiz",
+      "上市櫃"
+     ],
+     "title": "【資安週報】1109～1113，Cyberbiz事件擴大、多家上市櫃公司接連公告，資安救火人力不足恐浮現",
+     "url": "https://www.ithome.com.tw/news/180500"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-14",
+     "flags": [],
+     "rank": 6,
+     "summary": "Nvidia 已有超過 18% 員工連署，要求卸任的黃仁勳回任執行長。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳"
+     ],
+     "title": "超過18%的Nvidia員工連署要求黃仁勳回鍋",
+     "url": "https://www.ithome.com.tw/news/180510"
     }
-   ]
+   ],
+   "updatedAt": "2026-11-16T19:40:00+08:00"
   },
   {
    "actions": [
