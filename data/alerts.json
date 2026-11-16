@@ -1,17 +1,57 @@
 {
  "note": "公開版只收錄資安院一般警訊；EWA／INT 等機關專屬通報、標示 TLP 的內容，以及 SOC 與安碁通報不放在公開網站。",
- "updatedAt": "2026-11-16T08:12:00+08:00",
+ "updatedAt": "2026-11-16T12:05:00+08:00",
  "days": [
   {
    "date": "2026-11-16",
-   "updatedAt": "2026-11-16T08:12:00+08:00",
+   "updatedAt": "2026-11-16T12:05:00+08:00",
    "period": {
     "from": "2026-11-13T00:00:00+08:00",
-    "to": "2026-11-16T08:12:00+08:00"
+    "to": "2026-11-16T12:05:00+08:00"
    },
-   "alertCount": 0,
-   "note": "此期間無資安院通報",
-   "items": []
+   "alertCount": 2,
+   "note": "資安院 2 則（Oracle PHP 漏洞已遭利用、Apache HTTP/2 RCE）",
+   "items": [
+    {
+     "id": "NICS-ANA-2026-0001039",
+     "source": "資安院",
+     "kind": "ANA",
+     "receivedAt": "2026-11-16T11:47:48+08:00",
+     "publishedAt": "2026-11-16T11:13:22+08:00",
+     "eventType": "漏洞預警",
+     "title": "Oracle多項產品存在2項高風險安全漏洞(CVE-2026-109618與CVE-2026-109619)，請儘速確認並進行處置",
+     "level": "高",
+     "platform": "Oracle Communications 多項產品、Oracle Secure Backup 19.1、Oracle Solaris 11（內含 PHP 元件）",
+     "action": "依 Oracle 安全警示更新；曝露於公眾網路者 3 天內、未曝露者 14 天內完成處置",
+     "tlp": "",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "priority": "緊急",
+     "dupCount": 1,
+     "public": true
+    },
+    {
+     "id": "NICS-ANA-2026-0001038",
+     "source": "資安院",
+     "kind": "ANA",
+     "receivedAt": "2026-11-16T11:35:01+08:00",
+     "publishedAt": "2026-11-16T11:08:22+08:00",
+     "eventType": "漏洞預警",
+     "title": "Apache HTTP Server存在高風險安全漏洞(CVE-2026-119618)，請儘速確認並進行處置",
+     "level": "高",
+     "platform": "Apache HTTP Server 2.4.55–2.4.70（啟用 mod_http2）、獨立 mod_h2 2.0.8–2.0.42",
+     "action": "更新至官方修補版本；曝露於公眾網路者 3 天內、未曝露者 60 天內完成處置，暫時可停用 HTTP/2",
+     "tlp": "",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "priority": "高",
+     "dupCount": 1,
+     "public": true
+    }
+   ]
   },
   {
    "date": "2026-11-15",

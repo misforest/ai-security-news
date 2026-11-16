@@ -1,8 +1,9 @@
 {
- "updatedAt": "2026-11-16T08:12:00+08:00",
+ "updatedAt": "2026-11-16T12:05:00+08:00",
  "days": [
   {
    "actions": [
+    "盤點對外 Apache HTTP Server（2.4.55–2.4.70、有啟用 HTTP/2）與 Oracle Solaris／Secure Backup 等含 PHP 元件的系統，對外系統依資安院指引 3 天內（11/19 前）完成更新。",
     "Check Point Gaia 漏洞 CVE-2026-123039（CISA 期限今天 11/16）：依安碁 F0202_2902 通知確認版本並完成修補，檢查閘道是否有異常帳號或後門跡象，並確認 VMware ESXi 有離線備份。",
     "全署 Chrome 更新至 157.0.8103.50 以上並重啟；Office／Outlook 套用 11 月安全更新（CVE-2026-124194，期限 11/24）。",
     "如有使用 Barracuda 郵件閘道或委外廠商使用，立即確認已更新至 9.4.0.030 以上並檢查設定是否遭還原。",
@@ -219,9 +220,60 @@
       "郵件閘道"
      ],
      "title": "Barracuda 郵件安全閘道兩漏洞遭串連利用，可免驗證取得 root 權限"
+    },
+    {
+     "region": "國內",
+     "category": "資安",
+     "rank": 1,
+     "title": "資安院警訊：Oracle 多項產品受 PHP 漏洞影響且已遭利用，公眾網路系統須 3 天內處置",
+     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001039，Oracle 通訊產品、Secure Backup 與 Solaris 11 內含的 PHP 元件受 CVE-2026-109618／109619 影響，未經驗證即可遠端執行程式碼，且已遭駭客利用。曝露於公眾網路者處置期限 3 天。",
+     "flags": [
+      "已遭利用",
+      "免認證 RCE"
+     ],
+     "tags": [
+      "Oracle",
+      "PHP",
+      "資安院"
+     ],
+     "sources": [
+      {
+       "name": "國家資通安全研究院 漏洞警訊",
+       "url": "https://www.nics.nat.gov.tw/core_business/information_security_information_sharing/Vulnerability_Alert_Announcements/5c4e9af1-4275-44ef-a277-c692786b5a2c/"
+      },
+      {
+       "name": "Oracle Security Alert",
+       "url": "https://www.oracle.com/security-alerts/alert-cve-2026-109618.html"
+      }
+     ]
+    },
+    {
+     "region": "國內",
+     "category": "資安",
+     "rank": 2,
+     "title": "資安院警訊：Apache HTTP Server mod_http2 競爭條件漏洞可免驗證 RCE",
+     "summary": "資安院 11/16 發布 NICS-ANA-2026-0001038，Apache HTTP Server 2.4.55–2.4.70 啟用 HTTP/2 時存在 CVE-2026-119618，可被自動化利用並完全控制主機；官方已釋出修補，曝露於公眾網路者須 3 天內處置。",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "tags": [
+      "Apache",
+      "HTTP/2",
+      "資安院"
+     ],
+     "sources": [
+      {
+       "name": "Apache httpd 安全公告",
+       "url": "https://httpd.apache.org/security/vulnerabilities_24.html"
+      },
+      {
+       "name": "SecurityOnline",
+       "url": "https://securityonline.info/apache-http-server-cve-2026-119618-rce-fixed/"
+      }
+     ]
     }
    ],
-   "updatedAt": "2026-11-16T08:12:00+08:00"
+   "updatedAt": "2026-11-16T12:05:00+08:00"
   },
   {
    "actions": [
