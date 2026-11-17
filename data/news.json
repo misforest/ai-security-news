@@ -1,6 +1,231 @@
 {
- "updatedAt": "2026-11-16T19:40:00+08:00",
+ "updatedAt": "2026-11-17T08:15:00+08:00",
  "days": [
+  {
+   "actions": [
+    "AI 自主攻擊已能在修補釋出後自動產生利用程式：對外系統的重大更新（微軟 11 月更新含 Outlook CVE-2026-124194、Chrome CVE-2026-125350、Apache HTTP/2 CVE-2026-119618）以 3 天內完成為目標。",
+    "請委外廠商說明是否使用 ConnectWise ScreenConnect 等遠端維運工具及其第三方延伸套件，確認版本已更新、僅限核准來源連線並保留連線紀錄。",
+    "盤點併入或遺留、未列管的舊系統與舊網站（參考 Maersk 事件），未使用者下線，仍需使用者納入弱點掃描與修補範圍。",
+    "AI 代理式支付與自主代理普及：檢視公務帳號是否綁定個人支付工具，並在 AI 使用規範中明訂代理可執行的動作與授權方式。"
+   ],
+   "date": "2026-11-17",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "OpenAI",
+       "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180515"
+      }
+     ],
+     "summary": "OpenAI 推出付款功能，讓 AI 代理替使用者購物，每筆交易都須以 Face ID 或指紋等方式個別核准，卡號不會提供給代理或商家；與 American Express、Mastercard、Visa 合作，先開放美國 ChatGPT Pro 用戶透過個人代理「dots」使用。代理式支付普及後，機關應留意公務帳號綁定支付與代理權限的管理。",
+     "tags": [
+      "OpenAI",
+      "AI 代理",
+      "代理式支付"
+     ],
+     "title": "OpenAI 推出 ChatGPT Wallet，AI 代理可在使用者逐筆生物辨識授權後代為付款"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "媒體報導"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Financial Times",
+       "url": "https://www.ft.com/content/0f30a230-4d66-481b-a4fd-3a4ed0c45855"
+      },
+      {
+       "name": "Reuters",
+       "url": "https://www.reuters.com/business/neoclouds-ai-stocks-slide-again-nvidia-turmoil-rattles-sector-2026-11-13/"
+      }
+     ],
+     "summary": "《金融時報》報導，因涉諜疑雲辭職的黃仁勳正考慮重返 Nvidia 執行長，部分支持者公開聲援，但董事會調查尚未結束。Nvidia 領導層動盪也拖累 CoreWeave、Nebius 等 AI 雲端股。此為媒體報導，以公司正式公告為準。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳",
+      "AI 類股"
+     ],
+     "title": "FT：黃仁勳考慮回任 Nvidia 執行長，董事會調查仍在進行，AI 類股再度走弱"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/"
+      }
+     ],
+     "summary": "美團發表主打程式碼代理的 1.6 兆參數開放權重模型 LongCat-2.5，報導指出訓練未使用 Nvidia GPU，範例自建部署需 194 顆華為昇騰晶片。顯示中國在出口管制下持續以本土硬體發展大型模型；機關評估開源模型時仍須注意來源與資料安全規範。",
+     "tags": [
+      "美團",
+      "開源模型",
+      "華為昇騰"
+     ],
+     "title": "美團釋出 1.6 兆參數開源代理模型 LongCat-2.5，報導稱全程以國產晶片訓練"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Gizmodo",
+       "url": "https://gizmodo.com/the-faa-is-rolling-out-its-ai-air-traffic-tool-nationwide-2000839347"
+      }
+     ],
+     "summary": "美國聯邦航空總署在華府試行後，決定把 AI 輔助航管系統 SMART 推廣到全國，最終決定權仍由人類管制員掌握；國會議員質疑測試時間與規模是否足夠。是公部門在關鍵基礎設施導入 AI 的指標案例。",
+     "tags": [
+      "FAA",
+      "公部門 AI",
+      "關鍵基礎設施"
+     ],
+     "title": "美國 FAA 將 8.75 億美元 AI 輔助航管工具 SMART 擴大至全美"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "媒體報導"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/features/2026-11-15/anthropic-s-ipo-makes-dario-amodei-the-new-face-of-the-ai-boom"
+      }
+     ],
+     "summary": "Bloomberg 專題指出 Anthropic（Claude 的開發公司）的 IPO 規模可能創下紀錄，投資人關注 Claude 的需求能否支撐前沿模型的龐大運算成本。本則僅轉述媒體報導，募資金額與時程以公司正式文件為準。",
+     "tags": [
+      "Anthropic",
+      "IPO"
+     ],
+     "title": "Bloomberg：Anthropic 籌備可能是史上最大規模 IPO"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CyberScoop",
+       "url": "https://cyberscoop.com/google-fully-automated-ai-cyberattack"
+      },
+      {
+       "name": "Google Cloud Threat Intelligence",
+       "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
+      }
+     ],
+     "summary": "Google 威脅情報團隊與 Mandiant 指出，俄語攻擊者使用名為 exploit_agent 的框架，自動比對已修補與未修補程式碼、產生並執行漏洞利用程式，鎖定法國媒體、娛樂與教育網站。Google 也統計 2026 年 8 月有 22 個零時差漏洞遭利用。修補到被利用的時間差將進一步縮短，對外系統須加快更新。",
+     "tags": [
+      "AI 攻擊",
+      "Google GTIG",
+      "修補時效"
+     ],
+     "title": "Google：俄語駭客首度以全自動 AI 框架發動入侵，全程無人工介入"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CyberScoop",
+       "url": "https://cyberscoop.com/connectwise-screenconnect-sckit-attack/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180544"
+      }
+     ],
+     "summary": "攻擊者入侵託管服務供應商（MSP）環境，利用 ConnectWise ScreenConnect 第三方延伸套件漏洞散布蠕蟲 SCKit，並在多個組織的端點安裝惡意遠端存取工具；iThome 報導受感染主機近 500 台。委外廠商若以 ScreenConnect 等遠端工具維運本署系統，應確認延伸套件版本與連線控管。",
+     "tags": [
+      "ScreenConnect",
+      "MSP",
+      "供應鏈"
+     ],
+     "title": "蠕蟲 SCKit 利用 ScreenConnect 第三方延伸套件漏洞，經 MSP 環境擴散"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/"
+      }
+     ],
+     "summary": "航運巨頭 Maersk 證實，一套併購時承接的舊系統遭未授權存取並被竊資料，其他系統未受影響。勒索集團 WhiteArmor 聲稱竊得約 100 GB 並索討 500 萬美元，數量尚未證實。提醒機關盤點併入或遺留、未納管的舊系統。",
+     "tags": [
+      "Maersk",
+      "勒索軟體",
+      "舊系統"
+     ],
+     "title": "Maersk 證實舊系統遭 WhiteArmor 勒索集團竊取資料"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Unit 42",
+       "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/"
+      }
+     ],
+     "summary": "Palo Alto Networks Unit 42 揭露 CAIRN 攻擊框架，以 DeepSeek 與智譜 GLM 代理自主執行攻擊，鎖定至少 19 個組織、其中 10 個遭攻陷，對象包括半導體、國防與公民團體，報告稱逾百萬筆個資外洩。顯示 AI 自主攻擊已鎖定與台灣相關的產業。",
+     "tags": [
+      "Unit 42",
+      "AI 自主攻擊",
+      "半導體"
+     ],
+     "title": "Unit 42：攻擊者以 DeepSeek 與智譜 GLM 代理自主入侵，至少 10 個組織遭攻陷"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-17",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "summary": "蠕蟲 SCKit 透過遠端桌面工具 ScreenConnect 第三方延伸套件的漏洞擴散，已有近 500 台主機受感染。",
+     "tags": [
+      "ScreenConnect",
+      "蠕蟲",
+      "遠端存取"
+     ],
+     "title": "蠕蟲SCKit利用ScreenConnect第三方延伸套件漏洞散布，近500臺主機被感染",
+     "url": "https://www.ithome.com.tw/news/180544"
+    }
+   ],
+   "updatedAt": "2026-11-17T08:15:00+08:00"
+  },
   {
    "actions": [
     "盤點對外 Apache HTTP Server（2.4.55–2.4.70、有啟用 HTTP/2）與 Oracle Solaris／Secure Backup 等含 PHP 元件的系統，對外系統依資安院指引 3 天內（11/19 前）完成更新。",
