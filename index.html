@@ -439,7 +439,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   </div>
   <div class="wrap">
     <main>
-      <p class="lawlinks"><b>資料來源：資安院、安碁 SOC、安碁訊息通知及其他機關資安相關的 Outlook 信件</b><a href="https://www.ncert.nat.gov.tw" target="_blank" rel="noopener noreferrer">通報應變網站 ↗</a><span>更新頻率：每天 8:00 彙整前一天 00:00 起的信件（週一從上週五 00:00 起）；週一至週五 9:00–18:00 每小時再更新一次當天信件。重要性：緊急＝立即處理、高＝儘速處理、中／低＝例行追蹤；「緊急」「高」兩區只列當天收到的通報，其餘依期間在下方各來源查看。ACSI訊息通知每次回溯 7 天</span></p>
+      <p class="lawlinks"><b>資料來源：資安院、安碁 SOC、安碁訊息通知及其他機關資安相關的 Outlook 信件</b><a href="https://www.ncert.nat.gov.tw" target="_blank" rel="noopener noreferrer">通報應變網站 ↗</a><span>更新頻率：每天 8:00 彙整前一天 00:00 起的信件（週一從上週五 00:00 起）；週一至週五 9:00–18:00 每小時再更新一次當天信件。重要性：緊急＝立即處理、高＝儘速處理、中／低＝例行追蹤；「緊急」「高」兩區只列當天收到的通報，其餘依期間在下方各來源查看，各來源清單依收信時間由近而遠排列。ACSI訊息通知每次回溯 7 天</span></p>
       <section class="block" aria-labelledby="h-acrit"><h2 id="h-acrit">緊急：立即處理（今日・全部來源） <span class="count" id="cnt-acrit"></span></h2><div class="list" id="list-acrit"></div></section>
       <section class="block" aria-labelledby="h-ahigh"><h2 id="h-ahigh">高：儘速處理（今日・全部來源） <span class="count" id="cnt-ahigh"></span></h2><div class="list" id="list-ahigh"></div></section>
       <section class="block" aria-labelledby="h-anics"><h2 id="h-anics">資安院通報 <span class="count" id="cnt-anics"></span></h2><div class="list" id="list-anics"></div></section>
@@ -835,7 +835,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         out.push(a);
       });
     });
-    return out.sort(function(a,b){ return (PRI[a.priority]==null?9:PRI[a.priority]) - (PRI[b.priority]==null?9:PRI[b.priority]) || (String(b.receivedAt) > String(a.receivedAt) ? 1 : -1); });
+    // 緊急、高兩區已置頂，下方各來源清單一律依收信時間由近而遠
+    return out.sort(function(a,b){ var ta = String(a.receivedAt||""), tb = String(b.receivedAt||""); return tb > ta ? 1 : (tb < ta ? -1 : 0); });
   }
   function alertTotal(){
     var seen = {}, n = 0;
