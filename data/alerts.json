@@ -1,16 +1,16 @@
 {
  "note": "公開版只收錄資安院一般警訊；EWA／INT 等機關專屬通報、標示 TLP 的內容，以及 SOC 與安碁通報不放在公開網站。",
- "updatedAt": "2026-11-18T12:20:00+08:00",
+ "updatedAt": "2026-11-18T13:20:00+08:00",
  "days": [
   {
    "date": "2026-11-18",
-   "updatedAt": "2026-11-18T12:20:00+08:00",
+   "updatedAt": "2026-11-18T13:20:00+08:00",
    "period": {
     "from": "2026-11-18T00:00:00+08:00",
-    "to": "2026-11-18T12:20:00+08:00"
+    "to": "2026-11-18T13:20:00+08:00"
    },
-   "alertCount": 4,
-   "note": "資安院 4 則：NICS-ANA-2026-0001049 Barracuda ESG 身分鑑別繞過已遭利用（緊急，3 天內處置）；0001050 Ivanti EPM 免認證 RCE（高）；0001048 Synology DSM SQL 注入（高）；0001052 FortiOS/FortiSASE OSPF 身分鑑別繞過（高）。",
+   "alertCount": 6,
+   "note": "資安院 6 則：NICS-ANA-2026-0001049 Barracuda ESG 身分鑑別繞過已遭利用（緊急，3 天內處置）；0001050 Ivanti EPM 免認證 RCE（高）；0001048 Synology DSM SQL 注入（高）；Fortinet 三則（高）：0001052 FortiOS/FortiSASE OSPF 身分鑑別繞過、0001053 FortiAuthenticator 硬刻通行碼、0001051 FortiManager/FortiAnalyzer 跨 VDOM 授權繞過。",
    "items": [
     {
      "action": "依 Synology_SA_26_19 更新 DSM；曝露於公眾網路者 3 天內、未曝露者 60 天內完成處置（未經身分鑑別可經 Auth API 注入 SQL，讀寫任意檔案，被自動化利用）。",
@@ -82,6 +82,40 @@
      "receivedAt": "2026-11-18T12:12:45+08:00",
      "source": "資安院",
      "title": "Fortinet FortiOS與FortiSASE存在高風險安全漏洞(CVE-2026-126253)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 FG-IR-26-271 更新；曝露於公眾網路者 14 天內處置、未曝露者待下次系統更新（硬刻通行碼，未經身分鑑別之遠端攻擊者可繞過身分鑑別）。",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0001053",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "FortiAuthenticator 6.6.0–6.6.10、8.0.0–8.0.3",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-18T11:28:24+08:00",
+     "receivedAt": "2026-11-18T12:28:23+08:00",
+     "source": "資安院",
+     "title": "Fortinet FortiAuthenticator存在高風險安全漏洞(CVE-2026-126257)，請儘速確認並進行處置",
+     "tlp": ""
+    },
+    {
+     "action": "依 FG-IR-26-244 更新；曝露於公眾網路者 14 天內處置、未曝露者待下次系統更新（取得管理權限者可跨 VDOM 存取）。",
+     "dupCount": 1,
+     "eventType": "漏洞預警",
+     "flags": [],
+     "id": "NICS-ANA-2026-0001051",
+     "kind": "ANA",
+     "level": "高",
+     "platform": "FortiManager／FortiAnalyzer 7.0.0–7.0.16、7.2.0–7.2.12、7.4.0–7.4.11、7.6.0–7.6.7、8.0.0–8.0.1；FortiManager Cloud／FortiAnalyzer Cloud 對應版本",
+     "priority": "高",
+     "public": true,
+     "publishedAt": "2026-11-18T11:28:24+08:00",
+     "receivedAt": "2026-11-18T12:47:51+08:00",
+     "source": "資安院",
+     "title": "Fortinet多項產品存在高風險安全漏洞(CVE-2026-126229)，請儘速確認並進行處",
      "tlp": ""
     }
    ]
