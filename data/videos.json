@@ -1,6 +1,6 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-17T16:56:33+08:00",
+ "updatedAt": "2026-11-18T08:20:00+08:00",
  "videos": [
   {
    "approx": true,
@@ -94,18 +94,48 @@
    "type": "講座"
   },
   {
-   "id": "BnNJtN6OVZw",
+   "id": "WCCyQYlHZA0",
    "type": "講座",
-   "title": "如何讓自己變更強？每天進步3公分的「撐竿跳哲學」ft. 前Google總經理 簡立峰",
-   "speaker": "簡立峰",
+   "title": "AI未來怎麼走，連美國菁英都說「我不知道」？iKala創辦人程世嘉赴美交流、揭開「K型職場」：AI正讓全世界失去確定感 Ft. 程世嘉【哈佛人物面對面】",
+   "speaker": "程世嘉",
+   "channel": "哈佛商業評論",
+   "date": "2026-09-11",
+   "approx": false,
+   "summary": "《哈佛商業評論》人物面對面專訪 iKala 創辦人程世嘉，談赴美交流觀察到的 AI 不確定性與「K 型職場」現象。",
+   "tags": [
+    "AI 人才與職場",
+    "對談",
+    "程世嘉"
+   ]
+  },
+  {
+   "approx": false,
    "channel": "天下學習",
    "date": "2026-09-09",
-   "approx": false,
+   "id": "BnNJtN6OVZw",
+   "speaker": "簡立峰",
    "summary": "天下學習節目專訪簡立峰，談發揮長處而非只補短處、每天進步一點的「撐竿跳哲學」，以及 AI 時代 1% 與 99% 的差距。",
    "tags": [
     "簡立峰",
     "AI 人才",
     "職涯成長"
+   ],
+   "title": "如何讓自己變更強？每天進步3公分的「撐竿跳哲學」ft. 前Google總經理 簡立峰",
+   "type": "講座"
+  },
+  {
+   "id": "w19xgnQNZYU",
+   "type": "講座",
+   "title": "唐鳳 × 丹增央措「對齊的另一面」：AI 時代，社會如何接住每一個人【Platform Originals】",
+   "speaker": "唐鳳、丹增央措",
+   "channel": "Platform 月台",
+   "date": "2026-09-03",
+   "approx": false,
+   "summary": "唐鳳與丹增央措對談「對齊的另一面」，討論 AI 時代社會如何照顧每一個人。",
+   "tags": [
+    "AI 治理",
+    "對談",
+    "唐鳳"
    ]
   },
   {
@@ -124,19 +154,19 @@
    "type": "講座"
   },
   {
-   "id": "2H5SRyHuiyQ",
-   "type": "講座",
-   "title": "93%小學生都在用AI！大腦外包時代，6歲前所學習的能力，才是真正AI搶不走的！ ft. 簡立峰老師｜親師關鍵字｜親子天下",
-   "speaker": "簡立峰",
+   "approx": false,
    "channel": "親子天下",
    "date": "2026-07-15",
-   "approx": false,
+   "id": "2H5SRyHuiyQ",
+   "speaker": "簡立峰",
    "summary": "簡立峰從「大腦外包」角度談 AI 普及下的教育，主張幼兒期培養的感知、同理與動手能力才是 AI 難以取代的關鍵。",
    "tags": [
     "簡立峰",
     "AI 教育",
     "人才培育"
-   ]
+   ],
+   "title": "93%小學生都在用AI！大腦外包時代，6歲前所學習的能力，才是真正AI搶不走的！ ft. 簡立峰老師｜親師關鍵字｜親子天下",
+   "type": "講座"
   },
   {
    "approx": false,
@@ -154,19 +184,19 @@
    "type": "講座"
   },
   {
-   "id": "FOLk9tBCXHM",
-   "type": "講座",
-   "title": "【商周MEGA TALK】簡立峰：AI革命，要從老闆開始 老闆自己先痛苦，才知道從那裡下手｜商周執行長 郭奕伶× Google前台灣董事總經理 簡立峰｜S2 EP.02",
-   "speaker": "簡立峰、郭奕伶",
+   "approx": false,
    "channel": "商業周刊",
    "date": "2026-04-20",
-   "approx": false,
+   "id": "FOLk9tBCXHM",
+   "speaker": "簡立峰、郭奕伶",
    "summary": "商周執行長郭奕伶與簡立峰對談中小企業的 AI 轉型，強調轉型要由老闆親自投入，並談台灣在超高齡社會下的機會與 IT 組織調整。",
    "tags": [
     "簡立峰",
     "企業 AI 導入",
     "商周"
-   ]
+   ],
+   "title": "【商周MEGA TALK】簡立峰：AI革命，要從老闆開始 老闆自己先痛苦，才知道從那裡下手｜商周執行長 郭奕伶× Google前台灣董事總經理 簡立峰｜S2 EP.02",
+   "type": "講座"
   },
   {
    "approx": false,
@@ -259,19 +289,19 @@
    "type": "講座"
   },
   {
-   "id": "hC-jRG2SrEE",
-   "type": "講座",
-   "title": "簡立峰｜善用 AI 成為 1% 的超級人才｜TO Talk EP82",
-   "speaker": "簡立峰",
+   "approx": false,
    "channel": "TechOrange 科技報橘",
    "date": "2026-01-15",
-   "approx": false,
+   "id": "hC-jRG2SrEE",
+   "speaker": "簡立峰",
    "summary": "收錄簡立峰在 2026 AI 人才年會的演講，談 AI 競局、以 AI 打造數位分身，以及職場自動化下如何成為頂尖 1% 人才。",
    "tags": [
     "簡立峰",
     "AI 人才年會",
     "數位分身"
-   ]
+   ],
+   "title": "簡立峰｜善用 AI 成為 1% 的超級人才｜TO Talk EP82",
+   "type": "講座"
   },
   {
    "approx": true,
