@@ -1,6 +1,6 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-18T08:20:00+08:00",
+ "updatedAt": "2026-11-19T08:30:00+08:00",
  "videos": [
   {
    "approx": true,
@@ -94,19 +94,19 @@
    "type": "講座"
   },
   {
-   "id": "WCCyQYlHZA0",
-   "type": "講座",
-   "title": "AI未來怎麼走，連美國菁英都說「我不知道」？iKala創辦人程世嘉赴美交流、揭開「K型職場」：AI正讓全世界失去確定感 Ft. 程世嘉【哈佛人物面對面】",
-   "speaker": "程世嘉",
+   "approx": false,
    "channel": "哈佛商業評論",
    "date": "2026-09-11",
-   "approx": false,
+   "id": "WCCyQYlHZA0",
+   "speaker": "程世嘉",
    "summary": "《哈佛商業評論》人物面對面專訪 iKala 創辦人程世嘉，談赴美交流觀察到的 AI 不確定性與「K 型職場」現象。",
    "tags": [
     "AI 人才與職場",
     "對談",
     "程世嘉"
-   ]
+   ],
+   "title": "AI未來怎麼走，連美國菁英都說「我不知道」？iKala創辦人程世嘉赴美交流、揭開「K型職場」：AI正讓全世界失去確定感 Ft. 程世嘉【哈佛人物面對面】",
+   "type": "講座"
   },
   {
    "approx": false,
@@ -124,19 +124,19 @@
    "type": "講座"
   },
   {
-   "id": "w19xgnQNZYU",
-   "type": "講座",
-   "title": "唐鳳 × 丹增央措「對齊的另一面」：AI 時代，社會如何接住每一個人【Platform Originals】",
-   "speaker": "唐鳳、丹增央措",
+   "approx": false,
    "channel": "Platform 月台",
    "date": "2026-09-03",
-   "approx": false,
+   "id": "w19xgnQNZYU",
+   "speaker": "唐鳳、丹增央措",
    "summary": "唐鳳與丹增央措對談「對齊的另一面」，討論 AI 時代社會如何照顧每一個人。",
    "tags": [
     "AI 治理",
     "對談",
     "唐鳳"
-   ]
+   ],
+   "title": "唐鳳 × 丹增央措「對齊的另一面」：AI 時代，社會如何接住每一個人【Platform Originals】",
+   "type": "講座"
   },
   {
    "approx": false,

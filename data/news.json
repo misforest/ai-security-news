@@ -1,6 +1,284 @@
 {
- "updatedAt": "2026-11-18T08:20:00+08:00",
+ "updatedAt": "2026-11-19T08:30:00+08:00",
  "days": [
+  {
+   "actions": [
+    "Java4Shell（CVE-2026-114938）：盤點本署與委外系統使用的 Java 17／21／25／27 執行環境（含 Jira、Confluence、Jenkins、Keycloak 等），3 天內更新至 Oracle 11 月修補版；暫無法更新者先加上 -XX:-UseBASE64Intrinsics 參數。",
+    "資安院 11/18 發布 3 則 Fortinet 高風險警訊（FortiOS/FortiSASE、FortiAuthenticator、FortiManager/FortiAnalyzer），請對照本署 Fortinet 設備版本並排定本週修補。",
+    "若有使用 Perforce Puppet 或 Apache Axis（含 Confluence、N-able N-central），立即修補並檢查伺服器是否有遭入侵跡象。",
+    "昨晚 SOC 通報集中出現網域控制站以不存在帳號連續登入失敗、雲端 DNS 帳號與 ANCHOR 特權平台非上班時間登入，請今日確認是否為授權作業並回報 Service Portal。",
+    "開發環境如曾安裝微軟 Agent Framework 的 PyPI 套件，檢查版本並輪替雲端金鑰；重申委外廠商只使用測試環境帳號。"
+   ],
+   "date": "2026-11-19",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "免認證 RCE",
+      "細節已公開"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News：Java4Shell Flaw Enables Pre-Auth RCE",
+       "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html"
+      },
+      {
+       "name": "The Hacker News：Oracle to Patch 11 Java Flaws",
+       "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
+      },
+      {
+       "name": "iThome：研究人員公布OpenJDK重大漏洞Java4Shell細節",
+       "url": "https://www.ithome.com.tw/news/180601"
+      }
+     ],
+     "summary": "研究機構 Calif 揭露 CVE-2026-114938（Java4Shell），問題出在 Java Base64 解碼器針對 AVX-512 的最佳化路徑，影響 Java 17.0.6 之後、21、25、27 版，僅限支援 AVX-512 VBMI 的 x86-64 處理器。部分應用在預設設定下即可被未登入的攻擊者遠端執行程式碼；Oracle 已於 11 月 17 日釋出 17.0.21.1、21.0.13.1、25.0.5.1、27.0.1.1 等修補版，資安院也發布高風險警訊要求 3 天內處置。報導發布時尚未有遭利用的公開紀錄，暫時可用 JVM 參數 -XX:-UseBASE64Intrinsics 緩解。",
+     "tags": [
+      "Java",
+      "Oracle",
+      "漏洞修補"
+     ],
+     "title": "OpenJDK「Java4Shell」漏洞可免認證遠端執行程式碼，Jira、Jenkins、Keycloak 等常見系統受影響"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome：Perforce Puppet重大漏洞遭積極利用",
+       "url": "https://www.ithome.com.tw/news/180611"
+      },
+      {
+       "name": "The Hacker News 首頁（Hackers Exploiting Critical Puppet RCE Flaw）",
+       "url": "https://thehackernews.com/"
+      }
+     ],
+     "summary": "iThome 與 The Hacker News 均報導，駭客正利用 Perforce Puppet Enterprise 的重大遠端程式碼執行漏洞攻擊企業組態管理伺服器。Puppet 這類平臺可對大量主機下發設定，一旦失守影響範圍很大。使用 Puppet 的單位應立即套用原廠修補並檢查伺服器是否有異常程序。",
+     "tags": [
+      "Puppet",
+      "組態管理",
+      "已遭利用"
+     ],
+     "title": "Perforce Puppet Enterprise 重大漏洞遭積極利用，組態管理伺服器成攻擊目標"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome：Apache Axis重大漏洞遭到利用",
+       "url": "https://www.ithome.com.tw/news/180573"
+      }
+     ],
+     "summary": "iThome 報導，攻擊者正利用 Apache Axis 的重大漏洞，進一步滲透使用該元件的 Atlassian Confluence 與 N-able N-central。此事件與前一日安碁通報的 Confluence Data Center 漏洞遭利用相互呼應，使用這兩套系統的單位應優先確認版本。",
+     "tags": [
+      "Apache Axis",
+      "Confluence",
+      "已遭利用"
+     ],
+     "title": "Apache Axis 重大漏洞遭利用，攻擊者藉此滲透 Confluence 與 N-able N-central"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "供應鏈攻擊"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News 首頁（Attackers Compromise Microsoft's Agent Framework PyPI Package）",
+       "url": "https://thehackernews.com/"
+      }
+     ],
+     "summary": "The Hacker News 報導，攻擊者入侵微軟 AI 代理開發框架 Agent Framework 在 PyPI 上發布的套件，用來竊取開發環境中的雲端憑證。AI 開發工具鏈已成供應鏈攻擊熱點，曾安裝相關套件的開發機應檢查版本並輪替雲端金鑰。",
+     "tags": [
+      "PyPI",
+      "AI 代理",
+      "供應鏈"
+     ],
+     "title": "微軟 Agent Framework 的 PyPI 套件遭入侵，被植入竊取雲端憑證的程式"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "供應鏈攻擊"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome：【資安日報】11月18日，Optimizely供應鏈攻擊波及178個組織網站",
+       "url": "https://www.ithome.com.tw/news/180612"
+      }
+     ],
+     "summary": "iThome 11 月 18 日資安日報指出，網站體驗與內容管理服務商 Optimizely 遭供應鏈攻擊，影響 BBC、GitLab、IKEA 等 178 個組織網站，匯豐臺灣也在名單內。實際影響範圍與資料是否外洩仍待各方確認，使用第三方網站代碼或 SaaS 元件的機關應檢視外部腳本清單。",
+     "tags": [
+      "供應鏈",
+      "金融業",
+      "網站安全"
+     ],
+     "title": "Optimizely 供應鏈攻擊波及 178 個組織網站，匯豐臺灣名列其中"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome：OpenAI推出GPT-6.2雙模型",
+       "url": "https://www.ithome.com.tw/news/180605"
+      }
+     ],
+     "summary": "iThome 報導，OpenAI 推出 GPT-6.2 雙模型，其中 Astra 在 OpenAI 自身的風險評估框架中，首度達到 AI 自我改進類別的高風險門檻。這代表前沿模型的能力評估與防護措施將更受監管與企業關注；細節以 OpenAI 公告為準。",
+     "tags": [
+      "OpenAI",
+      "前沿模型",
+      "AI 安全"
+     ],
+     "title": "OpenAI 推出 GPT-6.2 雙模型，Astra 首度達到「AI 自我改進」高風險門檻"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome：微軟推出7款自研AI模型",
+       "url": "https://www.ithome.com.tw/news/180590"
+      }
+     ],
+     "summary": "iThome 報導，微軟推出 7 款自研 MAI 系列模型，以較低價格與 OpenAI 及 Anthropic（Claude 的開發公司）競爭，降低對單一模型供應商的依賴。對使用 Microsoft 365 與 Azure 的機關而言，未來可選用的模型與計價方式將更多元。",
+     "tags": [
+      "Microsoft",
+      "自研模型",
+      "雲端 AI"
+     ],
+     "title": "微軟推出 7 款自研 AI 模型，以低價挑戰 OpenAI 與 Anthropic"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News 首頁（Apple Tightens macOS App Permissions）",
+       "url": "https://thehackernews.com/"
+      }
+     ],
+     "summary": "The Hacker News 報導，蘋果調整 macOS 的 App 權限機制，限制應用程式（包含 AI 代理）存取使用者資料的範圍。桌面型 AI 代理越來越普及，作業系統層級的權限控管成為新的防線。",
+     "tags": [
+      "Apple",
+      "AI 代理",
+      "權限控管"
+     ],
+     "title": "蘋果收緊 macOS App 權限，因應 AI 代理帶來的資料存取風險"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-18",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "summary": "Perforce Puppet 組態管理平臺的重大漏洞已遭攻擊者積極利用。",
+     "tags": [
+      "Puppet",
+      "漏洞"
+     ],
+     "title": "基礎設施自動化與組態管理平臺Perforce Puppet重大漏洞遭積極利用",
+     "url": "https://www.ithome.com.tw/news/180611"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-18",
+     "flags": [],
+     "rank": 2,
+     "summary": "研究人員公開 OpenJDK 重大漏洞 Java4Shell 的技術細節。",
+     "tags": [
+      "Java",
+      "OpenJDK"
+     ],
+     "title": "研究人員公布OpenJDK重大漏洞Java4Shell細節",
+     "url": "https://www.ithome.com.tw/news/180601"
+    },
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-18",
+     "flags": [],
+     "rank": 3,
+     "summary": "Optimizely 供應鏈攻擊影響 178 個組織網站，臺灣金融業也在名單中。",
+     "tags": [
+      "資安日報",
+      "供應鏈"
+     ],
+     "title": "【資安日報】11月18日，Optimizely供應鏈攻擊波及BBC、GitLab、IKEA等178個組織網站，匯豐臺灣也名列其中",
+     "url": "https://www.ithome.com.tw/news/180612"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-17",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 4,
+     "summary": "攻擊者利用 Apache Axis 漏洞入侵 Confluence 與 N-able N-central。",
+     "tags": [
+      "Apache Axis",
+      "Confluence"
+     ],
+     "title": "Apache Axis重大漏洞遭到利用，攻擊者藉此滲透Atlassian Confluence與N-able N-central",
+     "url": "https://www.ithome.com.tw/news/180573"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-18",
+     "flags": [],
+     "rank": 1,
+     "summary": "OpenAI 發表 GPT-6.2 雙模型，其中 Astra 達到自我改進高風險門檻。",
+     "tags": [
+      "OpenAI",
+      "前沿模型"
+     ],
+     "title": "OpenAI推出GPT-6.2雙模型，Astra首度達AI自我改進高風險門檻",
+     "url": "https://www.ithome.com.tw/news/180605"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-18",
+     "flags": [],
+     "rank": 2,
+     "summary": "微軟以 7 款低價自研模型與 OpenAI、Anthropic 競爭。",
+     "tags": [
+      "Microsoft",
+      "自研模型"
+     ],
+     "title": "微軟推出7款自研AI模型，以低價挑戰OpenAI及Anthropic",
+     "url": "https://www.ithome.com.tw/news/180590"
+    }
+   ],
+   "updatedAt": "2026-11-19T08:30:00+08:00"
+  },
   {
    "actions": [
     "盤點並撤銷已結案委外廠商（含 AI 服務廠商）仍持有的雲端金鑰、API Token 與帳號；Barracuda 事件即因前廠商金鑰未撤銷而遭入侵。",
