@@ -344,6 +344,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   <div class="wrap">
     <main>
       <p class="vnote" id="vnote" hidden></p>
+      <section class="vgroup" aria-labelledby="h-vaj"><div class="group"><h2 id="h-vaj" style="margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px">AJ 專區 <span class="count" id="cnt-vaj" style="font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400"></span></h2></div><p class="srcnote" style="margin:0 0 12px">YouTube 頻道「欸那個AJ」的 AI 工具實作教學（ChatGPT、Gemini、Claude、NotebookLM 等），收錄近 3 個月上架的影片。<a href="https://www.youtube.com/@ohthataj" target="_blank" rel="noopener noreferrer">前往頻道 ↗</a></p><div id="list-vaj"></div></section>
       <section class="vgroup" aria-labelledby="h-vtalk"><div class="group"><h2 id="h-vtalk" style="margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px">AI 講座 <span class="count" id="cnt-vtalk" style="font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400"></span></h2></div><div id="list-vtalk"></div></section>
       <section class="vgroup" aria-labelledby="h-vcourse"><div class="group"><h2 id="h-vcourse" style="margin:0 0 12px;font-size:19px;font-weight:900;letter-spacing:.04em;display:flex;align-items:baseline;gap:10px">AI 課程 <span class="count" id="cnt-vcourse" style="font-family:var(--font-tech);font-size:12.5px;color:var(--muted);font-weight:400"></span></h2></div><div id="list-vcourse"></div></section>
     </main>
@@ -725,11 +726,14 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   }
   function renderVideos(){
     var items = collectVideos();
-    var talks = items.filter(function(v){ return v.type !== "課程"; });
-    var courses = items.filter(function(v){ return v.type === "課程"; });
+    var aj = items.filter(function(v){ return v.zone === "AJ"; });
+    var rest = items.filter(function(v){ return v.zone !== "AJ"; });
+    var talks = rest.filter(function(v){ return v.type !== "課程"; });
+    var courses = rest.filter(function(v){ return v.type === "課程"; });
+    renderVideoGroup("video-aj", aj, "list-vaj", "cnt-vaj");
     renderVideoGroup("video-talk", talks, "list-vtalk", "cnt-vtalk");
     renderVideoGroup("video-course", courses, "list-vcourse", "cnt-vcourse");
-    $("vsummary").innerHTML = state.videos.length ? "符合條件：講座 <b>" + talks.length + "</b> 部、課程 <b>" + courses.length + "</b> 部，依上架日期由新到舊" + (state.vq.trim() ? "，關鍵字「" + esc(state.vq.trim()) + "」" : "") : "";
+    $("vsummary").innerHTML = state.videos.length ? "符合條件：AJ 專區 <b>" + aj.length + "</b> 部、講座 <b>" + talks.length + "</b> 部、課程 <b>" + courses.length + "</b> 部，依上架日期由新到舊" + (state.vq.trim() ? "，關鍵字「" + esc(state.vq.trim()) + "」" : "") : "";
     var note = $("vnote");
     if(state.mode === "db"){ note.hidden = false; note.innerHTML = "這個版本的網頁不允許內嵌外部影片，點「來源」會在 YouTube 開啟。要在頁面內直接播放，請使用 GitHub 版：<a href=\"https://misforest.github.io/ai-security-news/#videos\" target=\"_blank\" rel=\"noopener noreferrer\">misforest.github.io/ai-security-news</a>"; }
     else { note.hidden = true; }
