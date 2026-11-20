@@ -1,6 +1,6 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-19T09:30:00+08:00",
+ "updatedAt": "2026-11-20T08:20:00+08:00",
  "videos": [
   {
    "approx": true,
@@ -78,36 +78,36 @@
    "type": "講座"
   },
   {
-   "id": "tGPQ1bVKEgE",
-   "zone": "AJ",
-   "type": "課程",
-   "title": "徹底解放！Gemini「技能 Skill」全新功能登場！不用複雜提示詞，教一次就能自動搞定所有工作！【欸那個AJ】",
-   "speaker": "AJ",
+   "approx": false,
    "channel": "欸那個AJ",
    "date": "2026-10-16",
-   "approx": false,
+   "id": "tGPQ1bVKEgE",
+   "speaker": "AJ",
    "summary": "介紹 Gemini 新推出的「技能（Skills）」功能，示範如何把常用工作流程設定成技能，之後不必重寫提示詞就能重複使用。",
    "tags": [
     "Gemini",
     "Skills",
     "AI 工具教學"
-   ]
+   ],
+   "title": "徹底解放！Gemini「技能 Skill」全新功能登場！不用複雜提示詞，教一次就能自動搞定所有工作！【欸那個AJ】",
+   "type": "課程",
+   "zone": "AJ"
   },
   {
-   "id": "ogesjMLFm_0",
-   "zone": "AJ",
-   "type": "課程",
-   "title": "太扯了！Claude 新模型生 AI 影片強到髮指！不用會寫程式，講話就能做出專業動畫！保母級教學新手從 0 開始也能學會！【欸那個AJ】",
-   "speaker": "AJ",
+   "approx": false,
    "channel": "欸那個AJ",
    "date": "2026-10-08",
-   "approx": false,
+   "id": "ogesjMLFm_0",
+   "speaker": "AJ",
    "summary": "新手向教學，示範用 Claude 新模型以對話方式產生動畫影片，不需要撰寫程式。",
    "tags": [
     "Claude",
     "AI 影片",
     "AI 工具教學"
-   ]
+   ],
+   "title": "太扯了！Claude 新模型生 AI 影片強到髮指！不用會寫程式，講話就能做出專業動畫！保母級教學新手從 0 開始也能學會！【欸那個AJ】",
+   "type": "課程",
+   "zone": "AJ"
   },
   {
    "approx": true,
@@ -171,20 +171,20 @@
    "type": "講座"
   },
   {
-   "id": "nURFvFjCX7k",
-   "zone": "AJ",
-   "type": "課程",
-   "title": "解放 ChatGPT 完整體！實測這 7 個隱藏功能，工作效率直接飆升 10 倍！【欸那個AJ】",
-   "speaker": "AJ",
+   "approx": false,
    "channel": "欸那個AJ",
    "date": "2026-08-21",
-   "approx": false,
+   "id": "nURFvFjCX7k",
+   "speaker": "AJ",
    "summary": "實測 ChatGPT 的 7 個較少人知道的功能，說明如何用在日常工作提升效率。",
    "tags": [
     "ChatGPT",
     "工作效率",
     "AI 工具教學"
-   ]
+   ],
+   "title": "解放 ChatGPT 完整體！實測這 7 個隱藏功能，工作效率直接飆升 10 倍！【欸那個AJ】",
+   "type": "課程",
+   "zone": "AJ"
   },
   {
    "approx": false,

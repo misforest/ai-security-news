@@ -1,6 +1,363 @@
 {
- "updatedAt": "2026-11-19T08:30:00+08:00",
+ "updatedAt": "2026-11-20T08:20:00+08:00",
  "days": [
+  {
+   "actions": [
+    "NGINX（NICS-ANA-2026-0001058）：盤點本署與委外系統對外的 NGINX、NGINX Plus、Ingress Controller 與 F5 WAF for NGINX，優先處理啟用 HTTP/2、HTTP/3 或郵件代理的服務，14 天內更新至 1.30.7／1.31.9 以上版本（PoC 已公開）。",
+    "若機房或委外環境使用 VMware vCenter，立即更新至 8.0 U3m／9.0.2.0200／9.1.1.0200，仍在 7.0 者規劃升級並限制管理介面只允許內部管理網段連線。",
+    "Java4Shell：已出現利用嘗試，請持續追蹤各系統廠商回報（公文系統 OpenJDK 升級測試中），未回覆者今日催辦，目標 11/21 前完成。",
+    "確認昨晚 SOC 通報的外部主機大量觸發 WAF 事件是否為合法掃描，非法來源於防火牆雙向阻擋，並至 Service Portal 回報處理結果。",
+    "如有使用 Cisco Expressway、Synology NAS 或 F5 BIG-IP，確認版本並排定本週修補；提醒同仁不要授權第三方 AI 代理存取公務帳號或付款功能。"
+   ],
+   "date": "2026-11-20",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "零時差"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/"
+      },
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html"
+      }
+     ],
+     "summary": "Mandiant 指出，CVSS 9.8 的 vCenter 目錄服務認證繞過漏洞在 Broadcom 修補前已被疑似中國駭客組織 Armory Castle（UNC5221）利用，初始入侵管道為 BeyondTrust 零時差漏洞。修補版本為 vCenter 9.1.1.0200、9.0.2.0200 與 8.0 U3m；已停止支援的 7.0 沒有修補。",
+     "tags": [
+      "VMware",
+      "vCenter",
+      "APT"
+     ],
+     "title": "VMware vCenter 認證繞過漏洞（CVE-2026-123890）修補前已遭中國 APT 當零時差利用逾兩個月"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "PoC 已公開"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/f5-patches-critical-nginx2root-flaws-as-poc-exploits-go-public/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180651"
+      },
+      {
+       "name": "NGINX 安全公告",
+       "url": "https://nginx.org/en/security_advisories.html"
+      }
+     ],
+     "summary": "F5 修補 22 個漏洞，其中 NGINX 5 個重大漏洞（CVE-2026-113425、121810、123007、123633、123634）可在 ASLR 停用或被繞過時遠端執行程式碼，Rapid7 與 Censys 已公開 PoC，目前未見實際利用。修補版本為 NGINX Open Source 1.30.7／1.31.9、NGINX Plus 37.0.8.1／37.3.0.1；資安院 NICS-ANA-2026-0001058 要求曝露於公眾網路者 14 天內處置。Censys 估計約 900 萬個啟用 HTTP/2 的 NGINX 服務受影響。",
+     "tags": [
+      "NGINX",
+      "F5",
+      "資安院警訊"
+     ],
+     "title": "F5 修補 NGINX 5 個重大漏洞（NGINX2Root），PoC 已公開，資安院列高風險"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "細節已公開"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/java4shell-exploitation-attempts-begin-as-vendors-rush-out-advisories/"
+      }
+     ],
+     "summary": "GreyNoise 等多家機構觀測到針對 OpenJDK Base64 記憶體毀損漏洞的探測請求，目前尚未確認有成功入侵。漏洞只影響支援 AVX-512 VBMI 的 x86-64 處理器；Oracle 與 OpenJDK 已於 11/17 修補，Keycloak 推出 26.8.2-3，Cisco 尚無修補。",
+     "tags": [
+      "Java",
+      "OpenJDK",
+      "漏洞利用"
+     ],
+     "title": "Java4Shell（CVE-2026-114938）開始出現利用嘗試，各廠商陸續發布公告"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "PoC 已公開",
+      "免認證 RCE"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/hackers-exploit-cisco-expressway-vulnerability-soon-after-poc-release/"
+      }
+     ],
+     "summary": "CVSS 9.8 的漏洞可讓未經認證者在叢集部署的 Expressway Core／Edge 以 root 執行指令。資安公司 F6 發現攻擊者在 PoC 上架 GitHub 後不久，從對外的 X15.5.3 設備入侵並橫向移動到內部節點。修補版本為 X15.5.20，建議僅允許信任的叢集節點連線 TCP 4371–4372。",
+     "tags": [
+      "Cisco",
+      "Expressway",
+      "視訊會議"
+     ],
+     "title": "Cisco Expressway 重大漏洞（CVE-2026-76466）PoC 公開後隨即遭利用"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180621"
+      }
+     ],
+     "summary": "依 iThome 標題，攻擊者以 AI 代理攻擊框架 ARTEX 鎖定資安公司 Barracuda，在 44 小時內入侵 10 個雲端帳戶並蒐集憑證，顯示 AI 自動化正加快入侵速度。",
+     "tags": [
+      "AI 攻擊",
+      "雲端帳戶",
+      "憑證竊取"
+     ],
+     "title": "駭客利用 AI 代理框架 ARTEX 攻擊 Barracuda，44 小時入侵 10 個雲端帳戶"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/nvidia-responds-to-gentlemen-ransomware-claim/"
+      },
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/"
+      }
+     ],
+     "summary": "Gentlemen 勒索集團在外洩網站列出 Nvidia，但未提供攻擊細節。Nvidia 表示正在調查可能影響第三方合作夥伴的事件，目前未發現自身系統受影響；勒索集團的說法尚未證實。",
+     "tags": [
+      "勒索軟體",
+      "Nvidia",
+      "供應鏈"
+     ],
+     "title": "Gentlemen 勒索集團將 Nvidia 列上外洩網站，Nvidia 稱可能僅涉及第三方合作夥伴"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180656"
+      }
+     ],
+     "summary": "依 iThome 報導標題，富邦媒旗下開店平臺 mo店+ 發生資安事件，部分出貨資料遭未經授權存取，延續近期臺灣電商服務供應鏈接連出事的情況；影響範圍與筆數以官方公告為準。",
+     "tags": [
+      "個資事件",
+      "電商",
+      "臺灣"
+     ],
+     "title": "富邦媒 mo店+ 發生資安事件，部分出貨資料遭未經授權存取"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Anthropic：路演公告",
+       "url": "https://anthropic.com/news/roadshow-launch"
+      },
+      {
+       "name": "Anthropic：IPO 定價公告",
+       "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+      },
+      {
+       "name": "The Neuron",
+       "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-thursday-november-19-2026/"
+      }
+     ],
+     "summary": "Anthropic（開發 Claude 的公司）已啟動 IPO 路演；據 The Neuron 轉述，最終定價每股 83 美元、發行約 9.8 億股，募資規模約 813 億美元，可能是美國史上最大 IPO，估值數字各家報導不一。此處僅轉述報導內容，正式數字以公司公告與 SEC 文件為準。",
+     "tags": [
+      "Anthropic",
+      "IPO",
+      "AI 產業"
+     ],
+     "title": "Anthropic 首次公開發行定價，預計在 Nasdaq 以代號 ANT 掛牌"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Verge",
+       "url": "https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling"
+      },
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/11/18/nvidia-chips-china-military-ai.html"
+      }
+     ],
+     "summary": "Nvidia 表示雖已取得美方部分銷售核准，但目前沒有進一步向中國出貨授權 Hopper 晶片的計畫；美國國會委員會同時警告中國軍方對 Nvidia 晶片的興趣，Nvidia 也提醒客戶出租雲端算力給中國企業的法律風險。",
+     "tags": [
+      "Nvidia",
+      "出口管制",
+      "AI 晶片"
+     ],
+     "title": "Nvidia 表示不再規劃向中國出貨授權的 Hopper AI 晶片"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180641"
+      }
+     ],
+     "summary": "依 iThome 標題，Google 擴充 Gemini Tasks 的代理功能，可代使用者打電話與完成購物付款，並首度開放免費使用；AI 代理直接操作付款，帳號授權與責任歸屬將是機關與民眾需要注意的議題。",
+     "tags": [
+      "Google",
+      "Gemini",
+      "AI 代理"
+     ],
+     "title": "Google 升級 Gemini Tasks，新增 AI 代打電話、購物付款並首度免費開放"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+      }
+     ],
+     "summary": "Citi 更新條款，客戶透過具帳戶存取權的第三方 AI 工具進行的交易由客戶自行負責，即使遭駭也一樣；其他銀行也採類似立場，反映 AI 代理開始能發動金融交易後的責任分配問題。",
+     "tags": [
+      "AI 代理",
+      "金融",
+      "責任歸屬"
+     ],
+     "title": "Citi 等銀行修改條款：客戶授權 AI 代理操作帳戶，出事責任自負"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/openai-opens-its-cybersecurity-tool-daybreak-to-nato-and-european-governments/"
+      }
+     ],
+     "summary": "OpenAI 將 AI 資安工具計畫 Daybreak 開放給 NATO 與歐洲各國政府，報導指出歐盟網路安全局 ENISA 已在使用，AI 輔助資安防禦正逐步進入政府部門。",
+     "tags": [
+      "OpenAI",
+      "政府",
+      "AI 資安"
+     ],
+     "title": "OpenAI 資安計畫 Daybreak 擴大開放給 NATO 與歐洲政府"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-19",
+     "flags": [],
+     "rank": 1,
+     "summary": "11 月 19 日資安日報，頭條為 Nginx 緊急修補 10 個漏洞、其中 5 個可能被用來遠端執行程式碼。",
+     "tags": [
+      "資安日報",
+      "Nginx",
+      "漏洞"
+     ],
+     "title": "【資安日報】11月19日，Nginx緊急修補10個漏洞，其中5個恐遭遠端執行程式碼",
+     "url": "https://www.ithome.com.tw/news/180654"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-19",
+     "flags": [],
+     "rank": 2,
+     "summary": "Nginx 一次修補 10 個漏洞，其中 5 個有遠端執行程式碼的風險，使用 Nginx 的網站應儘速更新。",
+     "tags": [
+      "Nginx",
+      "RCE",
+      "修補"
+     ],
+     "title": "Nginx緊急修補10個漏洞，其中5個恐遭遠端執行程式碼",
+     "url": "https://www.ithome.com.tw/news/180651"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-19",
+     "flags": [],
+     "rank": 3,
+     "summary": "富邦媒旗下 mo店+ 發生資安事件，部分出貨資料遭到未經授權存取。",
+     "tags": [
+      "資安事件",
+      "電商",
+      "個資"
+     ],
+     "title": "富邦媒mo店+發生資安事件，部分出貨資料遭未經授權存取",
+     "url": "https://www.ithome.com.tw/news/180656"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-19",
+     "flags": [],
+     "rank": 4,
+     "summary": "攻擊者利用 AI 代理攻擊框架 ARTEX 鎖定 Barracuda，44 小時內入侵 10 個雲端帳戶並蒐集憑證。",
+     "tags": [
+      "AI 攻擊",
+      "雲端帳戶",
+      "憑證"
+     ],
+     "title": "駭客利用AI代理框架ARTEX攻擊資安公司Barracuda，44小時入侵10個雲端帳戶搜刮憑證",
+     "url": "https://www.ithome.com.tw/news/180621"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-19",
+     "flags": [],
+     "rank": 1,
+     "summary": "Google 擴充 Gemini Tasks，讓 AI 可代為打電話與購物付款，並首度開放免費使用。",
+     "tags": [
+      "Google",
+      "Gemini",
+      "AI 代理"
+     ],
+     "title": "Google升級Gemini Tasks，新增AI代打電話、購物付款功能，首度開放免費使用",
+     "url": "https://www.ithome.com.tw/news/180641"
+    }
+   ],
+   "updatedAt": "2026-11-20T08:20:00+08:00"
+  },
   {
    "actions": [
     "Java4Shell（CVE-2026-114938）：盤點本署與委外系統使用的 Java 17／21／25／27 執行環境（含 Jira、Confluence、Jenkins、Keycloak 等），3 天內更新至 Oracle 11 月修補版；暫無法更新者先加上 -XX:-UseBASE64Intrinsics 參數。",
