@@ -229,6 +229,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
       <button type="button" role="tab" id="tab-videos" aria-controls="view-videos" aria-selected="false">最新影片<span class="n" id="tabn-videos"></span></button>
       <button type="button" role="tab" id="tab-laws" aria-controls="view-laws" aria-selected="false">法規查詢<span class="n" id="tabn-laws"></span></button>
       <button type="button" role="tab" id="tab-alerts" aria-controls="view-alerts" aria-selected="false">資安通報<span class="n" id="tabn-alerts"></span></button>
+      <button type="button" role="tab" id="tab-work" aria-controls="view-work" aria-selected="false">重要工作<span class="n" id="tabn-work"></span></button>
     </nav>
   </div>
 </div>
@@ -454,6 +455,56 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   </div>
 </div>
 
+<!-- ===== 重要工作 ===== -->
+<div id="view-work" role="tabpanel" aria-labelledby="tab-work" hidden>
+  <div class="filters">
+    <div class="wrap">
+      <form class="frow" id="workForm" autocomplete="off">
+        <div class="field grow"><label for="wq">關鍵字</label><input type="search" id="wq" placeholder="例如：預算、會議、填報、企劃組"></div>
+        <div class="field">
+          <span class="lbl" id="woriLbl">來信單位</span>
+          <div class="seg" role="group" aria-labelledby="woriLbl" id="woris">
+            <button type="button" data-wori="all">全部</button>
+            <button type="button" data-wori="農業部">農業部</button>
+            <button type="button" data-wori="本署">本署同仁</button>
+          </div>
+        </div>
+        <div class="field">
+          <span class="lbl" id="wpriLbl">重要性</span>
+          <div class="seg" role="group" aria-labelledby="wpriLbl" id="wpris">
+            <button type="button" data-wpri="all">全部</button>
+            <button type="button" data-wpri="緊急">緊急</button>
+            <button type="button" data-wpri="高">高</button>
+            <button type="button" data-wpri="中低">中／低</button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="wrange">期間</label>
+          <select id="wrange">
+            <option value="7">近 7 天</option>
+            <option value="latest">最新一次彙整</option>
+            <option value="30">近 30 天</option>
+            <option value="all">全部</option>
+          </select>
+        </div>
+        <button type="button" class="linkbtn" id="wreset">清除篩選</button>
+      </form>
+      <p class="summary" id="wsummary"></p>
+    </div>
+  </div>
+  <div class="wrap">
+    <main>
+      <p class="lawlinks"><b>資料來源：農業部（moa.gov.tw）及本署同仁（forest.gov.tw）寄來的 Outlook 信件</b><span>只收需要處理的事項：交辦、需要回覆或填報、會議、公文會辦、期限提醒等；不收傳閱、議價、自動寄送與系統通知信，資安相關信件放在「資安通報」。更新頻率同資安通報（每天 8:00；週一至週五 9:00–18:00 每小時）。重要性：緊急＝立即處理、高＝儘速處理、中／低＝例行追蹤</span></p>
+      <section class="block" aria-labelledby="h-wdue"><h2 id="h-wdue">即將到期（7 天內・含今日） <span class="count" id="cnt-wdue"></span></h2><div class="list" id="list-wdue"></div></section>
+      <div class="groups">
+        <section class="group" aria-labelledby="h-wmoa"><h2 id="h-wmoa">農業部來信 <span class="count" id="cnt-wmoa"></span></h2><div class="list" id="list-wmoa"></div></section>
+        <section class="group" aria-labelledby="h-wfor"><h2 id="h-wfor">本署同仁來信 <span class="count" id="cnt-wfor"></span></h2><div class="list" id="list-wfor"></div></section>
+      </div>
+      <p class="srcnote" id="wsrc"></p>
+    </main>
+  </div>
+</div>
+
 <div class="wrap">
   <footer>智安領航站・新聞與課程摘要為改寫整理，請以原始網頁為準。標示「尚未證實」的新聞內容，目前還沒有一手來源確認；課程的認證時數與報名資格以 e 等公務園+ 公告為準。</footer>
 </div>
@@ -469,7 +520,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     courses: [], courseMeta: null, cq: "", celig: "all", csort: "rank",
     videos: [], vq: "", vtype: "all", playing: {}, mode: "",
     laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "active", lauth: "all",
-    alertDays: [], aq: "", apri: "all", arange: "7", asrc: "all"
+    alertDays: [], aq: "", apri: "all", arange: "7", asrc: "all",
+    workDays: [], wq: "", wpri: "all", wrange: "7", wori: "all"
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -504,7 +556,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   }
 
   /* ---------- tabs ---------- */
-  var VIEWS = ["news","courses","videos","laws","alerts"];
+  var VIEWS = ["news","courses","videos","laws","alerts","work"];
   function setView(v, fromHash){
     state.view = VIEWS.indexOf(v) !== -1 ? v : "news";
     VIEWS.forEach(function(k){
@@ -913,6 +965,74 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     } else { box.hidden = true; box.innerHTML = ""; }
   }
 
+  /* ---------- 重要工作 ---------- */
+  function workDaysInRange(){
+    var ds = state.workDays.filter(function(d){ return d && d.date; }).sort(function(a,b){ return a.date < b.date ? 1 : -1; });
+    if(!ds.length) return [];
+    if(state.wrange === "latest") return ds.slice(0,1);
+    if(state.wrange === "all") return ds;
+    var from = addDays(ds[0].date, -(parseInt(state.wrange,10)-1));
+    return ds.filter(function(d){ return d.date >= from; });
+  }
+  function workOrigin(w){ return w && w.origin === "農業部" ? "農業部" : "本署"; }
+  function workAll(){
+    var seen = {}, out = [];
+    state.workDays.forEach(function(d){ (d && Array.isArray(d.items) ? d.items : []).forEach(function(w){ if(w && w.id && !seen[w.id]){ seen[w.id] = 1; out.push(w); } }); });
+    return out;
+  }
+  function collectWork(){
+    var seen = {}, out = [];
+    workDaysInRange().forEach(function(d){
+      (Array.isArray(d.items) ? d.items : []).forEach(function(w){
+        if(!w || !w.id || seen[w.id]) return; seen[w.id] = 1;
+        if(state.wori !== "all" && workOrigin(w) !== state.wori) return;
+        if(!matchAll(state.wq, [w.id, w.origin, w.unit, w.category, w.title, w.summary, w.deadline, w.action, (w.flags||[]).join(" ")].join(" "))) return;
+        out.push(w);
+      });
+    });
+    return out.sort(function(a,b){ var ta = String(a.receivedAt||""), tb = String(b.receivedAt||""); return tb > ta ? 1 : (tb < ta ? -1 : 0); });
+  }
+  function workCard(w){
+    var h = function(t){ return hlWith(state.wq, t); };
+    var crit = w.priority === "緊急";
+    var pri = '<span class="pill ' + (crit ? "crit" : (w.priority === "高" ? "sec" : "plain")) + '">' + esc(w.priority||"") + (TIER[w.priority] ? "・" + TIER[w.priority] : "") + '</span>';
+    var flags = (Array.isArray(w.flags) ? w.flags : []).map(function(f){ return '<span class="pill flag">' + h(f) + '</span>'; }).join("");
+    var f = function(k, v){ return v ? '<p class="afield"><b>' + k + '</b>' + h(v) + '</p>' : ""; };
+    var today = todayTPE(), dl = String(w.deadline||"");
+    var dlPill = dl ? '<span class="pill ' + (dl < today ? "plain" : (dl <= addDays(today, 2) ? "crit" : "flag")) + '">期限 ' + esc(dl) + (dl < today ? "（已過）" : "") + '</span>' : "";
+    return '<article class="item ' + (crit ? "pri-crit" : (w.priority === "高" ? "pri-high" : "")) + '">' +
+      '<div class="meta"><span class="pill ' + (workOrigin(w) === "農業部" ? "ai" : "pd") + '">' + esc(workOrigin(w) === "農業部" ? "農業部" : "本署同仁") + '</span>' + (w.unit ? '<span class="pill plain">' + h(w.unit) + '</span>' : "") + pri + dlPill + flags + '</div>' +
+      '<h3>' + h(w.title) + '</h3>' +
+      '<div class="meta"><span class="num">收信 ' + esc(fmtTime(w.receivedAt)) + '</span>' + (w.category ? '<span class="pill plain">' + h(w.category) + '</span>' : "") + (w.dupCount > 1 ? '<span class="num">相關信件 ' + esc(w.dupCount) + ' 封</span>' : "") + '</div>' +
+      f("內容摘要", w.summary) + f("待辦事項", w.action) + f("判斷依據", w.basis) +
+      (mailUrl(w.mailLink) ? '<div class="srcs"><span class="lbl">來源信件</span><a class="src" href="' + esc(mailUrl(w.mailLink)) + '" target="_blank" rel="noopener noreferrer">在 Outlook 開啟原始信件 ↗</a></div>' : "") +
+    '</article>';
+  }
+  function renderWork(){
+    var all = collectWork();
+    var isLow = function(w){ return w.priority === "中" || w.priority === "低" || !w.priority; };
+    var shown = all.filter(function(w){ return state.wpri === "all" || (state.wpri === "中低" ? isLow(w) : w.priority === state.wpri); });
+    var publicOnly = state.mode === "files";
+    var noData = publicOnly ? "公開版不收錄重要工作（含本署內部資訊），請至 claude.ai 版查看。" : (state.workDays.length ? "這個期間沒有符合條件的工作事項。" : "目前還沒有重要工作資料。");
+    var today = todayTPE(), lim = addDays(today, 6);
+    var due = workAll().filter(function(w){ var d = String(w.deadline||""); return d && d >= today && d <= lim && (state.wori === "all" || workOrigin(w) === state.wori) && (state.wpri === "all" || (state.wpri === "中低" ? isLow(w) : w.priority === state.wpri)) && matchAll(state.wq, [w.title, w.summary, w.unit, w.action].join(" ")); })
+      .sort(function(a,b){ return String(a.deadline) < String(b.deadline) ? -1 : (String(a.deadline) > String(b.deadline) ? 1 : (PRI[a.priority]||9) - (PRI[b.priority]||9)); });
+    renderList("work-due", due, "list-wdue", "cnt-wdue", workCard, publicOnly ? noData : "7 天內沒有到期的事項。", "件");
+    var moa = shown.filter(function(w){ return workOrigin(w) === "農業部"; }), fr = shown.filter(function(w){ return workOrigin(w) !== "農業部"; });
+    $("h-wmoa").parentNode.hidden = state.wori === "本署"; $("h-wfor").parentNode.hidden = state.wori === "農業部";
+    renderList("work-moa", moa, "list-wmoa", "cnt-wmoa", workCard, noData, "件");
+    renderList("work-for", fr, "list-wfor", "cnt-wfor", workCard, noData, "件");
+    var ds = workDaysInRange(), d0 = ds[0];
+    var per = d0 && d0.period ? fmtTime(d0.period.from) + " ～ " + fmtTime(d0.period.to) : "";
+    $("wsummary").innerHTML = state.workDays.length ? (state.wrange === "latest" && d0 ? "最新彙整 <b>" + esc(d0.date) + "</b>" + (per ? "（期間 " + esc(per) + "）" : "") + "：" : "") +
+      "共 <b>" + shown.length + "</b> 件（緊急 " + shown.filter(function(w){ return w.priority === "緊急"; }).length + "、高 " + shown.filter(function(w){ return w.priority === "高"; }).length + "、中／低 " + shown.filter(isLow).length + "；農業部 " + moa.length + "、本署 " + fr.length + "），7 天內到期 <b>" + due.length + "</b> 件" + (state.wq.trim() ? "，關鍵字「" + esc(state.wq.trim()) + "」" : "") : "";
+    $("wsrc").textContent = d0 && d0.note ? d0.note : "";
+    Array.prototype.forEach.call($("wpris").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-wpri") === state.wpri); });
+    Array.prototype.forEach.call($("woris").querySelectorAll("button"), function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-wori") === state.wori); });
+    var n = workAll().length;
+    $("tabn-work").textContent = state.status !== "loading" && n ? n : "";
+  }
+
   function renderStatus(){
     var el = $("status"); el.classList.remove("bad");
     if(state.status === "loading"){ el.textContent = "資料載入中…"; return; }
@@ -977,7 +1097,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     (function loop(ts){ if(t0 === null) t0 = ts; lastAngle = -Math.PI/2 + ((ts - t0)/4200)*Math.PI*2; if(!document.hidden) drawRadar(lastAngle); requestAnimationFrame(loop); })(performance.now());
   } else { drawRadar(lastAngle); }
 
-  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); renderVideos(); renderLaws(); renderAlerts(); }
+  function render(){ renderStatus(); renderGauges(); renderNews(); renderCourses(); renderVideos(); renderLaws(); renderAlerts(); renderWork(); }
 
   /* ---------- controls ---------- */
   $("newsForm").addEventListener("submit", function(e){ e.preventDefault(); });
@@ -1008,6 +1128,13 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("arange").addEventListener("change", function(){ state.arange = this.value; resetExpand("alert"); render(); });
   $("asrcs").addEventListener("click", function(e){ var b = e.target.closest("button[data-asrc]"); if(!b) return; state.asrc = b.getAttribute("data-asrc"); resetExpand("alert"); render(); });
   $("areset").addEventListener("click", function(){ state.aq = ""; $("aq").value = ""; state.apri = "all"; state.asrc = "all"; state.arange = "7"; $("arange").value = "7"; resetExpand("alert"); render(); });
+  $("workForm").addEventListener("submit", function(e){ e.preventDefault(); });
+  var wqT = null;
+  $("wq").addEventListener("input", function(){ var v = this.value; clearTimeout(wqT); wqT = setTimeout(function(){ state.wq = v; resetExpand("work"); render(); }, 150); });
+  $("wpris").addEventListener("click", function(e){ var b = e.target.closest("button[data-wpri]"); if(!b) return; state.wpri = b.getAttribute("data-wpri"); resetExpand("work"); render(); });
+  $("woris").addEventListener("click", function(e){ var b = e.target.closest("button[data-wori]"); if(!b) return; state.wori = b.getAttribute("data-wori"); resetExpand("work"); render(); });
+  $("wrange").addEventListener("change", function(){ state.wrange = this.value; resetExpand("work"); render(); });
+  $("wreset").addEventListener("click", function(){ state.wq = ""; $("wq").value = ""; state.wpri = "all"; state.wori = "all"; state.wrange = "7"; $("wrange").value = "7"; resetExpand("work"); render(); });
   $("urgent").addEventListener("click", function(e){ if(e.target.closest("a[href='#alerts']")){ e.preventDefault(); setView("alerts"); } });
   var vqT = null;
   $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
@@ -1087,6 +1214,10 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         state.alertDays = snap.docs.map(function(d){ return d.data(); }).filter(function(d){ return d && d.date; });
         render();
       }, function(){ render(); });
+      db.collection("work").orderBy("date", "desc").limit(200).onSnapshot(function(snap){
+        state.workDays = snap.docs.map(function(d){ return d.data(); }).filter(function(d){ return d && d.date; });
+        render();
+      }, function(){ render(); });
       db.doc("catalog/videos").onSnapshot(function(snap){
         var d = snap.exists ? snap.data() : null;
         state.videos = d && Array.isArray(d.videos) ? d.videos : [];
@@ -1113,4 +1244,3 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
 </script>
 </body>
 </html>
-

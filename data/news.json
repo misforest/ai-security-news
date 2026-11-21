@@ -1,6 +1,380 @@
 {
- "updatedAt": "2026-11-20T08:20:00+08:00",
+ "updatedAt": "2026-11-21T08:40:00+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點機關內 Synology NAS，依群暉公告與安碁 F0202_2924 通知更新 DSM；無法更新者先關閉對外存取。",
+    "確認所有 VMware vCenter 已升級到修補版本（官方表示沒有替代緩解），並檢查是否有異常管理登入。",
+    "針對 AI 輔助攻擊（ARTEX）加強雲端金鑰與服務帳號盤點、輪替，並追查 SOC 11/20 多起帳號登入失敗與 User Locked 的來源。",
+    "檢視郵件過濾、行銷等第三方委外廠商可存取的資料範圍與通報義務（JPMorgan、N-able 事件）。",
+    "訂定公務電腦使用桌面型 AI 代理（Gemini、Muse 等）的規範，避免授權存取公務檔案與個資。"
+   ],
+   "date": "2026-11-21",
+   "items": [
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180680"
+      },
+      {
+       "name": "ISI Defense 週報",
+       "url": "https://isidefense.com/blog/cybersecurity-news-roundup-optimizely-jpmorgan-vmware-and-more"
+      }
+     ],
+     "summary": "群暉（Synology）公告 DiskStation Manager 有兩個重大漏洞，預計 11 月 20 日起分批推出修補版本。資安業者彙整指出，美國 CISA 已將 Synology DSM、LiteLLM 與 REDCap 漏洞列入已知遭利用漏洞（KEV）清單；安碁也於 11/20 發出 DSM 嚴重漏洞通知。機關內的 NAS 應盡快盤點版本並套用更新。",
+     "tags": [
+      "Synology",
+      "NAS",
+      "KEV"
+     ],
+     "title": "群暉警告 NAS 作業系統 DSM 存在兩個重大漏洞，11/20 起陸續提供部分版本修補"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "AI 輔助攻擊"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/"
+      },
+      {
+       "name": "The Register",
+       "url": "https://www.theregister.com/cyber-crime/2026/11/19/european-commission-scrambles-to-contain-ai-assisted-cyberattack/5311103"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180672"
+      }
+     ],
+     "summary": "歐盟執委會 11/19 證實，攻擊者濫用公開可取得的 AI 工具入侵內部系統；10/22 察覺異常後下線部分應用，多數服務已恢復，目前未發現全員資料外洩。媒體報導工具為 AI 滲透測試框架 ARTEX，與先前 Barracuda 遭 44 小時入侵事件使用的工具相同，執委會尚未正式證實。",
+     "tags": [
+      "歐盟",
+      "ARTEX",
+      "AI 攻擊"
+     ],
+     "title": "歐盟執委會遭 AI 輔助網攻，調查指向開源滲透框架 ARTEX"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "零時差"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180673"
+      }
+     ],
+     "summary": "VMware 針對已遭中國 APT 零時差利用的 vCenter 認證繞過漏洞發布更新，並表示沒有其他暫時緩解措施，必須升級版本。安碁 11/20 也發出「VMware vCenter 零時差漏洞遭利用」通知。",
+     "tags": [
+      "VMware",
+      "vCenter"
+     ],
+     "title": "VMware 修補 vCenter 重大漏洞，強調只能升級、沒有替代緩解方式"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html"
+      }
+     ],
+     "summary": "N-able 表示其託管郵件過濾服務 Mail Assure 與 SpamExperts 有一台伺服器遭未授權存取，管理入口、API、隔離區與日誌功能暫停，郵件過濾仍運作。公司稱目前未發現客戶資料遭竊，並說明與先前 N-central 漏洞無關。",
+     "tags": [
+      "N-able",
+      "郵件安全",
+      "供應鏈"
+     ],
+     "title": "N-able 證實 Mail Assure／SpamExperts 雲端伺服器遭未授權存取"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Newsweek",
+       "url": "https://www.newsweek.com/hackers-leak-data-jpmorgan-thousands-richest-customers-12740448"
+      }
+     ],
+     "summary": "外洩資料為電子郵件與電話，摩根大通表示資料來自第三方行銷廠商，自身服務未受影響；Visa、Mastercard 也證實經第三方業者有少量資料曝露，未含卡號。筆數為攻擊者公開資料，尚未完全證實。",
+     "tags": [
+      "第三方風險",
+      "個資",
+      "勒索"
+     ],
+     "title": "n0n 勒索集團公開摩根大通約 1.6 萬名高端卡客戶聯絡資料"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "服務中斷"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CNN",
+       "url": "https://www.cnn.com/2026/11/20/politics/nsa-highly-classified-network-outage-resolved"
+      },
+      {
+       "name": "CBS News",
+       "url": "https://www.cbsnews.com/news/national-security-agency-network-outage-software-vulnerability/"
+      }
+     ],
+     "summary": "NSANet 自 11/17 起中斷，大量人員無法使用，CNN 11/20 報導已大致恢復。NSA 稱為例行維護，報導指與緊急修補 PHP 有關，目前沒有遭攻擊的證據，屬服務中斷而非資安攻擊。",
+     "tags": [
+      "NSA",
+      "服務中斷",
+      "PHP"
+     ],
+     "title": "美國 NSA 機密網路 NSANet 中斷逾 3 天，官方稱維護、無攻擊證據"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180671"
+      },
+      {
+       "name": "Semafor",
+       "url": "https://www.semafor.com/article/11/19/2026/anthropic-makes-record-market-debut"
+      }
+     ],
+     "summary": "Anthropic（Claude 的開發公司）在 Nasdaq 掛牌，報導指 IPO 出售約 9.8 億股、募得約 813 億美元，首日股價上漲約 17%。本則僅轉述媒體報導。",
+     "tags": [
+      "Anthropic",
+      "IPO"
+     ],
+     "title": "Anthropic 掛牌上市首日上漲 17%，募資規模創紀錄"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CNBC",
+       "url": "https://www.cnbc.com/2026/11/19/nvidia-amd-china-chip-sales-congress.html"
+      }
+     ],
+     "summary": "美國眾議院外交委員會公布文件，顯示商務部至 2026 年 5 月核准的 AI 晶片出口，對象包括被列為與中國軍方有關的企業。民主黨議員批評出口管制執法不力，Nvidia 與 AMD 表示均遵守法規。",
+     "tags": [
+      "晶片出口管制",
+      "美中"
+     ],
+     "title": "眾議院文件：美商務部曾核准逾 87.9 萬顆 AI 晶片售予中國企業"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180677"
+      },
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/"
+      }
+     ],
+     "summary": "Gemini 新增電腦操作功能，可在使用者繼續工作時操作 Mac 上的 App、整理本機檔案與完成表單，先開放美國英文版付費訂閱者。這是繼 OpenAI、Anthropic 之後又一家推出桌面代理功能。",
+     "tags": [
+      "Google",
+      "AI 代理",
+      "電腦操作"
+     ],
+     "title": "Google Gemini 開放操作 Mac 電腦，可代為整理檔案與填寫表單"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "隱私風險"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/"
+      }
+     ],
+     "summary": "報導指 Meta 員工發現 Muse 出現與自己無關的其他用戶私人內容，例如提醒事項與銀行餘額。Meta 回應員工測試的版本含尚未公開的功能。事件凸顯 AI 代理處理個資的隔離風險。",
+     "tags": [
+      "Meta",
+      "AI 代理",
+      "隱私"
+     ],
+     "title": "Meta AI 代理 Muse 被報導混入其他用戶私人內容"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Rio Rundown（轉述 Fortune）",
+       "url": "https://riorundown.substack.com/p/ai-news-nov-20-2026-agentic-ai-infrastructure"
+      }
+     ],
+     "summary": "企業可預先授權 AI 代理在預算與規則內購買軟體，不必逐筆人工核准；Bedrock AgentCore 也可透過 x402 協定把採購費用計入雲端帳單。",
+     "tags": [
+      "AWS",
+      "AI 代理",
+      "採購"
+     ],
+     "title": "AWS Marketplace 允許企業授權 AI 代理自主採購軟體"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Politico",
+       "url": "https://www.politico.com/live-updates/2026/11/19/congress/new-bipartisan-ai-caucus-forms-with-two-dozen-house-members-01174829"
+      }
+     ],
+     "summary": "眾議員於 11/18 提案在 CISA 下設立國家資安與 AI 事故調查委員會，調查重大資安與 AI 失誤；11/19 另有 24 名以上眾議員組成 AI 安全與創新黨團。",
+     "tags": [
+      "AI 治理",
+      "美國國會"
+     ],
+     "title": "美國國會提出 ROOT CAUSE Act，並成立跨黨派 AI 安全與創新黨團"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-20",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "summary": "VMware 修補 vCenter 重大漏洞，並表示必須升級，沒有其他緩解方式。",
+     "tags": [
+      "VMware",
+      "vCenter"
+     ],
+     "title": "VMware發布資安更新，修補重大等級的vCenter漏洞，警告只能升級沒有其他替代緩解方法",
+     "url": "https://www.ithome.com.tw/news/180673"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 2,
+     "summary": "群暉通報 NAS 作業系統兩個重大漏洞，11/20 起陸續提供修補。",
+     "tags": [
+      "Synology",
+      "NAS"
+     ],
+     "title": "群暉警告NAS存在兩個重大漏洞，預計20日提供部分版本作業系統修補程式",
+     "url": "https://www.ithome.com.tw/news/180680"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 3,
+     "summary": "歐盟執委會遭攻擊，駭客使用開源 AI 滲透工具 ARTEX。",
+     "tags": [
+      "歐盟",
+      "AI 攻擊"
+     ],
+     "title": "歐盟執委會遭AI網攻，ARTEX開源工具成駭客利器",
+     "url": "https://www.ithome.com.tw/news/180672"
+    },
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 4,
+     "summary": "回顧本週第三方供應商遭駭事件，以及 Java4Shell、NGINX2Root 等重大漏洞。",
+     "tags": [
+      "資安週報",
+      "供應鏈"
+     ],
+     "title": "【資安週報】1116～1120，全球第三方供應商遭駭連環爆；Java4Shell、NGINX2Root等重大漏洞揭露引關注",
+     "url": "https://www.ithome.com.tw/news/180681"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 1,
+     "summary": "Anthropic 掛牌上市，首日股價上漲 17%。",
+     "tags": [
+      "Anthropic",
+      "IPO"
+     ],
+     "title": "全球首家前沿AI公司Anthropic上市，首日上漲17%",
+     "url": "https://www.ithome.com.tw/news/180671"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 2,
+     "summary": "Gemini 新增操作 Mac 電腦的代理功能。",
+     "tags": [
+      "Google",
+      "AI 代理"
+     ],
+     "title": "Google跟進OpenAI、Anthropic，Gemini開始支援Mac電腦操作",
+     "url": "https://www.ithome.com.tw/news/180677"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-20",
+     "flags": [],
+     "rank": 3,
+     "summary": "本期周報聚焦微軟推出 7 款自研 AI 模型，兼顧效能與成本。",
+     "tags": [
+      "AI趨勢周報",
+      "微軟"
+     ],
+     "title": "AI趨勢周報第295期：微軟一口氣推出7款AI模型，拚效能也拚Token成本",
+     "url": "https://www.ithome.com.tw/news/180669"
+    }
+   ],
+   "updatedAt": "2026-11-21T08:40:00+08:00"
+  },
   {
    "actions": [
     "NGINX（NICS-ANA-2026-0001058）：盤點本署與委外系統對外的 NGINX、NGINX Plus、Ingress Controller 與 F5 WAF for NGINX，優先處理啟用 HTTP/2、HTTP/3 或郵件代理的服務，14 天內更新至 1.30.7／1.31.9 以上版本（PoC 已公開）。",
