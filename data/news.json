@@ -1,6 +1,265 @@
 {
- "updatedAt": "2026-11-21T08:40:00+08:00",
+ "updatedAt": "2026-11-22T08:11:00+08:00",
  "days": [
+  {
+   "date": "2026-11-22",
+   "updatedAt": "2026-11-22T08:11:00+08:00",
+   "items": [
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 1,
+     "title": "CISA 將 Apache Roller、SAP NetWeaver 等已遭利用漏洞列入 KEV，Apache Roller RCE 達 CVSS 9.8",
+     "summary": "美國 CISA 於 11/20 再將多個已遭實際利用的漏洞列入 KEV，其中 Apache Roller 的 XML-RPC 反序列化漏洞（CVE-2026-129448，CVSS 9.8）免認證即可遠端執行程式碼，只在後台關閉 XML-RPC 並不能阻擋，需升級到修補版本；同批也包含 SAP NetWeaver 與 VMware vCenter。資安聯盟彙整另指出 Puppet Enterprise 報告處理反序列化漏洞（CVE-2026-115731）也被列入，修補後需重啟 Puppet Server。",
+     "flags": [
+      "已遭利用",
+      "KEV"
+     ],
+     "tags": [
+      "CISA KEV",
+      "Apache Roller",
+      "Puppet"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html"
+      },
+      {
+       "name": "CSA CISO Daily Briefing",
+       "url": "https://labs.cloudsecurityalliance.org/research/alt-ciso-briefing-2026-11-21/"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 2,
+     "title": "中國關聯駭客以 AI 代理自行找到 MONAI Label 零時差漏洞並入侵大學伺服器",
+     "summary": "Amazon 披露，中國關聯攻擊者使用的 AI 代理自行發現醫療影像標註工具 MONAI Label（0.8.5 以前版本）的路徑穿越漏洞並加以利用，約 11 分鐘就在一台大學伺服器取得 root。預設安裝沒有認證機制；原始碼已合併修正但尚無正式修補版本，需先依公告的緩解方式處理並避免對外開放。",
+     "flags": [
+      "零時差",
+      "已遭利用",
+      "AI 輔助攻擊"
+     ],
+     "tags": [
+      "MONAI",
+      "AI 代理",
+      "零時差"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 3,
+     "title": "GnuPG 警告 GPGME 存在重大 double free 漏洞（CVE-2026-129975）",
+     "summary": "GnuPG 於 11/20 發布警告，GPGME 2.3.0 以前版本處理帶有超長使用者 ID 的惡意 OpenPGP 金鑰時可能觸發記憶體毀損，無法排除遠端執行程式碼；修補版本已釋出，目前未見攻擊。使用 GPGME 的郵件加密、套件簽章驗證等程式應盡快更新。",
+     "flags": [],
+     "tags": [
+      "GnuPG",
+      "GPGME",
+      "加密"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 4,
+     "title": "Windows 未修補漏洞 FastUnlock：實體接觸即可在鎖定畫面啟動程式",
+     "summary": "研究人員揭露名為 FastUnlock 的 Windows 技巧，攻擊者在可實體接觸電腦時能於鎖定狀態下啟動程式，但只取得受限帳號、非系統管理員權限。ThreatLocker 已重現，微軟尚未提供修補，目前也沒有實際攻擊報告。",
+     "flags": [
+      "細節已公開",
+      "尚未修補"
+     ],
+     "tags": [
+      "Windows",
+      "實體安全"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 5,
+     "title": "Linux KVM 漏洞（CVE-2026-99312）讓 AMD 主機上的虛擬機讀取宿主記憶體",
+     "summary": "在啟用巢狀虛擬化的 AMD 主機上，惡意客體 VM 可讀取宿主記憶體，DigitalOcean 測試中可讀到約 127 GB。上游核心已於本週釋出修補，雲端業者已即時修補；目前未見實際利用。",
+     "flags": [],
+     "tags": [
+      "Linux",
+      "KVM",
+      "虛擬化"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "資安",
+     "rank": 6,
+     "title": "美國國家網路總監 Cairncross 遭撤換，由國防部資訊長代理",
+     "summary": "媒體報導美國總統川普於 11/20 撤換白宮國家網路總監 Sean Cairncross，由國防部資訊長 Kirsten Davies 代理。同日報導也提到美國農業部遭網攻導致部分服務中斷並全面重設密碼，以及多起科技服務中斷官方稱非惡意活動。",
+     "flags": [],
+     "tags": [
+      "美國",
+      "資安政策"
+     ],
+     "sources": [
+      {
+       "name": "Fox News",
+       "url": "https://www.foxnews.com/live-news/tech-outages-trump-national-cyber-director-fired-11-20-26"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 1,
+     "title": "美國 GAO 發布 AI 用於資安的報告，提出 16 項政策選項",
+     "summary": "美國政府問責署（GAO）11/20 發布報告 GAO-27-108458，評估以 AI 進行網路防禦的機會與風險，提出 16 項政策選項，包括重大資安處置須經人員授權、在認證前限制自主 AI 的權限等，可作為機關訂定 AI 資安作業規範的參考。",
+     "flags": [],
+     "tags": [
+      "AI 治理",
+      "政府",
+      "資安"
+     ],
+     "sources": [
+      {
+       "name": "GAO",
+       "url": "https://www.gao.gov/products/gao-27-108458"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 2,
+     "title": "Signal 預設封鎖螢幕截圖，防止作業系統層 AI 代理讀取聊天內容",
+     "summary": "Signal 在 iOS 與 Android 預設限制螢幕截圖，避免手機作業系統內建的 AI 代理讀取對話；Signal 也坦言這項防護並不完整，且無法保護 macOS。顯示 AI 代理存取裝置畫面已成為通訊隱私的新風險。",
+     "flags": [],
+     "tags": [
+      "AI 代理",
+      "隱私",
+      "Signal"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html"
+      },
+      {
+       "name": "Signal Blog",
+       "url": "https://signal.org/blog/protecting-your-privacy/"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 3,
+     "title": "研究揭露 Meta AI 代理 Muse 的外傳防護可被惡意網頁繞過",
+     "summary": "資安業者 NebuSec 示範，單一惡意網頁即可繞過 Meta 個人 AI 代理 Muse 的 Sentinel 外傳審核機制，在沒有提示使用者核准的情況下取出私人對話與記憶；屬實驗室示範，Meta 已修補所有回報的問題。",
+     "flags": [
+      "提示注入"
+     ],
+     "tags": [
+      "Meta",
+      "AI 代理",
+      "提示注入"
+     ],
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 4,
+     "title": "CrowdStrike：LoRA 微調模型可藏入觸發式後門，模型平台掃描難以發現",
+     "summary": "CrowdStrike 研究指出，攻擊者可在 LoRA 轉接器的權重中藏入特定提示觸發的工具呼叫後門，現有模型平台掃描工具不易察覺；目前未確認有實際攻擊。機關下載開源模型或微調權重時應限定可信來源並在隔離環境測試。",
+     "flags": [],
+     "tags": [
+      "AI 供應鏈",
+      "模型安全"
+     ],
+     "sources": [
+      {
+       "name": "CrowdStrike",
+       "url": "https://www.crowdstrike.com/en-us/blog/supply-chain-risk-from-backdoored-lora-models/"
+      }
+     ]
+    },
+    {
+     "region": "國外",
+     "category": "AI",
+     "rank": 5,
+     "title": "Anthropic 研究員宣稱在 Claude 協助下證明廣義黎曼猜想，尚待數學界驗證",
+     "summary": "電子報彙整報導，Anthropic 研究員 11/20 宣稱借助 Claude（Anthropic 開發的 AI 模型）完成廣義黎曼猜想的證明，並公開 Lean 形式化檔案；目前數學界尚未完成驗證，結果尚未證實。",
+     "flags": [
+      "尚未證實"
+     ],
+     "tags": [
+      "Anthropic",
+      "AI 研究"
+     ],
+     "sources": [
+      {
+       "name": "Rio Rundown",
+       "url": "https://riorundown.substack.com/p/ai-news-nov-21-2026-enterprise-infrastructure"
+      }
+     ]
+    },
+    {
+     "region": "國內",
+     "category": "AI",
+     "rank": 1,
+     "title": "簡立峰在 MEET TAIPEI 2026：AI 新創需 8 成領域知識加 2 成 AI 能力",
+     "summary": "前 Google 台灣董事總經理簡立峰在 MEET TAIPEI 2026 創新創業嘉年華指出，AI 創業成功關鍵在領域專業，建議台灣團隊結合硬體、成熟企業與缺工等在地需求，而非只做小型個人新創。",
+     "flags": [],
+     "tags": [
+      "簡立峰",
+      "AI 人才",
+      "創業"
+     ],
+     "sources": [
+      {
+       "name": "數位時代",
+       "url": "https://www.bnext.com.tw/article/93123/2026-meet-taipei-lee-feng-chien"
+      }
+     ]
+    }
+   ],
+   "actions": [
+    "盤點是否使用 Apache Roller、Puppet Enterprise、SAP NetWeaver、MONAI Label，依 CISA KEV 清單優先升級；MONAI Label 尚無修補版前先停止對外開放。",
+    "加強雲端身分管理：全域管理員啟用防釣魚 MFA 與 PIM，並提醒資訊人員留意冒用雲端服務通知的社交工程信件。",
+    "更新使用 GnuPG／GPGME 的系統元件；公務電腦落實離座鎖定與實體管控，以因應尚未修補的 Windows 鎖定畫面繞過手法。",
+    "參考 GAO 報告與 Signal、Muse 案例，訂定 AI 代理存取公務畫面與資料的規範，開源模型與 LoRA 權重限定可信來源並於隔離環境測試。"
+   ],
+   "ithome": []
+  },
   {
    "actions": [
     "盤點機關內 Synology NAS，依群暉公告與安碁 F0202_2924 通知更新 DSM；無法更新者先關閉對外存取。",
