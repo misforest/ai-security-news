@@ -1,6 +1,6 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-23T08:45:00+08:00",
+ "updatedAt": "2026-11-24T08:20:00+08:00",
  "videos": [
   {
    "approx": true,
@@ -125,19 +125,19 @@
    "zone": "AJ"
   },
   {
-   "id": "Vr3_8SQhiAo",
-   "type": "講座",
-   "title": "【下班國際線】記憶體回檔能撐多久？潘健成揭AI超級循環！長江存儲恐成最大黑天鵝？！ft.潘健成 Ep.68路怡珍 @TheStormMedia",
-   "speaker": "潘健成",
+   "approx": true,
    "channel": "風傳媒 The Storm Media",
    "date": "2026-09-19",
-   "approx": true,
+   "id": "Vr3_8SQhiAo",
+   "speaker": "潘健成",
    "summary": "風傳媒《下班國際線》第 68 集，主持人路怡珍訪問潘健成，依標題談記憶體市場回檔、AI 帶動的記憶體超級循環與中國記憶體廠的風險。",
    "tags": [
     "AI 產業",
     "記憶體",
     "供應鏈"
-   ]
+   ],
+   "title": "【下班國際線】記憶體回檔能撐多久？潘健成揭AI超級循環！長江存儲恐成最大黑天鵝？！ft.潘健成 Ep.68路怡珍 @TheStormMedia",
+   "type": "講座"
   },
   {
    "approx": true,
