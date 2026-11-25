@@ -1,7 +1,22 @@
 {
  "note": "以 YouTube 公開影片為來源，依上架日期由新到舊排列；標示「約」的日期為依搜尋結果推估。",
- "updatedAt": "2026-11-24T08:20:00+08:00",
+ "updatedAt": "2026-11-25T08:25:00+08:00",
  "videos": [
+  {
+   "id": "kd3xRaUx56s",
+   "type": "講座",
+   "title": "EP488 - 李開復：AI Agent 為什麼幫不了公司賺錢？只讓員工用 AI 等於白做｜Forbes 專訪",
+   "speaker": "李開復（Forbes 專訪內容）",
+   "channel": "AI懶人報",
+   "date": "2026-11-22",
+   "approx": false,
+   "summary": "頻道整理李開復接受 Forbes 專訪的觀點，談企業大量導入 AI Agent 卻未提升獲利的原因：只讓員工使用 AI、工作流程與組織沒有跟著改變。",
+   "tags": [
+    "李開復",
+    "AI Agent",
+    "企業導入AI"
+   ]
+  },
   {
    "approx": true,
    "channel": "風傳媒 The Storm Media",
@@ -31,6 +46,22 @@
    ],
    "title": "老闆不能只動嘴！簡立峰談企業AI落地與Agent革命《AI未來已來》",
    "type": "講座"
+  },
+  {
+   "id": "4RLjRv_GpSg",
+   "type": "講座",
+   "title": "【下班國際線】台股為何大跌？外資狂賣、資金急撤！施俊吉：這點讓台積電也無法護盤！ft.施俊吉 ｜Ep.75｜路怡珍 @TheStormMedia",
+   "speaker": "施俊吉（主持：路怡珍）",
+   "channel": "風傳媒 The Storm Media",
+   "date": "2026-11-07",
+   "approx": false,
+   "summary": "風傳媒《下班國際線》第 75 集訪問施俊吉，分析外資賣超使台股下跌的原因，並談 AI 資料中心、AI 公司債與 AI 泡沫風險。",
+   "tags": [
+    "下班國際線",
+    "台股",
+    "AI泡沫",
+    "資料中心"
+   ]
   },
   {
    "approx": true,
@@ -91,6 +122,21 @@
    ],
    "title": "從 AI 代理邁向 AI 治理｜TO Talk EP178",
    "type": "講座"
+  },
+  {
+   "id": "glPydoTwdKg",
+   "type": "講座",
+   "title": "老闆發現買 AI 比漲你薪水划算怎麼辦？白領中產的求生之道 ft. 程世嘉 Sega",
+   "speaker": "程世嘉",
+   "channel": "張修修的不正常人類研究所",
+   "date": "2026-10-16",
+   "approx": false,
+   "summary": "iKala 創辦人程世嘉上節目，談企業用 AI 取代部分白領工作後，中產上班族如何調整職涯與技能。",
+   "tags": [
+    "程世嘉",
+    "AI與工作",
+    "AI人才"
+   ]
   },
   {
    "approx": false,

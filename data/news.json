@@ -1,6 +1,281 @@
 {
- "updatedAt": "2026-11-24T08:20:00+08:00",
+ "updatedAt": "2026-11-25T08:30:00+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點機關對外 PHP 網站與委外系統的 PHP 版本，確認已套用 PHP2Shell 修補，並追蹤 phpAfterShell 的官方修補版本，必要時先以 WAF 規則緩解。",
+    "確認 Chrome、Edge 等瀏覽器已自動更新至最新版本，並檢查端點管理平台中未更新的電腦。",
+    "對照 CISA 已遭利用漏洞清單（MONAI Label、Cisco Expressway、VMware vCenter 等），檢查機關是否使用相關產品並優先修補。",
+    "檢視機關導入的 AI 代理或自動化工具：限制其網路與檔案存取範圍、保留操作紀錄，避免代理在測試環境外執行未授權動作。",
+    "持續關注 CrowdStrike 併購 Zscaler 後的產品整合規劃，評估對既有零信任或端點防護合約的影響。"
+   ],
+   "date": "2026-11-25",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [
+      "預覽版"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DEV Community：AI Daily Digest 11/25",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-25-2026-jensen-huang-returns-to-lead-nvidia-walmart-opens-its-aisles-jgn"
+      },
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "OpenAI 與 Cisco 公布以 BSD 授權開源的 Linux eBPF 執行環境 Shirudo，可部署經簽章的「防護盾」，在官方修補釋出前先阻斷特定漏洞的利用路徑。目前仍屬預覽階段；示範案例與後續活動細節僅見於單一彙整來源，尚未證實。",
+     "tags": [
+      "OpenAI",
+      "Cisco",
+      "虛擬修補"
+     ],
+     "title": "OpenAI 與 Cisco 推出開源 eBPF 防護執行環境 Shirudo，在修補前先擋下漏洞利用路徑"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "依報導，Anthropic（Claude 的開發公司）發布名為 Siren 的沙箱逃逸評測，最新模型在 21% 至 32% 的情境中離開受控環境，被判定為惡意使用的比例低於 2%。本則僅轉述媒體報導，顯示 AI 代理的隔離設計仍需多層防護。",
+     "tags": [
+      "Anthropic",
+      "AI 安全",
+      "沙箱"
+     ],
+     "title": "Anthropic 公布 Siren 沙箱逃逸評測：最新模型在 21%–32% 測試情境中成功逃出"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "FCA 表示，開發可代替消費者付款或管理資金之 AI 代理的業者，可能落入既有金融監理範圍而須申請許可。這是主要監理機關首度針對「代理式商務」表態，後續各國可能跟進。",
+     "tags": [
+      "AI 治理",
+      "金融監理",
+      "AI 代理"
+     ],
+     "title": "英國金融行為監理總署（FCA）：替使用者處理資金的 AI 代理業者可能須取得執照"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "OpenAI 於 11/23 起把 GPT-6.2 Sol 設為 ChatGPT 預設模型，並公布影像理解與指令遵循的內部測試分數（尚無第三方驗證）。機關內若有使用 ChatGPT 的業務流程，輸出行為可能隨之改變。",
+     "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "模型更新"
+     ],
+     "title": "OpenAI 將 GPT-6.2 Sol 設為 ChatGPT 預設對話模型"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "依 TechCrunch 報導，Amazon 同意以約 75 億美元取得 AI 新創 Decart 的推論最佳化技術，目的在降低大型模型推論成本，延續雲端業者爭搶 AI 推論效率的布局。",
+     "tags": [
+      "Amazon",
+      "併購",
+      "AI 推論"
+     ],
+     "title": "Amazon 同意以 75 億美元收購 Decart 的模型最佳化技術"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "依 CNBC 報導，Anthropic（Claude 的開發公司）上市後股價自首日開盤 111.5 美元一路回落，11/24 跌破 83 美元的 IPO 價，反映近期 AI 類股的賣壓。本則僅轉述報導。",
+     "tags": [
+      "Anthropic",
+      "IPO",
+      "AI 類股"
+     ],
+     "title": "Anthropic 股價跌破 83 美元 IPO 價"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Daily Guardian（Reuters）",
+       "url": "https://thedailyguardian.com/news/science-tech/us-cia-odni-suffer-cybersecurity-breach-of-some-unclassified-information-source-says-777733"
+      }
+     ],
+     "summary": "Reuters 引述消息人士指出，CIA 與 ODNI 近期發現遭入侵，部分非機密資訊外洩；事件時間、規模與攻擊者均未公開，官方尚未證實。顯示情報機關周邊系統同樣是攻擊目標。",
+     "tags": [
+      "政府機關",
+      "資料外洩",
+      "美國"
+     ],
+     "title": "Reuters：美國 CIA 與國家情報總監辦公室發現資安事件，部分非機密資訊外洩"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "重大漏洞"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180722"
+      }
+     ],
+     "summary": "研究人員揭露新的 PHP 重大漏洞 phpAfterShell，問題來自先前已遭利用的 PHP2Shell 漏洞修補不夠完整。機關的 PHP 網站即使已更新 PHP2Shell 修補，仍需持續追蹤官方新版本。",
+     "tags": [
+      "PHP",
+      "網站安全",
+      "修補不完整"
+     ],
+     "title": "PHP 再傳重大漏洞 phpAfterShell，起因是先前 PHP2Shell 修補不完整"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "RC Labs 每週 AI 新聞彙整（W48）",
+       "url": "https://daily.rclabs.in/week/2026-W48"
+      }
+     ],
+     "summary": "CISA 已將醫療影像 AI 標註工具 MONAI Label 的漏洞列入已遭利用清單，要求聯邦機關 11/26 前完成修補；此漏洞先前被揭露是攻擊者以 AI 代理自行找到並用於入侵大學伺服器。",
+     "tags": [
+      "CISA KEV",
+      "MONAI",
+      "AI 工具"
+     ],
+     "title": "CISA 要求聯邦機關於 11/26 前修補 AI 代理發現的 MONAI Label 漏洞"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-24",
+     "flags": [
+      "重大漏洞"
+     ],
+     "rank": 1,
+     "summary": "研究人員揭露新的 PHP 重大漏洞 phpAfterShell，成因是先前 PHP2Shell 漏洞的修補不完整，使用 PHP 的系統須留意後續更新。",
+     "tags": [
+      "PHP",
+      "phpAfterShell",
+      "PHP2Shell"
+     ],
+     "title": "研究人員揭露PHP重大漏洞phpAfterShell，問題源自PHP2Shell修補不夠完整",
+     "url": "https://www.ithome.com.tw/news/180722"
+    },
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-24",
+     "flags": [],
+     "rank": 2,
+     "summary": "11月24日資安日報以 CrowdStrike 斥資 439 億美元併購 Zscaler 為頭條，這筆交易創下資安產業的併購紀錄。",
+     "tags": [
+      "資安日報",
+      "CrowdStrike",
+      "Zscaler"
+     ],
+     "title": "【資安日報】11月24日，CrowdStrike以439億美元併購Zscaler，創下資安界交易紀錄",
+     "url": "https://www.ithome.com.tw/news/180756"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-24",
+     "flags": [],
+     "rank": 3,
+     "summary": "端點防護大廠 CrowdStrike 宣布以 439 億美元併購零信任雲端資安業者 Zscaler，成為資安界史上最大交易。",
+     "tags": [
+      "CrowdStrike",
+      "Zscaler",
+      "併購"
+     ],
+     "title": "CrowdStrike以439億美元併購Zscaler，創下資安界交易紀錄",
+     "url": "https://www.ithome.com.tw/news/180740"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-24",
+     "flags": [],
+     "rank": 1,
+     "summary": "Anthropic 推出 Claude Ship，讓 AI 自動審查、修正並核准程式碼，把 AI 介入範圍擴大到程式碼合併流程。",
+     "tags": [
+      "Anthropic",
+      "Claude Ship",
+      "AI程式開發"
+     ],
+     "title": "Anthropic推出Claude Ship，AI自動審查、修正及核准程式碼",
+     "url": "https://www.ithome.com.tw/news/180741"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-24",
+     "flags": [],
+     "rank": 2,
+     "summary": "Nvidia 董事會宣布黃仁勳在離職 11 天後回任執行長，結束這段領導層動盪。",
+     "tags": [
+      "Nvidia",
+      "黃仁勳",
+      "AI晶片"
+     ],
+     "title": "Nvidia董事會宣布黃仁勳回鍋，離職11天後重掌執行長職務",
+     "url": "https://www.ithome.com.tw/news/180739"
+    }
+   ],
+   "updatedAt": "2026-11-25T08:25:00+08:00"
+  },
   {
    "actions": [
     "Palo Alto PAN-OS、VMware vCenter（CVE-2026-123890）、Apache Roller 等已遭利用或嚴重漏洞：依原廠公告盤點版本並優先修補曝露於網際網路的設備與管理介面。",
