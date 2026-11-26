@@ -1,6 +1,258 @@
 {
- "updatedAt": "2026-11-25T08:30:00+08:00",
+ "updatedAt": "2026-11-26T08:50:00+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點機關 vCenter 版本，依 Broadcom 公告升級修補 CVE-2026-123903（CVSS 9.8），並限制 vCenter 管理介面僅能由管理網段存取。",
+    "檢查防火牆管理伺服器（含 Check Point、Fortinet 等）是否已套用最新修補，檢視近期管理操作紀錄、異常憑證與政策卸載紀錄，必要時更換管理憑證。",
+    "盤點使用 PostgreSQL 與 MongoDB 的系統（含委外系統），依資安院處置期限升級至修補版本；曝露於網際網路者優先處理。",
+    "使用 Azure API Management 經典層者，檢查並輪替其中的權杖、機密與具名值，評估移轉至 v2 層級。",
+    "提醒服務台與同仁防範冒充 IT 人員的電話網釣：重設密碼與 MFA 須經回撥或其他管道確認身分，不要核准非本人發起的 MFA 推播。"
+   ],
+   "date": "2026-11-26",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DW：EU plans €50 billion sovereign tech equity fund",
+       "url": "https://www.dw.com/en/eu-plans-50-billion-sovereign-tech-equity-fund-to-boost-quantum-technology/a-80047569"
+      },
+      {
+       "name": "DEV Community：AI Daily Digest 11/26",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o"
+      }
+     ],
+     "summary": "歐盟科技事務執行副主席 Virkkunen 於 11/25 提出規模目標 500 億歐元的主權科技股權基金，以長期股權投資歐洲 AI 與量子企業，期望每 1 歐元公共資金帶動最多 6 歐元民間資金；同步提出的量子法草案將在公共採購中優先考量歐盟控制的業者。500 億歐元目前仍是目標，尚未編入預算。",
+     "tags": [
+      "歐盟",
+      "主權AI",
+      "產業政策"
+     ],
+     "title": "歐盟執委會提出 500 億歐元「主權科技股權基金」與量子法草案"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "廠商自行公布"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DEV Community：AI Daily Digest 11/26",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o"
+      }
+     ],
+     "summary": "Cognition 於 11/24 推出 SWE-2.1，以 Moonshot AI 的開放權重模型 Kimi K3 為基礎、透過強化學習訓練，提供 Lightning（與 Cerebras 合作的高速版）、Cyber 與標準版三種版本；官方公布 Terminal-Bench、ExploitBench 等評測分數約為前一代的兩倍。數據均為廠商自行公布，其自家比較表仍顯示 Claude Opus 5.5（Anthropic 開發）等模型在主要評測領先。",
+     "tags": [
+      "AI程式代理",
+      "Cognition",
+      "開放權重"
+     ],
+     "title": "Cognition 發布 Devin 新模型 SWE-2.1，宣稱多項程式與資安評測分數倍增"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DEV Community：AI Daily Digest 11/26",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o"
+      }
+     ],
+     "summary": "日本 Sakana AI 於 11/25 發布以 NVIDIA 開放模型 Nemotron 3 Nano 續訓的 30B 推理模型 Namazu Small，在搜尋輔助研究類評測（BrowseComp）大幅領先 Nemotron 3 Super，但閉卷知識題表現較弱；地端部署版本預計 12 月上半推出，價格未公布，研發獲日本經產省 GENIAC 計畫支持。",
+     "tags": [
+      "Sakana AI",
+      "地端模型",
+      "主權AI"
+     ],
+     "title": "Sakana AI 推出 30B 推理模型 Namazu Small，主打搜尋輔助研究並規劃地端部署"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "廠商自行公布"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "DEV Community：AI Daily Digest 11/26",
+       "url": "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-26-2026-one-meter-for-chatgpt-and-codex-cognition-doubles-down-europe-2j0o"
+      }
+     ],
+     "summary": "微軟 AI 部門發文說明內部強化學習框架 Rocket，用於後訓練約 3 兆參數的 MAI Base 2；Satya Nadella 表示單日處理 113 萬次 rollout，並稱硬體故障約 5 分鐘即可恢復、節省逾 7% GPU 時數。相關數字均為微軟自行公布。",
+     "tags": [
+      "Microsoft",
+      "MAI",
+      "AI基礎設施"
+     ],
+     "title": "微軟公開自研強化學習平台 Rocket，用於 MAI Base 2 後訓練"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News：Hackers Compromise 24 Check Point Management Servers",
+       "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html"
+      }
+     ],
+     "summary": "GreyNoise 追蹤代號 GT13 的攻擊者，10/17 至 11/2 間經由遭入侵的 Rejetto HFS 伺服器作跳板，利用已修補的 Check Point 漏洞 CVE-2026-16232 入侵約 17 國、22 個組織（含政府、金融、能源）的安全管理伺服器，竊取防火牆資料庫與憑證檔並卸載安全政策；另嘗試攻擊 NetScaler、Ivanti、vCenter、Exchange 與 Netlogon。Check Point 表示該漏洞已修補，並非新漏洞。",
+     "tags": [
+      "Check Point",
+      "防火牆",
+      "AI攻擊"
+     ],
+     "title": "24 台 Check Point 安全管理伺服器遭入侵，疑為駭客以 AI 代理工具發動"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "重大漏洞"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News：VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw",
+       "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html"
+      },
+      {
+       "name": "iThome：【資安日報】11月25日，Broadcom修補VMware產品23個漏洞",
+       "url": "https://www.ithome.com.tw/news/180793"
+      }
+     ],
+     "summary": "Broadcom 修補 ESX、vCenter、Workstation、Fusion 與 Avi Load Balancer 共 23 個漏洞，其中 vCenter vmdir 目錄服務的身分驗證繞過漏洞 CVE-2026-123903（CVSS 9.8）可讓可連線的攻擊者未經授權存取 vCenter，另有可導致程式碼執行的任意檔案寫入漏洞 CVE-2026-123904（CVSS 7.5）。目前未證實 CVE-2026-123903 已遭利用，但 vCenter 近期已有零時差漏洞遭利用的案例。",
+     "tags": [
+      "VMware",
+      "vCenter",
+      "修補"
+     ],
+     "title": "Broadcom 修補 VMware 23 個漏洞，vCenter 身分驗證繞過漏洞 CVSS 9.8"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News：Microsoft Fixes Azure API Management Classic Flaw",
+       "url": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html"
+      }
+     ],
+     "summary": "挪威國家安全局（NSM）指出，不明攻擊者正在 Azure API Management 中搜尋存取權杖、機密與具名值，挪威多家企業（含能源業）受影響；微軟於 11/18 確認問題僅影響經典（Classic）層級，v2 層級不受影響，並已完成修補。NSM 表示尚不清楚利用範圍。",
+     "tags": [
+      "Microsoft",
+      "Azure",
+      "雲端機密"
+     ],
+     "title": "微軟修補 Azure API Management 經典層漏洞，挪威示警有攻擊者搜尋客戶機密"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "免認證 RCE"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "PostgreSQL：18.7、17.12、16.16、15.20、14.25 版發布",
+       "url": "https://www.postgresql.org/about/news/postgresql-187-1712-1616-1520-1425-and-19-rc-2-released-3442/"
+      },
+      {
+       "name": "NVD：CVE-2026-118383",
+       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118383"
+      }
+     ],
+     "summary": "PostgreSQL 釋出 18.7、17.12、16.16、15.20、14.25 版修補 32 項高風險漏洞，最嚴重者可讓具建立物件權限的使用者經 DDL 操作以資料庫主機帳號權限執行程式碼，部分 C 語言擴充套件需重新編譯。MongoDB Server 則修補 CVE-2026-118383，未經身分驗證即可在複本集成員上觸發記憶體釋放後使用，導致服務中止或特定條件下執行程式碼。兩者目前均未發現遭利用。",
+     "tags": [
+      "PostgreSQL",
+      "MongoDB",
+      "資料庫"
+     ],
+     "title": "PostgreSQL 修補 32 項高風險漏洞、MongoDB 修補免認證可觸發的記憶體漏洞"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Daily CyberSecurity：CISA KEV adds Drupal, Idunno, Optimizely",
+       "url": "https://securityonline.info/cisa-kev-catalog-drupal-idunno-optimizely/"
+      },
+      {
+       "name": "The Hacker News：Hackers Exploit N-able MailAssure Flaw",
+       "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
+      }
+     ],
+     "summary": "CISA 新增 Drupal Core（CVE-2026-132165、CVE-2026-132224）及 Idunno AntiCsrf、Optimizely Web Experimentation 等已遭利用漏洞至 KEV 清單，要求聯邦機關於 11/27 前完成修補；此前也已列入 N-able MailAssure SSRF（CVE-2026-134624）。細節依彙整報導，以 CISA 公告為準。",
+     "tags": [
+      "CISA KEV",
+      "Drupal",
+      "網站安全"
+     ],
+     "title": "CISA 將 Drupal 核心、Idunno AntiCsrf、Optimizely 漏洞列入已遭利用清單"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "社交工程"
+     ],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News：Okta Links ShinyHunters-Associated Vishing Group to INCEPTION",
+       "url": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html"
+      }
+     ],
+     "summary": "Okta 威脅情報指出，先前與 ShinyHunters 相關的語音網釣集團 O-UNC-053 已改以 INCEPTION 名義經營新的資料外洩網站，手法是冒充客服或 IT 人員打電話騙取帳密並誘使受害者核准 MFA 推播；11/16 起已在網站上公布受害者資料。",
+     "tags": [
+      "Okta",
+      "語音網釣",
+      "MFA"
+     ],
+     "title": "Okta：與 ShinyHunters 有關的語音網釣集團改名 INCEPTION 並設立外洩網站"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-25",
+     "flags": [],
+     "rank": 1,
+     "summary": "iThome 11/25 資安日報，以 Broadcom 修補 VMware 產品 23 個漏洞、其中包含 vCenter 身分驗證繞過重大漏洞為頭條。",
+     "tags": [
+      "資安日報",
+      "VMware",
+      "vCenter"
+     ],
+     "title": "【資安日報】11月25日，Broadcom修補VMware產品23個漏洞，含影響vCenter的身分驗證繞過重大漏洞",
+     "url": "https://www.ithome.com.tw/news/180793"
+    }
+   ],
+   "updatedAt": "2026-11-26T08:45:00+08:00"
+  },
   {
    "actions": [
     "盤點機關對外 PHP 網站與委外系統的 PHP 版本，確認已套用 PHP2Shell 修補，並追蹤 phpAfterShell 的官方修補版本，必要時先以 WAF 規則緩解。",
