@@ -496,7 +496,7 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   <div class="wrap">
     <main>
       <p class="lawlinks"><b>資料來源：農業部（moa.gov.tw）、本署同仁（forest.gov.tw）寄來的 Outlook 信件，以及外部單位的「行前通知」信件</b><span>只收需要處理的事項：交辦、需要回覆或填報、會議、公文會辦、期限提醒等；不收傳閱、議價、自動寄送與系統通知信，資安相關信件放在「資安通報」。更新頻率同資安通報（每天 8:00；週一至週五 9:00–18:00 每小時）。重要性：緊急＝立即處理、高＝儘速處理、中／低＝例行追蹤</span></p>
-      <section class="block" aria-labelledby="h-wdue"><h2 id="h-wdue">即將到期（7 天內・含今日） <span class="count" id="cnt-wdue"></span></h2><div class="list" id="list-wdue"></div></section>
+      <section class="block" aria-labelledby="h-wdue"><h2 id="h-wdue">即將到期（7 天內・含今日） <span class="count" id="cnt-wdue"></span></h2><p class="srcnote" style="margin:0 0 10px">看過的事項按「已讀，不再顯示」，下次就不會出現在這一區。</p><div class="list" id="list-wdue"></div><p class="srcnote" id="wread-note" style="margin:10px 0 0" hidden></p></section>
       <div class="groups">
         <section class="group" aria-labelledby="h-wmoa"><h2 id="h-wmoa">農業部來信 <span class="count" id="cnt-wmoa"></span></h2><div class="list" id="list-wmoa"></div></section>
         <section class="group" aria-labelledby="h-wfor"><h2 id="h-wfor">本署同仁來信 <span class="count" id="cnt-wfor"></span></h2><div class="list" id="list-wfor"></div></section>
@@ -523,7 +523,8 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     videos: [], vq: "", vtype: "all", playing: {}, mode: "",
     laws: [], lawUpdates: [], lawMeta: null, lq: "", lcat: "all", lstatus: "active", lauth: "all",
     alertDays: [], aq: "", apri: "all", arange: "7", asrc: "all",
-    workDays: [], wq: "", wpri: "all", wrange: "7", wori: "all"
+    workDays: [], wq: "", wpri: "all", wrange: "7", wori: "all",
+    wread: {}, wreadDb: null
   };
   var $ = function(id){ return document.getElementById(id); };
 
@@ -1011,6 +1012,31 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
       (mailUrl(w.mailLink) ? '<div class="srcs"><span class="lbl">來源信件</span><a class="src" href="' + esc(mailUrl(w.mailLink)) + '" target="_blank" rel="noopener noreferrer">在 Outlook 開啟原始信件 ↗</a></div>' : "") +
     '</article>';
   }
+  /* 即將到期：按「已讀」後不再出現在這一區（claude.ai 版存在網頁資料庫，跨裝置同步；其他情況存在本機瀏覽器） */
+  function dueCard(w){
+    var html = workCard(w);
+    var btn = '<div><button type="button" class="more" data-wread="' + esc(w.id) + '">✓ 已讀，不再顯示</button></div>';
+    return html.slice(0, html.lastIndexOf("</article>")) + btn + "</article>";
+  }
+  var WREAD_KEY = "zhian.workRead";
+  function loadReadLocal(){ try { var v = JSON.parse(localStorage.getItem(WREAD_KEY) || "{}"); return v && typeof v === "object" ? v : {}; } catch(_){ return {}; } }
+  function saveReadLocal(m){ try { localStorage.setItem(WREAD_KEY, JSON.stringify(m)); } catch(_){} }
+  function pruneRead(m){
+    // 期限過了的已讀紀錄不再需要，自動清掉
+    var today = todayTPE(), out = {};
+    Object.keys(m || {}).forEach(function(k){ var d = String(m[k] || ""); if(/^[A-Za-z0-9_.:-]{1,120}$/.test(k) && (!d || d >= today)) out[k] = d; });
+    return out;
+  }
+  var wreadSaving = false, wreadPending = false;
+  function saveRead(){
+    var m = pruneRead(state.wread); state.wread = m; saveReadLocal(m);
+    if(!state.wreadDb) return;
+    if(wreadSaving){ wreadPending = true; return; }
+    wreadSaving = true;
+    state.wreadDb.doc("prefs/workRead").set({ items: m, updatedAt: new Date().toISOString() })
+      .catch(function(){}).then(function(){ wreadSaving = false; if(wreadPending){ wreadPending = false; saveRead(); } });
+  }
+  state.wread = pruneRead(loadReadLocal());
   function renderWork(){
     var all = collectWork();
     var isLow = function(w){ return w.priority === "中" || w.priority === "低" || !w.priority; };
@@ -1018,9 +1044,14 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
     var publicOnly = state.mode === "files";
     var noData = publicOnly ? "公開版不收錄重要工作（含本署內部資訊），請至 claude.ai 版查看。" : (state.workDays.length ? "這個期間沒有符合條件的工作事項。" : "目前還沒有重要工作資料。");
     var today = todayTPE(), lim = addDays(today, 6);
-    var due = workAll().filter(function(w){ var d = String(w.deadline||""); return d && d >= today && d <= lim && (state.wori === "all" || workOrigin(w) === state.wori) && (state.wpri === "all" || (state.wpri === "中低" ? isLow(w) : w.priority === state.wpri)) && matchAll(state.wq, [w.title, w.summary, w.unit, w.action].join(" ")); })
+    var dueAll = workAll().filter(function(w){ var d = String(w.deadline||""); return d && d >= today && d <= lim; });
+    var nRead = dueAll.filter(function(w){ return state.wread[w.id]; }).length;
+    var due = dueAll.filter(function(w){ return !state.wread[w.id] && (state.wori === "all" || workOrigin(w) === state.wori) && (state.wpri === "all" || (state.wpri === "中低" ? isLow(w) : w.priority === state.wpri)) && matchAll(state.wq, [w.title, w.summary, w.unit, w.action].join(" ")); })
       .sort(function(a,b){ return String(a.deadline) < String(b.deadline) ? -1 : (String(a.deadline) > String(b.deadline) ? 1 : (PRI[a.priority]||9) - (PRI[b.priority]||9)); });
-    renderList("work-due", due, "list-wdue", "cnt-wdue", workCard, publicOnly ? noData : "7 天內沒有到期的事項。", "件");
+    renderList("work-due", due, "list-wdue", "cnt-wdue", dueCard, publicOnly ? noData : (nRead ? "7 天內到期的事項都已讀。" : "7 天內沒有到期的事項。"), "件");
+    var rn = $("wread-note");
+    if(nRead){ rn.hidden = false; rn.innerHTML = "已讀而隱藏 " + nRead + " 件即將到期的事項（仍可在下方各來源清單查看）。<button type=\"button\" class=\"linkbtn\" data-wundo=\"1\">全部重新顯示</button>"; }
+    else { rn.hidden = true; rn.innerHTML = ""; }
     var moa = shown.filter(function(w){ return workOrigin(w) === "農業部"; }), fr = shown.filter(function(w){ return workOrigin(w) === "本署"; }), ext = shown.filter(function(w){ return workOrigin(w) === "外部"; });
     $("h-wmoa").parentNode.hidden = state.wori !== "all" && state.wori !== "農業部"; $("h-wfor").parentNode.hidden = state.wori !== "all" && state.wori !== "本署"; $("h-wext").parentNode.hidden = state.wori !== "all" && state.wori !== "外部";
     renderList("work-moa", moa, "list-wmoa", "cnt-wmoa", workCard, noData, "件");
@@ -1139,13 +1170,21 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
   $("woris").addEventListener("click", function(e){ var b = e.target.closest("button[data-wori]"); if(!b) return; state.wori = b.getAttribute("data-wori"); resetExpand("work"); render(); });
   $("wrange").addEventListener("change", function(){ state.wrange = this.value; resetExpand("work"); render(); });
   $("wreset").addEventListener("click", function(){ state.wq = ""; $("wq").value = ""; state.wpri = "all"; state.wori = "all"; state.wrange = "7"; $("wrange").value = "7"; resetExpand("work"); render(); });
+  $("view-work").addEventListener("click", function(e){
+    var b = e.target.closest("button[data-wread]");
+    if(b){
+      var id = b.getAttribute("data-wread"), w = workAll().filter(function(x){ return x.id === id; })[0];
+      state.wread[id] = w ? String(w.deadline || "") : ""; saveRead(); render(); return;
+    }
+    if(e.target.closest("button[data-wundo]")){ state.wread = {}; saveRead(); render(); }
+  });
   $("urgent").addEventListener("click", function(e){ if(e.target.closest("a[href='#alerts']")){ e.preventDefault(); setView("alerts"); } });
   var vqT = null;
   $("vq").addEventListener("input", function(){ var v = this.value; clearTimeout(vqT); vqT = setTimeout(function(){ state.vq = v; resetExpand("video"); render(); }, 150); });
   $("vtypes").addEventListener("click", function(e){ var b = e.target.closest("button[data-vtype]"); if(!b) return; state.vtype = b.getAttribute("data-vtype"); resetExpand("video"); render(); });
   $("vreset").addEventListener("click", function(){ state.vq = ""; $("vq").value = ""; state.vtype = "all"; resetExpand("video"); render(); });
   document.addEventListener("click", function(e){ var p = e.target.closest("button[data-play]"); if(!p) return; var id = p.getAttribute("data-play"); if(validId(id)){ state.playing[id] = true; renderVideos(); } });
-  document.addEventListener("click", function(e){ var b = e.target.closest("button.more"); if(!b) return; var k = b.getAttribute("data-key"); state.expanded[k] = !state.expanded[k]; render(); });
+  document.addEventListener("click", function(e){ var b = e.target.closest("button.more[data-key]"); if(!b) return; var k = b.getAttribute("data-key"); state.expanded[k] = !state.expanded[k]; render(); });
 
   var initHash = (location.hash||"").slice(1);
   setView(VIEWS.indexOf(initHash) !== -1 ? initHash : "news", true);
@@ -1222,6 +1261,13 @@ footer{color:var(--muted);font-size:12.5px;padding:8px 0 32px;border-top:1px sol
         state.workDays = snap.docs.map(function(d){ return d.data(); }).filter(function(d){ return d && d.date; });
         render();
       }, function(){ render(); });
+      state.wreadDb = db;
+      db.doc("prefs/workRead").onSnapshot(function(snap){
+        var d = snap.exists ? snap.data() : null;
+        // 資料庫有紀錄時以資料庫為準（跨裝置同步）；還沒有紀錄時保留本機已讀
+        if(d && d.items && typeof d.items === "object"){ state.wread = pruneRead(d.items); saveReadLocal(state.wread); }
+        render();
+      }, function(){});
       db.doc("catalog/videos").onSnapshot(function(snap){
         var d = snap.exists ? snap.data() : null;
         state.videos = d && Array.isArray(d.videos) ? d.videos : [];
