@@ -1,6 +1,435 @@
 {
- "updatedAt": "2026-11-26T08:50:00+08:00",
+ "updatedAt": "2026-11-27T08:12:48+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點對外的防火牆與 VPN 管理介面（含 Palo Alto 等邊界設備），確認未暴露於網際網路，並依原廠公告套用已遭利用漏洞的 hotfix。",
+    "清查機關 GIS 與網站元件（GeoServer、Drupal 等）版本，GeoServer 升級至 3.0.2／2.28.6／2.27.7 以上，未能即時修補者先限制對外存取。",
+    "檢視機房空調、冷凍、門禁等 OT／IoT 控制器是否可由外網連入，無修補的設備以網段隔離與存取控制補強。",
+    "檢視委外系統與第三方 API 的存取紀錄與金鑰輪替，並盤點 GitHub 等程式碼平台的個人存取權杖與權限範圍。",
+    "向同仁宣導勿安裝來路不明的 App，並留意行動裝置要求「無障礙權限」的應用程式。"
+   ],
+   "date": "2026-11-27",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Gizmodo",
+       "url": "https://gizmodo.com/feds-approve-spacexs-ai-data-center-satellites-all-1-million-of-them-2000845526"
+      },
+      {
+       "name": "AP News",
+       "url": "https://apnews.com/article/b9897fe06f851ffaf92fd304ae69075c"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180802"
+      }
+     ],
+     "summary": "FCC 授權 SpaceX 建置名為「Starmind」的低軌道運算衛星網路，以太陽能在軌執行 AI 工作負載再回傳地面；目前為許可上限，尚未實際大規模部署。科學界對晶片散熱、經濟效益、太空垃圾與天文觀測干擾仍有疑慮。",
+     "tags": [
+      "AI 資料中心",
+      "衛星",
+      "監理"
+     ],
+     "title": "美國 FCC 核准 SpaceX 部署最多 100 萬顆衛星，打造太空 AI 運算網路"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "TechCrunch",
+       "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180807"
+      }
+     ],
+     "summary": "OpenAI 表示同時大量使用 Chat 與 Work 的用戶將共用同一份配額，可能更快觸及上限；配額用完後仍可使用 Instant 模型，12 月起擴大部署。機關若有付費帳號，應留意配額變動對業務使用的影響。",
+     "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "服務異動"
+     ],
+     "title": "OpenAI 合併 ChatGPT Chat 與 Work 的使用配額，12 月擴大實施"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Anthropic",
+       "url": "https://www.anthropic.com/research/migrating-api-to-rust"
+      }
+     ],
+     "summary": "Anthropic（Claude 的開發公司）說明以 AI 代理比對新舊實作對真實請求的回應差異，並在人工審查下修正；官方稱每個請求的處理器用量降約 70%、首個 token 回應時間中位數縮短 20%。本則僅轉述官方說法。",
+     "tags": [
+      "Anthropic",
+      "AI 輔助開發",
+      "系統改寫"
+     ],
+     "title": "Anthropic 以 Claude 代理協助把 Messages API 從 Python 改寫為 Rust"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Semafor",
+       "url": "https://www.semafor.com/article/11/25/2026/new-us-export-rules-threaten-asian-ai-buildout"
+      }
+     ],
+     "summary": "Semafor 報導，美國新的出口規則使部分貸款機構暫停與中國大型雲端業者相關的數十億美元融資，亞洲 AI 資料中心計畫可能受影響。相關金額與影響範圍為媒體報導，尚未經官方證實。",
+     "tags": [
+      "出口管制",
+      "AI 晶片",
+      "供應鏈"
+     ],
+     "title": "Semafor：美國新出口規則衝擊亞洲 AI 基礎建設，傳貸方暫停中國雲端相關融資"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "NBC News",
+       "url": "https://www.nbcnews.com/tech/tech-news/new-york-governor-kathy-hochul-sign-ai-toy-ban-law-rcna610962"
+      }
+     ],
+     "summary": "紐約州長簽署法案，未來 5 年禁止生產與銷售內建 AI 聊天機器人的玩具，為針對兒童 AI 產品的明確立法。",
+     "tags": [
+      "AI 治理",
+      "兒少保護",
+      "立法"
+     ],
+     "title": "美國紐約州立法禁止製造與販售 AI 聊天機器人玩具 5 年"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "TechNode",
+       "url": "https://technode.com/2026/11/25/ant-releases-ling-3-2-air-multimodal-model-under-mit-license/"
+      }
+     ],
+     "summary": "模型可處理文字、影像與影片並可透過工具完成辦公任務，權重可下載並商業修改；螞蟻自家辦公自動化測試完成率由前版 15.7% 提升到 61%。",
+     "tags": [
+      "開放權重",
+      "多模態",
+      "中國 AI"
+     ],
+     "title": "螞蟻集團以 MIT 授權釋出多模態模型 Ling-3.2-air"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "社交工程"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180826"
+      }
+     ],
+     "summary": "刑事局揭露歹徒以偽冒短劇 App 誘騙民眾安裝 Android 木馬，取得無障礙權限後操控手機盜轉存款，相關網銀盜轉案已超過百起。",
+     "tags": [
+      "行動裝置",
+      "金融詐騙",
+      "Android"
+     ],
+     "title": "刑事局：偽冒短劇 App 散布 Android 木馬，濫用無障礙權限盜轉網銀逾百起"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "個資事件"
+     ],
+     "rank": 2,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180833"
+      }
+     ],
+     "summary": "香帥蛋糕、一事製菓等業者揭露資安事件，起因是其電子發票服務商 PayNow 的對外 API 遭異常存取，影響約 500 家商家；屬委外服務供應鏈個資事件，影響範圍以業者公告為準。",
+     "tags": [
+      "供應鏈",
+      "API 安全",
+      "個資"
+     ],
+     "title": "電子發票服務商 PayNow 對外 API 遭異常存取，波及約 500 家商家"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/2d68bc8505f773acbfd50c6059190c2f84477e07"
+      }
+     ],
+     "summary": "攻擊者把 Fragnesia 與 PHP2Shell 串連，鎖定暴露在網際網路的 PAN-OS 管理介面取得 root 權限，有單一組織 24 台防火牆遭入侵，Palo Alto 已確認。應立即套用對應版本 hotfix，並封鎖管理介面的對外存取。",
+     "tags": [
+      "防火牆",
+      "邊界設備",
+      "Palo Alto"
+     ],
+     "title": "Palo Alto PAN-OS「Fragnesia」漏洞（CVE-2026-46300）遭利用，攻擊者串連取得 root"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180820"
+      },
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/420627cd7e6f59c1f32c0295c223bfabc74b389b"
+      }
+     ],
+     "summary": "攻擊者 11/19 竊得員工 GitHub 帳號權杖，複製公司私有原始碼並下載有限的客戶帳戶中繼資料；1Password 表示使用者保管庫內容未遭取得。",
+     "tags": [
+      "供應鏈",
+      "原始碼外洩",
+      "權杖"
+     ],
+     "title": "1Password 員工 GitHub 權杖遭竊，私有程式碼與部分帳戶中繼資料外洩"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/02d3502efd3d9c7c38ef32fc6ed470e0af4e7ba1"
+      }
+     ],
+     "summary": "watchTowr 觀察到兩項漏洞遭探測利用，串連後可能達成遠端程式碼執行；請升級至 3.0.2、2.28.6 或 2.27.7。GeoServer 常用於機關 GIS 圖資服務，應優先盤點。",
+     "tags": [
+      "GIS",
+      "GeoServer",
+      "RCE"
+     ],
+     "title": "GeoServer 兩項漏洞（CVE-2026-120705、CVE-2026-129243）遭利用，可串連為遠端執行"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "尚無修補"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/94e001fb831dec50ff5879734b0ec6b4e216dde5"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180823"
+      }
+     ],
+     "summary": "CISA 示警 Danfoss AK-SM 8xxA 系列漏洞（CVE-2026-129713）已遭利用，原廠表示將於 5.5.x 修補；另有報導指 Copeland XWEB PRO 冷凍控制器遭劫持作為垃圾郵件與代理節點。OT／冷鏈設備不應直接暴露於網際網路。",
+     "tags": [
+      "OT",
+      "工控",
+      "IoT"
+     ],
+     "title": "Danfoss AK-SM 800A 控制器 CVSS 9.8 漏洞遭利用且尚無修補；Copeland XWEB PRO 冷凍控制器遭劫持"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/14c2f279b50e82d79ec9d204c1f39f947cfb1526"
+      },
+      {
+       "name": "ZeroHour（Artex）",
+       "url": "https://zerohour.day/item/17a805c0d69ce85842a9e8ad5114fed280c02cc7"
+      }
+     ],
+     "summary": "瑞士國家資安中心證實首批由 AI 代理發動、針對當地組織的攻擊，已知案例皆入侵 IT 系統；同期微軟也指出多個國家級與犯罪集團濫用 Artex 自動化滲透框架。",
+     "tags": [
+      "AI 攻擊",
+      "關鍵基礎設施",
+      "威脅情資"
+     ],
+     "title": "瑞士 NCSC 證實境內首起 AI 代理攻擊，至少兩個關鍵基礎設施領域受害"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "ZeroHour",
+       "url": "https://zerohour.day/item/1598cb54bc1efa7271106e57f7d7372baad0cf0c"
+      }
+     ],
+     "summary": "FinCEN 發現未授權存取後將部分系統下線，是否有資料外洩尚未確認；銀行保密法申報期限展延至 12/30。",
+     "tags": [
+      "政府機關",
+      "資安事件"
+     ],
+     "title": "美國金融犯罪執法局（FinCEN）遭未授權存取，部分系統下線"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-26",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "summary": "刑事局揭露偽冒短劇 App 散布 Android 木馬，濫用無障礙權限盜轉網銀存款，案件逾百起。",
+     "tags": [
+      "Android",
+      "金融詐騙",
+      "木馬"
+     ],
+     "title": "網銀盜轉案逾百起，刑事局揭露偽冒短劇App散布Android木馬，歹徒濫用無障礙權限盜轉存款",
+     "url": "https://www.ithome.com.tw/news/180826"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-26",
+     "flags": [],
+     "rank": 2,
+     "summary": "電子發票服務商 PayNow 對外 API 遭異常存取，多家業者揭露資安事件，約 500 商家受波及。",
+     "tags": [
+      "供應鏈",
+      "API",
+      "個資"
+     ],
+     "title": "香帥蛋糕、一事製菓揭露資安事件，電子發票服務商PayNow對外API遭異常存取，波及500商家",
+     "url": "https://www.ithome.com.tw/news/180833"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-26",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 3,
+     "summary": "CISA 將 Drupal 等 3 種應用系統漏洞列入已遭利用清單，要求儘速修補。",
+     "tags": [
+      "Drupal",
+      "CISA KEV",
+      "漏洞"
+     ],
+     "title": "CISA警告Drupal等3種應用系統的漏洞遭積極利用",
+     "url": "https://www.ithome.com.tw/news/180796"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-26",
+     "flags": [],
+     "rank": 4,
+     "summary": "駭客透過 1Password 員工的 GitHub 帳號竊取公司程式碼並下載部分客戶資料。",
+     "tags": [
+      "1Password",
+      "GitHub",
+      "資料外洩"
+     ],
+     "title": "駭客存取1Password員工GitHub帳號竊走公司程式碼、下載客戶資料",
+     "url": "https://www.ithome.com.tw/news/180820"
+    },
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-26",
+     "flags": [],
+     "rank": 5,
+     "summary": "11/26 資安日報，頭條為 Copeland 冷凍控制器遭劫持作為垃圾郵件與代理節點。",
+     "tags": [
+      "資安日報",
+      "OT",
+      "IoT"
+     ],
+     "title": "【資安日報】11月26日，Copeland XWEB PRO冷凍控制器遭劫持，淪為垃圾郵件發送與代理節點",
+     "url": "https://www.ithome.com.tw/news/180823"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-26",
+     "flags": [],
+     "rank": 1,
+     "summary": "SpaceX 取得最多 100 萬顆衛星的部署許可，用於建置太空 AI 資料中心。",
+     "tags": [
+      "SpaceX",
+      "AI 資料中心",
+      "衛星"
+     ],
+     "title": "SpaceX取得100萬顆衛星部署許可，以打造太空資料中心",
+     "url": "https://www.ithome.com.tw/news/180802"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-26",
+     "flags": [],
+     "rank": 2,
+     "summary": "OpenAI 合併 ChatGPT Chat 與 Work 介面並改為共用配額，12 月擴大部署。",
+     "tags": [
+      "OpenAI",
+      "ChatGPT",
+      "配額"
+     ],
+     "title": "OpenAI開始合併ChatGPT的Chat與Work介面，預定12月擴大部署共用配額",
+     "url": "https://www.ithome.com.tw/news/180807"
+    }
+   ],
+   "updatedAt": "2026-11-27T08:12:48+08:00"
+  },
   {
    "actions": [
     "盤點機關 vCenter 版本，依 Broadcom 公告升級修補 CVE-2026-123903（CVSS 9.8），並限制 vCenter 管理介面僅能由管理網段存取。",
