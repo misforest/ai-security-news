@@ -1,6 +1,450 @@
 {
- "updatedAt": "2026-11-27T08:12:48+08:00",
+ "updatedAt": "2026-11-28T08:20:00+08:00",
  "days": [
+  {
+   "actions": [
+    "盤點對外 Drupal 與 WordPress 網站：Drupal SA-CORE-2026-017／019 已遭利用，未更新者先暫停對外或加 WAF 規則，再升級到修補版本。",
+    "確認是否使用 Juniper SSR／Session Smart Conductor、Mitel MiCollab，若有請立即套用原廠修補並檢查網域控制站近期異常登入。",
+    "對外 NAS（Synology DSM）與 Linux 主機依原廠公告更新；暴露在網際網路的設備優先處理。",
+    "清查程式碼庫、容器映像與設定檔中的雲端與 AI 金鑰（含 .env、settings.local.json），發現外洩立即撤銷並輪替。",
+    "盤點同仁使用的 AI 代理與第三方整合，訂定串接 Google Workspace／Microsoft 365 等雲端服務的授權與稽核規則。"
+   ],
+   "date": "2026-11-28",
+   "items": [
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/gpt-6-2-astra-users-now-hit-limits-40-faster-after-openai-patched-a-pricing-error/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180853"
+      }
+     ],
+     "summary": "OpenAI 修正先前讓 GPT-6.2 Astra 與 Sol 誤享折扣的計費錯誤，修正後 Astra 約快 40%、Sol 約快 25% 達到用量上限；符合資格的訂閱者可獲用量重置，Business 用戶到 2026 年底可免費使用 Fast Mode。",
+     "tags": [
+      "OpenAI",
+      "GPT-6.2",
+      "訂閱方案"
+     ],
+     "title": "OpenAI 修正 GPT-6.2 計費錯誤，Astra、Sol 模型用量上限將更快用罄"
+    },
+    {
+     "category": "AI",
+     "flags": [
+      "尚待官方證實"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Reuters",
+       "url": "https://www.reuters.com/world/china/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-2026-11-26/"
+      },
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/"
+      }
+     ],
+     "summary": "Reuters 報導智譜 Z.AI 下一代旗艦模型進度落後，月之暗面預期與美國模型的差距將由約半年拉長到一年以上；另有報導指輝達要求伺服器夥伴暫停出貨至馬來西亞、新加坡、泰國與印尼，並警告新雲業者不得出租 GPU 給中國企業。",
+     "tags": [
+      "出口管制",
+      "AI晶片",
+      "供應鏈"
+     ],
+     "title": "Reuters：美國晶片管制與蒸餾打擊拖慢中國 AI 模型開發；傳輝達暫停對東南亞四國出貨伺服器"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/26/google-ai-agent-security-requirements/"
+      }
+     ],
+     "summary": "Google 宣布自 2027 年 2 月 1 日起，第三方 AI 代理存取 Workspace 資料須透過官方 Workspace MCP 伺服器或 CLI，以集中權限控管與稽核；使用 Workspace 的單位需盤點既有 AI 整合。",
+     "tags": [
+      "AI代理",
+      "Google Workspace",
+      "存取控管"
+     ],
+     "title": "Google Workspace 2027 年 2 月起要求 AI 代理須經 Workspace MCP 或 CLI 連線"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/25/anthropic-enterprise-frontier-safeguards-public-beta/"
+      }
+     ],
+     "summary": "Anthropic（Claude 的開發商）開放企業版前沿防護功能公測，提供濫用監控與零資料保存等選項，供企業在使用高能力模型時強化管控；以上依媒體報導轉述。",
+     "tags": [
+      "Anthropic",
+      "AI治理",
+      "企業導入"
+     ],
+     "title": "Anthropic 推出「Enterprise Frontier Safeguards」公開測試，提供濫用監控與零資料保存"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Next Web",
+       "url": "https://thenextweb.com/news/canada-ai-compute-access-fund-700m-expansion"
+      }
+     ],
+     "summary": "加拿大政府擴大 AI Compute Access Fund，最高補助 80% 在合格主權雲業者的算力費用，以扶植本地 AI 發展並強化資料主權。",
+     "tags": [
+      "主權AI",
+      "算力",
+      "政府政策"
+     ],
+     "title": "加拿大 AI 算力補助基金追加 7 億加元，總額達 10 億加元"
+    },
+    {
+     "category": "AI",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "NIST",
+       "url": "https://www.nist.gov/news-events/news/2026/11/towards-best-practices-evaluating-si-driven-uplift"
+      }
+     ],
+     "summary": "NIST 於 11 月 24 日發布自願性指引草案，說明如何衡量 AI 系統對使用者能力的提升程度，公開意見徵詢至 2027 年 2 月 22 日，可作為機關評估 AI 風險的參考。",
+     "tags": [
+      "NIST",
+      "AI治理",
+      "風險評估"
+     ],
+     "title": "NIST 發布 SP 2400-801 草案，提出評估 AI 能力提升（uplift）的最佳實務"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 1,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/critical-juniper-session-smart-conductor-flaw-exploited-in-attacks/"
+      }
+     ],
+     "summary": "SecurityWeek 報導 Juniper Session Smart Conductor（SSR 網路管理元件）重大漏洞已出現實際攻擊；使用 Juniper SSR／Conductor 的單位應確認版本並套用原廠修補。",
+     "tags": [
+      "Juniper",
+      "網路設備",
+      "漏洞"
+     ],
+     "title": "Juniper Session Smart Conductor 重大漏洞已遭攻擊利用"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用"
+     ],
+     "rank": 2,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "CISA",
+       "url": "https://www.cisa.gov/news-events/alerts/2026/11/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      }
+     ],
+     "summary": "美國 CISA 再將 3 項已知遭利用漏洞列入 KEV 目錄，要求聯邦機關限期修補；可對照 KEV 清單盤點自身資產。",
+     "tags": [
+      "CISA",
+      "KEV",
+      "修補"
+     ],
+     "title": "CISA 11 月 27 日新增 3 項已遭利用漏洞至 KEV 目錄"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "已遭利用",
+      "零時差"
+     ],
+     "rank": 3,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180854"
+      }
+     ],
+     "summary": "iThome 報導攻擊者在修補釋出前即利用 MiCollab 漏洞入侵，並在約 1 小時內橫向移動取得網域控制權限；使用 Mitel 協作平臺者應儘速更新並檢視 AD 異常。",
+     "tags": [
+      "Mitel",
+      "MiCollab",
+      "網域控制站"
+     ],
+     "title": "Mitel MiCollab 漏洞修補前已遭利用，攻擊者約 1 小時內取得網域控制權"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 4,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/"
+      }
+     ],
+     "summary": "BleepingComputer 引述 Reuters 報導，美國空軍使用的雲端平台遭駭客入侵，是近期一連串美國聯邦機關資安事件之一；影響範圍與入侵手法尚未公開證實。",
+     "tags": [
+      "政府機關",
+      "雲端",
+      "資料外洩"
+     ],
+     "title": "美國空軍雲端平台傳遭駭，聯邦機關資安事件再添一起"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "尚未證實"
+     ],
+     "rank": 5,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "SecurityWeek",
+       "url": "https://www.securityweek.com/sap-confirms-cyberattack-source-code-reportedly-compromised/"
+      }
+     ],
+     "summary": "SAP 證實發生網路攻擊事件，外界報導部分原始碼可能遭竊；目前未見客戶系統遭波及的公開證據，使用 SAP 產品的單位應留意後續公告。",
+     "tags": [
+      "SAP",
+      "供應鏈",
+      "原始碼"
+     ],
+     "title": "SAP 證實遭網路攻擊，傳部分原始碼外洩"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 6,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Hacker News",
+       "url": "https://thehackernews.com/2026/11/microsoft-store-app-found-delivering.html"
+      }
+     ],
+     "summary": "研究人員發現 Microsoft Store 上的應用程式夾帶 Vinci RAT，可遠端控制受害電腦；機關可評估以 App 控管政策限制員工自行從商店安裝軟體。",
+     "tags": [
+      "Microsoft Store",
+      "惡意程式",
+      "RAT"
+     ],
+     "title": "Microsoft Store 上架應用程式被發現散布 Vinci 遠端存取木馬"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 7,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/security/cloud-keys-leaked-in-docker-hub-images-are-stolen-within-seconds/"
+      },
+      {
+       "name": "Help Net Security",
+       "url": "https://www.helpnetsecurity.com/2026/11/25/docker-aws-key-exposure-bots/"
+      }
+     ],
+     "summary": "研究人員在 8 個容器登錄平台放置含假 AWS、OpenAI、Anthropic 金鑰的映像，AWS 金鑰最快約 8 秒即被使用、累計逾 14 萬次 API 呼叫；AI 模型金鑰已成 Docker Hub 最常外洩的類型。",
+     "tags": [
+      "金鑰外洩",
+      "容器",
+      "雲端"
+     ],
+     "title": "研究：Docker Hub 公開映像中的雲端與 AI 金鑰數秒內即遭盜用"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 8,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "The Decoder",
+       "url": "https://the-decoder.com/microsoft-details-how-state-backed-hackers-use-the-artex-ai-framework-to-automate-cyberattacks/"
+      },
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180851"
+      }
+     ],
+     "summary": "微軟說明 ARTEX 會把攻擊步驟分派給專門的 AI 代理執行，建議以誘捕等欺敵防禦因應；iThome 資安日報指出中國與北韓駭客皆已將其納入武器庫。",
+     "tags": [
+      "AI攻擊",
+      "國家級駭客",
+      "ARTEX"
+     ],
+     "title": "微軟揭露國家級駭客以 AI 框架 ARTEX 自動化攻擊，中國與北韓駭客皆已採用"
+    },
+    {
+     "category": "資安",
+     "flags": [],
+     "rank": 9,
+     "region": "國外",
+     "sources": [
+      {
+       "name": "BleepingComputer",
+       "url": "https://www.bleepingcomputer.com/news/microsoft/new-out-of-band-oob-emergency-hotpatch-fixes-windows-server-2025-crashes/"
+      }
+     ],
+     "summary": "微軟發布 Windows Server 2025 頻外（OOB）緊急 hotpatch，修正先前更新造成的伺服器當機；使用 hotpatch 的機關應確認是否已套用。",
+     "tags": [
+      "Microsoft",
+      "Windows Server",
+      "更新"
+     ],
+     "title": "微軟釋出頻外緊急熱修補，修正 Windows Server 2025 當機問題"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "個資事件"
+     ],
+     "rank": 1,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180841"
+      }
+     ],
+     "summary": "iThome 報導袋鼠金融平臺遭外部攻擊，部分使用者個人資料外洩，業者已啟動應變；為本週臺灣第三方服務業者資安事件延燒的又一例。",
+     "tags": [
+      "個資外洩",
+      "金融科技",
+      "臺灣"
+     ],
+     "title": "袋鼠金融平臺遭外部攻擊，部分使用者個資外洩"
+    },
+    {
+     "category": "資安",
+     "flags": [
+      "個資事件"
+     ],
+     "rank": 2,
+     "region": "國內",
+     "sources": [
+      {
+       "name": "iThome",
+       "url": "https://www.ithome.com.tw/news/180857"
+      }
+     ],
+     "summary": "iThome 回顧 11/23–11/27 重點：偽冒短劇 App 盜轉網銀、黑貓宅急便委外廠商遭駭與 PayNow 電子發票 API 遭異常存取等第三方供應鏈事件接連發生。",
+     "tags": [
+      "供應鏈",
+      "委外廠商",
+      "臺灣"
+     ],
+     "title": "iThome 資安週報：網銀盜轉手法曝光，第三方資訊服務商事件延燒至物流與電子發票"
+    }
+   ],
+   "ithome": [
+    {
+     "approx": false,
+     "category": "資安",
+     "date": "2026-11-27",
+     "flags": [],
+     "rank": 1,
+     "summary": "資安日報指出中國與北韓國家級駭客都已開始使用 AI 攻擊框架 ARTEX。",
+     "tags": [
+      "AI攻擊",
+      "國家級駭客"
+     ],
+     "title": "【資安日報】11月27日，中國及北韓駭客皆已於武器庫中加入ARTEX",
+     "url": "https://www.ithome.com.tw/news/180851"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-27",
+     "flags": [
+      "已遭利用",
+      "零時差"
+     ],
+     "rank": 2,
+     "summary": "Mitel MiCollab 漏洞在修補前就遭利用，攻擊者約 1 小時內取得網域控制權。",
+     "tags": [
+      "Mitel",
+      "網域控制站"
+     ],
+     "title": "MiCollab漏洞修補前已遭利用，攻擊者約在1小時取得網域控制權限",
+     "url": "https://www.ithome.com.tw/news/180854"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-27",
+     "flags": [],
+     "rank": 3,
+     "summary": "國內金融科技平臺袋鼠金融遭外部攻擊，部分使用者個資外洩。",
+     "tags": [
+      "個資外洩",
+      "臺灣"
+     ],
+     "title": "袋鼠金融平臺遭外部攻擊，部分使用者個資外洩",
+     "url": "https://www.ithome.com.tw/news/180841"
+    },
+    {
+     "approx": true,
+     "category": "資安",
+     "date": "2026-11-28",
+     "flags": [],
+     "rank": 4,
+     "summary": "彙整本週網銀盜轉手法與第三方資訊服務商事件波及物流、電子發票服務的情形。",
+     "tags": [
+      "資安週報",
+      "供應鏈"
+     ],
+     "title": "【資安週報】1123～1127，網銀盜轉手法曝光，第三方資訊服務供應商資安事件延燒至物流與電子發票服務",
+     "url": "https://www.ithome.com.tw/news/180857"
+    },
+    {
+     "approx": true,
+     "category": "AI",
+     "date": "2026-11-27",
+     "flags": [],
+     "rank": 1,
+     "summary": "OpenAI 修正 GPT-6.2 計費錯誤後，Astra 與 Sol 模型的使用額度會更快用完。",
+     "tags": [
+      "OpenAI",
+      "GPT-6.2"
+     ],
+     "title": "OpenAI修正GPT-6.2計費系統錯誤，Astra、Sol模型將更快用罄使用限額",
+     "url": "https://www.ithome.com.tw/news/180853"
+    }
+   ],
+   "updatedAt": "2026-11-28T08:20:00+08:00"
+  },
   {
    "actions": [
     "盤點對外的防火牆與 VPN 管理介面（含 Palo Alto 等邊界設備），確認未暴露於網際網路，並依原廠公告套用已遭利用漏洞的 hotfix。",
